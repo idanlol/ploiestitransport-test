@@ -1,0 +1,4718 @@
+{
+  "HomeTrasee": ["1D", 2, "4B", 5, 7, 8, "22B", 28, 30, 32, 35, "35B", 36, "39B", "39C", 40, "40B", "44B", 104, 300, 301, 302, 303, 304, 307, 310, 311, 401, "402B", 444, 445],
+  "HomeTraseeTroleu": [44, "44S", 202, "202S"],
+  "HomeTraseeTramvai": [101, 102],
+  
+  "ZileVac": [
+    "01-01-2026",
+    "09-10-2026"
+  ],
+
+  "IDs" : [
+    {"stopId": "S50001", "coord": "44.963041,26.007157", "nume": "Spitalul Judetean"},
+    {"stopId": "S50002", "coord": "44.960308,26.010069", "nume": "Fun Shop Park"},
+    {"stopId": "S50003", "coord": "44.957673,26.009289", "nume": "Complex Mestesugaresc"},
+    {"stopId": "S50004", "coord": "44.955876,26.004246", "nume": "Complexul Mic"},
+    {"stopId": "S50005", "coord": "44.952840,26.000784", "nume": "Restaurant Nord"},
+    {"stopId": "S50006", "coord": "44.950192,26.003660", "nume": "8 Martie"},
+    {"stopId": "S50007", "coord": "44.947486,26.011822", "nume": "Piata Mihai Viteazul"},
+    {"stopId": "S50008", "coord": "44.946512,26.015891", "nume": "Colinii"},
+    {"stopId": "S50009", "coord": "44.944138,26.023678", "nume": "Hale Tramvai"},
+    {"stopId": "S50010", "coord": "44.938174,26.028264", "nume": "Muzeul de Istorie"},
+    {"stopId": "S50011", "coord": "44.935302,26.030735", "nume": "Covurlui"},
+    {"stopId": "S50012", "coord": "44.930997,26.031675", "nume": "13 Decembrie"},
+    {"stopId": "S50013", "coord": "44.926283,26.030846", "nume": "Gara de Sud Tr. Debarcare "},
+    {"stopId": "S50014", "coord": "44.925875,26.031148", "nume": "Gara de Sud Tr."},
+    {"stopId": "S50015", "coord": "44.930834,26.031815", "nume": "13 Decembrie"},
+    {"stopId": "S50016", "coord": "44.935354,26.030830", "nume": "Covurlui"},
+    {"stopId": "S50017", "coord": "44.9387247,26.0283232", "nume": "Muzeul de Istorie"},
+    {"stopId": "S50018", "coord": "44.9447905,26.0223409", "nume": "Hale Tramvai"},
+    {"stopId": "S50019", "coord": "44.9464646,26.0163234", "nume": "Colinii"},
+    {"stopId": "S50020", "coord": "44.9474430,26.0122578", "nume": "Piata Mihai Viteazul"},
+    {"stopId": "S50021", "coord": "44.9490889,26.0067402", "nume": "Mega Nord"},
+    {"stopId": "S50022", "coord": "44.953220,26.001264", "nume": "Restaurant Nord"},
+    {"stopId": "S50023", "coord": "44.955898,26.004426", "nume": "Complex Mic"},
+    {"stopId": "S50024", "coord": "44.958308,26.011517", "nume": "Complex Mestesugaresc"},
+    {"stopId": "S50025", "coord": "44.960444,26.010074", "nume": "Fun Shop Park"},
+    {"stopId": "S50026", "coord": "44.963007,26.007455", "nume": "Spitalul Judetean"},
+    {"stopId": "S50027", "coord": "44.949212,25.996939", "nume": "Deltei"},
+    {"stopId": "S50028", "coord": "44.946886,25.994585", "nume": "Malu Rosu"},
+    {"stopId": "S50029", "coord": "44.942404,25.991957", "nume": "ACR"},
+    {"stopId": "S50030", "coord": "44.938549,25.990075", "nume": "Biserica Inaltarea Domnului"},
+    {"stopId": "S50031", "coord": "44.935832,25.989622", "nume": "Cosminele"},
+    {"stopId": "S50032", "coord": "44.931332,25.989145", "nume": "Lamaita"},
+    {"stopId": "S50033", "coord": "44.927955,25.992443", "nume": "Pasaj Marasesti"},
+    {"stopId": "S50034", "coord": "44.925840,25.994791", "nume": "Gara de Vest Tr. Debarcare"},
+    {"stopId": "S50035", "coord": "44.925400,25.995384", "nume": "Gara de Vest"},
+    {"stopId": "S50036", "coord": "44.928004,25.992483", "nume": "Pasaj Marasesti"},
+    {"stopId": "S50037", "coord": "44.931344,25.989254", "nume": "Lamaita"},
+    {"stopId": "S50038", "coord": "44.935822,25.989716", "nume": "Cosminele"},
+    {"stopId": "S50039", "coord": "44.937983,25.990057", "nume": "Biserica Inaltarea Domnului"},
+    {"stopId": "S50040", "coord": "44.942367,25.992031", "nume": "ACR"},
+    {"stopId": "S50041", "coord": "44.946849,25.994654", "nume": "Malu Rosu"},
+    {"stopId": "S50042", "coord": "44.949168,25.997003", "nume": "Deltei"},
+    {"stopId": "S00001", "coord": "44.911139,26.037362", "nume": "Hipodrom"},
+    {"stopId": "S00002", "coord": "44.914724,26.036060", "nume": "UPG"},
+    {"stopId": "S00003", "coord": "44.918068,26.034992", "nume": "Bariera Bucuresti"},
+    {"stopId": "S00004", "coord": "44.921752,26.034506", "nume": "Rulmenti grei"},
+    {"stopId": "S00005", "coord": "44.926175,26.029693", "nume": "Gara de Sud"},
+    {"stopId": "S00006", "coord": "44.930357,26.028120", "nume": "13 Decembrie"},
+    {"stopId": "S00007", "coord": "44.933589,26.027066", "nume": "Ana Ipatescu"},
+    {"stopId": "S00008", "coord": "44.941162,26.022740", "nume": "Palatul Culturii"},
+    {"stopId": "S00009", "coord": "44.943713,26.0198499", "nume": "Hale Coreco"},
+    {"stopId": "S00010", "coord": "44.947660,26.011759", "nume": "Parc Mihai Viteazul"},
+    {"stopId": "S00011", "coord": "44.949165,26.006870", "nume": "Mega Nord"},
+    {"stopId": "S00012", "coord": "44.953503,26.001645", "nume": "Restaurant Nord"},
+    {"stopId": "S00013", "coord": "44.955202,26.003607", "nume": "XXL"},
+    {"stopId": "S00014", "coord": "44.956397,26.005515", "nume": "Complex Mic"},
+    {"stopId": "S00015", "coord": "44.955252,26.009643", "nume": "Biserica Sf. Andrei"},
+    {"stopId": "S00016", "coord": "", "nume": ""},
+    {"stopId": "S00017", "coord": "44.951711,26.010809", "nume": "Cina"},
+    {"stopId": "S00018", "coord": "44.946821,26.011140", "nume": "Parc Mihai Viteazul"},
+    {"stopId": "S00019", "coord": "44.941759,26.020662", "nume": "Galeriile Comerciale"},
+    {"stopId": "S00020", "coord": "44.938244,26.025204", "nume": "Filarmonica Paul Constantinescu"},
+    {"stopId": "S00021", "coord": "44.933548,26.026793", "nume": "Ana Ipatescu"},
+    {"stopId": "S00022", "coord": "44.930315,26.027844", "nume": "13 Decembrie"},
+    {"stopId": "S00023", "coord": "44.925606,26.029554", "nume": "Gara de Sud"},
+    {"stopId": "S00024", "coord": "44.920804,26.034236", "nume": "Rulmenti grei"},
+    {"stopId": "S00025", "coord": "44.916688,26.035047", "nume": "Bariera Bucuresti"},
+    {"stopId": "S00026", "coord": "44.913980,26.036058", "nume": "UPG"},
+    {"stopId": "S00027", "coord": "44.910635,26.037756", "nume": "Hipodrom"},
+    {"stopId": "S00028", "coord": "44.942083,26.020879", "nume": "Grivitei"},
+    {"stopId": "S00029", "coord": "44.952277,25.999288", "nume": "Restaurant Nord"},
+    {"stopId": "S00030", "coord": "44.955401,25.993158", "nume": "Kaufland Nord"},
+    {"stopId": "S00031", "coord": "44.956904,25.988598", "nume": "Meteo"},
+    {"stopId": "S00032", "coord": "44.959191,25.983633", "nume": "KM 5"},
+    {"stopId": "S00033", "coord": "44.963430,25.973778", "nume": "Shell"},
+    {"stopId": "S00034", "coord": "44.965169,25.972974", "nume": "Ploiesti Shopping City 1"},
+    {"stopId": "S00035", "coord": "44.966404,25.971142", "nume": "Ploiesti Shopping City 2"},
+    {"stopId": "S00036", "coord": "44.969369,25.961953", "nume": "Metro"},
+    {"stopId": "S00037", "coord": "44.964508,25.969929", "nume": "Leroy Merlin"},
+    {"stopId": "S00038", "coord": "44.958428,25.984635", "nume": "KM 5"},
+    {"stopId": "S00039", "coord": "44.956090,25.989939", "nume": "Meteo"},
+    {"stopId": "S00040", "coord": "44.954064,25.994573", "nume": "Cablul Romanesc"},
+    {"stopId": "S00041", "coord": "44.950145,26.003490", "nume": "8 Martie"},
+    {"stopId": "S00042", "coord": "44.927964,25.998871", "nume": "Aleea Vitioarei"},
+    {"stopId": "S00043", "coord": "44.931857,26.005055", "nume": "Eroilor"},
+    {"stopId": "S00044", "coord": "44.934907,26.016597", "nume": "Plaiesilor"},
+    {"stopId": "S00045", "coord": "44.938251,26.024439", "nume": "Liceul Mihai Viteazul"},
+    {"stopId": "S00046", "coord": "44.928511,26.036550", "nume": "AFI Value Centre"},
+    {"stopId": "S00047", "coord": "44.937313,26.024822", "nume": "Jurnalist Gabi Dobre"},
+    {"stopId": "S00048", "coord": "44.935964,26.016674", "nume": "Panificatie"},
+    {"stopId": "S00049", "coord": "44.933180,26.008600", "nume": "Eroilor"},
+    {"stopId": "S00050", "coord": "44.930487,26.003290", "nume": "Domnisori"},
+    {"stopId": "S00051", "coord": "44.927112,25.996439", "nume": "Spitalul CFR"},
+    {"stopId": "S00052", "coord": "44.925183,25.994780", "nume": "Gara de Vest Deb."},
+    {"stopId": "S00053", "coord": "44.960264, 26.009894", "nume": "Fun Shop Park"},
+    {"stopId": "S00054", "coord": "44.957893, 26.012490", "nume": "Autogara Gageni"},
+    {"stopId": "S00055", "coord": "44.955420, 26.015110", "nume": "Autobaza TCE"},
+    {"stopId": "S00056", "coord": "44.950987, 26.018724", "nume": "Radu de la Afumati"},
+    {"stopId": "S00057", "coord": "44.9435560,26.0197908", "nume": "Hale Catedrala"},
+    {"stopId": "S00058", "coord": "44.941079, 26.030314", "nume": "Postei"},
+    {"stopId": "S00059", "coord": "44.941639, 26.034954", "nume": "Stadion Ilie Oana"},
+    {"stopId": "S00060", "coord": "44.942691, 26.040901", "nume": "Razboieni"},
+    {"stopId": "S00061", "coord": "44.943413, 26.044785", "nume": "Neajlov"},
+    {"stopId": "S00062", "coord": "44.940176, 26.046513", "nume": "Cartier Mihai Bravu"},
+    {"stopId": "S00063", "coord": "44.943439, 26.044220", "nume": "Neajlov"},
+    {"stopId": "S00064", "coord": "44.942744, 26.041510", "nume": "Tanin"},
+    {"stopId": "S00065", "coord": "44.941680, 26.036970", "nume": "Stadion Ilie Oana"},
+    {"stopId": "S00066", "coord": "44.941404, 26.029630", "nume": "Postei"},
+    {"stopId": "S00067", "coord": "44.952116, 26.018069", "nume": "Radu de la Afumati"},
+    {"stopId": "S00068", "coord": "44.954634, 26.016105", "nume": "Autobaza TCE"},
+    {"stopId": "S00069", "coord": "44.957897, 26.012812", "nume": "Autogara Gageni"},
+    {"stopId": "S00070", "coord": "44.960045, 26.010582", "nume": "Fun Shop Park"},
+    {"stopId": "S00071", "coord": "44.963412,26.006522", "nume": "Spitalul Judetean"},
+    {"stopId": "S00072", "coord": "44.932039,26.053454", "nume": "Cartier Dorobantu"},
+    {"stopId": "S00073", "coord": "44.933416,26.050283", "nume": "Fabrica Dorobantu"},
+    {"stopId": "S00074", "coord": "44.935636,26.043738", "nume": "Biserica Sf. Dumitru"},
+    {"stopId": "S00075", "coord": "44.936709,26.036036", "nume": "Scoala 9"},
+    {"stopId": "S00076", "coord": "44.939978,26.030052", "nume": "Armoniei"},
+    {"stopId": "S00077", "coord": "44.938641,26.019953", "nume": "Faredo"},
+    {"stopId": "S00078", "coord": "44.936162,26.021058", "nume": "Liceul Economic"},
+    {"stopId": "S00079", "coord": "44.932301,26.019743", "nume": "Spitalul Schuller"},
+    {"stopId": "S00080", "coord": "44.928184,26.017182", "nume": "Jupiter"},
+    {"stopId": "S00081", "coord": "44.925853,26.015771", "nume": "Facultativa"},
+    {"stopId": "S00082", "coord": "44.923699,26.014497", "nume": "Eroilor"},
+    {"stopId": "S00083", "coord": "44.921678,26.011210", "nume": "Bariera Rudului"},
+    {"stopId": "S00084", "coord": "44.923199,26.014083", "nume": "Eroilor"},
+    {"stopId": "S00085", "coord": "44.925162,26.015391", "nume": "Stindardului"},
+    {"stopId": "S00086", "coord": "44.927754,26.017059", "nume": "Jupiter"},
+    {"stopId": "S00087", "coord": "44.931034,26.019305", "nume": "Spitalul Schuller"},
+    {"stopId": "S00088", "coord": "44.935166,26.020956", "nume": "Liceul Economic"},
+    {"stopId": "S00089", "coord": "44.939217,26.021593", "nume": "Take Ionescu"},
+    {"stopId": "S00090", "coord": "44.939219,26.029576", "nume": "Muzeu Petrolului"},
+    {"stopId": "S00091", "coord": "44.936024,26.037837", "nume": "Udriste Nasturel"},
+    {"stopId": "S00092", "coord": "44.935732,26.042993", "nume": "Gradinari"},
+    {"stopId": "S00093", "coord": "44.934508,26.046756", "nume": "Pictor Iscovescu"},
+    {"stopId": "S00094", "coord": "44.933287,26.050068", "nume": "Fabrica Dorobantu"},
+    {"stopId": "S00095", "coord": "44.931964,26.053281", "nume": "Cartier Dorobantu"},
+    {"stopId": "S00096", "coord": "44.940667,26.028636", "nume": "Armoniei"},
+    {"stopId": "S00097", "coord": "44.939397,26.021694", "nume": "Take Ionescu"},
+    {"stopId": "S00098", "coord": "", "nume": ""},
+    {"stopId": "S00099", "coord": "44.932709,26.015235", "nume": "Sala Sporturilor"},
+    {"stopId": "S00100", "coord": "44.926840,26.011283", "nume": "Cimitir Bolovani"},
+    {"stopId": "S00101", "coord": "44.932978,26.015181", "nume": "Sala Sporturilor"},
+    {"stopId": "S00102", "coord": "", "nume": ""},
+    {"stopId": "S00103", "coord": "44.928369,26.037497", "nume": "Prahova Value Centre"},
+    {"stopId": "S00104", "coord": "44.915762,26.038764", "nume": "Ghighiului"},
+    {"stopId": "S00105", "coord": "44.915048,26.043044", "nume": "Vintileanca"},
+    {"stopId": "S00106", "coord": "44.915955,26.044243", "nume": "Moreni"},
+    {"stopId": "S00107", "coord": "44.918069,26.040961", "nume": "Inotesti"},
+    {"stopId": "S00108", "coord": "44.919651,26.040238", "nume": "Cimitirul Eternitatii"},
+    {"stopId": "S00109", "coord": "44.921836,26.046421", "nume": "Oxigen"},
+    {"stopId": "S00110", "coord": "44.923595,26.050310", "nume": "Islazului"},
+    {"stopId": "S00111", "coord": "44.919522,26.056713", "nume": "Targului"},
+    {"stopId": "S00112", "coord": "44.921165,26.054302", "nume": "Uzinei"},
+    {"stopId": "S00113", "coord": "44.924457,26.049168", "nume": "Bariera Rafov"},
+    {"stopId": "S00114", "coord": "44.926398,26.051541", "nume": "Corlatesti"},
+    {"stopId": "S00115", "coord": "44.927412,26.054842", "nume": "Protan"},
+    {"stopId": "S00116", "coord": "44.929611,26.057552", "nume": "Pictor Rosenthal"},
+    {"stopId": "S00117", "coord": "44.927464,26.054761", "nume": "Protan"},
+    {"stopId": "S00118", "coord": "44.926408,26.051359", "nume": "Corlatesti"},
+    {"stopId": "S00119", "coord": "44.924230,26.049348", "nume": "Bariera Rafov"},
+    {"stopId": "S00120", "coord": "44.921690,26.045967", "nume": "Oxigen"},
+    {"stopId": "S00121", "coord": "44.919794,26.040346", "nume": "Cimitirul Eternitatii"},
+    {"stopId": "S00122", "coord": "44.918062,26.041251", "nume": "Azuga"},
+    {"stopId": "S00123", "coord": "44.915680,26.044272", "nume": "Moreni"},
+    {"stopId": "S00124", "coord": "44.915092,26.042932", "nume": "Vintileanca"},
+    {"stopId": "S00125", "coord": "44.938935,25.981169", "nume": "Pod Inalt"},
+    {"stopId": "S00126", "coord": "44.938584,25.984306", "nume": "Eremia Grigorescu"},
+    {"stopId": "S00127", "coord": "44.938264,25.988223", "nume": "Biserica Inaltarea Domnului"},
+    {"stopId": "S00128", "coord": "44.937739,25.995684", "nume": "Ienachita Vacarescu"},
+    {"stopId": "S00129", "coord": "44.937647,26.000169", "nume": "Zimbrului"},
+    {"stopId": "S00130", "coord": "44.937749,26.006204", "nume": "Popa Farcas"},
+    {"stopId": "S00131", "coord": "44.938475,26.011822", "nume": "Logofat Tautu"},
+    {"stopId": "S00132", "coord": "44.925874,26.029081", "nume": "Gara de Sud BIG"},
+    {"stopId": "S00133", "coord": "44.938749,26.012269", "nume": "Logofat Tautu"},
+    {"stopId": "S00134", "coord": "44.938040,26.006985", "nume": "Popa Farcas"},
+    {"stopId": "S00135", "coord": "44.937870,26.002047", "nume": "Zimbrului"},
+    {"stopId": "S00136", "coord": "44.937893,25.996571", "nume": "Ienachita Vacarescu"},
+    {"stopId": "S00137", "coord": "44.938285,25.991277", "nume": "Liceul de Constructii"},
+    {"stopId": "S00138", "coord": "44.938469,25.988847", "nume": "Biserica Inaltarea Domnului"},
+    {"stopId": "S00139", "coord": "44.938956,25.982421", "nume": "Pod Inalt"},
+    {"stopId": "S00140", "coord": "44.946535,25.994224", "nume": "Malu Rosu"},
+    {"stopId": "S00141", "coord": "44.9428747,25.9936218", "nume": "Carol Davila"},
+    {"stopId": "S00142", "coord": "44.9420178,25.9982986", "nume": "Aviatorilor"},
+    {"stopId": "S00143", "coord": "44.9411095,26.0032134", "nume": "Nicolae Titulescu"},
+    {"stopId": "S00144", "coord": "44.940572,26.010014", "nume": "Traian"},
+    {"stopId": "S00145", "coord": "44.942393,26.014847", "nume": "Scoala 4"},
+    {"stopId": "S00146", "coord": "44.940640,26.003838", "nume": "Nicolae Titulescu"},
+    {"stopId": "S00147", "coord": "44.942314,25.997441", "nume": "Aleea Profesorilor"},
+    {"stopId": "S00148", "coord": "44.943594,25.992867", "nume": "Ofelia"},
+    {"stopId": "S00149", "coord": "44.947028,25.994362", "nume": "Malu Rosu"},
+    {"stopId": "S00150", "coord": "44.930939,25.989531", "nume": "Lamaita"},
+    {"stopId": "S00151", "coord": "44.936219,25.989906", "nume": "Biserica Inaltarea Domnului"},
+    {"stopId": "S00152", "coord": "44.936773,26.015564", "nume": "Tudor Vladimirescu"},
+    {"stopId": "S00153", "coord": "44.935537,26.011022", "nume": "Popa Farcas"},
+    {"stopId": "S00154", "coord": "44.933202,26.006042", "nume": "Torcatori"},
+    {"stopId": "S00155", "coord": "44.931125,25.999323", "nume": "Scoala 20"},
+    {"stopId": "S00156", "coord": "44.928859,25.993404", "nume": "Bariera Marasesti"},
+    {"stopId": "S00157", "coord": "44.932397,25.988963", "nume": "Bloc 39"},
+    {"stopId": "S00158", "coord": "44.928498,25.993044", "nume": "Pasaj Marasesti"},
+    {"stopId": "S00159", "coord": "44.931009,25.999740", "nume": "Palatul Copiilor"},
+    {"stopId": "S00160", "coord": "44.933220,26.006220", "nume": "Torcatori"},
+    {"stopId": "S00161", "coord": "44.935338,26.010260", "nume": "Popa Farcas"},
+    {"stopId": "S00162", "coord": "44.936663,26.015359", "nume": "Tudor Vladimirescu"},
+    {"stopId": "S00163", "coord": "44.937049,25.989705", "nume": "Biserica Inaltarea Domnului"},
+    {"stopId": "S00164", "coord": "44.949658,26.024038", "nume": "Spital Boldescu"},
+    {"stopId": "S00165", "coord": "44.952855,26.026278", "nume": "Gara de Nord"},
+    {"stopId": "S00166", "coord": "44.954014,26.023362", "nume": "Poienitei"},
+    {"stopId": "S00167", "coord": "44.957601,26.021610", "nume": "Rafinaria Vega"},
+    {"stopId": "S00168", "coord": "44.953920,26.023386", "nume": "Panificatie"},
+    {"stopId": "S00169", "coord": "", "nume": ""},
+    {"stopId": "S00170", "coord": "44.949731,26.023822", "nume": "Spital Boldescu"},
+    {"stopId": "S00171", "coord": "44.947053,26.024321", "nume": "Romana"},
+    {"stopId": "S00172", "coord": "44.957601,26.021610", "nume": "Izvoare"},
+    {"stopId": "S00173", "coord": "44.928942,26.044280", "nume": "Bariera Unirii"},
+    {"stopId": "S00174", "coord": "44.929933,26.040219", "nume": "Upetrom"},
+    {"stopId": "S00175", "coord": "44.934041,26.035234", "nume": "Armasi"},
+    {"stopId": "S00176", "coord": "44.944466,25.964425", "nume": "ATAC"},
+    {"stopId": "S00177", "coord": "44.941623,25.977117", "nume": "Selgros"},
+    {"stopId": "S00178", "coord": "", "nume": ""},
+    {"stopId": "S00179", "coord": "44.943855,25.964453", "nume": "ATAC Debarcare"},
+    {"stopId": "S00180", "coord": "44.928578,25.991145", "nume": "West Mall"},
+    {"stopId": "S00181", "coord": "44.926214,25.984956", "nume": "Parc Municipal Vest"},
+    {"stopId": "S00182", "coord": "44.907665,25.988346", "nume": "Cartier Mitica Apostol"},
+    {"stopId": "S00183", "coord": "44.906100,25.984786", "nume": "Cartier Mitica Apostol Capat"},
+    {"stopId": "S00184", "coord": "44.907589,25.988443", "nume": "Cartier Mitica Apostol"},
+    {"stopId": "S00185", "coord": "44.925965,25.984719", "nume": "Parc Municipal Vest"},
+    {"stopId": "S00186", "coord": "44.928789,25.991372", "nume": "OMW"},
+    {"stopId": "S00187", "coord": "44.915452,25.986340", "nume": "Concordia"},
+    {"stopId": "S00188", "coord": "44.943091,26.029323", "nume": "Biserica Sf. Vineri"},
+    {"stopId": "S00189", "coord": "44.945726,26.035379", "nume": "Parc Obor"},
+    {"stopId": "S00190", "coord": "44.950733,26.042945", "nume": "Atlas"},
+    {"stopId": "S00191", "coord": "44.949388,26.046197", "nume": "Petros"},
+    {"stopId": "S00192", "coord": "44.947772,26.048379", "nume": "Pelinului"},
+    {"stopId": "S00193", "coord": "44.950092,26.047751", "nume": "Luminisului"},
+    {"stopId": "S00194", "coord": "44.952914,26.044222", "nume": "Complex Bereasca"},
+    {"stopId": "S00195", "coord": "44.954619,26.042003", "nume": "SC Control"},
+    {"stopId": "S00196", "coord": "44.956415,26.039707", "nume": "Cimitir"},
+    {"stopId": "S00197", "coord": "44.954172,26.039328", "nume": "Arborilor"},
+    {"stopId": "S00198", "coord": "44.952049,26.041010", "nume": "Leandrului"},
+    {"stopId": "S00199", "coord": "44.946338,26.035422", "nume": "Hotel Forum"},
+    {"stopId": "S00200", "coord": "44.943180,26.029233", "nume": "Biserica Sf. Vineri"},
+    {"stopId": "S00201", "coord": "44.955921,26.049778", "nume": "Strand"},
+    {"stopId": "S00202", "coord": "44.960057,26.056544", "nume": "Aldini"},
+    {"stopId": "S00203", "coord": "44.968071,26.063317", "nume": "Intrare Bucov"},
+    {"stopId": "S00204", "coord": "44.974247,26.059936", "nume": "Parc Bucov"},
+    {"stopId": "S00205", "coord": "44.967107,26.063222", "nume": "Intrare Bucov"},
+    {"stopId": "S00206", "coord": "44.957558,26.052648", "nume": "Strand"},
+    {"stopId": "S00207", "coord": "44.951416,26.043052", "nume": "Complex Bereasca"},
+    {"stopId": "S00208", "coord": "44.952173,26.043895", "nume": "Complex Bereasca"},
+    {"stopId": "S00209", "coord": "44.939657,26.037543", "nume": "Maternitate"},
+    {"stopId": "S00210", "coord": "44.938496,26.043220", "nume": "Gradinari"},
+    {"stopId": "S00211", "coord": "44.939264,26.051323", "nume": "Fero"},
+    {"stopId": "S00212", "coord": "44.941217,26.063117", "nume": "Dacia"},
+    {"stopId": "S00213", "coord": "44.942109,26.072064", "nume": "Petrotel"},
+    {"stopId": "S00214", "coord": "44.942343,26.084946", "nume": "Camine"},
+    {"stopId": "S00215", "coord": "44.942294,26.089940", "nume": "Uztel Deb."},
+    {"stopId": "S00216", "coord": "44.942523,26.090482", "nume": "Uztel"},
+    {"stopId": "S00217", "coord": "44.942460,26.085085", "nume": "Camine"},
+    {"stopId": "S00218", "coord": "44.942288,26.072425", "nume": "Petrotel"},
+    {"stopId": "S00219", "coord": "44.941455,26.063574", "nume": "Dacia"},
+    {"stopId": "S00220", "coord": "44.939626,26.051753", "nume": "Fero"},
+    {"stopId": "S00221", "coord": "44.938460,26.045302", "nume": "Gradinari"},
+    {"stopId": "S00222", "coord": "44.939817,26.038259", "nume": "Maternitate"},
+    {"stopId": "S00223", "coord": "44.957687,26.009129", "nume": "Complex Mestesugaresc"},
+    {"stopId": "S00224", "coord": "44.955823,26.004046", "nume": "Complex Mic"},
+    {"stopId": "S00225", "coord": "44.952915,26.000770", "nume": "Restaurant Nord"},
+    {"stopId": "S00226", "coord": "44.947380,26.011866", "nume": "Piata Mihai Viteazul"},
+    {"stopId": "S00227", "coord": "44.946455,26.015742", "nume": "Colinii"},
+    {"stopId": "S00228", "coord": "44.946560,26.016280", "nume": "Colinii"},
+    {"stopId": "S00229", "coord": "44.958063,26.010903", "nume": "Complex Mestesugaresc"},
+    {"stopId": "S00230", "coord": "44.933381,26.031693", "nume": "13 Decembrie"},
+    {"stopId": "S00231", "coord": "44.934924,26.038691", "nume": "Armasi"},
+    {"stopId": "S00232", "coord": "44.937617,26.045053", "nume": "Gradinari"},
+    {"stopId": "S00233", "coord": "44.946994,26.034420", "nume": "AFI PLOIESTI"},
+    {"stopId": "S00234", "coord": "44.941758,26.035383", "nume": "Alexandru Vlahuta"},
+    {"stopId": "S00235", "coord": "44.940568,26.046200", "nume": "Cartier Mihai Bravu"},
+    {"stopId": "S00236", "coord": "44.937531,26.044591", "nume": "Gradinari"},
+    {"stopId": "S00237", "coord": "44.934970,26.038568", "nume": "Armasi"},
+    {"stopId": "S00238", "coord": "44.934106,26.033326", "nume": "Spatari"},
+    {"stopId": "S00239", "coord": "44.933126,26.031004", "nume": "13 Decembrie"},
+    {"stopId": "S00240", "coord": "44.947542,25.995381", "nume": "Deltei"},
+    {"stopId": "S00241", "coord": "44.946113,25.987064", "nume": "COCOS 2"},
+    {"stopId": "S00242", "coord": "44.942597,25.991943", "nume": "ACR"},
+    {"stopId": "S00243", "coord": "44.945467,26.027066", "nume": "Liceul I.L. Caragiale"},
+    {"stopId": "S00244", "coord": "44.915217,26.026753", "nume": "Rafinaria Astra"},
+    {"stopId": "S00245", "coord": "44.917322,26.034104", "nume": "Bariera Bucuresti"},
+    {"stopId": "S00246", "coord": "44.915378,26.026534", "nume": "Rafinaria Astra Deb."},
+    {"stopId": "S00247", "coord": "44.913831,26.021067", "nume": "UMERVA"},
+    {"stopId": "S00248", "coord": "44.912311,26.017120", "nume": "COMAT"},
+    {"stopId": "S00249", "coord": "", "nume": ""},
+    {"stopId": "S00250", "coord": "44.913656,26.020754", "nume": "UMERVA"},
+    {"stopId": "S00251", "coord": "44.923073,26.027149", "nume": "CONPET"},
+    {"stopId": "S00252", "coord": "44.921056,26.016257", "nume": "Rafinorilor"},
+    {"stopId": "S00253", "coord": "44.923187,26.027154", "nume": "CONPET"},
+    {"stopId": "S00254", "coord": "44.903196,26.011921", "nume": "Ploiesti Triaj"},
+    {"stopId": "S00255", "coord": "44.940625,25.935631", "nume": "Parc Industrial Ploiesti"},
+    {"stopId": "S00256", "coord": "44.938463,25.935962", "nume": "Yazaki"},
+    {"stopId": "S00257", "coord": "44.940585,25.935867", "nume": "Piritex"},
+    {"stopId": "S00258", "coord": "44.939046,26.049737", "nume": "Cornatel"},
+    {"stopId": "S00259", "coord": "44.924461,26.023727", "nume": "Bobalna"},
+    {"stopId": "S00260", "coord": "44.928443,26.015793", "nume": "Scoala Florin Comisel"},
+    {"stopId": "S00261", "coord": "44.925947,26.013964", "nume": "Campiei"},
+    {"stopId": "S00262", "coord": "44.924587,26.024631", "nume": "Depoului"},
+    {"stopId": "S00263", "coord": "44.935396,25.905704", "nume": "Bauelemente"},
+    {"stopId": "S00264", "coord": "44.954122,25.898177", "nume": "Jungheinrich"},
+    {"stopId": "S00265", "coord": "44.961299,25.892704", "nume": "Lubbers"},
+    {"stopId": "S00266", "coord": "44.964532,25.917641", "nume": "Biserica Buda"},
+    {"stopId": "S00267", "coord": "44.963553,25.924472", "nume": "Bloc Buda"},
+    {"stopId": "S00268", "coord": "44.948507,25.935346", "nume": "Dachser"},
+    {"stopId": "S00269", "coord": "44.917951,25.885674", "nume": "Dispensar"},
+    {"stopId": "S00270", "coord": "44.915415,25.878504", "nume": "Gradinita"},
+    {"stopId": "S00271", "coord": "44.917579,25.877203", "nume": "Iliescu"},
+    {"stopId": "S00272", "coord": "44.927977,25.862809", "nume": "Stoenesti"},
+    {"stopId": "S00273", "coord": "44.942689,25.840482", "nume": "Trestioreanu"},
+    {"stopId": "S00274", "coord": "44.946626,25.833333", "nume": "Posta"},
+    {"stopId": "S00275", "coord": "44.952594,25.828558", "nume": "Cimitir"},
+    {"stopId": "S00276", "coord": "44.960761,25.825256", "nume": "Canal"},
+    {"stopId": "S00277", "coord": "44.962972,25.823533", "nume": "Intrare Nedelea"},
+    {"stopId": "S00278", "coord": "44.968183,25.818300", "nume": "Alimentara"},
+    {"stopId": "S00279", "coord": "44.974096,25.813445", "nume": "Sala Sport Nedelea deb."},
+    {"stopId": "S00280", "coord": "44.973860,25.813334", "nume": "Sala Sport Nedelea"},
+    {"stopId": "S00281", "coord": "44.968036,25.818305", "nume": "Alimentara"},
+    {"stopId": "S00282", "coord": "44.962912,25.823506", "nume": "Intrare Nedelea"},
+    {"stopId": "S00283", "coord": "44.960592,25.825191", "nume": "Canal"},
+    {"stopId": "S00284", "coord": "44.952450,25.828776", "nume": "Cimitir"},
+    {"stopId": "S00285", "coord": "44.946519,25.833637", "nume": "Posta"},
+    {"stopId": "S00286", "coord": "44.942504,25.840502", "nume": "Trestioreanu"},
+    {"stopId": "S00287", "coord": "44.927735,25.862982", "nume": "Stoenesti"},
+    {"stopId": "S00288", "coord": "44.917800,25.876978", "nume": "Iliescu"},
+    {"stopId": "S00289", "coord": "44.914889,25.879130", "nume": "Camin cultural Tg. Nou"},
+    {"stopId": "S00290", "coord": "44.918042,25.886051", "nume": "Dispensar"}
+  ],
+  
+  "1": {
+    "Cap1": "CABLUL ROMANESC",
+    "Cap2": "ASTRA",
+    "Cap3": "ASTRA",
+    "Cap4": "CABLUL ROMANESC",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "B"},
+      { "litera": "C"},
+      { "litera": "D"},
+      { "litera": "E"},
+      { "litera": "F"}
+    ],
+
+    "StatiiTur": [
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 0},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 3},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00019", "nume": "Galeriile Comerciale", "offset": 4},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 2},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 2},
+      { "stopId": "S00245", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00246", "nume": "Rafinaria Astra Deb.", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00244", "nume": "Rafinaria Astra", "offset": 0},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 2},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00005", "nume": "Coreco Sud", "offset": 3},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 2},
+      { "stopId": "S00010", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00030", "nume": "Kaufland Nord", "offset": 2}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [30, 40, 50]
+    },
+  
+    "Prog_R_LV": {
+      "5": [30]
+    },
+    
+    "Prog_T_S": {
+      "5": [30],
+      "6": [15, 30]
+    },
+  
+    "Prog_R_S": {
+      "5": [55]
+    },
+  
+    "Prog_T_D": {
+      "5": [30],
+      "6": [15, 30]
+    },
+  
+    "Prog_R_D": {
+      "5": [55]
+    }
+  },
+
+  "1A": {
+    "Cap1": "PLOIESTI SHOPPING CITY",
+    "Cap2": "RAFINARIA ASTRA",
+    "Cap3": "RAFINARIA ASTRA",
+    "Cap4": "PLOIESTI SHOPPING CITY",
+    
+    "StatiiTur": [
+      { "stopId": "S00034", "nume": "Ploiesti Shopping City 1", "offset": 0},
+      { "stopId": "S00035", "nume": "Ploiesti Shopping City 2", "offset": 1},
+      { "stopId": "S00037", "nume": "Leroy Merlin", "offset": 2},
+      { "stopId": "S00038", "nume": "KM 5", "offset": 3},
+      { "stopId": "S00039", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 3},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00019", "nume": "Galeriile Comerciale", "offset": 4},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 2},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 2},
+      { "stopId": "S00245", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00246", "nume": "Rafinaria Astra Deb.", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00244", "nume": "Rafinaria Astra", "offset": 0},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 2},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00005", "nume": "Coreco Sud", "offset": 3},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 2},
+      { "stopId": "S00010", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00030", "nume": "Kaufland Nord", "offset": 2},
+      { "stopId": "S00031", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00032", "nume": "KM 5", "offset": 1},
+      { "stopId": "S00033", "nume": "Shell", "offset": 2},
+      { "stopId": "S00034", "nume": "Ploiesti Shopping City 1", "offset": 3}
+    ],
+  
+    "Prog_T_LV": {
+      "21": [30, 50],
+      "22": [25, 40]
+    },
+  
+    "Prog_R_LV": {
+      "20": [54],
+      "21": [15, 40],
+      "22": [11, 35]
+    },
+    
+    "Prog_T_S": {
+      "21": [50],
+      "22": [25],
+      "23": [10]
+    },
+  
+    "Prog_R_S": {
+      "21": [18, 50],
+      "22": [35]
+    },
+  
+    "Prog_T_D": {
+      "6": [50],
+      "18": [43],
+      "19": [0, 15, 35, 50],
+      "20": [10, 30],
+      "21": [15, 50],
+      "22": [25],
+      "23": [10]
+    },
+  
+    "Prog_R_D": {
+      "6": [18],
+      "18": [10, 27, 44],
+      "19": [3, 20, 40],
+      "20": [0, 20, 45],
+      "21": [20, 50],
+      "22": [35]
+    }
+  },
+  
+  "1B": {
+    "Cap1": "PLOIESTI SHOPPING CITY",
+    "Cap2": "HALE CORECO",
+    "Cap3": "HALE CORECO",
+    "Cap4": "PLOIESTI SHOPPING CITY",
+    
+    "StatiiTur": [
+      { "stopId": "S00034", "nume": "Ploiesti Shopping City 1", "offset": 0},
+      { "stopId": "S00035", "nume": "Ploiesti Shopping City 2", "offset": 1},
+      { "stopId": "S00037", "nume": "Leroy Merlin", "offset": 2},
+      { "stopId": "S00038", "nume": "KM 5", "offset": 3},
+      { "stopId": "S00039", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 3},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4}
+    ],
+    
+    "Prog_T_LV": {
+      "23": [15]
+    },
+      
+    "Prog_T_S": {
+      "22": [25]
+    },
+      
+    "Prog_T_D": {
+      "20": [50],
+      "22": [35]
+    }
+  },
+
+  "1C": {
+    "Cap1": "KM5",
+    "Cap2": "RAFINARIA ASTRA",
+    "Cap3": "RAFINARIA ASTRA",
+    "Cap4": "KM5",
+    
+    "StatiiTur": [
+      { "stopId": "S00038", "nume": "KM 5", "offset": 0},
+      { "stopId": "S00039", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 3},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00019", "nume": "Galeriile Comerciale", "offset": 4},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 2},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 2},
+      { "stopId": "S00245", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00246", "nume": "Rafinaria Astra Deb.", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [0]
+    }
+  },
+  
+  "1D": {
+    "Cap1": "METRO",
+    "Cap2": "RAFINARIA ASTRA",
+    "Cap3": "RAFINARIA ASTRA",
+    "Cap4": "METRO",
+    
+    "StatiiTur": [
+      { "stopId": "S00036", "nume": "Metro", "offset": 0},
+      { "stopId": "S00037", "nume": "Leroy Merlin", "offset": 3},
+      { "stopId": "S00038", "nume": "KM 5", "offset": 3},
+      { "stopId": "S00039", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 3},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00019", "nume": "Galeriile Comerciale", "offset": 4},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 2},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 2},
+      { "stopId": "S00245", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00246", "nume": "Rafinaria Astra Deb.", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00244", "nume": "Rafinaria Astra", "offset": 0},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 2},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00005", "nume": "Coreco Sud", "offset": 3},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 2},
+      { "stopId": "S00010", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00030", "nume": "Kaufland Nord", "offset": 2},
+      { "stopId": "S00031", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00032", "nume": "KM 5", "offset": 1},
+      { "stopId": "S00033", "nume": "Shell", "offset": 2},
+      { "stopId": "S00034", "nume": "Ploiesti Shopping City 1", "offset": 3},
+      { "stopId": "S00035", "nume": "Ploiesti Shopping City 2", "offset": 1},
+      { "stopId": "S00036", "nume": "Metro", "offset": 2}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [13, 52],
+      "7": [8, 25, 35, 52],
+      "8": [5, 16, 31, 46, 59],
+      "9": [12, 25, 38, 51],
+      "10": [4, 18, 29, 44, 59],
+      "11": [14, 29, 44, 59],
+      "12": [14, 29, 44, 59],
+      "13": [14, 31, 48],
+      "14": [5, 19, 47],
+      "15": [15, 29, 43, 58],
+      "16": [25, 36, 49],
+      "17": [1, 13, 27, 40, 49],
+      "18": [1, 14, 28, 40, 52],
+      "19": [4, 16, 28, 41, 53],
+      "20": [5, 17, 29, 44],
+      "21": [7, 30]
+    },
+  
+    "Prog_R_LV": {
+      "5": [58],
+      "6": [15, 28, 56],
+      "7": [35, 51],
+      "8": [7, 21, 33, 47, 59],
+      "9": [12, 25, 38, 52],
+      "10": [6, 20, 35, 50],
+      "11": [5, 20, 36, 51],
+      "12": [5, 20, 35, 51],
+      "13": [9, 25, 39, 53],
+      "14": [7, 21, 35, 49],
+      "15": [6, 31, 57],
+      "16": [10, 23, 34, 48],
+      "17": [10, 22, 35, 49],
+      "18": [2, 13, 25, 37, 50],
+      "19": [1, 14, 26, 37, 50],
+      "20": [5, 28, 54]
+    },
+    
+    "Prog_T_S": {
+      "6": [50],
+      "7": [30, 42, 55],
+      "8": [9, 21, 33, 51],
+      "9": [8, 25, 43, 58],
+      "10": [17, 34, 51],
+      "11": [8, 26, 43],
+      "12": [0, 17, 34, 51],
+      "13": [9, 26, 43],
+      "14": [0, 18, 35, 52],
+      "15": [9, 26, 43],
+      "16": [1, 18, 35, 52],
+      "17": [9, 27, 44],
+      "18": [1, 10, 32, 53],
+      "19": [10, 27, 44],
+      "20": [4, 24],
+      "21": [5]
+    },
+  
+    "Prog_R_S": {
+      "6": [18, 57],
+      "7": [11, 25, 38, 50],
+      "8": [8, 25, 42],
+      "9": [0, 15, 34, 51],
+      "10": [8, 25, 43],
+      "11": [0, 17, 34, 51],
+      "12": [8, 26, 43],
+      "13": [0, 17, 35, 52],
+      "14": [9, 27, 43],
+      "15": [0, 18, 35, 52],
+      "16": [9, 26, 44],
+      "17": [1, 18, 35, 51],
+      "18": [10, 27, 44],
+      "19": [3, 20, 40],
+      "20": [0, 20, 50]
+    },
+  
+    "Prog_T_D": {
+      "7": [30, 42, 55],
+      "8": [9, 21, 33, 51],
+      "9": [8, 25, 43, 58],
+      "10": [17, 34, 51],
+      "11": [8, 26, 43],
+      "12": [0, 17, 34, 51],
+      "13": [9, 26, 43],
+      "14": [0, 18, 35, 52],
+      "15": [9, 26, 43],
+      "16": [1, 18, 35, 52],
+      "17": [9, 27, 44],
+      "18": [1, 10, 30]
+    },
+  
+    "Prog_R_D": {
+      "6": [57],
+      "7": [12, 25, 38, 50],
+      "8": [8, 25, 42],
+      "9": [0, 17, 34, 51],
+      "10": [8, 25, 43],
+      "11": [0, 17, 34, 51],
+      "12": [9, 26, 43],
+      "13": [0, 17, 35, 52],
+      "14": [9, 26, 43],
+      "15": [1, 18, 35, 52],
+      "16": [9, 27, 44],
+      "17": [1, 18, 35, 52]
+    }
+  },
+  
+  "1E": {
+    "Cap1": "METRO",
+    "Cap2": "HALE CORECO",
+    "Cap3": "HALE CORECO",
+    "Cap4": "METRO",
+    
+    "StatiiTur": [
+      { "stopId": "S00036", "nume": "Metro", "offset": 0},
+      { "stopId": "S00037", "nume": "Leroy Merlin", "offset": 3},
+      { "stopId": "S00038", "nume": "KM 5", "offset": 3},
+      { "stopId": "S00039", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 3},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4}
+    ],
+    
+    "Prog_T_S": {
+      "20": [45],
+      "21": [22]
+    }
+  },
+
+  "1F": {
+    "Cap1": "METRO",
+    "Cap2": "COMAT",
+    "Cap3": "COMAT",
+    "Cap4": "METRO",
+    
+    "StatiiTur": [
+      { "stopId": "S00036", "nume": "Metro", "offset": 0},
+      { "stopId": "S00037", "nume": "Leroy Merlin", "offset": 3},
+      { "stopId": "S00038", "nume": "KM 5", "offset": 3},
+      { "stopId": "S00039", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 3},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00019", "nume": "Galeriile Comerciale", "offset": 4},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 2},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 2},
+      { "stopId": "S00245", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00246", "nume": "Rafinaria Astra Deb.", "offset": 1},
+      { "stopId": "S00247", "nume": "UMERVA", "offset": 1},
+      { "stopId": "S00248", "nume": "COMAT", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00248", "nume": "COMAT", "offset": 0},
+      { "stopId": "S00250", "nume": "UMERVA", "offset": 1},
+      { "stopId": "S00244", "nume": "Rafinaria Astra", "offset": 1},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 2},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00005", "nume": "Coreco Sud", "offset": 3},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 2},
+      { "stopId": "S00010", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00030", "nume": "Kaufland Nord", "offset": 2},
+      { "stopId": "S00031", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00032", "nume": "KM 5", "offset": 1},
+      { "stopId": "S00033", "nume": "Shell", "offset": 2},
+      { "stopId": "S00034", "nume": "Ploiesti Shopping City 1", "offset": 3},
+      { "stopId": "S00035", "nume": "Ploiesti Shopping City 2", "offset": 1},
+      { "stopId": "S00036", "nume": "Metro", "offset": 2}
+    ],
+    
+    "Prog_T_LV": {
+      "6": [26, 35],
+      "14": [33],
+      "15": [1],
+      "16": [11]
+    },
+  
+    "Prog_R_LV": {
+      "6": [43],
+      "7": [9, 22],
+      "15": [18, 45],
+      "17": [0]
+    }
+  },
+  
+  "1G": {
+    "Cap1": "METRO",
+    "Cap2": "RESTAURANT NORD",
+    "Cap3": "RESTAURANT NORD",
+    "Cap4": "METRO",
+      
+    "StatiiRetur": [
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 0},
+      { "stopId": "S00030", "nume": "Kaufland Nord", "offset": 2},
+      { "stopId": "S00031", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00032", "nume": "KM 5", "offset": 1},
+      { "stopId": "S00033", "nume": "Shell", "offset": 2},
+      { "stopId": "S00034", "nume": "Ploiesti Shopping City 1", "offset": 3},
+      { "stopId": "S00035", "nume": "Ploiesti Shopping City 2", "offset": 1},
+      { "stopId": "S00036", "nume": "Metro", "offset": 2}
+    ],
+      
+    "Prog_R_LV": {
+      "5": [58]
+    }
+  },
+
+  "2": {
+    "Cap1": "GARA DE VEST",
+    "Cap2": "GARA DE SUD - AFI VALUE CENTRE",
+    "Cap3": "AFI VALUE CENTRE - GARA DE SUD",
+    "Cap4": "GARA DE VEST",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S50035", "nume": "Gara de Vest", "offset": 0},
+      { "stopId": "S00042", "nume": "Aleea Vitioarei", "offset": 1},
+      { "stopId": "S00043", "nume": "Eroilor", "offset": 2},
+      { "stopId": "S00044", "nume": "Plaiesilor", "offset": 3},
+      { "stopId": "S00045", "nume": "Liceul Mihai Viteazul", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 1},
+      { "stopId": "S00046", "nume": "AFI Value Centre", "offset": 2}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00046", "nume": "Pleiades", "offset": 0},
+      { "stopId": "S00005", "nume": "Gara de Sud", "offset": 3},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00047", "nume": "Jurnalist Gabi Dobre", "offset": 3},
+      { "stopId": "S00048", "nume": "Panificatie", "offset": 2},
+      { "stopId": "S00049", "nume": "Eroilor", "offset": 2},
+      { "stopId": "S00050", "nume": "Domnisori", "offset": 2},
+      { "stopId": "S00051", "nume": "Spitalul CFR", "offset": 2},
+      { "stopId": "S00052", "nume": "Gara de Vest", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [0, 20, 40, 55],
+      "6": [7, 19, 31, 43, 55],
+      "7": [5, 15, 25, 35, 45, 55],
+      "8": [5, 15, 28, 43],
+      "9": [0, 15, 30, 45],
+      "10": [0, 15, 30, 45],
+      "11": [0, 15, 30, 45],
+      "12": [0, 15, 30, 45],
+      "13": [0, 15, 30, 45],
+      "14": [0, 12, 24, 36, 48],
+      "15": [0, 12, 24, 36, 48],
+      "16": [0, 10, 22, 34, 46, 58],
+      "17": [11, 29, 47],
+      "18": [3, 18, 33, 45],
+      "19": [0, 15, 30, 45],
+      "20": [0, 15, 30, 45],
+      "21": [0, 20, 40],
+      "22": [5, 25, 43],
+      "23": [8, 30]
+    },
+  
+    "Prog_R_LV": {
+      "5": [19, 39],
+      "6": [1, 16, 28, 40, 52],
+      "7": [4, 16, 26, 36, 46, 56],
+      "8": [6, 16, 26, 36, 49],
+      "9": [4, 25, 40, 55],
+      "10": [10, 25, 40, 55],
+      "11": [10, 25, 40, 55],
+      "12": [10, 25, 40, 55],
+      "13": [10, 25, 40, 55],
+      "14": [10, 25, 37, 49],
+      "15": [1, 13, 25, 37, 49],
+      "16": [1, 13, 25, 35, 47, 59],
+      "17": [11, 25, 36, 52],
+      "18": [10, 28, 43, 58],
+      "19": [10, 25, 40, 55],
+      "20": [10, 25, 40, 55],
+      "21": [8, 23, 43],
+      "22": [3, 25, 44],
+      "23": [2, 27, 49]
+    },
+    
+    "Prog_T_SD": {
+      "5": [20, 40],
+      "6": [0, 15, 30, 42, 54],
+      "7": [6, 18, 30, 45],
+      "8": [0, 15, 30, 45],
+      "9": [0, 20, 40],
+      "10": [0, 20, 40],
+      "11": [0, 20, 40],
+      "12": [0, 20, 40],
+      "13": [0, 20, 40],
+      "14": [0, 20, 40],
+      "15": [0, 20, 40],
+      "16": [0, 20, 40],
+      "17": [0, 20, 40],
+      "18": [0, 20, 40],
+      "19": [0, 20, 40],
+      "20": [0, 25, 50],
+      "21": [15, 38],
+      "22": [2, 25, 45],
+      "23": [5, 30]
+    },
+  
+    "Prog_R_SD": {
+      "5": [37, 57],
+      "6": [19, 34, 49],
+      "7": [1, 13, 25, 37, 49],
+      "8": [4, 19, 34, 49],
+      "9": [4, 19, 39, 59],
+      "10": [19, 39, 59],
+      "11": [19, 39, 59],
+      "12": [19, 39, 59],
+      "13": [19, 39, 59],
+      "14": [19, 39, 59],
+      "15": [19, 39, 59],
+      "16": [19, 39, 59],
+      "17": [19, 39, 59],
+      "18": [19, 39, 59],
+      "19": [19, 39, 59],
+      "20": [19, 44],
+      "21": [9, 34, 57],
+      "22": [21, 45],
+      "23": [5, 25, 49]
+    }
+  },
+
+  "4": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "RAFINARIA VEGA",
+    "Cap3": "RAFINARIA VEGA",
+    "Cap4": "HALE CATEDRALA",
+    
+    "Variante": [
+      { "litera": "B"}
+    ]
+  },
+  
+  "4B": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "RAFINARIA VEGA",
+    "Cap3": "RAFINARIA VEGA",
+    "Cap4": "HALE CATEDRALA",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "B"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00164", "nume": "Spital Boldescu", "offset": 4},
+      { "stopId": "S00165", "nume": "Gara de Nord", "offset": 2},
+      { "stopId": "S00166", "nume": "Poienitei", "offset": 1},
+      { "stopId": "S00167", "nume": "Rafinaria Vega", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00167", "nume": "Rafinaria Vega", "offset": 0},
+      { "stopId": "S00168", "nume": "Panificatie", "offset": 2},
+      { "stopId": "S00165", "nume": "Gara de Nord", "offset": 1},
+      { "stopId": "S00170", "nume": "Spital Boldescu", "offset": 2},
+      { "stopId": "S00171", "nume": "Romana", "offset": 1},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [20, 35, 45],
+      "7": [20, 45],
+      "8": [0],
+      "9": [15],
+      "11": [15],
+      "13": [10],
+      "14": [20],
+      "15": [20, 50],
+      "19": [0]
+    },
+  
+    "Prog_R_LV": {
+      "5": [45],
+      "6": [10, 35],
+      "7": [0, 35],
+      "8": [15],
+      "9": [30],
+      "11": [30],
+      "13": [30],
+      "14": [35],
+      "15": [35],
+      "16": [5],
+      "19": [15]
+    },
+    
+    "Prog_T_SD": {
+      "9": [26],
+      "12": [26],
+      "15": [0],
+      "17": [0]
+    },
+  
+    "Prog_R_SD": {
+      "8": [40],
+      "9": [40],
+      "12": [40],
+      "15": [15],
+      "17": [15]
+    }
+  },
+  
+  "5": {
+    "Cap1": "Spitalul Judetean",
+    "Cap2": "Cartier Mihai Bravu",
+    "Cap3": "Cartier Mihai Bravu",
+    "Cap4": "Spitalul Judetean",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "S"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S50001", "nume": "Spitalul Judetean", "offset": 0},
+      { "stopId": "S00053", "nume": "Fun Shop Park", "offset": 1},
+      { "stopId": "S00054", "nume": "Autogara Gageni", "offset": 2},
+      { "stopId": "S00055", "nume": "Autobaza TCE", "offset": 1},
+      { "stopId": "S00056", "nume": "Radu de la Afumati", "offset": 1},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4},
+      { "stopId": "S00058", "nume": "Postei", "offset": 4},
+      { "stopId": "S00059", "nume": "Stadion Ilie Oana", "offset": 1},
+      { "stopId": "S00060", "nume": "Razboieni", "offset": 2},
+      { "stopId": "S00061", "nume": "Neajlov", "offset": 1},
+      { "stopId": "S00062", "nume": "Cartier Mihai Bravu", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00062", "nume": "Cartier Mihai Bravu", "offset": 0},
+      { "stopId": "S00063", "nume": "Neajlov", "offset": 2},
+      { "stopId": "S00064", "nume": "Tanin", "offset": 1},
+      { "stopId": "S00065", "nume": "Stadion Ilie Oana", "offset": 1},
+      { "stopId": "S00066", "nume": "Postei", "offset": 1},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4},
+      { "stopId": "S00067", "nume": "Radu de la Afumati", "offset": 4},
+      { "stopId": "S00068", "nume": "Autobaza TCE", "offset": 1},
+      { "stopId": "S00069", "nume": "Autogara Gageni", "offset": 1},
+      { "stopId": "S00070", "nume": "Fun Shop Park", "offset": 2},
+      { "stopId": "S00071", "nume": "Spitalul Judetean", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [20, 40, 55],
+      "6": [5, 20, 34, 46, 59],
+      "7": [10, 25, 37, 46],
+      "8": [1, 13, 26, 38],
+      "9": [0, 20, 40],
+      "10": [0, 20, 40],
+      "11": [0, 20, 40],
+      "12": [0, 20, 40],
+      "13": [0, 20, 40],
+      "14": [0, 15, 30, 53],
+      "15": [8, 23, 35, 53],
+      "16": [10, 30, 50],
+      "17": [10, 30, 50],
+      "18": [10, 30, 50],
+      "19": [10, 42],
+      "20": [12, 42],
+      "21": [0, 42],
+      "22": [20],
+      "23": [0, 40]
+    },
+  
+    "Prog_R_LV": {
+      "5": [40],
+      "6": [0, 15, 30, 42, 54],
+      "7": [6, 18, 30, 47, 59],
+      "8": [8, 15, 23, 35, 48],
+      "9": [0, 22, 42],
+      "10": [2, 22, 42],
+      "11": [2, 22, 42],
+      "12": [2, 22, 42],
+      "13": [2, 22, 42],
+      "14": [2, 22, 37, 52],
+      "15": [15, 30, 45, 57],
+      "16": [15, 30, 50],
+      "17": [10, 30, 50],
+      "18": [10, 30, 50],
+      "19": [10, 30],
+      "20": [0, 30],
+      "21": [0, 30],
+      "22": [0, 40],
+      "23": [20]
+    },
+    
+    "Prog_T_SD": {
+      "5": [30],
+      "6": [0, 40],
+      "7": [7, 37, 57],
+      "8": [17, 37, 57],
+      "9": [27, 47],
+      "10": [7, 27, 47],
+      "11": [7, 27, 47],
+      "12": [7, 27, 47],
+      "13": [7, 37],
+      "14": [7, 37],
+      "15": [7, 32],
+      "16": [7, 37],
+      "17": [7, 32],
+      "18": [2, 32],
+      "19": [9, 39],
+      "20": [9, 39],
+      "21": [30],
+      "22": [30],
+      "23": [40]
+    },
+  
+    "Prog_R_SD": {
+      "5": [55],
+      "6": [30],
+      "7": [0, 25, 55],
+      "8": [15, 35, 55],
+      "9": [15, 45],
+      "10": [5, 25, 45],
+      "11": [5, 25, 45],
+      "12": [5, 25, 45],
+      "13": [5, 25, 55],
+      "14": [25, 55],
+      "15": [25, 50],
+      "16": [25, 55],
+      "17": [25, 50],
+      "18": [20, 50],
+      "19": [25, 55],
+      "20": [25, 55],
+      "21": [55],
+      "22": [55]
+    }
+  },
+  
+  "5S": {
+    "Cap1": "Spitalul Judetean",
+    "Cap2": "Hale Coreco",
+    "Cap3": "Hale Coreco",
+    "Cap4": "Spitalul Judetean",
+    
+    "StatiiTur": [
+      { "stopId": "S50001", "nume": "Spitalul Judetean", "offset": 0},
+      { "stopId": "S00053", "nume": "Fun Shop Park", "offset": 1},
+      { "stopId": "S00054", "nume": "Autogara Gageni", "offset": 2},
+      { "stopId": "S00055", "nume": "Autobaza TCE", "offset": 1},
+      { "stopId": "S00056", "nume": "Radu de la Afumati", "offset": 1},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4}
+    ],
+  
+    "Prog_T_LV": {
+      "21": [58]
+    }
+  },
+
+  "7": {
+    "Cap1": "Cartier Dorobantu",
+    "Cap2": "Bariera Rudului",
+    "Cap3": "Bariera Rudului",
+    "Cap4": "Cartier Dorobantu",
+
+    "Variante": [
+      { "litera": ""},
+      { "litera": "S"}
+    ],
+  
+    "StatiiTur": [
+      { "stopId": "S00072", "nume": "Cartier Dorobantu", "offset": 0},
+      { "stopId": "S00073", "nume": "Fabrica Dorobantu", "offset": 1},
+      { "stopId": "S00074", "nume": "Biserica Sf. Dumitru", "offset": 1},
+      { "stopId": "S00075", "nume": "Scoala 9", "offset": 2},
+      { "stopId": "S00076", "nume": "Armoniei", "offset": 2},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4},
+      { "stopId": "S00077", "nume": "Faredo", "offset": 4},
+      { "stopId": "S00078", "nume": "Liceul Economic", "offset": 1},
+      { "stopId": "S00079", "nume": "Spitalul Schuller", "offset": 2},
+      { "stopId": "S00080", "nume": "Jupiter", "offset": 1},
+      { "stopId": "S00081", "nume": "Facultativa", "offset": 1},
+      { "stopId": "S00082", "nume": "Eroilor", "offset": 1},
+      { "stopId": "S00083", "nume": "Bariera Rudului", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00083", "nume": "Bariera Rudului", "offset": 0},
+      { "stopId": "S00084", "nume": "Eroilor", "offset": 1},
+      { "stopId": "S00085", "nume": "Stindardului", "offset": 1},
+      { "stopId": "S00086", "nume": "Jupiter", "offset": 1},
+      { "stopId": "S00087", "nume": "Spitalul Schuller", "offset": 1},
+      { "stopId": "S00088", "nume": "Liceul Economic", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4},
+      { "stopId": "S00090", "nume": "Muzeu Petrolului", "offset": 4},
+      { "stopId": "S00091", "nume": "Udriste Nasturel", "offset": 2},
+      { "stopId": "S00092", "nume": "Gradinari", "offset": 1},
+      { "stopId": "S00093", "nume": "Pictor Iscovescu", "offset": 1},
+      { "stopId": "S00094", "nume": "Fabrica Dorobantu", "offset": 1},
+      { "stopId": "S00095", "nume": "Cartier Dorobantu", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [20, 45],
+      "6": [10, 25, 45],
+      "7": [5, 25, 45],
+      "8": [5, 35],
+      "9": [5, 35],
+      "10": [5, 35],
+      "11": [0, 24, 49],
+      "12": [14, 38],
+      "13": [3, 28, 52],
+      "14": [16, 41],
+      "15": [5, 30, 55],
+      "16": [15, 35],
+      "17": [0, 25, 50],
+      "18": [10, 30, 50],
+      "19": [10, 30],
+      "20": [0],
+      "21": [0],
+      "22": [0, 56]
+    },
+  
+    "Prog_R_LV": {
+      "5": [46],
+      "6": [11, 36, 51],
+      "7": [11, 31, 51],
+      "8": [9, 32],
+      "9": [7, 37],
+      "10": [7, 37],
+      "11": [7, 32, 56],
+      "12": [21, 46],
+      "13": [10, 35],
+      "14": [0, 26, 46],
+      "15": [13, 37],
+      "16": [2, 30, 49],
+      "17": [7, 32, 57],
+      "18": [22, 34, 54],
+      "19": [14, 34, 54],
+      "20": [24],
+      "21": [24],
+      "22": [26]
+    },
+    
+    "Prog_T_S": {
+      "5": [40],
+      "6": [0, 35],
+      "7": [5, 35],
+      "8": [5, 30, 55],
+      "9": [25, 55],
+      "10": [25, 55],
+      "11": [25],
+      "12": [0, 33],
+      "13": [5],
+      "14": [10],
+      "15": [10],
+      "16": [10],
+      "17": [10],
+      "18": [15],
+      "19": [10],
+      "20": [5],
+      "21": [0],
+      "22": [0, 56]
+    },
+  
+    "Prog_R_S": {
+      "6": [8, 30],
+      "7": [0, 30],
+      "8": [0, 30, 55],
+      "9": [20, 50],
+      "10": [20, 50],
+      "11": [20, 50],
+      "12": [25, 58],
+      "13": [30],
+      "14": [35],
+      "15": [0, 35],
+      "16": [35],
+      "17": [35],
+      "18": [40],
+      "19": [35],
+      "20": [30],
+      "21": [25],
+      "22": [26]
+    },
+  
+    "Prog_T_D": {
+      "6": [0],
+      "7": [0],
+      "8": [5],
+      "9": [0],
+      "10": [0],
+      "11": [0],
+      "12": [0],
+      "13": [0],
+      "14": [0],
+      "15": [0],
+      "16": [0],
+      "17": [5],
+      "18": [0],
+      "19": [0],
+      "20": [0],
+      "21": [0],
+      "22": [0, 56]
+    },
+  
+    "Prog_R_D": {
+      "6": [30],
+      "7": [30],
+      "8": [30],
+      "9": [25],
+      "10": [25],
+      "11": [25],
+      "12": [25],
+      "13": [25],
+      "14": [25],
+      "15": [25],
+      "16": [25],
+      "17": [30],
+      "18": [30],
+      "19": [25],
+      "20": [25],
+      "21": [25],
+      "22": [26]
+    }
+  },
+  
+  "7S": {
+    "Cap1": "Take Ionescu",
+    "Cap2": "Bariera Rudului",
+    "Cap3": "Bariera Rudului",
+    "Cap4": "Take Ionescu",
+  
+    "StatiiRetur": [
+      { "stopId": "S00083", "nume": "Bariera Rudului", "offset": 0},
+      { "stopId": "S00084", "nume": "Eroilor", "offset": 1},
+      { "stopId": "S00085", "nume": "Stindardului", "offset": 1},
+      { "stopId": "S00086", "nume": "Jupiter", "offset": 1},
+      { "stopId": "S00087", "nume": "Spitalul Schuller", "offset": 1},
+      { "stopId": "S00088", "nume": "Liceul Economic", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2}
+    ],
+  
+    "Prog_T_LV": {
+
+    },
+  
+    "Prog_R_LV": {
+      "23": [15]
+    },
+    
+    "Prog_T_S": {
+
+    },
+  
+    "Prog_R_S": {
+      "23": [15]
+    },
+  
+    "Prog_T_D": {
+
+    },
+  
+    "Prog_R_D": {
+      "23": [15]
+    }
+  },
+
+  "8": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "CIMITIR BOLOVANI",
+    "Cap3": "CIMITIR BOLOVANI",
+    "Cap4": "HALE CATEDRALA",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00097", "nume": "Take Ionescu", "offset": 3},
+      { "stopId": "S00048", "nume": "Panificatie", "offset": 2},
+      { "stopId": "S00099", "nume": "Sala Sporturilor", "offset": 2},
+      { "stopId": "S00100", "nume": "Cimitir Bolovani", "offset": 2}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00100", "nume": "Cimitir Bolovani", "offset": 0},
+      { "stopId": "S00101", "nume": "Sala Sporturilor", "offset": 2},
+      { "stopId": "S00044", "nume": "Plaiesilor", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 3},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4}
+    ],
+    
+    "Prog_T_SD": {
+      "8": [50],
+      "9": [50],
+      "10": [50],
+      "11": [50],
+      "12": [50]
+    },
+  
+    "Prog_R_SD": {
+      "9": [12],
+      "10": [12],
+      "11": [12],
+      "12": [12],
+      "13": [12]
+    }
+  },
+
+  "22": {
+    "Cap1": "POD INALT",
+    "Cap2": "BARIERA UNIRII",
+    "Cap3": "BARIERA UNIRII",
+    "Cap4": "POD INALT",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "A"},
+      { "litera": "B"},
+      { "litera": "C"},
+      { "litera": "D"},
+      { "litera": "S"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 0},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00128", "nume": "Ienachita Vacarescu", "offset": 2},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00130", "nume": "Popa Farcas", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4},
+      { "stopId": "S00090", "nume": "Muzeu Petrolului", "offset": 4},
+      { "stopId": "S00091", "nume": "Udriste Nasturel", "offset": 2},
+      { "stopId": "S00172", "nume": "Izvoare", "offset": 1},
+      { "stopId": "S00173", "nume": "Bariera Unirii", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00173", "nume": "Bariera Unirii", "offset": 0},
+      { "stopId": "S00174", "nume": "Upetrom", "offset": 1},
+      { "stopId": "S00175", "nume": "Armasi", "offset": 1},
+      { "stopId": "S00075", "nume": "Scoala 9", "offset": 2},
+      { "stopId": "S00076", "nume": "Armoniei", "offset": 2},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 4},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00135", "nume": "Zimbrului", "offset": 2},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00137", "nume": "Liceul de Constructii", "offset": 1},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 2}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [30, 50],
+      "22": [10, 30],
+      "23": [15]
+    },
+  
+    "Prog_R_LV": {
+      "20": [40],
+      "21": [42],
+      "22": [0, 37, 58]
+    },
+    
+    "Prog_T_S": {
+      "5": [45],
+      "22": [30]
+    },
+  
+    "Prog_R_S": {
+      "21": [55],
+      "22": [58]
+    },
+  
+    "Prog_T_D": {
+      "5": [45],
+      "22": [20]
+    },
+  
+    "Prog_R_D": {
+      "21": [55],
+      "22": [58]
+    }
+  },
+
+  "22A": {
+    "Cap1": "SELGROS",
+    "Cap2": "BARIERA UNIRII",
+    "Cap3": "BARIERA UNIRII",
+    "Cap4": "SELGROS",
+    
+    "StatiiTur": [
+      { "stopId": "S00177", "nume": "Selgros", "offset": 0},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 3},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00128", "nume": "Ienachita Vacarescu", "offset": 2},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00130", "nume": "Popa Farcas", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4},
+      { "stopId": "S00090", "nume": "Muzeu Petrolului", "offset": 4},
+      { "stopId": "S00091", "nume": "Udriste Nasturel", "offset": 2},
+      { "stopId": "S00172", "nume": "Izvoare", "offset": 1},
+      { "stopId": "S00173", "nume": "Bariera Unirii", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00173", "nume": "Bariera Unirii", "offset": 0},
+      { "stopId": "S00174", "nume": "Upetrom", "offset": 1},
+      { "stopId": "S00175", "nume": "Armasi", "offset": 1},
+      { "stopId": "S00075", "nume": "Scoala 9", "offset": 2},
+      { "stopId": "S00076", "nume": "Armoniei", "offset": 2},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 4},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00135", "nume": "Zimbrului", "offset": 2},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00137", "nume": "Liceul de Constructii", "offset": 1},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 2},
+      { "stopId": "S00177", "nume": "Selgros", "offset": 3}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [10]
+    },
+  
+    "Prog_R_LV": {
+      "5": [20]
+    },
+    
+    "Prog_T_SD": {
+      "6": [0],
+      "9": [16]
+    },
+  
+    "Prog_R_SD": {
+      "5": [20],
+      "8": [15]
+    }
+  },
+
+  "22B": {
+    "Cap1": "AUCHAN - SELGROS",
+    "Cap2": "BARIERA UNIRII",
+    "Cap3": "BARIERA UNIRII",
+    "Cap4": "SELGROS - AUCHAN",
+    
+    "StatiiTur": [
+      { "stopId": "S00176", "nume": "ATAC", "offset": 0},
+      { "stopId": "S00177", "nume": "Selgros", "offset": 5},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 3},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00128", "nume": "Ienachita Vacarescu", "offset": 2},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00130", "nume": "Popa Farcas", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4},
+      { "stopId": "S00090", "nume": "Muzeu Petrolului", "offset": 4},
+      { "stopId": "S00091", "nume": "Udriste Nasturel", "offset": 2},
+      { "stopId": "S00172", "nume": "Izvoare", "offset": 1},
+      { "stopId": "S00173", "nume": "Bariera Unirii", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00173", "nume": "Bariera Unirii", "offset": 0},
+      { "stopId": "S00174", "nume": "Upetrom", "offset": 1},
+      { "stopId": "S00175", "nume": "Armasi", "offset": 1},
+      { "stopId": "S00075", "nume": "Scoala 9", "offset": 2},
+      { "stopId": "S00076", "nume": "Armoniei", "offset": 2},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 4},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00135", "nume": "Zimbrului", "offset": 2},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00137", "nume": "Liceul de Constructii", "offset": 1},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 2},
+      { "stopId": "S00177", "nume": "Selgros", "offset": 3},
+      { "stopId": "S00179", "nume": "ATAC Debarcare", "offset": 5}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [37, 57],
+      "7": [20, 51],
+      "8": [23, 55],
+      "9": [33],
+      "10": [7, 35],
+      "11": [3, 30, 58],
+      "12": [26, 53],
+      "13": [21, 49],
+      "14": [16, 44],
+      "15": [9, 42],
+      "16": [4, 28],
+      "17": [0, 38],
+      "18": [5, 34, 55],
+      "19": [20],
+      "20": [10],
+      "21": [13]
+    },
+  
+    "Prog_R_LV": {
+      "6": [4, 25, 46],
+      "7": [10, 32],
+      "8": [9, 26],
+      "9": [0, 37],
+      "10": [11, 45],
+      "11": [14, 41],
+      "12": [8, 30, 37],
+      "13": [4, 31, 59],
+      "14": [26, 52],
+      "15": [22, 47],
+      "16": [18, 42],
+      "17": [8, 40],
+      "18": [14, 39],
+      "19": [9, 30, 54]
+    },
+    
+    "Prog_T_S": {
+      "6": [38],
+      "7": [11, 40],
+      "8": [15, 47],
+      "9": [42],
+      "10": [8, 34],
+      "11": [0, 26, 52],
+      "12": [18, 44],
+      "13": [10, 38],
+      "14": [48],
+      "15": [58],
+      "17": [8, 50],
+      "19": [0],
+      "20": [15],
+      "21": [22]
+    },
+  
+    "Prog_R_S": {
+      "6": [9, 34],
+      "7": [9, 43],
+      "8": [52],
+      "9": [24, 53],
+      "10": [19, 45],
+      "11": [11, 37],
+      "12": [3, 29, 55],
+      "13": [21, 47],
+      "14": [10],
+      "15": [20],
+      "16": [30],
+      "17": [46],
+      "18": [22],
+      "19": [32],
+      "20": [48]
+    },
+  
+    "Prog_T_D": {
+      "6": [38],
+      "7": [11, 40],
+      "8": [15, 47],
+      "9": [42],
+      "10": [8, 34],
+      "11": [0, 26, 52],
+      "12": [18, 44],
+      "13": [10, 38],
+      "14": [10, 48],
+      "15": [58],
+      "17": [8, 50],
+      "19": [0],
+      "20": [15]
+    },
+  
+    "Prog_R_D": {
+      "6": [9, 34],
+      "7": [9, 43],
+      "8": [52],
+      "9": [24, 53],
+      "10": [19, 45],
+      "11": [11, 37],
+      "12": [3, 29, 55],
+      "13": [21, 47],
+      "14": [10, 47],
+      "15": [20],
+      "16": [30],
+      "17": [46],
+      "18": [22],
+      "19": [32]
+    }
+  },
+
+  "22C": {
+    "Cap1": "AUCHAN",
+    "Cap2": "HALE CATEDRALA",
+    "Cap3": "HALE CATEDRALA",
+    "Cap4": "AUCHAN",
+    
+    "StatiiTur": [
+      { "stopId": "S00176", "nume": "ATAC", "offset": 0},
+      { "stopId": "S00177", "nume": "Selgros", "offset": 5},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 3},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00128", "nume": "Ienachita Vacarescu", "offset": 2},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00130", "nume": "Popa Farcas", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4}
+    ],
+    
+    "Prog_T_LV": {
+      "14": [35]
+    },
+      
+    "Prog_T_S": {
+      "14": [10]
+    }    
+  },
+  
+  "22D": {
+    "Cap1": "AUCHAN",
+    "Cap2": "BARIERA UNIRII",
+    "Cap3": "BARIERA UNIRII",
+    "Cap4": "AUCHAN",
+    
+    "StatiiTur": [
+      { "stopId": "S00176", "nume": "ATAC", "offset": 0},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 5},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00128", "nume": "Ienachita Vacarescu", "offset": 2},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00130", "nume": "Popa Farcas", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4},
+      { "stopId": "S00090", "nume": "Muzeu Petrolului", "offset": 4},
+      { "stopId": "S00091", "nume": "Udriste Nasturel", "offset": 2},
+      { "stopId": "S00172", "nume": "Izvoare", "offset": 1},
+      { "stopId": "S00173", "nume": "Bariera Unirii", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "21": [30]
+    },
+    
+    "Prog_T_D": {
+      "21": [22]
+    }
+  },
+
+  "22S": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "BARIERA UNIRII",
+    "Cap3": "BARIERA UNIRII",
+    "Cap4": "HALE CATEDRALA",
+    
+    "StatiiRetur": [
+      { "stopId": "S00173", "nume": "Bariera Unirii", "offset": 0},
+      { "stopId": "S00174", "nume": "Upetrom", "offset": 1},
+      { "stopId": "S00175", "nume": "Armasi", "offset": 1},
+      { "stopId": "S00075", "nume": "Scoala 9", "offset": 2},
+      { "stopId": "S00076", "nume": "Armoniei", "offset": 2},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4}
+    ],
+  
+    "Prog_R_LV": {
+      "23": [35]
+    }
+  },
+
+  "28": {
+    "Cap1": "SPITALUL JUETEAN",
+    "Cap2": "UZTEL",
+    "Cap3": "UZTEL",
+    "Cap4": "SPITALUL JUETEAN",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S50001", "nume": "Spitalul Judetean", "offset": 0},
+      { "stopId": "S00053", "nume": "Fun Shop Park", "offset": 1},
+      { "stopId": "S00223", "nume": "Complex Mestesugaresc", "offset": 1},
+      { "stopId": "S00224", "nume": "Complex Mic", "offset": 2},
+      { "stopId": "S00225", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 2},
+      { "stopId": "S00226", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00227", "nume": "Colinii", "offset": 1},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 2},
+      { "stopId": "S00090", "nume": "Muzeu Petrolului", "offset": 3},
+      { "stopId": "S00209", "nume": "Maternitate", "offset": 2},
+      { "stopId": "S00210", "nume": "Gradinari", "offset": 1},
+      { "stopId": "S00211", "nume": "Fero", "offset": 2},
+      { "stopId": "S00212", "nume": "Dacia", "offset": 2},
+      { "stopId": "S00213", "nume": "Petrotel", "offset": 1},
+      { "stopId": "S00214", "nume": "Camine", "offset": 1},
+      { "stopId": "S00215", "nume": "Uztel", "offset": 1}
+      
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00216", "nume": "Uztel", "offset": 0},
+      { "stopId": "S00217", "nume": "Camine", "offset": 1},
+      { "stopId": "S00218", "nume": "Petrotel", "offset": 2},
+      { "stopId": "S00219", "nume": "Dacia", "offset": 1},
+      { "stopId": "S00220", "nume": "Fero", "offset": 1},
+      { "stopId": "S00221", "nume": "Gradinari", "offset": 2},
+      { "stopId": "S00222", "nume": "Maternitate", "offset": 1},
+      { "stopId": "S00076", "nume": "Armoniei", "offset": 2},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4},
+      { "stopId": "S00228", "nume": "Colinii", "offset": 2},
+      { "stopId": "S00010", "nume": "Parc Mihai Viteazul", "offset": 1},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00012", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00013", "nume": "XXL", "offset": 1},
+      { "stopId": "S00014", "nume": "Complexul Mic", "offset": 1},
+      { "stopId": "S00229", "nume": "Complex Mestesugaresc", "offset": 2},
+      { "stopId": "S00070", "nume": "Fun Shop Park", "offset": 1},
+      { "stopId": "S00071", "nume": "Spitalul Judetean", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [0, 50]
+    },
+  
+    "Prog_R_LV": {
+      "7": [20]
+    },
+    
+    "Prog_T_SD": {
+
+    },
+  
+    "Prog_R_SD": {
+
+    }
+  },
+
+  "30": {
+    "Cap1": "BLOC REPUBLICII",
+    "Cap2": "HIPODROM",
+    "Cap3": "HIPODROM",
+    "Cap4": "BLOC REPUBLICII",
+
+    "Variante": [
+      { "litera": ""},
+      { "litera": "A"},
+      { "litera": "B"},
+      { "litera": "C"},
+      { "litera": "S"}
+    ],
+    
+    "StatiiTur": [
+      { "stopId": "S00015", "nume": "Biserica Sf. Andrei", "offset": 0},
+      { "stopId": "S00017", "nume": "Cina", "offset": 1},
+      { "stopId": "S00018", "nume": "Mihai Viteazul", "offset": 3},
+      { "stopId": "S00019", "nume": "Galeriile Comerciale", "offset": 4},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 2},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 2},
+      { "stopId": "S00025", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00026", "nume": "UPG", "offset": 1},
+      { "stopId": "S00027", "nume": "Hipodrom", "offset": 1}
+    ],
+    
+    "StatiiRetur": [
+      { "stopId": "S00001", "nume": "Hipodrom", "offset": 0},
+      { "stopId": "S00002", "nume": "UPG", "offset": 1},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00005", "nume": "Coreco Sud", "offset": 3},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 2},
+      { "stopId": "S00010", "nume": "Parc Mihai Viteazul", "offset": 3},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00012", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00013", "nume": "XXL", "offset": 1},
+      { "stopId": "S00014", "nume": "Complexul Mic", "offset": 1},
+      { "stopId": "S00015", "nume": "Biserica Sf. Andrei", "offset": 2}
+    ],
+    
+    "Prog_T_LV": {
+      "6": [8, 16, 23, 32, 40, 47, 53],
+      "7": [0, 14, 21, 28, 35, 42, 49, 56],
+      "8": [3, 13, 21, 27, 35, 43, 51, 59],
+      "9": [7, 16, 25, 33, 41, 49, 57],
+      "10": [5, 13, 21, 28, 36, 44, 52],
+      "11": [0, 8, 16, 24, 31, 39, 47, 55],
+      "12": [3, 11, 19, 27, 34, 42, 50, 58],
+      "13": [6, 14, 22, 30, 37, 45, 53],
+      "14": [1, 9, 17, 25, 33, 40, 48, 56],
+      "15": [4, 12, 20, 28, 36, 43, 51, 59],
+      "16": [7, 15, 23, 31, 39, 46, 54],
+      "17": [2, 10, 18, 26, 34, 42, 49, 57],
+      "18": [5, 11, 21, 29, 36, 45, 53],
+      "19": [1, 8, 14, 20, 28, 36, 46, 55],
+      "20": [2, 9, 18, 31, 46],
+      "21": [2, 15, 35, 50],
+      "22": [15, 36],
+      "23": [0]
+    },
+  
+    "Prog_R_LV": {
+      "5": [30, 42],
+      "6": [0, 12, 22, 33, 43, 51, 59],
+      "7": [6, 22, 28, 35, 42, 50, 56],
+      "8": [4, 12, 20, 28, 37, 46, 54],
+      "9": [2, 10, 18, 26, 34, 42, 50, 57],
+      "10": [5, 13, 21, 29, 37, 45, 53],
+      "11": [0, 8, 16, 24, 32, 40, 48, 56],
+      "12": [3, 11, 19, 27, 35, 43, 51, 59],
+      "13": [6, 14, 22, 30, 38, 46, 54],
+      "14": [2, 9, 17, 25, 33, 41, 49, 57],
+      "15": [5, 12, 20, 28, 36, 44, 52],
+      "16": [0, 8, 15, 23, 31, 39, 47, 55],
+      "17": [3, 11, 18, 26, 34, 41, 50, 58],
+      "18": [6, 14, 22, 30, 37, 43, 50, 58],
+      "19": [6, 17, 25, 32, 39, 47],
+      "20": [2, 15, 30, 45],
+      "21": [2, 20, 45],
+      "22": [5, 30, 45],
+      "23": [10, 30]
+    },
+    
+    "Prog_T_SD": {
+      "6": [23, 35, 45, 55],
+      "7": [5, 18, 31, 43, 56],
+      "8": [7, 17, 27, 38, 48],
+      "9": [0, 12, 25, 38, 51],
+      "10": [3, 15, 27, 39, 52],
+      "11": [4, 16, 28, 40, 53],
+      "12": [5, 17, 29, 41, 54],
+      "13": [6, 18, 30, 43, 56],
+      "14": [9, 21, 33, 45, 57],
+      "15": [10, 22, 58, 34, 46, 58],
+      "16": [11, 22, 35, 47, 58],
+      "17": [12, 24, 36, 48],
+      "18": [0, 13, 25, 37, 49],
+      "19": [1, 14, 26, 38, 49],
+      "20": [2, 15, 27, 39, 50],
+      "21": [2, 15, 32, 52],
+      "22": [7, 36, 57]
+    },
+  
+    "Prog_R_SD": {
+      "5": [40],
+      "6": [5, 15, 27, 37, 51],
+      "7": [3, 13, 24, 35, 47, 57],
+      "8": [7, 16, 28, 40, 53],
+      "9": [6, 19, 31, 43, 55],
+      "10": [7, 20, 32, 44, 56],
+      "11": [8, 21, 33, 45, 57],
+      "12": [9, 22, 34, 46, 58],
+      "13": [11, 24, 37, 49],
+      "14": [1, 13, 25, 38, 50],
+      "15": [2, 14, 26, 39, 50],
+      "16": [3, 15, 28, 40, 52],
+      "17": [4, 16, 28, 41, 53],
+      "18": [5, 17, 29, 42, 54],
+      "19": [6, 18, 30, 43, 55],
+      "20": [7, 18, 30, 43],
+      "21": [0, 20, 40],
+      "22": [5, 30],
+      "23": [10, 30]
+    }
+  },
+
+  "30S": {
+    "Cap1": "HALE CORECO",
+    "Cap2": "HIPODROM",
+    "Cap3": "HIPODROM",
+    "Cap4": "HALE CORECO",
+    
+    "StatiiRetur": [
+      { "stopId": "S00001", "nume": "Hipodrom", "offset": 0},
+      { "stopId": "S00002", "nume": "UPG", "offset": 1},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00005", "nume": "Coreco Sud", "offset": 3},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 2}
+    ],
+  
+    "Prog_R_LV": {
+      "7": [13, 45],
+      "8": [16, 41]
+    },
+    
+    "Prog_R_SD": {
+      "9": [14, 24],
+      "21": [5, 43],
+      "22": [27]
+    }
+  },
+
+  "32": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "PICTOR ROSENTHAL via AFI VALUE CENTRE",
+    "Cap3": "PICTOR ROSENTHAL",
+    "Cap4": "HALE CATEDRALA",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "A"},
+      { "litera": "C"}
+    ],
+    
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 4},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 2},
+      { "stopId": "S00103", "nume": "Prahova Value Centre", "offset": 3},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 4},
+      { "stopId": "S00025", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00104", "nume": "Ghighiului", "offset": 1},
+      { "stopId": "S00105", "nume": "Vintileanca", "offset": 1},
+      { "stopId": "S00106", "nume": "Moreni", "offset": 1},
+      { "stopId": "S00107", "nume": "Inotesti", "offset": 1},
+      { "stopId": "S00108", "nume": "Cimitirul Eternitatii", "offset": 1},
+      { "stopId": "S00109", "nume": "Oxigen", "offset": 1},
+      { "stopId": "S00110", "nume": "Islazului", "offset": 1},
+      { "stopId": "S00111", "nume": "Targului", "offset": 1},
+      { "stopId": "S00112", "nume": "Uzinei", "offset": 1},
+      { "stopId": "S00113", "nume": "Bariera Rafov", "offset": 1},
+      { "stopId": "S00114", "nume": "Corlatesti", "offset": 1},
+      { "stopId": "S00115", "nume": "Protan", "offset": 1},
+      { "stopId": "S00116", "nume": "Pictor Rosenthal", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00116", "nume": "Pictor Rosenthal", "offset": 0},
+      { "stopId": "S00117", "nume": "Protan", "offset": 1},
+      { "stopId": "S00118", "nume": "Corlatesti", "offset": 1},
+      { "stopId": "S00119", "nume": "Bariera Rafov", "offset": 1},
+      { "stopId": "S00120", "nume": "Oxigen", "offset": 1},
+      { "stopId": "S00121", "nume": "Cimitirul Eternitatii", "offset": 1},
+      { "stopId": "S00122", "nume": "Azuga", "offset": 1},
+      { "stopId": "S00123", "nume": "Moreni", "offset": 1},
+      { "stopId": "S00124", "nume": "Vintileanca", "offset": 1},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 2},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00046", "nume": "Pleiades", "offset": 3},
+      { "stopId": "S00005", "nume": "Gara de Sud", "offset": 3},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00057", "nume": "Hale Coreco", "offset": 2}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [45],
+      "6": [25],
+      "7": [5, 55],
+      "9": [1],
+      "10": [19],
+      "11": [37],
+      "12": [55],
+      "14": [13],
+      "15": [5],
+      "16": [23],
+      "17": [35],
+      "18": [35],
+      "19": [53],
+      "21": [10],
+      "22": [32],
+      "23": [40]
+    },
+  
+    "Prog_R_LV": {
+      "6": [25],
+      "7": [2, 42],
+      "8": [32],
+      "9": [38],
+      "10": [56],
+      "12": [14],
+      "13": [32],
+      "14": [50],
+      "15": [42],
+      "17": [0],
+      "18": [12],
+      "19": [12],
+      "20": [30],
+      "21": [47],
+      "23": [6]
+    },
+    
+    "Prog_T_SD": {
+      "8": [0],
+      "10": [0],
+      "12": [0],
+      "13": [45],
+      "15": [45],
+      "18": [0]
+    },
+  
+    "Prog_R_SD": {
+      "8": [35],
+      "10": [35],
+      "12": [35],
+      "14": [20],
+      "16": [20],
+      "18": [35]
+    }
+  },
+  
+  "35": {
+    "Cap1": "LAMAITA",
+    "Cap2": "PALATUL CULTURII",
+    "Cap3": "PALATUL CULTURII",
+    "Cap4": "LAMAITA",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "B"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00150", "nume": "Lamaita", "offset": 0},
+      { "stopId": "S00151", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00128", "nume": "Ienachita Vacarescu", "offset": 3},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00130", "nume": "Popa Farcas", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 2},
+      { "stopId": "S00028", "nume": "Grivitei", "offset": 0}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00028", "nume": "Grivitei", "offset": 0},
+      { "stopId": "S00152", "nume": "Tudor Vladimirescu", "offset": 4},
+      { "stopId": "S00153", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00154", "nume": "Torcatori", "offset": 2},
+      { "stopId": "S00155", "nume": "Scoala 20", "offset": 2},
+      { "stopId": "S00156", "nume": "Bariera Marasesti", "offset": 2},
+      { "stopId": "S00150", "nume": "Lamaita", "offset": 1}
+    ],
+    
+    "Prog_T_LV": {
+      "5": [35, 55],
+      "6": [6, 12, 18, 24, 30, 37, 43, 49, 55],
+      "7": [1, 7, 14, 20, 26, 32, 38, 44, 51, 57],
+      "8": [3, 9, 15, 21, 27, 35, 43, 51],
+      "9": [0, 9, 18, 26, 34, 42, 51, 58],
+      "10": [5, 13, 21, 28, 35, 42, 50, 58],
+      "11": [5, 12, 19, 27, 35, 42, 49, 56],
+      "12": [4, 12, 19, 26, 33, 41, 49, 56],
+      "13": [3, 10, 18, 26, 33, 40, 47, 55],
+      "14": [3, 10, 17, 24, 32, 40, 47, 54],
+      "15": [1, 9, 17, 24, 31, 38, 46, 54],
+      "16": [1, 8, 15, 23, 31, 38, 45, 55],
+      "17": [5, 15, 25, 35, 46, 56],
+      "18": [6, 16, 25, 34, 43, 53],
+      "19": [5, 20, 35, 45, 55],
+      "20": [10, 30, 50],
+      "21": [6, 25, 40, 59],
+      "22": [17, 32, 51],
+      "23": [33]
+    },
+  
+    "Prog_R_LV": {
+      "5": [50],
+      "6": [10, 21, 27, 33, 39, 45, 52, 58],
+      "7": [5, 11, 17, 23, 30, 36, 42, 48, 54],
+      "8": [0, 7, 13, 19, 25, 31, 37, 43, 51, 59],
+      "9": [7, 16, 25, 34, 42, 50, 58],
+      "10": [7, 14, 21, 29, 37, 44, 51, 58],
+      "11": [6, 14, 21, 28, 35, 43, 51, 58],
+      "12": [5, 12, 20, 28, 35, 42, 49, 57],
+      "13": [5, 12, 19, 26, 34, 42, 49, 56],
+      "14": [3, 11, 19, 26, 33, 40, 48, 56],
+      "15": [3, 10, 17, 25, 33, 40, 47, 54],
+      "16": [2, 10, 17, 24, 31, 39, 47, 54],
+      "17": [1, 11, 21, 31, 41, 51],
+      "18": [2, 12, 22, 32, 40, 50, 59],
+      "19": [9, 20, 35, 50],
+      "20": [0, 10, 25, 45],
+      "21": [5, 21, 40, 55],
+      "22": [14, 32, 47],
+      "23": [6, 48]
+    },
+    
+    "Prog_T_S": {
+      "6": [5, 14, 24, 36, 48],
+      "7": [0, 12, 24, 36, 48],
+      "8": [0, 9, 18, 25, 32, 39, 47, 56],
+      "9": [6, 17, 28, 40, 51],
+      "10": [2, 13, 24, 36, 47, 54],
+      "11": [2, 9, 16, 23, 30, 38, 45, 52, 59],
+      "12": [8, 17, 26, 35, 44, 53],
+      "13": [2, 11, 20, 29, 38, 47, 56],
+      "14": [5, 14, 23, 32, 41, 51],
+      "15": [1, 11, 20, 29, 38, 47, 56],
+      "16": [5, 15, 26, 37, 49],
+      "17": [1, 13, 25, 36, 47, 59],
+      "18": [10, 21, 33, 44, 55],
+      "19": [6, 18, 30, 42, 55],
+      "20": [7, 24, 41],
+      "21": [0, 17, 37, 57],
+      "22": [17, 32, 51],
+      "23": [33]
+    },
+  
+    "Prog_R_S": {
+      "6": [17, 29, 39, 51],
+      "7": [3, 15, 27, 39, 51],
+      "8": [3, 15, 25, 34, 41, 48, 55],
+      "9": [3, 12, 22, 33, 44, 56],
+      "10": [7, 18, 29, 40, 52],
+      "11": [3, 10, 18, 25, 32, 39, 46, 54],
+      "12": [1, 8, 15, 24, 33, 42, 51],
+      "13": [0, 9, 18, 27, 36, 45, 54],
+      "14": [3, 12, 21, 30, 39, 48, 57],
+      "15": [7, 17, 27, 36, 45, 54],
+      "16": [3, 12, 21, 30, 41, 52],
+      "17": [4, 16, 28, 40, 51],
+      "18": [2, 14, 25, 36, 48, 59],
+      "19": [10, 21, 33, 45, 57],
+      "20": [10, 22, 39, 56],
+      "21": [15, 32, 52],
+      "22": [12, 32, 47],
+      "23": [6, 48]
+    },
+  
+    "Prog_T_D": {
+      "6": [5, 14, 24, 36, 48],
+      "7": [0, 12, 24, 36, 48],
+      "8": [0, 9, 18, 27, 36, 45, 54],
+      "9": [4, 16, 28, 40, 52],
+      "10": [4, 16, 28, 40, 52],
+      "11": [4, 13, 22, 31, 40, 49, 59],
+      "12": [8, 17, 26, 35, 44, 53],
+      "13": [2, 11, 20, 29, 38, 47, 56],
+      "14": [5, 14, 23, 32, 41, 51],
+      "15": [1, 11, 20, 29, 38, 47, 56],
+      "16": [5, 15, 26, 37, 49],
+      "17": [1, 13, 25, 36, 47, 59],
+      "18": [10, 21, 33, 44, 55],
+      "19": [6, 18, 30, 42, 55],
+      "20": [7, 24, 41],
+      "21": [0, 17, 37, 57],
+      "22": [17, 32, 51],
+      "23": [33]
+    },
+  
+    "Prog_R_D": {
+      "6": [17, 29, 39, 51],
+      "7": [3, 15, 27, 39, 51],
+      "8": [3, 15, 25, 34, 43, 52],
+      "9": [1, 10, 20, 32, 44, 56],
+      "10": [8, 20, 32, 44, 56],
+      "11": [8, 20, 29, 38, 47, 56],
+      "12": [5, 15, 24, 33, 42, 51],
+      "13": [0, 9, 18, 27, 36, 45, 54],
+      "14": [3, 12, 21, 30, 39, 48, 57],
+      "15": [7, 17, 27, 36, 45, 54],
+      "16": [3, 12, 21, 30, 41, 52],
+      "17": [4, 16, 28, 40, 51],
+      "18": [2, 14, 25, 36, 48, 59],
+      "19": [10, 21, 33, 45, 57],
+      "20": [10, 22, 39, 56],
+      "21": [15, 32, 52],
+      "22": [12, 32, 47],
+      "23": [6, 48]
+    }
+  },
+
+  "35B": {
+    "Cap1": "BLOC 39",
+    "Cap2": "PALATUL CULTURII",
+    "Cap3": "PALATUL CULTURII",
+    "Cap4": "BLOC 39",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "B"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00157", "nume": "Bloc 39", "offset": 0},
+      { "stopId": "S00158", "nume": "Bariera Marasesti", "offset": 2},
+      { "stopId": "S00159", "nume": "Palatul Copiilor", "offset": 2},
+      { "stopId": "S00160", "nume": "Torcatori", "offset": 2},
+      { "stopId": "S00161", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00162", "nume": "Tudor Vladimirescu", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 2},
+      { "stopId": "S00028", "nume": "Grivitei", "offset": 0}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00028", "nume": "Grivitei", "offset": 0},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 4},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00135", "nume": "Zimbrului", "offset": 2},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00163", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00157", "nume": "Bloc 39", "offset": 1}
+    ],
+    
+    "Prog_T_LV": {
+      "5": [30, 50],
+      "6": [3, 9, 15, 21, 27, 33, 40, 46, 52, 58],
+      "7": [4, 10, 17, 23, 29, 35, 41, 47, 54],
+      "8": [0, 6, 12, 18, 24, 32, 40, 48, 57],
+      "9": [6, 15, 23, 31, 39, 48, 55],
+      "10": [2, 10, 18, 25, 32, 39, 47, 55],
+      "11": [2, 9, 16, 24, 32, 39, 46, 53],
+      "12": [1, 9, 16, 23, 30, 38, 46, 53],
+      "13": [0, 7, 15, 23, 30, 37, 44, 52],
+      "14": [0, 7, 14, 21, 29, 37, 44, 51, 58],
+      "15": [6, 14, 21, 28, 35, 43, 51, 58],
+      "16": [5, 12, 20, 28, 35, 42, 50],
+      "17": [0, 10, 20, 30, 41, 51],
+      "18": [1, 11, 20, 29, 38, 48],
+      "19": [0, 15, 30, 45],
+      "20": [0, 20, 40],
+      "21": [0, 15, 32, 49],
+      "22": [6, 23, 40, 57],
+      "23": [14, 31]
+    },
+  
+    "Prog_R_LV": {
+      "5": [45],
+      "6": [5, 18, 24, 30, 36, 42, 48, 55],
+      "7": [1, 8, 14, 20, 26, 33, 39, 45, 51, 58],
+      "8": [3, 10, 16, 22, 28, 36, 40, 48, 56],
+      "9": [4, 13, 25, 31, 39, 47, 55],
+      "10": [4, 11, 18, 26, 34, 41, 48, 55],
+      "11": [3, 11, 18, 25, 32, 40, 48, 55],
+      "12": [2, 9, 17, 25, 32, 39, 46, 54],
+      "13": [2, 9, 16, 23, 31, 39, 46, 53],
+      "14": [0, 8, 16, 23, 30, 37, 45, 53],
+      "15": [0, 7, 14, 22, 30, 37, 44, 51, 59],
+      "16": [7, 14, 21, 28, 36, 44, 51, 58],
+      "17": [6, 16, 26, 36, 46, 57],
+      "18": [7, 17, 27, 35, 45, 54],
+      "19": [4, 15, 30, 46],
+      "20": [0, 15, 35, 55],
+      "21": [15, 30, 47],
+      "22": [4, 21, 38, 55],
+      "23": [12, 29, 46]
+    },
+    
+    "Prog_T_S": {
+      "6": [0, 10, 20, 32, 44, 56],
+      "7": [8, 20, 32, 44, 56],
+      "8": [8, 15, 21, 28, 35, 43, 52],
+      "9": [1, 10, 20, 29, 39, 48, 57],
+      "10": [6, 13, 21, 28, 36, 43, 50, 58],
+      "11": [5, 12, 19, 26, 34, 41, 48, 55],
+      "12": [4, 13, 22, 31, 40, 49, 58],
+      "13": [7, 16, 25, 34, 43, 52],
+      "14": [1, 10, 19, 28, 37, 47, 57],
+      "15": [6, 15, 24, 33, 42, 51],
+      "16": [0, 10, 21, 32, 44, 56],
+      "17": [8, 20, 31, 42, 54],
+      "18": [5, 16, 28, 39, 50],
+      "19": [1, 13, 24, 35, 47],
+      "20": [0, 15, 32, 49],
+      "21": [9, 29, 49],
+      "22": [6, 23, 40, 57],
+      "23": [31]
+    },
+  
+    "Prog_R_S": {
+      "6": [13, 25, 35, 47, 59],
+      "7": [11, 23, 35, 47],
+      "8": [0, 11, 23, 30, 37, 44, 51, 59],
+      "9": [8, 17, 26, 36, 45, 55],
+      "10": [4, 13, 22, 29, 37, 44, 52, 59],
+      "11": [6, 14, 21, 28, 35, 42, 50, 57],
+      "12": [4, 11, 20, 29, 38, 47, 56],
+      "13": [5, 14, 23, 32, 41, 50, 59],
+      "14": [8, 17, 26, 35, 44, 53],
+      "15": [3, 13, 22, 31, 40, 49, 58],
+      "16": [7, 16, 25, 36, 47, 59],
+      "17": [11, 23, 35, 46, 57],
+      "18": [9, 20, 31, 43, 54],
+      "19": [5, 16, 28, 39, 50],
+      "20": [2, 15, 30, 47],
+      "21": [4, 24, 44],
+      "22": [4, 21, 38, 55],
+      "23": [12, 46]
+    },
+  
+    "Prog_T_D": {
+      "6": [0, 10, 20, 32, 44, 56],
+      "7": [8, 20, 32, 44, 56],
+      "8": [8, 17, 26, 35, 44, 53],
+      "9": [2, 12, 24, 36, 48],
+      "10": [0, 12, 24, 36, 48],
+      "11": [0, 9, 18, 27, 36, 45, 54],
+      "12": [3, 13, 22, 31, 40, 49, 58],
+      "13": [7, 16, 25, 34, 43, 52],
+      "14": [1, 10, 19, 28, 37, 47, 57],
+      "15": [6, 15, 24, 33, 42, 51],
+      "16": [0, 10, 21, 32, 44, 56],
+      "17": [8, 20, 31, 42, 54],
+      "18": [5, 16, 28, 39, 50],
+      "19": [1, 13, 24, 35, 47],
+      "20": [0, 15, 32, 49],
+      "21": [9, 29, 49],
+      "22": [6, 23, 40, 57],
+      "23": [31]
+    },
+  
+    "Prog_R_D": {
+      "6": [13, 25, 35, 47, 59],
+      "7": [11, 23, 35, 47],
+      "8": [0, 12, 24, 33, 42, 51],
+      "9": [0, 9, 18, 28, 40, 52],
+      "10": [4, 16, 28, 40, 52],
+      "11": [4, 16, 25, 34, 43, 52],
+      "12": [1, 10, 19, 29, 38, 47, 56],
+      "13": [5, 14, 23, 32, 41, 50, 59],
+      "14": [8, 17, 26, 35, 44, 53],
+      "15": [3, 13, 22, 31, 40, 49, 58],
+      "16": [7, 16, 25, 36, 47, 59],
+      "17": [11, 23, 35, 46, 57],
+      "18": [9, 20, 31, 43, 54],
+      "19": [5, 16, 28, 39, 50],
+      "20": [2, 15, 30, 47],
+      "21": [4, 24, 44],
+      "22": [4, 21, 38, 55],
+      "23": [12, 46]
+    }
+  },
+  
+  "36": {
+    "Cap1": "POD INALT",
+    "Cap2": "UZTEL",
+    "Cap3": "UZTEL",
+    "Cap4": "POD INALT",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 0},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00163", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00157", "nume": "Bloc 39", "offset": 1},
+      { "stopId": "S00158", "nume": "Bariera Marasesti", "offset": 2},
+      { "stopId": "S00159", "nume": "Palatul Copiilor", "offset": 2},
+      { "stopId": "S00044", "nume": "Plaiesilor", "offset": 4},
+      { "stopId": "S00045", "nume": "Liceul Mihai Viteazul", "offset": 2},
+      { "stopId": "S00209", "nume": "Maternitate", "offset": 6},
+      { "stopId": "S00210", "nume": "Gradinari", "offset": 1},
+      { "stopId": "S00211", "nume": "Fero", "offset": 2},
+      { "stopId": "S00212", "nume": "Dacia", "offset": 2},
+      { "stopId": "S00213", "nume": "Petrotel", "offset": 1},
+      { "stopId": "S00214", "nume": "Camine", "offset": 1},
+      { "stopId": "S00215", "nume": "Uztel", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00216", "nume": "Uztel", "offset": 0},
+      { "stopId": "S00217", "nume": "Camine", "offset": 1},
+      { "stopId": "S00218", "nume": "Petrotel", "offset": 2},
+      { "stopId": "S00219", "nume": "Dacia", "offset": 1},
+      { "stopId": "S00220", "nume": "Fero", "offset": 1},
+      { "stopId": "S00221", "nume": "Gradinari", "offset": 2},
+      { "stopId": "S00222", "nume": "Maternitate", "offset": 1},
+      { "stopId": "S00076", "nume": "Armoniei", "offset": 2},
+      { "stopId": "S00047", "nume": "Jurnalist Gabi Dobre", "offset": 2},
+      { "stopId": "S00048", "nume": "Panificatie", "offset": 2},
+      { "stopId": "S00049", "nume": "Eroilor", "offset": 2},
+      { "stopId": "S00155", "nume": "Scoala 20", "offset": 3},
+      { "stopId": "S00156", "nume": "Bariera Marasesti", "offset": 2},
+      { "stopId": "S00150", "nume": "Lamaita", "offset": 1},
+      { "stopId": "S00151", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 2}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [0, 55]
+    },
+  
+    "Prog_R_LV": {
+      "7": [20]
+    },
+    
+    "Prog_T_SD": {
+    },
+  
+    "Prog_R_SD": {
+    }
+  },
+  
+  "39": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "CARTIER VEST",
+    "Cap3": "CARTIER VEST",
+    "Cap4": "HALE CATEDRALA",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "B"},
+      { "litera": "C"}
+    ], 
+
+    "StatiiTur": [
+    ],
+  
+    "StatiiRetur": [
+    ],
+  
+    "Prog_T_LV": {
+
+    },
+  
+    "Prog_R_LV": {
+
+    },
+    
+    "Prog_T_SD": {
+
+    },
+  
+    "Prog_R_SD": {
+
+    }
+  },
+
+  "39B": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "CARTIER VEST",
+    "Cap3": "CARTIER VEST",
+    "Cap4": "HALE CATEDRALA",
+    
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 5},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00135", "nume": "Zimbrului", "offset": 2},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00163", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00157", "nume": "Bloc 39", "offset": 1},
+      { "stopId": "S00180", "nume": "West Mall", "offset": 1},
+      { "stopId": "S00181", "nume": "Parc Municipal Vest", "offset": 1},
+      { "stopId": "S00182", "nume": "Cartier Mitica Apostol", "offset": 6},
+      { "stopId": "S00183", "nume": "Cartier Mitica Apostol Capat", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00183", "nume": "Cartier Mitica Apostol Capat", "offset": 0},
+      { "stopId": "S00184", "nume": "Cartier Mitica Apostol", "offset": 1},
+      { "stopId": "S00185", "nume": "Parc Municipal Vest", "offset": 6},
+      { "stopId": "S00186", "nume": "OMW", "offset": 2},
+      { "stopId": "S00150", "nume": "Lamaita", "offset": 0},
+      { "stopId": "S00151", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00128", "nume": "Ienachita Vacarescu", "offset": 3},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00130", "nume": "Popa Farcas", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [0, 50],
+      "7": [55],
+      "9": [0],
+      "10": [0, 30],
+      "11": [15],
+      "12": [0, 40],
+      "13": [45],
+      "14": [20],
+      "15": [30],
+      "16": [45],
+      "17": [20],
+      "18": [0, 50],
+      "19": [40],
+      "20": [40],
+      "21": [30],
+      "22": [30],
+      "23": [45]
+    },
+  
+    "Prog_R_LV": {
+      "5": [0, 30],
+      "6": [15, 50],
+      "7": [15, 20],
+      "8": [30],
+      "9": [30],
+      "10": [30],
+      "11": [15],
+      "12": [0, 30],
+      "13": [15],
+      "14": [15, 55],
+      "16": [5],
+      "17": [15],
+      "18": [0, 30],
+      "19": [20],
+      "20": [10],
+      "21": [10],
+      "22": [0],
+      "23": [0]
+    },
+    
+    "Prog_T_SD": {
+      "6": [45],
+      "8": [30],
+      "10": [0],
+      "11": [30],
+      "12": [45],
+      "14": [30],
+      "16": [20],
+      "18": [30],
+      "20": [30],
+      "22": [30]
+    },
+  
+    "Prog_R_SD": {
+      "5": [40],
+      "6": [15],
+      "7": [15],
+      "9": [0],
+      "10": [45],
+      "12": [0],
+      "13": [30],
+      "15": [0],
+      "17": [15],
+      "19": [0],
+      "21": [0]
+    }
+  },
+  
+  "39C": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "CONCORDIA",
+    "Cap3": "CONCORDIA",
+    "Cap4": "HALE CATEDRALA",
+    
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 5},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00135", "nume": "Zimbrului", "offset": 2},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00163", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00157", "nume": "Bloc 39", "offset": 1},
+      { "stopId": "S00180", "nume": "West Mall", "offset": 1},
+      { "stopId": "S00181", "nume": "Parc Municipal Vest", "offset": 1},
+      { "stopId": "S00187", "nume": "Concordia", "offset": 4}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00187", "nume": "Concordia", "offset": 0},
+      { "stopId": "S00185", "nume": "Parc Municipal Vest", "offset": 7},
+      { "stopId": "S00186", "nume": "OMW", "offset": 2},
+      { "stopId": "S00150", "nume": "Lamaita", "offset": 0},
+      { "stopId": "S00151", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00128", "nume": "Ienachita Vacarescu", "offset": 3},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00130", "nume": "Popa Farcas", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4}
+    ],
+  
+    "Prog_T_LV": {
+      "7": [40]
+    },
+  
+    "Prog_R_LV": {
+      "14": [15]
+    },
+    
+    "Prog_T_SD": {
+    },
+  
+    "Prog_R_SD": {
+    }
+  },
+
+  "40": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "BEREASCA",
+    "Cap3": "BEREASCA",
+    "Cap4": "HALE CATEDRALA",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "B"},
+      { "litera": "L"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00188", "nume": "Biserica Sf. Vineri", "offset": 3},
+      { "stopId": "S00189", "nume": "Parc Obor", "offset": 2},
+      { "stopId": "S00190", "nume": "Atlas", "offset": 2},
+      { "stopId": "S00191", "nume": "Petros", "offset": 1},
+      { "stopId": "S00192", "nume": "Pelinului", "offset": 1},
+      { "stopId": "S00193", "nume": "Luminisului", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00193", "nume": "Luminisului", "offset": 0},
+      { "stopId": "S00194", "nume": "Complex Bereasca", "offset": 1},
+      { "stopId": "S00195", "nume": "SC Control", "offset": 1},
+      { "stopId": "S00196", "nume": "Cimitir", "offset": 1},
+      { "stopId": "S00197", "nume": "Arborilor", "offset": 1},
+      { "stopId": "S00198", "nume": "Leandrului", "offset": 1},
+      { "stopId": "S00199", "nume": "Hotel Forum", "offset": 2},
+      { "stopId": "S00200", "nume": "Biserica Sf. Vineri", "offset": 3},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [10, 30, 50],
+      "6": [0, 10, 20, 30, 40, 49],
+      "7": [8, 18, 28, 38, 48],
+      "8": [1, 14, 28, 41, 54],
+      "9": [8, 21, 34, 48],
+      "10": [1, 14, 28, 41, 54],
+      "11": [8, 21, 34, 48],
+      "12": [1, 14, 24, 34, 44, 54],
+      "13": [4, 14, 24, 34, 45, 56],
+      "14": [7, 17, 27, 37, 47, 57],
+      "15": [7, 17, 38, 49],
+      "16": [0, 11, 20, 29, 39, 49],
+      "17": [0, 13, 26, 40, 55],
+      "18": [10, 25, 40, 55],
+      "19": [10, 25, 45],
+      "20": [5, 30],
+      "21": [0, 30],
+      "22": [0, 32],
+      "23": [0, 35]
+    },
+  
+    "Prog_R_LV": {
+      "5": [20, 40],
+      "6": [0, 15, 25, 35, 45, 55],
+      "7": [4, 23, 33, 43, 53],
+      "8": [3, 17, 30, 44, 57],
+      "9": [10, 24, 37, 50],
+      "10": [4, 17, 30, 44, 57],
+      "11": [10, 24, 37, 50],
+      "12": [4, 17, 30, 40, 50],
+      "13": [0, 10, 20, 30, 40, 50],
+      "14": [1, 12, 23, 33, 43, 53],
+      "15": [3, 13, 23, 33, 54],
+      "16": [5, 16, 27, 36, 45, 55],
+      "17": [5, 16, 29, 41, 55],
+      "18": [10, 25, 40, 55],
+      "19": [10, 25, 40],
+      "20": [0, 20, 45],
+      "21": [15, 42],
+      "22": [12, 44],
+      "23": [10, 45]
+    },
+    
+    "Prog_T_SD": {
+      "5": [30, 45],
+      "6": [0, 15, 30, 45, 55],
+      "7": [5, 15, 25, 33, 43, 52],
+      "8": [1, 10, 20, 30, 40, 50],
+      "9": [0, 10, 19, 29, 38, 48, 57],
+      "10": [7, 16, 26, 35, 45, 54],
+      "11": [4, 13, 23, 32, 42, 51],
+      "12": [1, 10, 19, 28, 38, 47],
+      "13": [0, 15, 30, 45],
+      "14": [0, 15, 30, 45],
+      "15": [0, 15, 30, 45],
+      "16": [0, 15, 30, 45],
+      "17": [0, 15, 30, 45],
+      "18": [0, 30],
+      "19": [0, 30],
+      "20": [0, 30],
+      "21": [0, 30],
+      "22": [0, 30],
+      "23": [0]
+    },
+  
+    "Prog_R_SD": {
+      "5": [42, 57],
+      "6": [12, 27, 42, 57],
+      "7": [10, 20, 30, 40],
+      "13": [30, 45],
+      "14": [0, 15, 30, 45],
+      "15": [0, 15, 30, 45],
+      "16": [0, 15, 30, 45],
+      "17": [0, 15, 30, 45],
+      "18": [0, 15, 45],
+      "19": [15, 45],
+      "20": [15, 45],
+      "21": [15, 45],
+      "22": [12, 42],
+      "23": [12]
+    }
+  },
+  
+  "40B": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "INTRARE PARC BUCOV",
+    "Cap3": "INTRARE PARC BUCOV",
+    "Cap4": "HALE CATEDRALA",
+    
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00188", "nume": "Biserica Sf. Vineri", "offset": 3},
+      { "stopId": "S00189", "nume": "Parc Obor", "offset": 2},
+      { "stopId": "S00207", "nume": "Complex Bereasca", "offset": 2},
+      { "stopId": "S00201", "nume": "Strand", "offset": 4},
+      { "stopId": "S00202", "nume": "Aldini", "offset": 2},
+      { "stopId": "S00203", "nume": "Intrare Bucov", "offset": 2},
+      { "stopId": "S00204", "nume": "Parc Bucov", "offset": 2}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00204", "nume": "Parc Bucov", "offset": 0},
+      { "stopId": "S00205", "nume": "Intrare Bucov", "offset": 2},
+      { "stopId": "S00206", "nume": "Strand", "offset": 2},
+      { "stopId": "S00208", "nume": "Complex Bereasca", "offset": 2},
+      { "stopId": "S00199", "nume": "Hotel Forum", "offset": 2},
+      { "stopId": "S00200", "nume": "Biserica Sf. Vineri", "offset": 3},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4}
+    ],
+  
+    "Prog_T_LV": {
+    },
+  
+    "Prog_R_LV": {
+    },
+    
+    "Prog_T_SD": {
+  
+    },
+  
+    "Prog_R_SD": {
+  
+    }
+  },
+  
+  "40L": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "PARC BUCOV",
+    "Cap3": "PARC BUCOV",
+    "Cap4": "HALE CATEDRALA",
+    
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00188", "nume": "Biserica Sf. Vineri", "offset": 3},
+      { "stopId": "S00189", "nume": "Parc Obor", "offset": 2},
+      { "stopId": "S00190", "nume": "Atlas", "offset": 2},
+      { "stopId": "S00191", "nume": "Petros", "offset": 1},
+      { "stopId": "S00192", "nume": "Pelinului", "offset": 1},
+      { "stopId": "S00193", "nume": "Luminisului", "offset": 1},
+      { "stopId": "S00201", "nume": "Strand", "offset": 4},
+      { "stopId": "S00202", "nume": "Aldini", "offset": 2},
+      { "stopId": "S00203", "nume": "Intrare Bucov", "offset": 2},
+      { "stopId": "S00204", "nume": "Parc Bucov", "offset": 2}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00204", "nume": "Parc Bucov", "offset": 0},
+      { "stopId": "S00205", "nume": "Intrare Bucov", "offset": 2},
+      { "stopId": "S00206", "nume": "Strand", "offset": 2},
+      { "stopId": "S00194", "nume": "Complex Bereasca", "offset": 2},
+      { "stopId": "S00195", "nume": "SC Control", "offset": 1},
+      { "stopId": "S00196", "nume": "Cimitir", "offset": 1},
+      { "stopId": "S00197", "nume": "Arborilor", "offset": 1},
+      { "stopId": "S00198", "nume": "Leandrului", "offset": 1},
+      { "stopId": "S00199", "nume": "Hotel Forum", "offset": 2},
+      { "stopId": "S00200", "nume": "Biserica Sf. Vineri", "offset": 3},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 4}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [58],
+      "15": [27]
+    },
+  
+    "Prog_R_LV": {
+      "7": [18],
+      "15": [45]
+    },
+    
+    "Prog_T_SD": {
+  
+    },
+  
+    "Prog_R_SD": {
+  
+    }
+  },
+
+  "44": {
+    "Cap1": "MALU ROSU",
+    "Cap2": "GARA DE SUD",
+    "Cap3": "GARA DE SUD",
+    "Cap4": "MALU ROSU",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00140", "nume": "Malu Rosu", "offset": 0},
+      { "stopId": "S00141", "nume": "Carol Davila", "offset": 2},
+      { "stopId": "S00142", "nume": "Aviatorilor", "offset": 1},
+      { "stopId": "S00143", "nume": "Nicolae Titulescu", "offset": 1},
+      { "stopId": "S00144", "nume": "Traian", "offset": 2},
+      { "stopId": "S00145", "nume": "Scoala 4", "offset": 2},
+      { "stopId": "S00019", "nume": "Galeriile Comerciale", "offset": 3},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00132", "nume": "Gara de Sud BIG", "offset": 2}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00005", "nume": "Gara de Sud", "offset": 0},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 2},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 4},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00146", "nume": "Nicolae Titulescu", "offset": 2},
+      { "stopId": "S00147", "nume": "Aleea Profesorilor", "offset": 2},
+      { "stopId": "S00148", "nume": "Ofelia", "offset": 1},
+      { "stopId": "S00149", "nume": "Malu Rosu", "offset": 1}
+    ],
+    
+    "Prog_T_LV": {
+      "5": [0, 20, 40, 55],
+      "6": [5, 13, 21, 30, 38, 47, 55],
+      "7": [4, 13, 21, 30, 38, 46, 55],
+      "8": [4, 14, 25, 36, 48],
+      "9": [0, 10, 20, 30, 40, 50],
+      "10": [0, 10, 20, 30, 40, 50],
+      "11": [0, 10, 20, 30, 40, 50],
+      "12": [0, 10, 20, 30, 40, 50],
+      "13": [0, 10, 20, 30, 40, 50],
+      "14": [0, 12, 24, 36, 48],
+      "15": [0, 12, 24, 36, 48],
+      "16": [0, 12, 24, 38, 52],
+      "17": [6, 20, 35, 50],
+      "18": [5, 20, 35, 50],
+      "19": [5, 20, 35, 50],
+      "20": [5, 20, 40],
+      "21": [5, 35],
+      "22": [0, 40],
+      "23": [10, 45]
+    },
+  
+    "Prog_R_LV": {
+      "5": [26, 46],
+      "6": [6, 21, 31, 39, 47, 56],
+      "7": [4, 13, 21, 30, 39, 47, 56],
+      "8": [4, 12, 21, 30, 40, 51],
+      "9": [2, 14, 26, 36, 46, 56],
+      "10": [6, 16, 26, 36, 46, 56],
+      "11": [6, 16, 26, 36, 46, 56],
+      "12": [6, 16, 26, 36, 46, 56],
+      "13": [6, 16, 26, 36, 46, 56],
+      "14": [6, 16, 26, 38, 50],
+      "15": [2, 14, 26, 38, 50],
+      "16": [2, 14, 26, 38, 50],
+      "17": [4, 18, 32, 46],
+      "18": [1, 16, 31, 46],
+      "19": [1, 16, 31, 46],
+      "20": [1, 16, 31, 46],
+      "21": [6, 31],
+      "22": [0, 36],
+      "23": [17, 36],
+      "24": [10]
+    },
+    
+    "Prog_T_SD": {
+      "5": [45],
+      "6": [5, 25, 45],
+      "7": [0, 12, 24, 36, 48],
+      "8": [2, 16, 30, 45],
+      "9": [0, 16, 31, 46],
+      "10": [1, 16, 32, 44, 56],
+      "11": [8, 20, 32, 45],
+      "12": [0, 15, 30, 45],
+      "13": [0, 15, 30, 45],
+      "14": [0, 15, 30, 45],
+      "15": [0, 15, 30, 45],
+      "16": [0, 15, 30, 45],
+      "17": [0, 16, 33, 50],
+      "18": [7, 24, 42],
+      "19": [0, 20, 38, 58],
+      "20": [15, 43],
+      "21": [10, 38],
+      "22": [0, 40],
+      "23": [10, 45]
+    },
+  
+    "Prog_R_SD": {
+      "6": [8, 28, 48],
+      "7": [11, 26, 38, 50],
+      "8": [2, 14, 28, 42, 56],
+      "9": [11, 26, 42, 57],
+      "10": [12, 27, 42, 58],
+      "11": [10, 22, 34, 46, 58],
+      "12": [11, 26, 41, 56],
+      "13": [10, 26, 40, 56],
+      "14": [11, 26, 41, 56],
+      "15": [11, 26, 41, 56],
+      "16": [11, 26, 41, 56],
+      "17": [11, 26, 42, 59],
+      "18": [15, 33, 50],
+      "19": [8, 26, 46],
+      "20": [4, 23, 41],
+      "21": [9, 36],
+      "22": [4, 36],
+      "23": [20, 40],
+      "24": [10]
+    }
+  },
+
+  "44B": {
+    "Cap1": "MALU ROSU",
+    "Cap2": "UZTEL",
+    "Cap3": "UZTEL",
+    "Cap4": "MALU ROSU",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00140", "nume": "Malu Rosu", "offset": 0},
+      { "stopId": "S00141", "nume": "Carol Davila", "offset": 2},
+      { "stopId": "S00142", "nume": "Aviatorilor", "offset": 1},
+      { "stopId": "S00143", "nume": "Nicolae Titulescu", "offset": 1},
+      { "stopId": "S00144", "nume": "Traian", "offset": 2},
+      { "stopId": "S00145", "nume": "Scoala 4", "offset": 2},
+      { "stopId": "S00209", "nume": "Maternitate", "offset": 8},
+      { "stopId": "S00210", "nume": "Gradinari", "offset": 1},
+      { "stopId": "S00211", "nume": "Fero", "offset": 2},
+      { "stopId": "S00212", "nume": "Dacia", "offset": 2},
+      { "stopId": "S00213", "nume": "Petrotel", "offset": 1},
+      { "stopId": "S00214", "nume": "Camine", "offset": 1},
+      { "stopId": "S00215", "nume": "Uztel", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00216", "nume": "Uztel", "offset": 0},
+      { "stopId": "S00217", "nume": "Camine", "offset": 1},
+      { "stopId": "S00218", "nume": "Petrotel", "offset": 2},
+      { "stopId": "S00219", "nume": "Dacia", "offset": 1},
+      { "stopId": "S00220", "nume": "Fero", "offset": 1},
+      { "stopId": "S00221", "nume": "Gradinari", "offset": 2},
+      { "stopId": "S00222", "nume": "Maternitate", "offset": 1},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 8},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00146", "nume": "Nicolae Titulescu", "offset": 2},
+      { "stopId": "S00147", "nume": "Aleea Profesorilor", "offset": 2},
+      { "stopId": "S00148", "nume": "Ofelia", "offset": 1},
+      { "stopId": "S00149", "nume": "Malu Rosu", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [0],
+      "7": [0]
+    },
+  
+    "Prog_R_LV": {
+      "6": [25]
+    },
+    
+    "Prog_T_SD": {
+    },
+  
+    "Prog_R_SD": {
+    }
+  },
+  
+  "101": {
+    "Cap1": "SPITALUL JUDETEAN",
+    "Cap2": "GARA DE SUD",
+    "Cap3": "GARA DE SUD",
+    "Cap4": "SPITALUL JUDETEAN",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+    
+    "StatiiTur": [
+      { "stopId": "S50001", "nume": "Spitalul Judetean", "offset": 0},
+      { "stopId": "S50002", "nume": "Fun Shop Park", "offset": 1},
+      { "stopId": "S50003", "nume": "Complex Mestesugaresc", "offset": 2},
+      { "stopId": "S50004", "nume": "Complex Mic", "offset": 2},
+      { "stopId": "S50005", "nume": "Restaurant Nord", "offset": 1},
+      { "stopId": "S50006", "nume": "8 Martie", "offset": 2},
+      { "stopId": "S50007", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S50008", "nume": "Colinii", "offset": 1},
+      { "stopId": "S50009", "nume": "Hale Tramvai", "offset": 3},
+      { "stopId": "S50010", "nume": "Muzeul de Istorie", "offset": 4},
+      { "stopId": "S50011", "nume": "Covurlui", "offset": 1},
+      { "stopId": "S50012", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S50013", "nume": "Gara de Sud", "offset": 2}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S50014", "nume": "Gara de Sud", "offset": 0},
+      { "stopId": "S50015", "nume": "13 Decembrie", "offset": 2},
+      { "stopId": "S50016", "nume": "Covurlui", "offset": 1},
+      { "stopId": "S50017", "nume": "Muzeul de Istorie", "offset": 1},
+      { "stopId": "S50018", "nume": "Hale Tramvai", "offset": 4},
+      { "stopId": "S50019", "nume": "Colinii", "offset": 2},
+      { "stopId": "S50020", "nume": "Piata Mihai Viteazul", "offset": 1},
+      { "stopId": "S50021", "nume": "Magazin Dacia", "offset": 2},
+      { "stopId": "S50022", "nume": "Restaurant Nord", "offset": 3},
+      { "stopId": "S50023", "nume": "Complex Mic", "offset": 1},
+      { "stopId": "S50024", "nume": "Complex Mestesugaresc", "offset": 2},
+      { "stopId": "S50025", "nume": "Fun Shop Park", "offset": 1},
+      { "stopId": "S50026", "nume": "Spitalul Judetean", "offset": 1}
+    ],
+    
+    "Prog_T_LV": {
+      "4": [55],
+      "5": [18, 31, 41, 50],
+      "6": [0, 8, 16, 24, 32, 40, 48, 56],
+      "7": [4, 12, 20, 28, 36, 44, 52],
+      "8": [0, 10, 23, 36, 49],
+      "9": [2, 15, 28, 41, 54],
+      "10": [7, 20, 33, 43, 53],
+      "11": [4, 15, 26, 37, 47, 57],
+      "12": [8, 19, 30, 41, 51],
+      "13": [1, 12, 23, 34, 45, 55],
+      "14": [5, 16, 27, 38, 49, 59],
+      "15": [9, 20, 31, 42, 53],
+      "16": [6, 19, 32, 45, 58],
+      "17": [11, 24, 37, 50],
+      "18": [3, 16, 29, 40, 53],
+      "19": [6, 19, 32, 45],
+      "20": [0, 15, 30, 45],
+      "21": [5, 30],
+      "22": [5, 35],
+      "23": [10, 35]
+    },
+  
+    "Prog_R_LV": {
+      "5": [35, 50],
+      "6": [5, 15, 25, 34, 42, 50, 58],
+      "7": [6, 14, 22, 30, 38, 46, 54],
+      "8": [2, 10, 20, 32, 45, 58],
+      "9": [11, 24, 37, 50],
+      "10": [3, 13, 23, 34, 45, 56],
+      "11": [7, 17, 27, 38, 49],
+      "12": [0, 11, 21, 31, 42, 53],
+      "13": [4, 15, 25, 35, 46, 57],
+      "14": [8, 19, 29, 39, 50],
+      "15": [1, 12, 23, 36, 49],
+      "16": [2, 15, 28, 41, 54],
+      "17": [7, 20, 33, 46, 59],
+      "18": [9, 19, 30, 41, 52],
+      "19": [3, 15, 27, 40, 51],
+      "20": [1, 15, 30, 45],
+      "21": [0, 15, 35],
+      "22": [0, 36],
+      "23": [0, 35],
+      "24": [0]
+    },
+    
+    "Prog_T_SD": {
+      "5": [20, 40, 50],
+      "6": [2, 14, 26, 37, 48, 59],
+      "7": [10, 21, 32, 43, 54],
+      "8": [5, 16, 27, 40, 53],
+      "9": [7, 21, 35, 48],
+      "10": [1, 14, 27, 41, 52],
+      "11": [3, 14, 25, 36, 47, 58],
+      "12": [9, 20, 31, 42, 53],
+      "13": [4, 15, 26, 37, 48, 59],
+      "14": [10, 21, 32, 43, 54],
+      "15": [5, 16, 27, 38, 49],
+      "16": [0, 11, 24, 38, 52],
+      "17": [6, 20, 33, 46, 59],
+      "18": [12, 26, 38, 54],
+      "19": [8, 24, 38, 52],
+      "20": [6, 20, 40],
+      "21": [0, 25, 55],
+      "22": [25],
+      "23": [0, 25]
+    },
+  
+    "Prog_R_SD": {
+      "5": [50],
+      "6": [10, 25, 37, 50],
+      "7": [2, 13, 24, 35, 46, 57],
+      "8": [10, 23, 37, 51],
+      "9": [5, 18, 31, 44, 57],
+      "10": [11, 22, 33, 44, 55],
+      "11": [6, 17, 28, 39, 50],
+      "12": [1, 12, 23, 34, 45, 56],
+      "13": [7, 18, 29, 40, 51],
+      "14": [2, 13, 24, 35, 46, 57],
+      "15": [8, 19, 30, 41, 54],
+      "16": [8, 22, 36, 50],
+      "17": [3, 16, 29, 42, 56],
+      "18": [7, 15, 22, 36, 51],
+      "19": [2, 8, 22, 36, 57],
+      "20": [12, 27, 36, 48],
+      "21": [12, 30, 55],
+      "22": [35, 55],
+      "23": [30]
+    }
+  },
+
+  "102": {
+    "Cap1": "SPITALUL JUDETEAN",
+    "Cap2": "GARA DE VEST",
+    "Cap3": "GARA DE VEST",
+    "Cap4": "SPITALUL JUDETEAN",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+    
+    "StatiiTur": [
+      { "stopId": "S50001", "nume": "Spitalul Judetean", "offset": 0},
+      { "stopId": "S50002", "nume": "Fun Shop Park", "offset": 1},
+      { "stopId": "S50003", "nume": "Complex Mestesugaresc", "offset": 2},
+      { "stopId": "S50004", "nume": "Complex Mic", "offset": 2},
+      { "stopId": "S50005", "nume": "Restaurant Nord", "offset": 1},
+      { "stopId": "S50027", "nume": "Deltei", "offset": 2},
+      { "stopId": "S50028", "nume": "Malu Rosu", "offset": 1},
+      { "stopId": "S50029", "nume": "ACR", "offset": 2},
+      { "stopId": "S50030", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S50031", "nume": "Cosminele", "offset": 1},
+      { "stopId": "S50032", "nume": "Lamaita", "offset": 1},
+      { "stopId": "S50033", "nume": "Pasaj Marasesti", "offset": 1},
+      { "stopId": "S50034", "nume": "Gara de Vest", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S50035", "nume": "Gara de Vest", "offset": 0},
+      { "stopId": "S50036", "nume": "Pasaj Marasesti", "offset": 1},
+      { "stopId": "S50037", "nume": "Lamaita", "offset": 1},
+      { "stopId": "S50038", "nume": "Cosminele", "offset": 1},
+      { "stopId": "S50039", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S50040", "nume": "ACR", "offset": 2},
+      { "stopId": "S50041", "nume": "Malu Rosu", "offset": 2},
+      { "stopId": "S50042", "nume": "Deltei", "offset": 1},
+      { "stopId": "S50022", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S50023", "nume": "Complex Mic", "offset": 1},
+      { "stopId": "S50024", "nume": "Complex Mestesugaresc", "offset": 2},
+      { "stopId": "S50025", "nume": "Fun Shop Park", "offset": 1},
+      { "stopId": "S50026", "nume": "Spitalul Judetean", "offset": 1}
+    ],
+   
+    "Prog_T_LV": {
+      "5": [0, 15, 30, 40, 50],
+      "6": [0, 10, 20, 30, 40, 50],
+      "7": [0, 10, 20, 30, 40, 50],
+      "8": [0, 10, 20, 30, 40, 50],
+      "9": [7, 22, 34, 44, 58],
+      "10": [11, 24, 36, 49],
+      "11": [1, 14, 26, 39, 51],
+      "12": [4, 16, 29, 41, 54],
+      "13": [6, 19, 31, 44, 56],
+      "14": [9, 21, 31, 46, 59],
+      "15": [11, 21, 31, 41, 51],
+      "16": [1, 11, 21, 31, 41, 53],
+      "17": [8, 23, 38, 48, 58],
+      "18": [13, 28, 41, 54],
+      "19": [6, 20, 32, 46],
+      "20": [5, 18, 30, 42, 55],
+      "21": [10, 25, 40],
+      "22": [0, 33],
+      "23": [5, 30],
+      "24": [0]
+    },
+  
+    "Prog_R_LV": {
+      "5": [25, 40, 55],
+      "6": [7, 17, 27, 37, 47, 57],
+      "7": [7, 17, 27, 37, 47, 57],
+      "8": [7, 17, 28, 43],
+      "9": [0, 11, 21, 31, 40, 49],
+      "10": [1, 13, 26, 38, 51],
+      "11": [3, 16, 28, 41, 53],
+      "12": [6, 18, 31, 43, 56],
+      "13": [8, 21, 33, 46, 58],
+      "14": [10, 23, 36, 48],
+      "15": [0, 13, 26, 38, 48, 58],
+      "16": [8, 18, 30, 45],
+      "17": [0, 15, 25, 35, 45, 50],
+      "18": [5, 18, 31, 43, 56],
+      "19": [9, 26, 39, 52],
+      "20": [5, 18, 33, 46, 58],
+      "21": [14, 25, 35, 50],
+      "22": [13, 33],
+      "23": [0, 30]
+    },
+    
+    "Prog_T_SD": {
+      "5": [10, 30, 45],
+      "6": [0, 15, 30, 45],
+      "7": [0, 15, 30, 40, 50],
+      "8": [0, 9, 20, 30, 41, 56],
+      "9": [12, 23, 35, 47],
+      "10": [0, 13, 25, 38, 50],
+      "11": [3, 15, 28, 40, 53],
+      "12": [5, 18, 30, 43, 55],
+      "13": [8, 20, 37, 53],
+      "14": [10, 27, 43],
+      "15": [0, 17, 33, 50],
+      "16": [7, 23, 40, 57],
+      "17": [20, 43],
+      "18": [3, 23, 39, 55],
+      "19": [13, 30, 46],
+      "20": [3, 20, 36, 53],
+      "21": [10, 35],
+      "22": [0, 33],
+      "23": [5, 30]
+    },
+  
+    "Prog_R_SD": {
+      "5": [30, 55],
+      "6": [10, 27, 42, 57],
+      "7": [12, 27, 42, 55],
+      "8": [8, 20, 36, 50],
+      "9": [1, 11, 22, 29, 38, 50],
+      "10": [2, 14, 27, 40, 52],
+      "11": [5, 17, 30, 42, 55],
+      "12": [7, 20, 32, 45, 57],
+      "13": [10, 22, 35, 47],
+      "14": [4, 20, 37, 54],
+      "15": [10, 27, 44],
+      "16": [0, 17, 34, 58],
+      "17": [21, 40],
+      "18": [1, 15, 31, 50],
+      "19": [6, 22, 40, 57],
+      "20": [13, 30, 47],
+      "21": [3, 20, 37],
+      "22": [2, 33],
+      "23": [0, 30],
+      "24": [0]
+    }
+  },
+
+  "104": {
+    "Cap1": "ARMONIEI",
+    "Cap2": "UZTEL",
+    "Cap3": "UZTEL",
+    "Cap4": "ARMONIEI",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "H"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 0},
+      { "stopId": "S00209", "nume": "Maternitate", "offset": 2},
+      { "stopId": "S00210", "nume": "Gradinari", "offset": 1},
+      { "stopId": "S00211", "nume": "Fero", "offset": 2},
+      { "stopId": "S00212", "nume": "Dacia", "offset": 2},
+      { "stopId": "S00213", "nume": "Petrotel", "offset": 1},
+      { "stopId": "S00214", "nume": "Camine", "offset": 1},
+      { "stopId": "S00215", "nume": "Uztel", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00216", "nume": "Uztel", "offset": 0},
+      { "stopId": "S00217", "nume": "Camine", "offset": 1},
+      { "stopId": "S00218", "nume": "Petrotel", "offset": 2},
+      { "stopId": "S00219", "nume": "Dacia", "offset": 1},
+      { "stopId": "S00220", "nume": "Fero", "offset": 1},
+      { "stopId": "S00221", "nume": "Gradinari", "offset": 2},
+      { "stopId": "S00222", "nume": "Maternitate", "offset": 1},
+      { "stopId": "S00076", "nume": "Armoniei", "offset": 2}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [22, 45, 55],
+      "6": [10, 16, 22, 35, 50],
+      "7": [5, 20, 35],
+      "8": [0, 20, 40],
+      "9": [0, 20, 40],
+      "10": [0, 20, 40],
+      "11": [0, 10, 30, 45],
+      "12": [0, 10, 20, 30, 45],
+      "13": [0, 15, 30, 40, 55],
+      "14": [5, 20, 40, 50],
+      "15": [0, 20, 40],
+      "16": [0, 20, 40],
+      "17": [0, 20, 40],
+      "18": [0, 20, 40],
+      "19": [5, 20, 40],
+      "20": [5, 40],
+      "21": [5, 40],
+      "22": [30],
+      "23": [30]
+    },
+  
+    "Prog_R_LV": {
+      "5": [35, 56],
+      "6": [15, 30, 45, 55],
+      "7": [5, 15, 25, 40],
+      "8": [0, 20, 40],
+      "9": [0, 20, 40],
+      "10": [0, 20, 40, 50],
+      "11": [10, 25, 40],
+      "12": [0, 10, 25, 40, 55],
+      "13": [10, 20, 35, 45],
+      "14": [0, 20, 30, 40],
+      "15": [0, 17, 30, 40],
+      "16": [0, 20, 40],
+      "17": [0, 20, 40],
+      "18": [0, 20, 40],
+      "19": [0, 20, 45],
+      "20": [0, 20, 45],
+      "21": [20, 30, 55]
+    },
+    
+    "Prog_T_SD": {
+      "6": [5, 20, 35, 55],
+      "7": [30],
+      "8": [0, 30],
+      "9": [0, 30],
+      "10": [0, 30],
+      "11": [0, 30],
+      "12": [0, 30],
+      "13": [0, 30],
+      "14": [0, 30],
+      "15": [0, 35],
+      "16": [0, 30],
+      "17": [0, 30],
+      "18": [5, 30],
+      "19": [0, 35],
+      "20": [10, 40],
+      "21": [10, 40],
+      "22": [30],
+      "23": [30]
+    },
+  
+    "Prog_R_SD": {
+      "6": [10, 35],
+      "7": [10, 40],
+      "8": [10, 40],
+      "9": [10, 40],
+      "10": [10, 40],
+      "11": [10, 40],
+      "12": [10, 40],
+      "13": [10, 40],
+      "14": [10, 40],
+      "15": [20, 40],
+      "16": [10, 40],
+      "17": [10, 40],
+      "18": [10, 40],
+      "19": [20, 50],
+      "20": [20, 50],
+      "21": [20, 35, 55]
+    }
+  },
+  
+  "104H": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "UZTEL",
+    "Cap3": "UZTEL",
+    "Cap4": "HALE CORECO",
+
+    "StatiiTur_104_HALE": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 3},
+      { "stopId": "S00209", "nume": "Maternitate", "offset": 2},
+      { "stopId": "S00210", "nume": "Gradinari", "offset": 1},
+      { "stopId": "S00211", "nume": "Fero", "offset": 2},
+      { "stopId": "S00212", "nume": "Dacia", "offset": 2},
+      { "stopId": "S00213", "nume": "Petrotel", "offset": 1},
+      { "stopId": "S00214", "nume": "Camine", "offset": 1},
+      { "stopId": "S00215", "nume": "Uztel", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00216", "nume": "Uztel", "offset": 0},
+      { "stopId": "S00217", "nume": "Camine", "offset": 1},
+      { "stopId": "S00218", "nume": "Petrotel", "offset": 2},
+      { "stopId": "S00219", "nume": "Dacia", "offset": 1},
+      { "stopId": "S00220", "nume": "Fero", "offset": 1},
+      { "stopId": "S00221", "nume": "Gradinari", "offset": 2},
+      { "stopId": "S00222", "nume": "Maternitate", "offset": 1},
+      { "stopId": "S00076", "nume": "Armoniei", "offset": 2},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4}
+    ],
+  
+    "Prog_T_LV": {
+    },
+  
+    "Prog_R_LV": {
+      "23": [20]
+    },
+    
+    "Prog_T_SD": {
+    },
+  
+    "Prog_R_SD": {
+      "23": [20]
+    }
+  },
+
+  "202": {
+    "Cap1": "POD INALT",
+    "Cap2": "GARA DE SUD",
+    "Cap3": "GARA DE SUD",
+    "Cap4": "POD INALT",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 0},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00128", "nume": "Enachita Vacarescu", "offset": 2},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00130", "nume": "Popa Farcas", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 1},
+      { "stopId": "S00019", "nume": "Galeriile Comerciale", "offset": 5},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00132", "nume": "Gara de Sud BIG", "offset": 2}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00005", "nume": "Gara de Sud", "offset": 0},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 2},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 4},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00135", "nume": "Zimbrului", "offset": 2},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00137", "nume": "Liceul de Constructii", "offset": 1},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 2}
+    ],
+   
+    "Prog_T_LV": {
+      "5": [10, 25, 40, 55],
+      "6": [8, 21, 34, 47],
+      "7": [0, 16, 32, 48],
+      "8": [4, 20, 35, 51],
+      "9": [7, 23, 36, 49],
+      "10": [2, 15, 28, 41, 57],
+      "11": [13, 29, 46],
+      "12": [2, 18, 34, 51],
+      "13": [7, 23, 39, 56],
+      "14": [12, 28, 44],
+      "15": [1, 17, 33, 49],
+      "16": [6, 22, 40],
+      "17": [0, 20, 41],
+      "18": [0, 19, 35, 52],
+      "19": [10, 43],
+      "20": [15, 45],
+      "21": [15, 45],
+      "22": [15, 45],
+      "23": [15, 40]
+    },
+  
+    "Prog_R_LV": {
+      "5": [45],
+      "6": [0, 15, 27, 38, 51],
+      "7": [4, 17, 30, 46],
+      "8": [2, 18, 34, 50],
+      "9": [5, 21, 37, 53],
+      "10": [6, 19, 32, 45, 58],
+      "11": [11, 27, 43, 59],
+      "12": [16, 32, 48],
+      "13": [4, 21, 37, 53],
+      "14": [9, 26, 42, 58],
+      "15": [14, 31, 47],
+      "16": [3, 19, 36, 52],
+      "17": [10, 30, 50],
+      "18": [11, 30, 49],
+      "19": [5, 22, 40],
+      "20": [14, 45],
+      "21": [15, 45],
+      "22": [15, 45],
+      "23": [18, 45],
+      "24": [5]
+    },
+    
+    "Prog_T_SD": {
+      "6": [0, 25, 45],
+      "7": [5, 30, 50],
+      "8": [10, 30, 51],
+      "9": [11, 29, 43, 59],
+      "10": [15, 32, 48],
+      "11": [4, 20, 37, 53],
+      "12": [9, 25, 42, 59],
+      "13": [16, 33, 51],
+      "14": [8, 25, 42, 58],
+      "15": [14, 30, 47],
+      "16": [3, 19, 35, 57],
+      "17": [28, 47],
+      "18": [7, 29, 52],
+      "19": [10, 43],
+      "20": [15, 45],
+      "21": [15, 45],
+      "22": [15, 45],
+      "23": [15, 40]
+    },
+  
+    "Prog_R_SD": {
+      "6": [30, 55],
+      "7": [15, 35],
+      "8": [0, 20, 40],
+      "9": [0, 21, 41, 59],
+      "10": [13, 29, 45],
+      "11": [2, 18, 34, 50],
+      "12": [7, 23, 39, 55],
+      "13": [12, 29, 46],
+      "14": [3, 21, 38, 55],
+      "15": [12, 28, 44],
+      "16": [0, 17, 33, 49],
+      "17": [5, 27, 58],
+      "18": [16, 37, 59],
+      "19": [22, 40],
+      "20": [14, 45],
+      "21": [15, 45],
+      "22": [15, 45],
+      "23": [15, 45],
+      "24": [5]
+    }
+  },
+
+  "300": {
+    "Cap1": "GARA DE SUD",
+    "Cap2": "PARC INDUSTRIAL PLOIESTI",
+    "Cap3": "PARC INDUSTRIAL PLOIESTI",
+    "Cap4": "GARA DE SUD",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00005", "nume": "Gara de Sud", "offset": 0},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 2},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 4},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00135", "nume": "Zimbrului", "offset": 2},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00137", "nume": "Liceul de Constructii", "offset": 1},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 1},
+      { "stopId": "S00255", "nume": "Parc Industrial Ploiesti", "offset": 9},
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 0},
+      { "stopId": "S00257", "nume": "Piritex", "offset": 1},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 9},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00128", "nume": "Enachita Vacarescu", "offset": 2},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00130", "nume": "Popa Farcas", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 1},
+      { "stopId": "S00089", "nume": "Take Ionescu", "offset": 2},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00132", "nume": "Gara de Sud BIG", "offset": 2}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [30],
+      "22": [30]
+    },
+  
+    "Prog_R_LV": {
+      "6": [45],
+      "23": [45]
+    },
+    
+    "Prog_R_S": {
+      "6": [45]
+    }
+  },
+  
+  "301": {
+    "Cap1": "PROTAN",
+    "Cap2": "PARC INDUSTRIAL PLOIESTI",
+    "Cap3": "PARC INDUSTRIAL PLOIESTI",
+    "Cap4": "PROTAN",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00117", "nume": "Protan", "offset": 0},
+      { "stopId": "S00118", "nume": "Corlatesti", "offset": 1},
+      { "stopId": "S00119", "nume": "Bariera Rafov", "offset": 1},
+      { "stopId": "S00120", "nume": "Oxigen", "offset": 1},
+      { "stopId": "S00121", "nume": "Cimitirul Eternitatii", "offset": 1},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00005", "nume": "Gara de Sud", "offset": 3},
+      { "stopId": "S00006", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00007", "nume": "Ana Ipatescu", "offset": 1},
+      { "stopId": "S00008", "nume": "Palatul Culturii", "offset": 4},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 2},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 4},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00146", "nume": "Nicolae Titulescu", "offset": 2},
+      { "stopId": "S00147", "nume": "Aleea Profesorilor", "offset": 2},
+      { "stopId": "S00242", "nume": "ACR", "offset": 2},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 2},
+      { "stopId": "S00255", "nume": "Parc Industrial Ploiesti", "offset": 9},
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 0},
+      { "stopId": "S00257", "nume": "Piritex", "offset": 1},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 9},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00141", "nume": "Carol Davila", "offset": 3},
+      { "stopId": "S00142", "nume": "Aviatorilor", "offset": 1},
+      { "stopId": "S00143", "nume": "Nicolae Titulescu", "offset": 1},
+      { "stopId": "S00144", "nume": "Traian", "offset": 2},
+      { "stopId": "S00145", "nume": "Scoala 4", "offset": 2},
+      { "stopId": "S00019", "nume": "Galeriile Comerciale", "offset": 3},
+      { "stopId": "S00020", "nume": "Filarmonica Paul Constantinescu", "offset": 2},
+      { "stopId": "S00021", "nume": "Ana Ipatescu", "offset": 2},
+      { "stopId": "S00022", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 1},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 2},
+      { "stopId": "S00025", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00108", "nume": "Cimitirul Eternitatii", "offset": 1},
+      { "stopId": "S00109", "nume": "Oxigen", "offset": 1},
+      { "stopId": "S00113", "nume": "Bariera Rafov", "offset": 1},
+      { "stopId": "S00114", "nume": "Corlatesti", "offset": 1},
+      { "stopId": "S00115", "nume": "Protan", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [30],
+      "22": [30]
+    },
+  
+    "Prog_R_LV": {
+      "6": [45],
+      "23": [45]
+    },
+    
+    "Prog_R_S": {
+      "6": [45]
+    }
+  },
+  
+  "302": {
+    "Cap1": "FERO",
+    "Cap2": "P.I.P. via CABLUL ROMANESC",
+    "Cap3": "PARC INDUSTRIAL PLOIESTI",
+    "Cap4": "FERO via CABLUL ROMANESC",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00220", "nume": "Fero", "offset": 0},
+      { "stopId": "S00258", "nume": "Cornatel", "offset": 0},
+      { "stopId": "S00221", "nume": "Gradinari", "offset": 1},
+      { "stopId": "S00222", "nume": "Maternitate", "offset": 1},
+      { "stopId": "S00076", "nume": "Armoniei", "offset": 2},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 4},
+      { "stopId": "S00228", "nume": "Colinii", "offset": 2},
+      { "stopId": "S00010", "nume": "Parc Mihai Viteazul", "offset": 1},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 2},
+      { "stopId": "S00140", "nume": "Malu Rosu", "offset": 3},
+      { "stopId": "S00242", "nume": "ACR", "offset": 1},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 1},
+      { "stopId": "S00255", "nume": "Parc Industrial Ploiesti", "offset": 9},
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 0},
+      { "stopId": "S00257", "nume": "Piritex", "offset": 1},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 9},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00148", "nume": "Ofelia", "offset": 3},
+      { "stopId": "S00240", "nume": "Deltei", "offset": 1},
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 3},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 2},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 3},
+      { "stopId": "S00226", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00227", "nume": "Colinii", "offset": 1},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 2},
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 3},
+      { "stopId": "S00209", "nume": "Maternitate", "offset": 2},
+      { "stopId": "S00210", "nume": "Gradinari", "offset": 1},
+      { "stopId": "S00211", "nume": "Fero", "offset": 2}
+
+    ],
+  
+    "Prog_T_LV": {
+      "5": [35],
+      "22": [35]
+    },
+  
+    "Prog_R_LV": {
+      "6": [45],
+      "23": [45]
+    },
+    
+    "Prog_R_S": {
+      "6": [45]
+    }
+  },
+  
+  "303": {
+    "Cap1": "SPITALUL JUDETEAN",
+    "Cap2": "PARC INDUSTRIAL PLOIESTI",
+    "Cap3": "PARC INDUSTRIAL PLOIESTI",
+    "Cap4": "SPITALUL JUDETEAN",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S50001", "nume": "Spitalul Judetean", "offset": 0},
+      { "stopId": "S00053", "nume": "Fun Shop Park", "offset": 1},
+      { "stopId": "S00223", "nume": "Complex Mestesugaresc", "offset": 1},
+      { "stopId": "S00224", "nume": "Complex Mic", "offset": 2},
+      { "stopId": "S00225", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00140", "nume": "Malu Rosu", "offset": 3},
+      { "stopId": "S00242", "nume": "ACR", "offset": 1},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 1},
+      { "stopId": "S00255", "nume": "Parc Industrial Ploiesti", "offset": 9},
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 0},
+      { "stopId": "S00257", "nume": "Piritex", "offset": 1},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 9},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00148", "nume": "Ofelia", "offset": 3},
+      { "stopId": "S00240", "nume": "Deltei", "offset": 1},
+      { "stopId": "S00012", "nume": "Restaurant Nord", "offset": 3},
+      { "stopId": "S00013", "nume": "XXL", "offset": 1},
+      { "stopId": "S00014", "nume": "Complexul Mic", "offset": 1},
+      { "stopId": "S00229", "nume": "Complex Mestesugaresc", "offset": 2},
+      { "stopId": "S00070", "nume": "Fun Shop Park", "offset": 1},
+      { "stopId": "S00071", "nume": "Spitalul Judetean", "offset": 1}
+      
+
+    ],
+  
+    "Prog_T_LV": {
+      "5": [40],
+      "22": [40]
+    },
+  
+    "Prog_R_LV": {
+      "6": [45],
+      "23": [45]
+    },
+    
+    "Prog_R_S": {
+      "6": [45]
+    }
+  },
+
+  "304": {
+    "Cap1": "GARA DE VEST",
+    "Cap2": "PARC INDUSTRIAL PLOIESTI",
+    "Cap3": "PARC INDUSTRIAL PLOIESTI",
+    "Cap4": "GARA DE VEST",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S50035", "nume": "Gara de Vest", "offset": 0},
+      { "stopId": "S00158", "nume": "Bariera Marasesti", "offset": 2},
+      { "stopId": "S00159", "nume": "Palatul Copiilor", "offset": 2},
+      { "stopId": "S00050", "nume": "Domnisori", "offset": 2},
+      { "stopId": "S00051", "nume": "Spitalul CFR", "offset": 2},
+      { "stopId": "S00150", "nume": "Lamaita", "offset": 3},
+      { "stopId": "S00151", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 1},
+      { "stopId": "S00255", "nume": "Parc Industrial Ploiesti", "offset": 9},
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 0},
+      { "stopId": "S00257", "nume": "Piritex", "offset": 1},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 9},
+      { "stopId": "S00126", "nume": "Eremia Grigorescu", "offset": 1},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00163", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00157", "nume": "Bloc 39", "offset": 1},
+      { "stopId": "S00158", "nume": "Bariera Marasesti", "offset": 2},
+      { "stopId": "S00159", "nume": "Palatul Copiilor", "offset": 2},
+      { "stopId": "S00050", "nume": "Domnisori", "offset": 2},
+      { "stopId": "S00051", "nume": "Spitalul CFR", "offset": 2},
+      { "stopId": "S00052", "nume": "Gara de Vest", "offset": 1}
+      
+    ],
+  
+    "Prog_T_LV": {
+      "5": [50],
+      "22": [50]
+    },
+  
+    "Prog_R_LV": {
+      "6": [45],
+      "23": [40]
+    },
+    
+    "Prog_R_S": {
+      "6": [45]
+    }
+  },
+
+  "307": {
+    "Cap1": "POD INALT",
+    "Cap2": "PARC INDUSTRIAL PLOIESTI",
+    "Cap3": "PARC INDUSTRIAL PLOIESTI",
+    "Cap4": "POD INALT",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 0},
+      { "stopId": "S00255", "nume": "Parc Industrial Ploiesti", "offset": 9},
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00256", "nume": "Yazaki", "offset": 0},
+      { "stopId": "S00257", "nume": "Piritex", "offset": 1},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 9}
+    ],
+  
+    "Prog_T_LV": {
+      "7": [35, 45],
+      "8": [0],
+      "14": [20, 30, 36]
+    },
+  
+    "Prog_R_LV": {
+      "15": [15, 15, 15],
+      "17": [30],
+      "19": [0]
+    }
+  },
+
+  "310": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "BLOC BUDA",
+    "Cap3": "BLOC BUDA",
+    "Cap4": "HALE CATEDRALA",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "B"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 10},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 2},
+      { "stopId": "S00263", "nume": "Bauelemente", "offset": 12},
+      { "stopId": "S00264", "nume": "Jungheinrich", "offset": 5},
+      { "stopId": "S00265", "nume": "Lubbers", "offset": 2},
+      { "stopId": "S00266", "nume": "Biserica Buda", "offset": 4},
+      { "stopId": "S00267", "nume": "Bloc Buda", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00267", "nume": "Bloc Buda", "offset": 0},
+      { "stopId": "S00268", "nume": "Dacheser", "offset": 4},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 15},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 12}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [15],
+      "7": [0],
+      "12": [15],
+      "13": [45],
+      "16": [30]
+    },
+  
+    "Prog_R_LV": {
+      "6": [0],
+      "7": [0],
+      "11": [0],
+      "13": [0],
+      "14": [30],
+      "18": [0]
+    },
+    
+    "Prog_T_SD": {
+      "9": [0],
+      "12": [30],
+      "16": [30]
+    },
+  
+    "Prog_R_SD": {
+      "6": [15],
+      "11": [0],
+      "14": [0]
+    }
+  },
+  
+  "310B": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "BAUELEMENTE",
+    "Cap3": "BAUELEMENTE",
+    "Cap4": "HALE CATEDRALA",
+
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 10},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 2},
+      { "stopId": "S00263", "nume": "Bauelemente", "offset": 12}
+    ],
+  
+    "StatiiRetur": [
+    ],
+  
+    "Prog_T_LV": {
+      "5": [40],
+      "10": [30]
+    },
+  
+    "Prog_R_LV": {
+    },
+    
+    "Prog_T_SD": {
+      "6": [0]
+    },
+  
+    "Prog_R_SD": {
+    }
+  },
+
+  "311": {
+    "Cap1": "HALE CATEDRALA",
+    "Cap2": "SALA SPORT NEDELEA",
+    "Cap3": "SALA SPORT NEDELEA",
+    "Cap4": "HALE CATEDRALA",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 0},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 5},
+      { "stopId": "S00138", "nume": "Biserica Inaltarea Domnului", "offset": 6},
+      { "stopId": "S00139", "nume": "Pod Inalt", "offset": 2},
+      { "stopId": "S00269", "nume": "Dispensar", "offset": 15},
+      { "stopId": "S00270", "nume": "Gradinita", "offset": 1},
+      { "stopId": "S00271", "nume": "Iliescu", "offset": 1},
+      { "stopId": "S00272", "nume": "Stoenesti", "offset": 3},
+      { "stopId": "S00273", "nume": "Trestioreanu", "offset": 4},
+      { "stopId": "S00274", "nume": "Posta", "offset": 1},
+      { "stopId": "S00275", "nume": "Cimitir", "offset": 1},
+      { "stopId": "S00276", "nume": "Canal", "offset": 2},
+      { "stopId": "S00277", "nume": "Intrare Nedelea", "offset": 1},
+      { "stopId": "S00278", "nume": "Alimentara", "offset": 1},
+      { "stopId": "S00279", "nume": "Sala Sport Nedelea deb.", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00280", "nume": "Sala Sport Nedelea", "offset": 0},
+      { "stopId": "S00281", "nume": "Alimentara", "offset": 1},
+      { "stopId": "S00282", "nume": "Intrare Nedelea", "offset": 1},
+      { "stopId": "S00283", "nume": "Canal", "offset": 1},
+      { "stopId": "S00284", "nume": "Cimitir", "offset": 2},
+      { "stopId": "S00285", "nume": "Posta", "offset": 1},
+      { "stopId": "S00286", "nume": "Trestioreanu", "offset": 1},
+      { "stopId": "S00287", "nume": "Stoenesti", "offset": 4},
+      { "stopId": "S00288", "nume": "Iliescu", "offset": 3},
+      { "stopId": "S00289", "nume": "Camin cultural Tg. Nou", "offset": 1},
+      { "stopId": "S00290", "nume": "Dispensar", "offset": 1},
+      { "stopId": "S00125", "nume": "Pod Inalt", "offset": 15},
+      { "stopId": "S00127", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00131", "nume": "Logofat Tautu", "offset": 6},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 6}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [15],
+      "7": [30],
+      "10": [30],
+      "13": [0],
+      "14": [0],
+      "16": [30],
+      "18": [0]
+    },
+  
+    "Prog_R_LV": {
+      "5": [30],
+      "7": [0],
+      "9": [0],
+      "12": [30],
+      "14": [30],
+      "16": [30]
+    },
+    
+    "Prog_T_SD": {
+      "10": [30],
+      "14": [0]
+    },
+  
+    "Prog_R_SD": {
+      "7": [0],
+      "12": [30],
+      "18": [30]
+    }
+  },
+
+  "401": {
+    "Cap1": "HIPODROM",
+    "Cap2": "AFI PLOIESTI",
+    "Cap3": "AFI PLOIESTI",
+    "Cap4": "HIPODROM",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00001", "nume": "Hipodrom", "offset": 0},
+      { "stopId": "S00002", "nume": "UPG", "offset": 1},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S50014", "nume": "Gara de Sud", "offset": 2},     
+      { "stopId": "S00046", "nume": "Pleiades", "offset": 3},
+      { "stopId": "S00230", "nume": "13 Decembrie", "offset": 3},
+      { "stopId": "S00231", "nume": "Armasi", "offset": 1},
+      { "stopId": "S00232", "nume": "Gradinari", "offset": 1},
+      { "stopId": "S00062", "nume": "Cartier Mihai Bravu", "offset": 1},
+      { "stopId": "S00063", "nume": "Neajlov", "offset": 2},
+      { "stopId": "S00064", "nume": "Tanin", "offset": 1},
+      { "stopId": "S00065", "nume": "Stadion Ilie Oana", "offset": 1},
+      { "stopId": "S00233", "nume": "AFI PLOIESTI", "offset": 3}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00233", "nume": "AFI PLOIESTI", "offset": 0},
+      { "stopId": "S00234", "nume": "Alexandru Vlahuta", "offset": 3},
+      { "stopId": "S00060", "nume": "Razboieni", "offset": 2},
+      { "stopId": "S00061", "nume": "Neajlov", "offset": 1},
+      { "stopId": "S00235", "nume": "Cartier Mihai Bravu", "offset": 2},
+      { "stopId": "S00236", "nume": "Gradinari", "offset": 2},
+      { "stopId": "S00237", "nume": "Armasi", "offset": 1},
+      { "stopId": "S00238", "nume": "Spatari", "offset": 1},
+      { "stopId": "S00239", "nume": "13 Decembrie", "offset": 1},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 3},
+      { "stopId": "S00103", "nume": "Prahova Value Centre", "offset": 3},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 4},
+      { "stopId": "S00025", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00026", "nume": "UPG", "offset": 1},
+      { "stopId": "S00027", "nume": "Hipodrom", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [30],
+      "7": [10, 50],
+      "8": [30],
+      "9": [10, 50],
+      "10": [30],
+      "11": [10, 50],
+      "12": [30],
+      "13": [10, 50],
+      "14": [30],
+      "15": [10, 50],
+      "16": [30],
+      "17": [10, 50],
+      "18": [16, 56],
+      "19": [36],
+      "20": [16, 48],
+      "21": [28],
+      "22": [0]
+    },
+  
+    "Prog_R_LV": {
+      "7": [6, 46],
+      "8": [26],
+      "9": [6, 46],
+      "10": [26],
+      "11": [6, 46],
+      "12": [26],
+      "13": [6, 46],
+      "14": [26],
+      "15": [6, 46],
+      "16": [26],
+      "17": [6, 46],
+      "18": [26, 52],
+      "19": [32],
+      "20": [10, 48],
+      "21": [20],
+      "22": [5, 30]
+    },
+    
+    "Prog_T_SD": {
+      "6": [30],
+      "7": [10, 50],
+      "8": [30],
+      "9": [10, 50],
+      "10": [30],
+      "11": [10, 50],
+      "12": [30],
+      "13": [10, 50],
+      "14": [30],
+      "15": [10, 50],
+      "16": [30],
+      "17": [10, 50],
+      "18": [16, 56],
+      "19": [36],
+      "20": [16, 48],
+      "21": [28],
+      "22": [0]
+    },
+  
+    "Prog_R_SD": {
+      "7": [6, 46],
+      "8": [26],
+      "9": [6, 46],
+      "10": [26],
+      "11": [6, 46],
+      "12": [26],
+      "13": [6, 46],
+      "14": [26],
+      "15": [6, 46],
+      "16": [26],
+      "17": [6, 46],
+      "18": [26, 52],
+      "19": [32],
+      "20": [10, 48],
+      "21": [20],
+      "22": [5, 30]
+    }
+  },
+  
+  "402": {
+    "Cap1": "LAMAITA ",
+    "Cap2": "AFI PLOIESTI",
+    "Cap3": "AFI PLOIESTI",
+    "Cap4": "BLOC 39",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "B"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00150", "nume": "Lamaita", "offset": 0},
+      { "stopId": "S00151", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00128", "nume": "Enachita Vacarescu", "offset": 3},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00146", "nume": "Nicolae Titulescu", "offset": 2},
+      { "stopId": "S00144", "nume": "Traian", "offset": 2},
+      { "stopId": "S00145", "nume": "Scoala 4", "offset": 2},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 3},
+      { "stopId": "S00243", "nume": "Liceul I.L. Caragiale", "offset": 3},
+      { "stopId": "S00233", "nume": "AFI PLOIESTI", "offset": 4}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00233", "nume": "AFI PLOIESTI", "offset": 0},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 6},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 4},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00135", "nume": "Zimbrului", "offset": 2},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00163", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00157", "nume": "Bloc 39", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "21": [5],
+      "22": [0]
+    },
+  
+    "Prog_R_LV": {
+      "20": [43],
+      "21": [30],
+      "22": [30]
+    },
+    
+    "Prog_T_S": {
+      "21": [5],
+      "22": [0]
+    },
+  
+    "Prog_R_S": {
+      "20": [43],
+      "21": [30],
+      "22": [30]
+    },
+  
+    "Prog_T_D": {
+      "19": [0],
+      "20": [0],
+      "21": [0],
+      "22": [0]
+    },
+  
+    "Prog_R_D": {
+      "18": [42],
+      "19": [30],
+      "20": [30],
+      "21": [30],
+      "22": [20]
+    }
+  },
+
+  "402B": {
+    "Cap1": "LAMAITA ",
+    "Cap2": "AFI PLOIESTI via COCOS 2",
+    "Cap3": "AFI PLOIESTI",
+    "Cap4": "BLOC 39 via COCOS 2",
+    
+    "StatiiTur": [
+      { "stopId": "S00150", "nume": "Lamaita", "offset": 0},
+      { "stopId": "S00151", "nume": "Biserica Inaltarea Domnului", "offset": 1},
+      { "stopId": "S00148", "nume": "Ofelia", "offset": 3},
+      { "stopId": "S00240", "nume": "Deltei", "offset": 1},
+      { "stopId": "S00241", "nume": "COCOS 2", "offset": 4},
+      { "stopId": "S00140", "nume": "Malu Rosu", "offset": 4},
+      { "stopId": "S00242", "nume": "ACR", "offset": 2},
+      { "stopId": "S00128", "nume": "Enachita Vacarescu", "offset": 3},
+      { "stopId": "S00129", "nume": "Zimbrului", "offset": 1},
+      { "stopId": "S00146", "nume": "Nicolae Titulescu", "offset": 2},
+      { "stopId": "S00144", "nume": "Traian", "offset": 2},
+      { "stopId": "S00145", "nume": "Scoala 4", "offset": 2},
+      { "stopId": "S00057", "nume": "Hale Catedrala", "offset": 3},
+      { "stopId": "S00243", "nume": "Liceul I.L. Caragiale", "offset": 3},
+      { "stopId": "S00233", "nume": "AFI PLOIESTI", "offset": 4}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00233", "nume": "AFI PLOIESTI", "offset": 0},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 6},
+      { "stopId": "S00133", "nume": "Logofat Tautu", "offset": 4},
+      { "stopId": "S00134", "nume": "Popa Farcas", "offset": 1},
+      { "stopId": "S00135", "nume": "Zimbrului", "offset": 2},
+      { "stopId": "S00136", "nume": "Ienachita Vacarescu", "offset": 1},
+      { "stopId": "S00137", "nume": "Liceul de Constructii", "offset": 1},
+      { "stopId": "S00148", "nume": "Ofelia", "offset": 2},
+      { "stopId": "S00240", "nume": "Deltei", "offset": 1},
+      { "stopId": "S00241", "nume": "COCOS 2", "offset": 4},
+      { "stopId": "S00140", "nume": "Malu Rosu", "offset": 4},
+      { "stopId": "S00242", "nume": "ACR", "offset": 2},
+      { "stopId": "S00163", "nume": "Biserica Inaltarea Domnului", "offset": 2},
+      { "stopId": "S00157", "nume": "Bloc 39", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [30],
+      "7": [15],
+      "8": [0, 45],
+      "9": [30],
+      "10": [15],
+      "11": [0, 45],
+      "12": [30],
+      "13": [15],
+      "14": [0, 45],
+      "15": [30],
+      "16": [15],
+      "17": [0, 45],
+      "18": [30],
+      "19": [15],
+      "20": [10]
+    },
+  
+    "Prog_R_LV": {
+      "7": [12, 57],
+      "8": [42],
+      "9": [27],
+      "10": [12, 57],
+      "11": [42],
+      "12": [27],
+      "13": [12, 57],
+      "14": [42],
+      "15": [27],
+      "16": [12, 57],
+      "17": [42],
+      "18": [27],
+      "19": [12, 54]
+    },
+    
+    "Prog_T_S": {
+      "6": [30],
+      "7": [15],
+      "8": [0, 45],
+      "9": [30],
+      "10": [15],
+      "11": [0, 45],
+      "12": [30],
+      "13": [15],
+      "14": [0, 45],
+      "15": [30],
+      "16": [15],
+      "17": [0, 45],
+      "18": [30],
+      "19": [15],
+      "20": [10]
+    },
+  
+    "Prog_R_S": {
+      "7": [12, 57],
+      "8": [42],
+      "9": [27],
+      "10": [12, 57],
+      "11": [42],
+      "12": [27],
+      "13": [12, 57],
+      "14": [42],
+      "15": [27],
+      "16": [12, 57],
+      "17": [42],
+      "18": [27],
+      "19": [12, 54]
+    },
+  
+    "Prog_T_D": {
+      "7": [15],
+      "8": [0, 45],
+      "9": [30],
+      "10": [15],
+      "11": [0, 45],
+      "12": [30],
+      "13": [15],
+      "14": [0, 45],
+      "15": [30],
+      "16": [15],
+      "17": [0],
+      "18": [0]
+    },
+  
+    "Prog_R_D": {
+      "7": [57],
+      "8": [42],
+      "9": [27],
+      "10": [12, 57],
+      "11": [42],
+      "12": [27],
+      "13": [12, 57],
+      "14": [42],
+      "15": [27],
+      "16": [12],
+      "17": [42]
+    }
+  },
+
+  "444": {
+    "Cap1": "RAFINORILOR",
+    "Cap2": "GARA DE SUD",
+    "Cap3": "GARA DE SUD",
+    "Cap4": "RAFINORILOR",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "B"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00252", "nume": "Rafinorilor", "offset": 0},
+      { "stopId": "S00251", "nume": "CONPET", "offset": 1},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 2},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00132", "nume": "Gara de Sud BIG", "offset": 2}
+    ],
+    
+    "StatiiRetur": [
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 0},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 2},
+      { "stopId": "S00245", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00253", "nume": "CONPET", "offset": 2},
+      { "stopId": "S00252", "nume": "Rafinorilor", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [10, 45],
+      "7": [20],
+      "8": [45],
+      "9": [40],
+      "10": [40],
+      "11": [45],
+      "12": [37],
+      "13": [37],
+      "14": [2, 42],
+      "16": [30],
+      "17": [2, 55],
+      "18": [40],
+      "19": [55],
+      "20": [55],
+      "21": [40],
+      "22": [55]
+    },
+  
+    "Prog_R_LV": {
+      "6": [33],
+      "7": [8],
+      "9": [28],
+      "10": [28],
+      "11": [33],
+      "12": [25],
+      "13": [25, 50],
+      "14": [30],
+      "16": [18, 50],
+      "17": [45],
+      "18": [30],
+      "19": [45],
+      "20": [45],
+      "21": [30],
+      "22": [45]
+    },
+    
+    "Prog_T_SD": {
+      "9": [15],
+      "10": [15],
+      "11": [15],
+      "12": [15],
+      "13": [15],
+      "15": [45],
+      "17": [30],
+      "19": [25],
+      "20": [53]
+    },
+  
+    "Prog_R_SD": {
+      "10": [7],
+      "11": [7],
+      "12": [7],
+      "13": [7],
+      "17": [22],
+      "19": [17],
+      "20": [45]
+    }
+  },
+  
+  "444B": {
+    "Cap1": "RAFINORILOR",
+    "Cap2": "SCOALA FLORIN COMISEL. via GARA DE SUD",
+    "Cap3": "SCOALA FLORIN COMISEL",
+    "Cap4": "RAFINORILOR via GARA DE SUD",
+    
+    "Variante": [
+      { "litera": ""},
+      { "litera": "B"}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00252", "nume": "Rafinorilor", "offset": 0},
+      { "stopId": "S00251", "nume": "CONPET", "offset": 1},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 2},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00132", "nume": "Gara de Sud BIG", "offset": 2},
+      { "stopId": "S00259", "nume": "Bobalna", "offset": 1},
+      { "stopId": "S00085", "nume": "Stindardului", "offset": 2},
+      { "stopId": "S00260", "nume": "Scoala Florin Comisel", "offset": 1}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00260", "nume": "Scoala Florin Comisel", "offset": 0},
+      { "stopId": "S00261", "nume": "Campiei", "offset": 2},
+      { "stopId": "S00081", "nume": "Facultativa", "offset": 1},
+      { "stopId": "S00082", "nume": "Eroilor", "offset": 1},
+      { "stopId": "S00083", "nume": "Bariera Rudului", "offset": 1},
+      { "stopId": "S00262", "nume": "Depoului", "offset": 2},
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 1},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 2},
+      { "stopId": "S00245", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00253", "nume": "CONPET", "offset": 2},
+      { "stopId": "S00252", "nume": "Rafinorilor", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+    },
+  
+    "Prog_R_LV": {
+    },
+    
+    "Prog_T_SD": {
+    },
+  
+    "Prog_R_SD": {
+    }
+  },
+  
+  "445": {
+    "Cap1": "GARA DE SUD",
+    "Cap2": "PLOIESTI TRIAJ",
+    "Cap3": "PLOIESTI TRIAJ",
+    "Cap4": "GARA DE SUD",
+    
+    "Variante": [
+      { "litera": ""}
+    ], 
+
+    "StatiiTur": [
+      { "stopId": "S00023", "nume": "Gara de Sud", "offset": 0},
+      { "stopId": "S00024", "nume": "Rulmenti grei", "offset": 2},
+      { "stopId": "S00025", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00026", "nume": "UPG", "offset": 1},
+      { "stopId": "S00254", "nume": "Ploiesti Triaj", "offset": 12}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00254", "nume": "Ploiesti Triaj", "offset": 0},
+      { "stopId": "S00001", "nume": "Hipodrom", "offset": 15},
+      { "stopId": "S00002", "nume": "UPG", "offset": 1},
+      { "stopId": "S00003", "nume": "Bariera Bucuresti", "offset": 1},
+      { "stopId": "S00004", "nume": "Rulmenti grei", "offset": 1},
+      { "stopId": "S00132", "nume": "Gara de Sud BIG", "offset": 2}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [55],
+      "8": [0],
+      "12": [30],
+      "13": [45],
+      "16": [30],
+      "17": [45],
+      "20": [0],
+      "22": [25]
+    },
+  
+    "Prog_R_LV": {
+      "6": [0],
+      "7": [15],
+      "10": [30],
+      "13": [0],
+      "14": [10],
+      "17": [0],
+      "18": [15],
+      "20": [30],
+      "22": [45]
+    },
+    
+    "Prog_T_SD": {
+      "7": [45],
+      "12": [30],
+      "16": [30],
+      "19": [45],
+      "22": [25]
+    },
+  
+    "Prog_R_SD": {
+      "6": [0],
+      "8": [15],
+      "13": [0],
+      "16": [50],
+      "20": [15]
+    }
+  }
+}

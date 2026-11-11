@@ -1,0 +1,78 @@
+{
+  "Anunturi": [
+    { "titluAnunt": "TEST_titlu",
+      "dataAnunt": "07.09.2026",
+      "idAnunt": "0000000_TEST",
+      "TraseeAfectate": ["1", "7", "8", "22","30", "35", "35B", "39"],
+      "segmenteAfectate": "TEST_segmente_afectate",
+      "perioada": "TEST_09.08.2026 ora 00:00 - 10.08.2026 ora 05:00",
+      "textAnunt": "TEST_text_anunt",
+      "infoYellow": ["TEST_yellow", "TEST_yellow2"],
+      "infoRed": ["TEST_red"]
+    },
+    { "titluAnunt": "Anunt intrerupere circulatie",
+      "dataAnunt": "07.09.2026",
+      "idAnunt": "0000001",
+      "TraseeAfectate": ["1", "7", "8", "22","30", "35", "35B", "39B"],
+      "segmenteAfectate": "",
+      "perioada": "09.08.2026 ora 00:00 - 10.08.2026 ora 05:00",
+      "textAnunt": "Prin Hotărârea din 05.08.2026, Comisia Municipală pentru Transport și Siguranța Circulației a Primăriei Municipiului Ploiești a aprobat închiderea circulației rutiere pe Bulevardul Republicii, între Str. Vasile Milea, zona Parcului Toma Socolescu, și intersecția cu Str. C.D. Gherea.<br><br>În consecință, traseele publice locale din Ploiești cu parcurs în zonă își modifică ruta astfel:",
+      "infoYellow": [
+        "Traseul 1<br><br>Sensul Armoniei - Metro: din Str. N. Bălcescu, pe Str. Șt. Greceanu, Romană, Ghe. Doja, Vasile Milea, Emile Zola, după care ruta cunoscută.<br><br>Sensul de întoarcere: de la sensul giratoriu de la Catedrală se intră pe Str. Carpați, Emile Zola, cu stație la Hale Catedrală, apoi pe Str. Vasile Milea, George Coșbuc, Șt. Greceanu, N. Bălcescu, Armoniei.<br><br>Stație suspendată: Galeriile Comerciale.",
+        "Traseul 30<br><br>Sensul Sud - Centru: circulă pe străzile Democrației, Ștefan cel Mare, N. Bălcescu, Șt. Greceanu, Romană, Ghe. Doja, Vasile Milea, Emile Zola, după care ruta cunoscută.<br><br>Stație suspendată pe sensul Sud - Centru: Palatul Culturii.<br><br>Celălalt sens: de la sensul giratoriu de la Catedrală se intră pe Str. Carpați, Emile Zola, cu stație la Hale Catedrală, apoi pe Str. Vasile Milea, George Coșbuc, Șt. Greceanu, N. Bălcescu, Gh. Lazăr și în continuare ruta normală pentru zi de weekend.<br><br>Stație suspendată: Galeriile Comerciale.",
+        "Traseele 7 și 22b<br><br>Sensul spre Dorobanțu / Bariera Unirii: din Str. T. Ionescu se vor parcurge Piața Victoriei, Str. Gh. Lazăr, Str. Dr. Bagdazar și în continuare traseu normal.<br><br>Stație suspendată: Hale Catedrală.<br><br>Sensul spre Rudului / Auchan: din Str. Șt. Greceanu se vor parcurge Str. Romană, Gh. Doja, Vasile Milea, Emile Zola și în continuare traseu normal.",
+        "Traseul 8<br><br>Sensul spre Cimitir Bolovani: din Str. E. Zola parcurge Str. Vasile Milea, G. Coșbuc, Șt. Greceanu, C.D. Gherea, Tache Ionescu și în continuare ruta normală.<br><br>Sensul spre Hale Catedrală: din Str. T. Ionescu va parcurge C.D. Gherea, Șt. Greceanu, Romană, Ghe. Doja, Văleni, Carpați, E. Zola.",
+        "Traseul 39b<br><br>Sensul spre Hale Catedrală: din Str. I.L. Caragiale va intra pe C.G. Cantacuzino, Cuza Vodă, Vasile Lupu, Carpați, E. Zola.<br><br>Stație temporară: se va efectua stația Faredo în loc de T. Ionescu.<br><br>Celălalt sens: ruta nu se modifică.",
+        "Traseele 35 și 35b<br><br>Traseele 35 și 35b se vor scurta la Faredo.<br><br>Traseul 35: din Str. I.L. Caragiale va parcurge străzile Rudului, Mărășești, Lobacevschi, Tudor Vladimirescu și în continuare ruta cunoscută."
+      ],
+      "infoRed": ["În funcție de dispozițiile Poliției Rutiere, atât intervalul orar, cât și rutele ocolitoare specificate pot fi modificate."]
+    },
+    { "titluAnunt": "Anunt intrerupere circulatie",
+      "dataAnunt": "12.09.2026",
+      "idAnunt": "0000002",
+      "TraseeAfectate": ["1", "30"],
+      "segmenteAfectate": "",
+      "perioada": "12.09.2026 ora 13:00 - 12.09.2026 ora 15:00",
+      "textAnunt": "În data de 12 septembrie 2026, în intervalul orar 13:00 - 15:00, se desfășoară concursul Federației Române de Ciclism - Turul României 2026, etapa 4. \n \n Conform Hotărârii Comisiei Municipale pentru Transport și Siguranța Circulației din 21.08.2026, se închide circulația rutieră pe Bulevardul Republicii, între Piața Mihai Viteazu și Piața Eroilor.",
+      "infoYellow": ["Traseele 1 și 30 vor circula pe rută ocolitoare<br><br>Sensul spre centru: traseu normal până în Piața Mihai Viteazu, apoi pe Str. Gheorghe Doja, cu oprire în stația Piața Mihai Viteazu, și în continuare pe străzile Văleni, Emile Zola, dreapta pe General Vasile Milea, iar din Piața Eroilor se revine la parcursul normal.<br><br>Stație suspendată: nu se efectuează stația Piața Mihai Viteazu de pe Bulevardul Republicii.<br><br>Sensul spre nord: ruta nu se modifică."],
+      "infoRed": ["În funcție de dispozițiile Poliției Rutiere, atât intervalul orar, cât și rutele ocolitoare specificate pot fi modificate."]
+    },
+    { "titluAnunt": "Anunt suspendare traseu",
+      "dataAnunt": "28.09.2026",
+      "idAnunt": "0000003",
+      "TraseeAfectate": ["40B"],
+      "segmenteAfectate": "",
+      "perioada": "12.09.2026 ora 13:00 - 12.09.2026 ora 15:00",
+      "textAnunt": "Începând cu data de 03.10.2026, se suspendă traseul 40barat Hale Catedrală - Parc „Constantin Stere” Bucov, care circulă in perioada de vară, în zilele de sâmbătă şi duminică.S.C. T.C.E. S.A. Ploiești",
+      "infoYellow": [""],
+      "infoRed": [""]
+    },
+    { "titluAnunt": "Anunt modificare trasee",
+      "dataAnunt": "12.10.2026",
+      "idAnunt": "0000004",
+      "TraseeAfectate": ["1", "32"],
+      "segmenteAfectate": "",
+      "perioada": "",
+      "textAnunt": "Începând cu data de 13.10.2026, ca urmare a <strong> Hotărarii Consiliului Local Ploiesti</strong> nr. 435/08.10.2026, traseul 1 va circula între Metro și Astra/Comat, iar traseul 32 va circula între Hale Catedrală și Pictor Rosenthal. Rutele si stațiile, precum și orarele traseelor 1 si 32 pot fi consultate pe site-ul S.C. T.C.E. S.A. Ploiești www.tceph.ro",
+      "infoYellow": [""],
+      "infoRed": [""]
+    },
+    { "titluAnunt": "Reorganizarea traseelor in zona Gara de Sud",
+      "dataAnunt": "22.10.2026",
+      "idAnunt": "0000005",
+      "TraseeAfectate": ["1", "2", "30", "32", "44", "202", "401", "444"],
+      "segmenteAfectate": "",
+      "perioada": "25.10.2026 ora 9:40 - 25.11.2026 ora 10:45",
+      "textAnunt": "Pe  data de 25 octombrie 2026  au  loc  manifestările prilejuite de  sărbătorirea  “Zilei  Armatei României”. \n \nAstfel, la Monumentul Vânătorilor din Zona Gării  Sud se impune reorganizarea transportului  public  local.  Între orele  09:40 – 10:45, traseele cu parcurs pe Bd. Independenței vor circula cu rută ocolitoare între statuia Radu Stanian și Gara Sud: pe  str. Bobâlna la sensul spre Sud, unde vor efectua stațiile Pelican, Liceul de Muzică, respectiv pe str. Democrației la sensul de deplasare dinspre Sud spre Centru, unde se vor efectua stațiile 13 Decembrie, Covurlui și Muzeul de Istorie.",
+      "infoYellow": [
+        "Troleibuzele din traseele 44 și 202 vor fi scurtate la Hale Coreco. Legătura între Centru și Gara Sud se va face cu celelalte trasee cu parcurs în zonă.",
+        "La traseele 1 și 30, la sensul spre Centru, autobuzele nu vor mai intra la Gara Sud; după stația Rulmenți Grei, urmatoarea stație va fi 13 Decembrie/Democrației.",
+        "Traseul 401(la sensul spre Centru) din stația Rulmenți Grei va urca podul și  va intra la Prahova Value Centre prin coborâre pe breteaua de acces, fără intrare în Gara Sud.",
+        "Traseul 32, la sensul spre Centru: autobuzele nu vor mai intra la Gara Sud; după stația Pleiades, urmatoarea stație va fi 13 Decembrie/Democrației. ",
+        "Traseul 2: la sensul Gara Vest-Prahova Value Centre se va circula pe str. Bobâlna, unde se vor efectua stațiile Pelican si Liceul de Muzică. La sensul Prahova Value Centre – Gara Vest, nu se va mai intra la Gara Sud și se va circula direct pe str. Democrației. După stația Pleiades, urmatoarea stație va fi 13 Decembrie din str. Democrației, apoi Covurlui si Muzeul de Istorie. Călătorii din zona Gara de Sud care doresc să ajungă în zona Centru / Vest vor folosi stația Gara Sud (din fata gării).  În acest scop călătorii răman în autobuzul care intră la Prahova Value Centre și apoi continuă circulația pe str. Democrației.",
+        "Traseul 444 va  circula doar până la Bariera București."
+      ],
+      "infoRed": ["În funcție de dispozițiile Poliției Rutiere, atât intervalul orar cât și rutele ocolitoare specificate pot fi modificate."]
+    }
+  ]
+}

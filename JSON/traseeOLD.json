@@ -1,0 +1,575 @@
+{
+  
+  "1K": {
+    "Cap1": "KM 5",
+    "Cap2": "ARMONIEI",
+    "Cap3": "ARMONIEI",
+    "Cap4": "KM 5",
+    
+    "StatiiTur": [
+      { "stopId": "S00038", "nume": "KM 5", "offset": 0},
+      { "stopId": "S00039", "nume": "Meteo", "offset": 1},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 2},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 2},
+      { "stopId": "S00019",  "nume": "Galeriile Comerciale", "offset": 2},
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 3}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 0},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 3},
+      { "stopId": "S00010", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00030", "nume": "Kaufland Nord", "offset": 2},
+      { "stopId": "S00031", "nume": "Meteo", "offset": 1},
+      { "stopId": "S00032", "nume": "KM 5", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [0]
+    },
+  
+    "Prog_R_LV": {
+      "5": [45]
+    }
+  },
+
+  "1M": {
+    "Cap1": "METRO",
+    "Cap2": "ARMONIEI",
+    "Cap3": "ARMONIEI",
+    "Cap4": "METRO",
+    
+    "StatiiTur": [
+      { "stopId": "S00036", "nume": "Metro", "offset": 0},
+      { "stopId": "S00037", "nume": "Leroy Merlin", "offset": 3},
+      { "stopId": "S00038", "nume": "KM 5", "offset": 3},
+      { "stopId": "S00039", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 3},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00019",  "nume": "Galeriile Comerciale", "offset": 4},
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 5}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 0},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 5},
+      { "stopId": "S00010", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00030", "nume": "Kaufland Nord", "offset": 2},
+      { "stopId": "S00031", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00032", "nume": "KM 5", "offset": 1},
+      { "stopId": "S00033", "nume": "Shell", "offset": 2},
+      { "stopId": "S00034", "nume": "Ploiesti Shopping City 1", "offset": 3},
+      { "stopId": "S00035", "nume": "Ploiesti Shopping City 2", "offset": 1},
+      { "stopId": "S00036", "nume": "Metro", "offset": 2}
+    ],
+  
+    "Prog_T_LV": {
+      "6": [15, 30, 44, 56],
+      "7": [9, 22, 35, 48],
+      "8": [0, 13, 25, 38, 50],
+      "9": [5, 17, 30, 42, 55],
+      "10": [7, 20, 32, 45, 57],
+      "11": [10, 22, 35, 47],
+      "12": [0, 12, 25, 37, 50],
+      "13": [2, 15, 27, 40, 52],
+      "14": [5, 17, 30, 42, 55],
+      "15": [7, 20, 32, 45, 57],
+      "16": [10, 22, 35, 47],
+      "17": [0, 12, 25, 40, 55],
+      "18": [7, 19, 32, 45, 57],
+      "19": [10, 22, 35, 47],
+      "20": [0, 12, 25, 37, 50],
+      "21": [5, 30]
+    },
+  
+    "Prog_R_LV": {
+      "5": [56],
+      "6": [6, 19, 31, 44, 57],
+      "7": [10, 23, 35, 48],
+      "8": [0, 13, 25, 40, 52],
+      "9": [5, 17, 30, 42, 55],
+      "10": [7, 20, 32, 45, 57],
+      "11": [10, 22, 35, 47],
+      "12": [0, 12, 25, 37, 50],
+      "13": [2, 15, 27, 40, 52],
+      "14": [5, 17, 30, 42, 55],
+      "15": [7, 20, 32, 45, 57],
+      "16": [10, 22, 35, 47],
+      "17": [0, 15, 30, 42, 54],
+      "18": [7, 20, 32, 45, 57],
+      "19": [10, 22, 35, 47],
+      "20": [0, 12, 25, 40],
+      "21": [5]
+    },
+    
+    "Prog_T_S": {
+      "6": [50],
+      "7": [5, 18, 30, 43, 55],
+      "8": [8, 20, 33, 45, 58],
+      "9": [10, 25, 40, 55],
+      "10": [10, 25, 40, 55],
+      "11": [10, 25, 40, 55],
+      "12": [10, 25, 40, 55],
+      "13": [10, 25, 40, 55],
+      "14": [10, 25, 40, 55],
+      "15": [10, 25, 40, 55],
+      "16": [10, 25, 40, 55],
+      "17": [10, 25, 40, 55],
+      "18": [10, 25, 40, 55],
+      "19": [10, 25, 40, 55],
+      "20": [10, 25, 45],
+      "21": [5, 25]
+    },
+  
+    "Prog_R_S": {
+      "6": [20, 40, 53],
+      "7": [5, 18, 30, 43, 55],
+      "8": [8, 20, 33, 45],
+      "9": [0, 15, 30, 45],
+      "10": [0, 15, 30, 45],
+      "11": [0, 15, 30, 45],
+      "12": [0, 15, 30, 45],
+      "13": [0, 15, 30, 45],
+      "14": [0, 15, 30, 45],
+      "15": [0, 15, 30, 45],
+      "16": [0, 15, 30, 45],
+      "17": [0, 15, 30, 45],
+      "18": [0, 15, 30, 45],
+      "19": [0, 15, 30, 45],
+      "20": [0, 20, 40],
+      "21": [0]
+    },
+  
+    "Prog_T_D": {
+      "7": [5, 18, 30, 43, 55],
+      "8": [8, 20, 33, 45, 58],
+      "9": [10, 25, 40, 55],
+      "10": [10, 25, 40, 55],
+      "11": [10, 25, 40, 55],
+      "12": [10, 25, 40, 55],
+      "13": [10, 25, 40, 55],
+      "14": [10, 25, 40, 55],
+      "15": [10, 25, 40, 55],
+      "16": [10, 25, 40, 55],
+      "17": [10, 25, 40, 55],
+      "18": [10, 25]
+    },
+  
+    "Prog_R_D": {
+      "6": [40, 53],
+      "7": [5, 18, 30, 43, 55],
+      "8": [8, 20, 33, 45],
+      "9": [0, 15, 30, 45],
+      "10": [0, 15, 30, 45],
+      "11": [0, 15, 30, 45],
+      "12": [0, 15, 30, 45],
+      "13": [0, 15, 30, 45],
+      "14": [0, 15, 30, 45],
+      "15": [0, 15, 30, 45],
+      "16": [0, 15, 30, 45],
+      "17": [0, 15, 30, 45],
+      "18": [0]
+    }
+  },
+
+  "1P": {
+    "Cap1": "PLOIESTI SHOPPING CITY",
+    "Cap2": "ARMONIEI",
+    "Cap3": "ARMONIEI",
+    "Cap4": "PLOIESTI SHOPPING CITY",
+    
+    "StatiiTur": [
+      { "stopId": "S00034", "nume": "Ploiesti Shopping City 1", "offset": 0},
+      { "stopId": "S00035", "nume": "Ploiesti Shopping City 2", "offset": 1},
+      { "stopId": "S00037", "nume": "Leroy Merlin", "offset": 2},
+      { "stopId": "S00038", "nume": "KM 5", "offset": 3},
+      { "stopId": "S00039", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 3},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00019",  "nume": "Galeriile Comerciale", "offset": 4},
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 5}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 0},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 5},
+      { "stopId": "S00010", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00030", "nume": "Kaufland Nord", "offset": 2},
+      { "stopId": "S00031", "nume": "Meteo", "offset": 2},
+      { "stopId": "S00032", "nume": "KM 5", "offset": 1},
+      { "stopId": "S00033", "nume": "Shell", "offset": 2},
+      { "stopId": "S00034", "nume": "Ploiesti Shopping City 1", "offset": 3}
+    ],
+  
+    "Prog_T_LV": {
+      "21": [50],
+      "22": [25, 40],
+      "23": [15]
+    },
+  
+    "Prog_R_LV": {
+      "21": [30],
+      "22": [5, 20, 55]
+    },
+    
+    "Prog_T_S": {
+      "21": [50],
+      "22": [25],
+      "23": [15]
+    },
+  
+    "Prog_R_S": {
+      "21": [30],
+      "22": [5, 50]
+    },
+  
+    "Prog_T_D": {
+      "6": [50],
+      "21": [5, 25, 50],
+      "22": [25],
+      "23": [10]
+    },
+  
+    "Prog_R_D": {
+      "6": [20],
+      "18": [20, 35, 50],
+      "19": [5, 20, 35],
+      "20": [5, 25, 45],
+      "21": [5, 30],
+      "22": [5, 50]
+    }
+  },
+
+  "1R": {
+    "Cap1": "CABLU ROMANESC",
+    "Cap2": "ARMONIEI",
+    "Cap3": "ARMONIEI",
+    "Cap4": "CABLU ROMANESC",
+    
+    "StatiiTur": [
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1},
+      { "stopId": "S00041", "nume": "8 Martie", "offset": 2},
+      { "stopId": "S00018", "nume": "Piata Mihai Viteazul", "offset": 2},
+      { "stopId": "S00019", "nume": "Galeriile Comerciale", "offset": 2},
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 3}
+    ],
+  
+    "StatiiRetur": [
+      { "stopId": "S00096", "nume": "Armoniei", "offset": 0},
+      { "stopId": "S00009", "nume": "Hale Coreco", "offset": 3},
+      { "stopId": "S00010", "nume": "Piata Mihai Viteazul", "offset": 3},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00029", "nume": "Restaurant Nord", "offset": 2},
+      { "stopId": "S00040", "nume": "Cablul Romanesc", "offset": 1}
+    ],
+  
+    "Prog_T_LV": {
+      "5": [30, 40, 50]
+    },
+    
+    "Prog_T_SD": {
+      "5": [30],
+      "6": [15, 30]
+    },
+  
+    "Prog_R_SD": {
+      "5": [55]
+    }
+  },
+  
+  "32": {
+    "Cap1": "GARA DE SUD",
+    "Cap2": "PICTOR ROSENTHAL via RAFINARIA ASTRA",
+    "Cap3": "PICTOR ROSENTHAL",
+    "Cap4": "GARA DE SUD",
+
+    "Variante": [
+      { "litera": ""},
+      { "litera": "C"}
+    ],
+    
+    "StatiiTur": [
+      { "nume": "Gara de Sud", "offset": 0},
+      { "nume": "Prahova Value Centre", "offset": 3},
+      { "nume": "Rulmenti grei", "offset": 3},
+      { "nume": "Bariera Bucuresti", "offset": 1},
+      { "nume": "Rafinaria Astra", "offset": 1},
+      { "nume": "Bariera Bucuresti", "offset": 1},
+      { "nume": "Ghighiului", "offset": 1},
+      { "nume": "Vintileanca", "offset": 1},
+      { "nume": "Moreni", "offset": 1},
+      { "nume": "Inotesti", "offset": 1},
+      { "nume": "Cimitirul Eternitatii", "offset": 1},
+      { "nume": "Oxigen", "offset": 1},
+      { "nume": "Islazului", "offset": 1},
+      { "nume": "Targului", "offset": 1},
+      { "nume": "Uzinei", "offset": 1},
+      { "nume": "Bariera Rafov", "offset": 1},
+      { "nume": "Corlatesti", "offset": 1},
+      { "nume": "Protan", "offset": 1},
+      { "nume": "Pictor Rosenthal", "offset": 1}
+    ],
+        
+    "StatiiRetur": [
+      { "nume": "Pictor Rosenthal", "offset": 0},
+      { "nume": "Protan", "offset": 1},
+      { "nume": "Corlatesti", "offset": 1},
+      { "nume": "Bariera Rafov", "offset": 1},
+      { "nume": "Oxigen", "offset": 1},
+      { "nume": "Cimitirul Eternitatii", "offset": 1},
+      { "nume": "Azuga", "offset": 1},
+      { "nume": "Moreni", "offset": 1},
+      { "nume": "Vintileanca", "offset": 1},
+      { "nume": "Bariera Bucuresti", "offset": 2},
+      { "nume": "Rulmenti grei", "offset": 1},
+      { "nume": "Pleiades", "offset": 3},
+      { "nume": "Gara de Sud", "offset": 3}
+    ],
+    
+    "Prog_T_LV": {
+      "5": [18, 39, 54],
+      "7": [36],
+      "8": [5, 35],
+      "9": [7, 37],
+      "10": [9, 39],
+      "11": [11, 41],
+      "12": [13, 43],
+      "13": [15, 45],
+      "14": [17],
+      "15": [53],
+      "16": [25, 55],
+      "17": [27, 57],
+      "18": [27, 57],
+      "19": [28, 58],
+      "20": [28],
+      "21": [7],
+      "22": [3, 53]
+    },
+    
+    "Prog_R_LV": {
+      "5": [47],
+      "6": [10, 25, 58],
+      "7": [20, 45],
+      "8": [10, 39],
+      "9": [9, 41],
+      "10": [11, 43],
+      "11": [13, 45],
+      "12": [15, 47],
+      "13": [17, 49],
+      "14": [19, 51],
+      "15": [25, 57],
+      "16": [27, 59],
+      "17": [29],
+      "18": [1, 31],
+      "19": [1, 31],
+      "20": [2, 32],
+      "21": [2, 39],
+      "22": [34],
+      "23": [24]
+    },
+
+    "Prog_T_SD": {
+      "7": [0],
+      "8": [0],
+      "9": [15],
+      "10": [15],
+      "11": [15],
+      "12": [15],
+      "13": [15],
+      "14": [15],
+      "15": [15],
+      "16": [15],
+      "17": [15],
+      "18": [30],
+      "19": [45],
+      "21": [0]
+    },
+
+    "Prog_R_SD": {
+      "7": [31],
+      "8": [31],
+      "9": [46],
+      "10": [46],
+      "11": [46],
+      "12": [46],
+      "13": [46],
+      "14": [46],
+      "15": [46],
+      "16": [46],
+      "17": [46],
+      "19": [1],
+      "20": [16],
+      "21": [30]
+    }
+  },
+  
+  "32A": {
+    "Cap1": "GARA DE SUD",
+    "Cap2": "PICTOR ROSENTHAL via RAFINARIA ASTRA",
+    "Cap3": "PICTOR ROSENTHAL",
+    "Cap4": "GARA DE SUD",
+
+    "StatiiTur": [
+      { "nume": "Gara de Sud", "offset": 0},
+      { "nume": "Prahova Value Centre", "offset": 3},
+      { "nume": "Rulmenti grei", "offset": 3},
+      { "nume": "Bariera Bucuresti", "offset": 1},
+      { "nume": "Rafinaria Astra", "offset": 1},
+      { "nume": "Bariera Bucuresti", "offset": 1},
+      { "nume": "Ghighiului", "offset": 1},
+      { "nume": "Vintileanca", "offset": 1},
+      { "nume": "Moreni", "offset": 1},
+      { "nume": "Inotesti", "offset": 1},
+      { "nume": "Cimitirul Eternitatii", "offset": 1},
+      { "nume": "Oxigen", "offset": 1},
+      { "nume": "Islazului", "offset": 1},
+      { "nume": "Targului", "offset": 1},
+      { "nume": "Uzinei", "offset": 1},
+      { "nume": "Bariera Rafov", "offset": 1},
+      { "nume": "Corlatesti", "offset": 1},
+      { "nume": "Protan", "offset": 1},
+      { "nume": "Pictor Rosenthal", "offset": 1}
+    ],
+        
+    "StatiiRetur": [
+      { "nume": "Pictor Rosenthal", "offset": 0},
+      { "nume": "Protan", "offset": 1},
+      { "nume": "Corlatesti", "offset": 1},
+      { "nume": "Bariera Rafov", "offset": 1},
+      { "nume": "Oxigen", "offset": 1},
+      { "nume": "Cimitirul Eternitatii", "offset": 1},
+      { "nume": "Azuga", "offset": 1},
+      { "nume": "Moreni", "offset": 1},
+      { "nume": "Vintileanca", "offset": 1},
+      { "nume": "Bariera Bucuresti", "offset": 2},
+      { "nume": "Rulmenti grei", "offset": 1},
+      { "nume": "Pleiades", "offset": 3},
+      { "nume": "Gara de Sud", "offset": 3}
+    ],
+    
+    "Prog_T_LV": {
+      "5": [18, 39, 54],
+      "7": [36],
+      "8": [5, 35],
+      "9": [7, 37],
+      "10": [9, 39],
+      "11": [11, 41],
+      "12": [13, 43],
+      "13": [15, 45],
+      "14": [17],
+      "15": [53],
+      "16": [25, 55],
+      "17": [27, 57],
+      "18": [27, 57],
+      "19": [28, 58],
+      "20": [28],
+      "21": [7],
+      "22": [3, 53]
+    },
+    
+    "Prog_R_LV": {
+      "5": [47],
+      "6": [10, 25, 58],
+      "7": [20, 45],
+      "8": [10, 39],
+      "9": [9, 41],
+      "10": [11, 43],
+      "11": [13, 45],
+      "12": [15, 47],
+      "13": [17, 49],
+      "14": [19, 51],
+      "15": [25, 57],
+      "16": [27, 59],
+      "17": [29],
+      "18": [1, 31],
+      "19": [1, 31],
+      "20": [2, 32],
+      "21": [2, 39],
+      "22": [34],
+      "23": [24]
+    },
+
+    "Prog_T_SD": {
+      "7": [0],
+      "8": [0],
+      "9": [15],
+      "10": [15],
+      "11": [15],
+      "12": [15],
+      "13": [15],
+      "14": [15],
+      "15": [15],
+      "16": [15],
+      "17": [15],
+      "18": [30],
+      "19": [45],
+      "21": [0]
+    },
+
+    "Prog_R_SD": {
+      "7": [31],
+      "8": [31],
+      "9": [46],
+      "10": [46],
+      "11": [46],
+      "12": [46],
+      "13": [46],
+      "14": [46],
+      "15": [46],
+      "16": [46],
+      "17": [46],
+      "19": [1],
+      "20": [16],
+      "21": [30]
+    }
+  },
+
+  "32C": {
+    "Cap1": "GARA DE SUD",
+    "Cap2": "PICTOR ROSENTHAL via RAF. ASTRA - COMAT",
+    "Cap3": "PICTOR ROSENTHAL",
+    "Cap4": "GARA DE SUD",
+
+    "StatiiTur": [
+      { "nume": "Gara de Sud", "offset": 0},
+      { "nume": "Prahova Value Centre", "offset": 3},
+      { "nume": "Rulmenti grei", "offset": 3},
+      { "nume": "Bariera Bucuresti", "offset": 1},
+      { "nume": "Rafinaria Astra", "offset": 1},
+      { "nume": "UMERVA", "offset": 1},
+      { "nume": "COMAT", "offset": 1},
+      { "nume": "UMERVA", "offset": 1},
+      { "nume": "Rafinaria Astra", "offset": 1},
+      { "nume": "Bariera Bucuresti", "offset": 1},
+      { "nume": "Ghighiului", "offset": 1},
+      { "nume": "Vintileanca", "offset": 1},
+      { "nume": "Moreni", "offset": 1},
+      { "nume": "Inotesti", "offset": 1},
+      { "nume": "Cimitirul Eternitatii", "offset": 1},
+      { "nume": "Oxigen", "offset": 1},
+      { "nume": "Islazului", "offset": 1},
+      { "nume": "Targului", "offset": 1},
+      { "nume": "Uzinei", "offset": 1},
+      { "nume": "Bariera Rafov", "offset": 1},
+      { "nume": "Corlatesti", "offset": 1},
+      { "nume": "Protan", "offset": 1},
+      { "nume": "Pictor Rosenthal", "offset": 1}
+    ],
+    
+    "Prog_T_LV": {
+      "6": [20, 42],
+      "7": [7],
+      "14": [47],
+      "15": [19]
+    }
+  }
+}
