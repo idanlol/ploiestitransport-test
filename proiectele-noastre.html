@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <title>Proiectele noastre - TransPloiesti</title>
+  <link rel="icon" type="image/png" href="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/favicon/msung62e.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./newsStyles.css">
+  <style>
+    @media (max-width: 979px) {
+      .abtnlink {
+        padding: 3vw;
+        border-radius: 6vw;
+      }
+      .articol-readmore {
+        padding: 1.7vw 4vw;
+        font-size: 3.5vw;
+      }
+      .nnr {
+        font-size: 2.5vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id=menuopen></div>
+  <div id=deadTopSpace></div>
+  <div id=titlu></div>
+  <div id=fixbtn></div>
+
+  <div style="margin-top: -3.3vmax; --bg-url: url('https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/ro/webpage_81/mveyz8q4/element_1490/rwdMode_4/640x166/DSCN2192.webp')" class="homeimgDiv display_flex">
+    <img class="homeimg" style="position: absolute; object-position: center 100%" src="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/ro/webpage_81/mveyz8q4/element_1490/rwdMode_4/640x166/DSCN2192.webp">
+    <div class="imgtext display_flex">Proiectele noastre</div>
+    <div class="imgtext imgchevron display_flex" onclick="scrollDownFunc()"><div class="chevron">⌄</div></div>
+  </div>
+  <div class="mb_3"></div>
+  
+  <div id=CardMain class="card ncard width_fitcontent display_flex justSelf_center justify_center align_center flexDir_col">
+    <div id=ntitle class="nsection alttitle height_fitcontent align_center justify_center flexDir_row"><div class="linetop lineblue display_flex"></div>Proiectele Noastre</div>
+    <div style="text-align: center;" id="ntext" class="id1 bigger4 nsection height_fitcontent"></div>
+    <div class="mb_2"></div>
+    <a href="https://transploiesti.com/plan-de-imbunatatire-2026" id="nbtn" class="abtnlink anews display_flex width_fitcontent height_fitcontent align_center flexDir_col">
+      <div class="alignSelf_start nnr display_flex justify_center align_center">
+        25.06.2026
+      </div>
+      <div class="bigger5">Plan de îmbunătățire a serviciilor SC Transport Călători Express SA Ploiești</div>
+      <div  class="mb_2 mb_r_07"></div>
+      <span class="display_flex alignSelf_start news3">Piloni strategici: Eficientizare operațională, modernizare digitală și securizarea veniturilor<br><br>👉 Click pe butonul de mai jos pentru detalii.</span>
+      <div class="mb_3 mb_r_1"></div>
+      <div  class="abtnlink articol-readmore alignSelf_center width_fitcontent">Citeste mai mult</div>
+    </a>
+    
+    <div class="mb_10"></div>
+  </div>
+  
+  <div id=footer></div>
+
+
+<script src="./Scripts/UiElements.js"></script>
+<script>
+
+    function scrollDownFunc() {
+      const element = document.getElementById('CardMain');
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - 100; 
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  
+  document.querySelector('.id1').innerHTML = 
+    `<div id="ntext" class="nsection height_fitcontent"> Dacă ai ajuns pe această pagină înseamnă că și tu ești interesat de dezvoltarea sistemului de transport public, în special, cel din Municipiul Ploiești. Mai jos, ai o listă de proiecte pe care le-am expus de-a lungul timpului, încă din 2011. Majoritatea sunt idei și planuri care cu un efort financiar minim se creează un efect maxim în ceea ce privește imaginea TCE Ploiești. Menționăm că aceste planuri au fost expuse fie municipalității, fie directorilor TCE / RATP Ploiești, sub forma unui portofoliu. </div>
+    `
+  document.querySelector('.id2').innerHTML = 
+    `<div style="margin-top: 2vw;" class="mb_1"><strong>De ce ne pasa ?</strong></div>
+    <div class="bigger3">Simplu: pentru că ne dorim eficiență și evoluția sistemului de transport public din Ploiești. În acest context, de-a lungul timpului, ne-am dezvoltat ideile și nu ne-am dorit altceva decât aplicarea acestora. Ideile noastre asigură în mare parte lucruri simple, însă cu un efect radical în viziunea călătorului TCE. Mai jos aveți o parte din proiectele campaniei „TransPloiești – Nouă ne pasă!”:</div>
+    <a href="" class="abtnlink bigger2 display_flex height_fitcontent width_fitcontent">Click pentru a vedea proiectele noastre</a>
+    `
+</script>

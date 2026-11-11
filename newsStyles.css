@@ -1,0 +1,189 @@
+.ncard {
+  border-radius: 2vw !important;
+}
+#ntitle {
+  margin: -2.5vw -1vw 0vw -1vw;
+  font-size: 2.5vw;
+  font-weight: 500;
+  width: 80vw;
+  padding: 3vw 1.5vw 1.5vw 1.5vw;
+  background: var(--n-red);
+  color: var(--font);
+  border-radius: 2vw;
+  text-align: center;
+}
+.alttitle {
+  background: var(--n-blue) !important;
+}
+#ninfo {
+  width: 70vw;
+  padding: 1vw 2.5vw;
+  background: var(--n-blue);
+  border-radius: 1.5vw;
+  color: var(--font);
+  text-align: start;
+}
+#ninfoyellow {
+  width: 70vw;
+  padding: 1vw 2.5vw;
+  background: var(--n-yellow);
+  border-radius: 1.5vw;
+  color: var(--font);
+  text-align: start;
+}
+#ninfored {
+  font-weight: 700;
+  width: 70vw;
+  padding: 1vw 2.5vw;
+  color: var(--font-red);
+  background: var(--n-red);
+  border-radius: 1.5vw;
+  text-align: start;
+}
+#ntext {
+  width: 70vw;
+  padding: 1vw 0vw;
+  color: var(--font);
+  text-align: start;
+  white-space: pre-line;
+}
+#nbtn {
+  width: 70vw!important;
+}
+.nsection {
+  overflow: hidden;
+  position: relative;
+  white-space: pre-line;
+  font-weight: 400;
+  font-size: 1.2vw;
+}
+.linetop {
+  height: 2.5vw !important;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  position: absolute;
+}
+.lineleft {
+  width: 1.5vw !important;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+}
+.linered {
+  background: var(--linered) !important;
+}
+.lineblue {
+  background: var(--lineblue) !important;
+}
+.lineyellow {
+  background: var(--lineyellow) !important;
+}
+.n_tcesa {
+  text-align: end !important;
+  font-size: 2vw;
+  font-weight: 500;
+}
+.bigger1 {
+  font-size: 2.5vw;
+}
+.bigger2 {
+  font-size: 2vw;
+  padding: 2vw;
+  border-radius: 5vw;
+}
+.bigger3 {
+  font-size: 1.5vw;
+}
+.bigger4 {
+  font-size: 3.5vw;
+}
+.bigger5 {
+  font-size: 2.5vw;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.5vw;
+}
+.articol-readmore {
+  padding: 0.7vw 2vw;
+}
+@media (max-width: 979px) {
+  .ncard {
+    border-radius: 7vmin !important;
+  }
+  #ntitle {
+    margin: -2.5vw -2.5vw 0vw -2.5vw;
+    font-size: 5vw;
+    font-weight: 500;
+    width: 80vw;
+    padding: 5.5vw 4vw 5vw 4vw;
+    border-radius: 7vmin;
+  }
+  #ninfo {
+    width: 70vw;
+    border-radius: 4vmin;
+    padding: 1.5vw 5vw;
+  }
+  #ninfoyellow {
+    width: 70vw;
+    padding: 3vw 5vw;
+    border-radius: 3vmin;
+  }
+  #ninfored {
+    font-weight: 700;
+    width: 70vw;
+    padding: 3vw 5vw;
+    border-radius: 3vw;
+  }
+  #ntext {
+    width: 70vw;
+    padding: 3vw 0vw;
+  }
+  #nbtn {
+    width: 70vw!important;
+  }
+  .nsection {
+    font-weight: 400;
+    font-size: 3vw;
+  }
+  .linetop {
+    height: 2.5vw !important;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+  }
+  .lineleft {
+    width: 2.5vw !important;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+  .n_tcesa {
+    font-size: 4vw;
+    font-weight: 500;
+  }
+  .bigger1 {
+    font-size: 5.5vw;
+  }
+  .bigger2 {
+    font-size: 5vw;
+    padding: 4vw;
+    border-radius: 5vw;
+  }
+  .bigger3 {
+    font-size: 3vw;
+  }
+  .bigger4 {
+    font-size: 3.5vw;
+  }
+  .bigger5 {
+    font-size: 5.5vw;
+    text-align: center;
+    font-weight: 700;
+    padding: 2vw;
+  }
+  .articol-readmore {
+    padding: 0.7vw 2vw;
+  }
+}

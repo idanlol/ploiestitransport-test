@@ -1,0 +1,303 @@
+<html>
+
+<head>
+  <title>Statie - TransPloiesti</title>
+  <link rel="icon" type="image/png" href="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/favicon/msung62e.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <div id=menuopen></div>
+  <div id=fixbtn></div>
+  <div id=titlu></div>
+  <div id=deadTopSpace></div>
+
+  <div id="statieName" class="display_flex justSelf_center mb_7 alignSelf_center"></div>
+  <div class="contentwrap_statie display_flex flexDir_col justSelf_center justify_center">
+    <div class="display_flex flexDir_col" id=StatieLiveETA></div>
+  </div>
+  <div class="mb_10"></div>
+  <div style="text-align: center;" class="display_flex traseeInfo mb_3 justSelf_center"><strong>Datele din programul de circulatie au caracter informativ si pot exista abateri. Respectarea programului depinde de conditiile de trafic de pe traseu</strong></div>
+  
+  <div class="mb_4"></div>
+  <div class="display_flex flexDir_col gap_2">
+    <div class="display_flex flexDir_row gap_3 align_center">
+      <div style="width: 5vw; margin-left: 5vw; background: #3355bb77 !important;" class="card"></div>
+      <div style="padding: 1vmin 0vmin;" class="anuntHint">Plecari viitoare</div>
+    </div>
+    <div class="display_flex flexDir_row gap_3 align_center">
+      <div style="width: 5vw; margin-left: 5vw; background: #ff10b077 !important;" class="card stopCardGrayedOut"></div>
+      <div style="padding: 1vmin 0vmin;" class="anuntHint">Ultima statie a traseului</div>
+    </div>
+    <div class="display_flex flexDir_row gap_3 align_center">
+      <div style="width: 5vw; margin-left: 5vw; background: #ff10b077 !important;" class="card stopCardGrayedOut"></div>
+      <div style="padding: 1vmin 0vmin;" class="anuntHint">Traseul nu mai are plecari azi</div>
+    </div>
+  </div>
+  
+  <div id=footer></div>
+
+
+  <script src="./Scripts/UiElements.js"></script>
+  <script>
+
+    function ContainerTraseu(LTiS, index, cardMuted, RSID) {
+      return `
+      <a href="./traseu.html?sID=${RSID}&tDIR=${LTiS.directie}#${LTiS.NrTraseu}.html" style="background: var(--card-stopETA)" class="card ${cardMuted} statieCard display_flex flexDir_col" id="cardContainer${index}">
+        <div class="display_flex align_center">
+          <div class="abtnlink-nr statie_nr display_flex justify_center align_center">${LTiS.NrTraseu}</div>
+          <div><strong>&rarr; ${LTiS.capFront}</strong></div>
+        </div>
+        <div class="mb_2"></div>
+        <div class="display_flex flexDir_row" id=liveETA${index} style="justify-content: space-around;"></div>
+      </a>`;
+    }
+
+    let data;
+    let ListaTraseeInStatie, ProgOffset;
+    let tipdir, tipzi;
+    let cardMuted = ``;
+
+    fetch('./JSON/trasee.json')
+      .then(response => response.json())
+      .then(datajson => {
+        data = datajson;
+        // console.log('Cache', data);
+        statiiGen();
+      });
+
+    window.addEventListener('hashchange', () => {
+      statiiGen();
+    });
+
+    function statiiGen() {
+      document.getElementById('StatieLiveETA').innerHTML = '';
+
+      let ReqStopID = `${window.location.hash.replace('#', '').replace('.html', '')}`;
+      // /*testing purposes, COMMENT WHEN FINISH*/ if (!window.location.hash) {ReqStopID = 'S00009'};
+      // const stopId = ReqStopID.includes('=') ? ReqStopID.split('=')[1] : ReqStopID;
+      console.warn(ReqStopID);
+      // if (!ReqStopID)
+      document.getElementById('statieName').innerHTML = data.IDs.find(st => st.stopId === ReqStopID).nume;
+  
+      ListaTraseeInStatie = searchForTrasee(ReqStopID, data);
+      // console.warn(ListaTraseeInStatie)
+      
+      if (ListaTraseeInStatie.length === 0) {
+        console.warn(`Stația cu ID-ul ${ReqStopID} nu a fost găsită.`);
+        return;
+      }
+      // console.log(`Găsit stația ${ListaTraseeInStatie[0].numeStatie} pe traseele:`, ListaTraseeInStatie);
+
+      let now_time = new Date();
+      let totalMinNow = now_time.getHours() * 60 + now_time.getMinutes();
+
+      
+      // const NrTraseeInStatie = ListaTraseeInStatie.map(m => m.NrTraseu);
+      // console.log('Trasee care trec prin stație:', NrTraseeInStatie);
+
+      ListaTraseeInStatie.forEach((LTiS, index) => {
+        // console.warn(LTiS.NrTraseu);
+        // console.warn(ListaTraseeInStatie[index].capFront);
+
+        let listaStatiiCurrent = LTiS.statii;
+        // console.warn('lista statii', listaStatiiCurrent)
+        let lastoffset = 0;
+        let isIdReached = false;
+        let lastStop = false;
+        listaStatiiCurrent.forEach(st => {
+          if (st.stopId !== ReqStopID && isIdReached===false) {
+            lastoffset = lastoffset + st.offset;
+            // console.log(`${lastoffset}`)
+          } else if (st.stopId === ReqStopID && isIdReached===false) {
+            lastoffset = lastoffset + st.offset;
+            isIdReached = true;
+          } else {
+            // console.log('else');
+            isIdReached = true;
+          }
+        })
+
+        if (listaStatiiCurrent.length > 0) {
+          const ultimaStatieDinTraseu = listaStatiiCurrent[listaStatiiCurrent.length - 1];
+          if (ultimaStatieDinTraseu.stopId === ReqStopID) {
+            lastStop = true;
+          }
+        }
+        
+        tipdir = LTiS.directie;
+        // console.warn(tipdir)
+        let getDataAzi = new Date();
+        let ziAct = getDataAzi.getDay();
+        // console.warn(ziAct);
+        tipzi = (ziAct === 6) ? "S" : (ziAct === 0) ? "D" : "LV";
+        if ((tipzi === "S" || tipzi === "D") && !data[`${LTiS.NrTraseu}`][`Prog_${tipdir}_${tipzi}`]) {
+          tipzi = "SD";
+        }
+        
+        let ProgSelectat = data[`${LTiS.NrTraseu}`][`Prog_${tipdir}_${tipzi}`];
+        // console.error(ProgSelectat);
+        
+        ProgOffset = {};
+        let hasUpcoming = false;
+        let nextPlecare = Infinity;
+        if (ProgSelectat && Object.keys(ProgSelectat).length > 0) {
+          for (const ora in ProgSelectat) {
+            const oraint = parseInt(ora, 10);
+            ProgSelectat[ora].forEach((minut) => {
+              const totalmin = oraint * 60 + minut + lastoffset;
+              const oracalc = Math.floor(totalmin / 60) % 25;
+              const mincalc = totalmin % 60;
+              if (!ProgOffset[oracalc]) {
+                ProgOffset[oracalc] = [];
+              }
+              ProgOffset[oracalc].push(mincalc);
+              if (totalmin >= totalMinNow) {
+                hasUpcoming = true;
+                if (totalmin < nextPlecare) {
+                  nextPlecare = totalmin;
+                }
+              }
+            })
+          }
+        };
+        LTiS.ProgOffset = ProgOffset;
+        LTiS.hasUpcoming = hasUpcoming;
+        LTiS.nextPlecare = nextPlecare;
+        LTiS.lastStop = lastStop;
+        
+        // console.log('ProgOffset', ProgOffset);
+
+      });
+      ListaTraseeInStatie.sort((a, b) => {
+        // Dacă a este ultima stație și b nu este, a merge după b (return 1)
+        if (a.lastStop && !b.lastStop) return 1;
+        // Dacă b este ultima stație și a nu este, b merge după a (return -1)
+        if (!a.lastStop && b.lastStop) return -1;
+        
+        // Altfel, sortarea normală după urmitoarea plecare
+        return a.nextPlecare - b.nextPlecare;
+      });
+
+      let htmlCarduri = "";
+      ListaTraseeInStatie.forEach((LTiS, index) => {
+        let customClass = !LTiS.hasUpcoming ? 'stopCardGrayedOut' : (LTiS.lastStop) ? 'stopCardGrayedOut' : '';
+        htmlCarduri += ContainerTraseu(LTiS, index, customClass, ReqStopID);
+      })
+      
+      // console.log(data[LTiS.NrTraseu]);
+      
+      document.getElementById('StatieLiveETA').innerHTML = htmlCarduri;
+
+      ListaTraseeInStatie.forEach((item, index) => {
+        liveETAfunc(item.ProgOffset, index, totalMinNow);
+      });
+
+      // Exemplu afișare:
+      // lista va returna un array de forma:
+      // [
+      //   { traseu: "30", directie: "Retur", numeStatie: "Hipodrom", ... },
+      //   { traseu: "30S", directie: "Retur", numeStatie: "Hipodrom", ... }
+      // ]  
+    }
+
+    
+
+    function searchForTrasee(ReqStopID, data) {
+      const results = [];
+      Object.keys(data).forEach(trKey => {
+        const traseu = data[trKey];
+        if (!traseu || typeof traseu !== 'object' || !Array.isArray(traseu.Variante) && !traseu.StatiiTur && !traseu.StatiiRetur) {
+          // console.log(trKey);
+          return;
+        }
+        // console.log('numar', trKey);
+        if (traseu.StatiiTur && Array.isArray(traseu.StatiiTur)) {
+          const StatieIndex = traseu.StatiiTur.findIndex(s => s.stopId === ReqStopID);
+          if (StatieIndex !== -1) {
+            results.push({
+              NrTraseu: trKey,
+              directie: 'T',
+              // numeStatie: traseu.StatiiTur[StatieIndex].nume,
+              offset: traseu.StatiiTur[StatieIndex].offset,
+              capOrig: traseu.Cap1,
+              capFront: traseu.Cap2,
+              statii: traseu.StatiiTur,
+              index: StatieIndex
+            });
+          }
+        }
+        if (traseu.StatiiRetur && Array.isArray(traseu.StatiiRetur)) {
+          const StatieIndex = traseu.StatiiRetur.findIndex(s => s.stopId === ReqStopID);
+          if (StatieIndex !== -1) {
+            results.push({
+              NrTraseu: trKey,
+              directie: 'R',
+              // numeStatie: traseu.StatiiRetur[StatieIndex].nume,
+              offset: traseu.StatiiRetur[StatieIndex].offset,
+              capOrig: traseu.Cap3,
+              capFront: traseu.Cap4,
+              statii: traseu.StatiiRetur,
+              index: StatieIndex
+            });
+          }
+        }
+      });
+      return results;
+    }
+    
+    function liveETAfunc(ProgSelectat, index, totalMinNow) {
+      let liveETAbox = document.getElementById(`liveETA${index}`);
+      let cardContainer = document.getElementById(`cardContainer${index}`)
+      if (!liveETAbox) return;
+      liveETAbox.innerHTML = '';
+    
+      if (!ProgSelectat || Object.keys(ProgSelectat).length === 0) {
+        liveETAbox.innerHTML = `--`;
+        if (cardContainer) cardContainer.classList.add(`stopCardGrayedOut`);
+        return;
+      }
+      
+      // let secunde_now = now_time.getSeconds();
+      let oraGasita = '';
+      let oreSortate = Object.keys(ProgSelectat).sort((a, b) => parseInt(a) - parseInt(b));
+      
+      let counterShow = 0;
+      for (let ora of oreSortate) {
+        let oraInt = parseInt(ora, 10);
+        for (let min of ProgSelectat[ora]) {
+          let totalMinCursa = oraInt * 60 + min;
+          if (totalMinCursa >= totalMinNow) {
+            oraGasita = `${String(oraInt).padStart(2, '0')}:${String(min).padStart(2, '0')}`;
+
+            if (totalMinCursa - totalMinNow === 0) {
+              liveETAbox.innerHTML += `<div class="display_flex justify_center flexDir_col"><div class="ETAtop display_flex justify_center"><strong>acum</strong></div><div class="ETAbottom display_flex justify_center">(${oraGasita})</div></div>`;
+            } else {
+              liveETAbox.innerHTML += `<div class="display_flex justify_center flexDir_col"><div class="ETAtop display_flex justify_center"><strong>${totalMinCursa - totalMinNow} min</strong></div><div class="ETAbottom display_flex justify_center">(${oraGasita})</div></div>`;
+            }
+            counterShow = counterShow + 1;
+            if (counterShow === 3) break;
+          }
+        }
+        if (counterShow === 3) break;
+      }
+      if (counterShow === 0) {
+        liveETAbox.innerHTML = `-`;
+        if (cardContainer) cardContainer.classList.add(`stopCardGrayedOut`);
+      }
+    }
+
+
+    
+    setInterval(() => {
+      statiiGen();
+    }, 10000);
+
+  </script>
+</body>
+</html>

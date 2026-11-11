@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width height=device-height"/>
+  <link rel="stylesheet" href="./ADMIN/stylestr.css">
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <script>eruda.init();</script>
+  <style>
+    h2 {
+      color: #eeeeee;
+      justify-self: center;
+    }
+    h3 {
+      color: #cccccc;
+      /*justify-self: center;*/
+    }
+    /*body {
+      font-family: Arial, sans-serif;
+      max-width: 70vw;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.4;
+      background-color: #111111 ;
+    }*/
+    body {
+      margin: 30px;
+    }
+    .titlu {
+      margin-bottom: 50px;
+    }
+    .card {
+      background-color: #001a5095;
+      box-shadow: 0px 20px 20px -20px #002aa0ff;
+      padding: 1.5vw;
+      margin: 15px;
+      border-radius: 5vw;
+    }
+    .inp {
+      display: flex;
+      gap: 1vw;
+      width: 67vw;
+      box-shadow: 0px 0px 9px -2px #00000050;
+      font-weight: bold;
+      font-size: 3.5vw;
+      align-items: center;
+      
+      outline: none;
+      border-radius: 3.5vw;
+      border: none;
+      background: #48485850;
+      color: #dddddd;
+      padding: 2vw 2.5vw;
+      justify-items: center;
+      justify-content: center;
+    }
+        
+    #cbox {
+      accent-color: #000000;
+    }
+
+    .ta {
+      min-height: 10px;
+    }
+    .inpbox {
+      transition: 0.3s;
+    }
+    .inpsub1 {
+      width: 35vw;
+      padding: 1.5vw 2vw;
+    }
+    .inpsub2 {
+      width: 3vw;
+      padding: 1.5vw 2vw;
+    }
+    .inpsub3 {
+      width: 7vw;
+      padding: 1.5vw 2vw;
+    }
+    .inpbox:hover {
+      background: #50505fff;
+      transform: scale(1.03);
+    }
+    button { 
+      background: #aaaaafbb;
+      color: #111111;
+      border: none;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      padding: 1.5vw 2.5vw;
+      border-radius: 10vw;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 3.2vw;
+      transition: 0.3s;
+    }
+    
+    button:disabled {
+      background: #555555;
+    }
+    #output-container {
+      margin-top: 20px;
+      display: none;
+    }
+    #output {
+      background: #555577aa;
+      padding: 0.5vw;
+      border-radius: 3.5vw;
+      white-space: pre-wrap;
+      color: #dddddd;
+      font-size: 3vw;
+      /*border: 1px solid #eee;*/
+    }
+    .clearall {
+      background: #ff0000aa;
+    }
+    .btn-copy {
+      background: #34a853;
+    }
+  
+    .gbuttons {
+      display: flex;
+      flex-direction: row;
+      gap: 3vw;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .st {
+      font-size: 1.1vw;
+      color: #eeeeee;
+      font-weight: bold;
+    }
+    .gcol {
+      gap: 1.2vw;
+    }
+    textarea {
+      max-width: 67vw;
+      min-width: 67vw;
+    }
+    .displaynone {
+      display: none;
+    }
+    .sel {
+      background: #aaaaffbb;
+      transform: scale(1.1);
+    }
+    .sdselect {
+      padding: 1.7vw 7vw;
+    }
+    #searchBox {
+      display: flex;
+      flex-direction: column;
+    }
+    /*#IDsToPaste {
+      white-space: pre-wrap;
+      font-family: monospace;
+      font-size: 2.2vw;
+      color: #88ff88;
+      word-break: break-all;
+    }*/
+
+    @media (hover: hover) {
+      button:hover {
+        background: #cccccc;
+        transform: scale(1.03);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="titlu">
+    <a href=..index.html>
+      <img class="ratphpng" src="https://ratph.ro/SiglaTCE.png">
+    </a>
+  </div>
+  
+  <div class="card">
+    <h2>
+      Convertire orar in json
+    </h2>
+    <div class="gbuttons" style="margin-bottom: 10px;">
+      <button id="processBtn" onclick="makejsontext()">
+        Proceseaza
+      </button>
+      <button id="processBtn" class="clearall" onclick="cleartext()">
+        Clear all
+      </button>
+      <button class="btn-copy" id="copyBtn" onclick="copyResult()">
+        Copiază textul
+      </button>
+    </div>
+    <div class="gcol">
+      <div class="inp" id="IDsToPaste" contenteditable></div>
+      <input class="inp inpbox" type="text" placeholder="Numar Traseu" id="numartraseu">
+      <div class="inp">
+        <input class="inp inpbox inpsub1" type="text" placeholder="Variante" id="variante">
+        <input type="checkbox" id="cbox">
+        <button onclick="addVariante()">+</button>
+      </div>
+      <div class="inp" id="LSVar" contenteditable></div>
+      <input class="inp inpbox" type="text" placeholder="Capat1" id="Capat1">
+      <input class="inp inpbox" type="text" placeholder="Capat2" id="Capat2">
+      <input class="inp inpbox" type="text" placeholder="Capat3" id="Capat3">
+      <input class="inp inpbox" type="text" placeholder="Capat4" id="Capat4">
+      <div class="inp">
+        <input class="inp inpbox inpsub1" type="text" placeholder="StatiiTur" id="statiitur">
+        <input class="inp inpbox inpsub3" type="text" placeholder="ID" id="textIdT">
+        <input class="inp inpbox inpsub2" inputmode="numeric" type="text" placeholder="Off" id="offsetsttur">
+        <button onclick="addStatie('tur')">+</button>
+      </div>
+      <div class="inp" id="LSTur" contenteditable></div>
+      <div class="inp">
+        <input class="inp inpbox inpsub1" type="text" placeholder="StatiiRetur" id="statiiretur">
+        <input class="inp inpbox inpsub3" type="text" placeholder="ID" id="textIdR">
+        <input class="inp inpbox inpsub2" inputmode="numeric" type="text" placeholder="Off" id="offsetstretur">
+        <button onclick="addStatie('retur')">+</button>
+      </div>
+      <div class="inp" id="LSRetur" contenteditable></div>
+      <div class="inp" id="searchBox"></div>
+      <textarea class="inp ta" type="text" placeholder="Orar TUR Luni-Vineri" id="TLV"></textarea>
+      <textarea class="inp ta" type="text" placeholder="Orar RETUR Luni-Vineri" id="RLV"></textarea>
+      <div class="grow">
+        <button id="sdselect" class="sdselect sel" onclick="weekend('SD', this)">SD</button>
+        <button id="sdselect" class="sdselect" onclick="weekend('S/D', this)">S/D</button>
+      </div>
+      <textarea class="inp ta" type="text" placeholder="Orar TUR Sambata-Duminica" id="TSD"></textarea>
+      <textarea class="inp ta" type="text" placeholder="Orar RETUR Sambata-Duminica" id="RSD"></textarea>
+      <textarea class="inp ta" type="text" placeholder="Orar TUR Sambata" id="TS"></textarea>
+      <textarea class="inp ta" type="text" placeholder="Orar RETUR Sambata" id="RS"></textarea>
+      <textarea class="inp ta" type="text" placeholder="Orar TUR Duminica" id="TD"></textarea>
+      <textarea class="inp ta" type="text" placeholder="Orar RETUR Duminica" id="RD"></textarea>
+    </div>
+    <div class="gbuttons">
+      <button id="processBtn" onclick="makejsontext()">
+        Proceseaza
+      </button>
+      <button id="processBtn" class="clearall" onclick="cleartext()">
+        Clear all
+      </button>
+      <button class="btn-copy" id="copyBtn" onclick="copyResult()">
+        Copiază textul
+      </button>
+    </div>
+  
+    <div id="output-container">
+      <div id="output"></div>
+    </div>
+  </div>
+  
+  <div class="endtitl">
+    <span>S.C.TRANSPORT CALATORI EXPRESS S.A. PLOIESTI</span>
+    <span>Toate drepturile sunt rezervate 2009 2026</span>
+    <span>Ultimul update: septembrie 2026</span>
+    <span>Ploiesti Romania</span>
+  </div>
+
+  <script>
+
+    let searchBox = document.getElementById('searchBox');
+    let IDsToPaste = document.getElementById('IDsToPaste');
+    let textIdT = document.getElementById('textIdT');
+    let textIdR = document.getElementById('textIdR');
+    let nrtr = document.getElementById('numartraseu');
+    let va = document.getElementById('variante');
+    let c1 = document.getElementById('Capat1');
+    let c2 = document.getElementById('Capat2');
+    let c3 = document.getElementById('Capat3');
+    let c4 = document.getElementById('Capat4');
+    let StT = document.getElementById('statiitur');
+    let OffT = document.getElementById('offsetsttur');
+    let OffR = document.getElementById('offsetstretur');
+    let StR = document.getElementById('statiiretur');
+    let t_lv = document.getElementById('TLV');
+    let r_lv = document.getElementById('RLV');
+    let t_sd = document.getElementById('TSD');
+    let r_sd = document.getElementById('RSD');
+    let t_s = document.getElementById('TS');
+    let r_s = document.getElementById('RS');
+    let t_d = document.getElementById('TD');
+    let r_d = document.getElementById('RD');
+
+    let ListStatiiTur = ``;
+    let ListStatiiRetur = ``;
+    let ListVA = ``;
+    let data;
+    let noiStatiiIDs = [];
+
+    
+    let virgturv = 0;
+    let virgreturv = 0;
+  
+    const copyBtn = document.getElementById('copyBtn');
+    copyBtn.style.display = "none";
+
+    fetch('./JSON/trasee.json')
+      .then(response => response.json())
+      .then(datajson => {
+        data = datajson;
+        console.log(data.IDs.length);
+        setupAutocomplete(StT, textIdT, searchBox);
+        setupAutocomplete(StR, textIdR, searchBox);
+
+      });
+
+    function setupAutocomplete(inputElement, tId, OutputElement) {
+      inputElement.addEventListener('input', (e) => {
+        console.log('da');
+        const query = e.target.value.toLowerCase().trim();
+        OutputElement.innerHTML = ``;
+
+        // if (query.length === 0) {
+        //   OutputElement.style.display = 'none';
+        //   return;
+        // }
+
+        const matches = data.IDs.filter(st => {
+          if (!st.nume || st.nume.trim() === '') return false;
+          return st.nume.toLowerCase().includes(query) || st.stopId.toLowerCase().includes(query);
+        });
+
+        // if (matches.length === 0) {
+        //   OutputElement.style.display = 'none';
+        //   return;
+        // }
+        // OutputElement.style.display = 'block';
+
+        matches.forEach(st => {
+          const item = document.createElement('div');
+          item.className = 'search-item';
+          item.innerHTML = `<span>${st.nume}</span> <span style="font-size: 2vw; color: #aaa;">(${st.stopId})</span>`;
+          item.addEventListener('click', () => {
+            tId.value = st.stopId;
+            inputElement.value = st.nume; // Pune numele stației în input
+            // OutputElement.style.display = 'none'; // Ascunde dropdown-ul
+          });
+          OutputElement.appendChild(item)
+        })
+      })
+      // document.addEventListener('click', (e) => {
+      //   if (!inputElement.contains(e.target) && !OutputElement.contains(e.target)) {
+      //     OutputElement.style.display = 'none';
+      //   }
+      // });
+    }
+    
+    let tipweeknd;
+    function weekend(tip, btn) {
+      if (tip === 'SD') {
+        document.getElementById('TSD').classList.remove('displaynone');
+        document.getElementById('RSD').classList.remove('displaynone');
+        document.getElementById('TS').classList.add('displaynone');
+        document.getElementById('RS').classList.add('displaynone');
+        document.getElementById('TD').classList.add('displaynone');
+        document.getElementById('RD').classList.add('displaynone');
+      } else if (tip === 'S/D') {
+        document.getElementById('TSD').classList.add('displaynone');
+        document.getElementById('RSD').classList.add('displaynone');
+        document.getElementById('TS').classList.remove('displaynone');
+        document.getElementById('RS').classList.remove('displaynone');
+        document.getElementById('TD').classList.remove('displaynone');
+        document.getElementById('RD').classList.remove('displaynone');
+      }
+      tipweeknd = tip;
+      document.querySelectorAll('.sdselect').forEach(da => da.classList.remove('sel'));
+      if (btn) {
+        btn.classList.add('sel');
+      }
+    }
+
+    function addVariante() {
+      ListVA += `,\n      { "litera": "${va.value}"}`;
+      document.getElementById('LSVar').innerText = ListVA;
+      va.value = "";
+    }
+
+    function lastIdAdd(SelStVal) {
+       // Verificăm dacă avem date în listă
+      if (!data || !data.IDs || data.IDs.length === 0) return "S00001";
+      
+      // Luăm ultimul element din array-ul IDs
+      const ultimaStatie = data.IDs[data.IDs.length - 1];
+      console.log(ultimaStatie);
+      const ultimulIdStr = ultimaStatie.stopId; // ex: "S00170"
+
+      // Extragem doar numărul (ștergem litera 'S')
+      const numarCurent = parseInt(ultimulIdStr.replace('S', ''), 10);
+      const numarNou = numarCurent + 1;
+
+      // Refacem formatul cu 'S' și completăm cu zerouri la stânga (ex: S00171)
+      const idNou = 'S' + String(numarNou).padStart(5, '0');
+
+      // Salvăm noul ID atât în data.IDs (să crească indexul la următoarea stație), cât și în lista de stații noi
+      const obiectNou = { "stopId": idNou, "nume": SelStVal };
+      data.IDs.push(obiectNou);
+      noiStatiiIDs.push(obiectNou);
+
+      // Afișăm în elementul IDsToPaste toate stațiile noi generate până acum, separate prin virgulă
+      let textPaste = noiStatiiIDs.map(st => `{"stopId": "${st.stopId}", "coord": "", "nume": "${st.nume}"}`).join(',\n');
+      IDsToPaste.innerText = textPaste;
+      
+      // IDsToPaste.innerHTML += `,\n{"stopId": "${idNou}", "nume": "${SelStVal}"}`
+      return idNou;
+    }
+    
+    function addStatie(directie) {
+      let StTval = StT.value;
+      let StRval = StR.value;
+      let StSelVal = (!StT.value) ? StRval : StTval;
+      let OffTval = OffT.value;
+      let OffRval = OffR.value;
+      let virgtur = (virgturv === 0) ? "" : ",";
+      let virgretur = (virgreturv === 0) ? "" : ",";
+      if (directie === 'tur') {
+        let idTval = (!textIdT.value) ? lastIdAdd(StSelVal) : textIdT.value;
+        ListStatiiTur += `${virgtur}\n      { "stopId": "${idTval}", "nume": "${StTval}", "offset": ${OffTval}}`;
+        virgturv = virgturv + 1;
+      } else {
+        let idRval = (!textIdR.value) ? lastIdAdd(StSelVal) : textIdR.value;
+        ListStatiiRetur += `${virgretur}\n      { "stopId": "${idRval}", "nume": "${StRval}", "offset": ${OffRval}}`;
+        virgreturv = virgreturv + 1;
+      }
+      document.getElementById('LSTur').innerText = ListStatiiTur;
+      document.getElementById('LSRetur').innerText = ListStatiiRetur;
+      StT.value = "";
+      StR.value = "";
+      textIdT.value = "";
+      textIdR.value = "";
+      OffT.value = "";
+      OffR.value = "";
+      searchBox.innerHTML = "";
+      
+      /*const cheiOre = Object.keys(OreMinGrup);
+      const LiniiOre = cheiOre.map((ora, index) => {
+        const MinArrayText = `[${OreMinGrup[ora].join(', ')}]`;
+        const virgula = (index < cheiOre.length - 1) ? ',' : '';
+        return `            "${ora}": ${MinArrayText}${virgula}`;
+      });
+      return `\n${LiniiOre.join('\n')}`;*/
+
+    }
+  
+    async function makejsontext() {
+      let nrtrval = nrtr.value;
+      let c1val = c1.value;
+      let c2val = c2.value;
+      let c3val = (c3.value === "") ? c2val : c3.value;
+      let c4val = (c4.value === "") ? c1val : c4.value;
+      
+      let t_lv_val = t_lv.value;
+      let r_lv_val = r_lv.value;
+      let t_sd_val = t_sd.value;
+      let r_sd_val = r_sd.value;
+      let t_s_val = t_s.value;
+      let r_s_val = r_s.value;
+      let t_d_val = t_d.value;
+      let r_d_val = r_d.value;
+
+      virgturv = 0;
+      virgreturv = 0;
+      
+      function sub(dir_zi) {
+        const oreConvert = dir_zi.match(/\b\d{1,2}:\d{2}\b/g);
+        const OreMinGrup = {};
+        if (oreConvert) {
+          oreConvert.forEach(oraConvert_each => {
+            const [orastr, minstr] = oraConvert_each.split(':');
+            const ora = parseInt(orastr, 10).toString();
+            const min = parseInt(minstr, 10);
+            if (!OreMinGrup[ora]) {
+              OreMinGrup[ora] = [];
+            }
+            OreMinGrup[ora].push(min);
+          });
+        }
+        const cheiOre = Object.keys(OreMinGrup);
+        const LiniiOre = cheiOre.map((ora, index) => {
+          const MinArrayText = `[${OreMinGrup[ora].join(', ')}]`;
+          const virgula = (index < cheiOre.length - 1) ? ',' : '';
+          return `      "${ora}": ${MinArrayText}${virgula}`;
+        });
+        return `\n${LiniiOre.join('\n')}`;
+      }
+      
+      const outputDiv = document.getElementById('output');
+      const outputContainer = document.getElementById('output-container');
+      outputContainer.style.display = "block";
+      copyBtn.style.display = "flex";
+      let varianteprint = ``;
+      if (document.getElementById('cbox').checked) {
+        varianteprint = `
+    "Variante": [
+      { "litera": ""}${ListVA}
+    ], \n`
+      } else {
+        varianteprint = ``;
+      };
+      let writeweeknd = (tipweeknd === 'SD') ? `
+    "Prog_T_SD": {${sub(t_sd_val)}
+    },
+  
+    "Prog_R_SD": {${sub(r_sd_val)}
+    }` : `
+    "Prog_T_S": {${sub(t_s_val)}
+    },
+  
+    "Prog_R_S": {${sub(r_s_val)}
+    },
+  
+    "Prog_T_D": {${sub(t_d_val)}
+    },
+  
+    "Prog_R_D": {${sub(r_d_val)}
+    }`;
+      
+      outputDiv.innerText =
+      `
+  "${nrtrval}": {
+    "Cap1": "${c1val}",
+    "Cap2": "${c2val}",
+    "Cap3": "${c3val}",
+    "Cap4": "${c4val}",
+    ${varianteprint}
+    "StatiiTur": [${ListStatiiTur}
+    ],
+  
+    "StatiiRetur": [${ListStatiiRetur}
+    ],
+  
+    "Prog_T_LV": {${sub(t_lv_val)}
+    },
+  
+    "Prog_R_LV": {${sub(r_lv_val)}
+    },
+    ${writeweeknd}
+  },
+`;
+      
+      
+      /*const btn = document.getElementById('processBtn');
+
+      btn.disabled = true;
+      //copyBtn.style.display = "none";
+
+      try {
+          outputDiv.innerText = resultText;
+          outputContainer.style.display = "block";
+
+      } finally {
+          btn.disabled = false;
+      }*/
+    }
+
+    function copyResult() {
+      const text = document.getElementById('output').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        // alert("Rezultatul a fost copiat în clipboard!");
+      });
+    }
+
+    function cleartext() {
+      virgturv = 0;
+      virgreturv = 0;
+      ListVA = ``;
+      ListStatiiTur = ``;
+      ListStatiiRetur = ``;
+      noiStatiiIDs = [];
+      IDsToPaste.innerHTML = ``;
+      
+      document.querySelectorAll('input[type="text"], textarea').forEach(ar => ar.value = "");
+      document.querySelectorAll('#LSTur', '#LSRetur', '#LSVar', '#output').forEach(ar => ar.innerText = ""); 
+    }
+    
+    weekend('SD', document.querySelector('.sdselect'))
+  </script>
+</html>

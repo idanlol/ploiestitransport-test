@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lista anunturi - TransPloiesti</title>
+  <link rel="icon" type="image/png" href="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/favicon/msung62e.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+  </style>
+</head>
+    
+<body>
+  <div id=menuopen></div>
+  <div id=deadTopSpace></div>
+  <div id=titlu></div>
+  <div id=fixbtn></div>
+  <!div id=menu></!div>
+
+  <div style="text-align: center;" class="abtnlink anuntHint mb_2 display_flex justSelf_center justify_center">Click pe oricare anunt pentru a vedea mai multe detalii</div>
+  <div class="gap_1 gap_r_3 display_flex flexDir_row_r justSelf_center">
+    <div id=newscard class="card noscrollbar width_fitcontent height_fitcontent gap_07 gap_r_2 display_flex flexDir_col gnews">
+      
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  
+
+  <script src="./Scripts/UiElements.js"></script>
+  <script src="./Scripts/news.js"></script>
+  <script>
+
+    fetch('./JSON/anunturi.json')
+      .then(response => response.json())
+      .then(data => {
+        data.Anunturi.reverse().forEach(anunt => {
+          anunt.TraseeAfectate.forEach(trafec => {
+            TrAfectFull += TrAfectPreset(trafec);
+          })
+          document.getElementById('newscard').innerHTML += AnuntPreset(anunt);
+          TrAfectFull = ``;
+        });
+      });
+    
+  </script>
+</body>
+
+</html>

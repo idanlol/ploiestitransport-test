@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <title>Anunt - TransPloiesti</title>
+  <link rel="icon" type="image/png" href="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/favicon/msung62e.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./newsStyles.css">
+  <style>
+    
+  </style>
+  </head>
+  
+  <body>
+    <div id=menuopen></div>
+    <div id=deadTopSpace></div>
+    <div id=titlu></div>
+    <div id=fixbtn></div>
+    <!div id=menu></!div>
+  
+    <div id=newspage class="gap_2 card ncard display_flex justSelf_center justify_center align_center flexDir_col">
+      
+    </div>
+    
+    <div id=footer></div>
+  
+  
+  <script src="./Scripts/UiElements.js"></script>
+  <script src="./Scripts/news.js"></script>
+  <script>
+    
+   // /*testing purposes, COMMENT WHEN FINISH*/ if (!window.location.hash) {window.location.hash = '#0000000_TEST'};
+ 
+    fetch('./JSON/anunturi.json')
+        .then(response => response.json())
+        .then(data => {
+          let idThisAnunt = data.Anunturi.find(item => item.idAnunt === window.location.hash.replace('#', '').replace('.html', ''));
+  
+          if (idThisAnunt) {
+            let f_titlu = (!idThisAnunt.titluAnunt) ? '' : document.getElementById('newspage').innerHTML = `<div id=ntitle class="nsection height_fitcontent align_center justify_center flexDir_row"><div class="linetop linered display_flex"></div>${idThisAnunt.titluAnunt}</div>`;
+            let f_dataAnunt = (!idThisAnunt.dataAnunt) ? '' : document.getElementById('newspage').innerHTML += `<div id=ninfo class="nsection height_fitcontent"><div class="lineleft lineblue display_flex"></div><strong>Data postarii anuntului:</strong><br>${idThisAnunt.dataAnunt}</div>`;
+            let f_traseeAfectate = (!idThisAnunt.TraseeAfectate) ? '' : document.getElementById('newspage').innerHTML += `<div id=ninfo class="nsection height_fitcontent"><div class="lineleft lineblue display_flex"></div><strong>Trasee afectate:</strong><br>${idThisAnunt.TraseeAfectate}</div>`;
+            let f_segmenteAfectate = (!idThisAnunt.segmenteAfectate) ? '' : document.getElementById('newspage').innerHTML += `<div id=ninfo class="nsection height_fitcontent"><div class="lineleft lineblue display_flex"></div><strong>Segmente/strazi afectate:</strong><br>${idThisAnunt.segmenteAfectate}</div>`;
+            let f_perioada = (!idThisAnunt.perioada) ? '' : document.getElementById('newspage').innerHTML += `<div id=ninfo class="nsection height_fitcontent"><div class="lineleft lineblue display_flex"></div><strong>Perioada afectata:</strong><br>${idThisAnunt.perioada}</div>`;
+            let f_textAnunt = (!idThisAnunt.textAnunt) ? '' : document.getElementById('newspage').innerHTML += `<div id=ntext class="nsection height_fitcontent">${idThisAnunt.textAnunt}</div>`;
+            let f_infoYellow = (idThisAnunt.infoYellow == "") ? '' : document.getElementById('newspage').innerHTML += idThisAnunt.infoYellow.map(text => {return `<div id=ninfoyellow class="nsection height_fitcontent"><div class="lineleft lineyellow display_flex"></div>${text}</div>`}).join('');
+            let f_infoRed = (idThisAnunt.infoRed == "") ? '' : document.getElementById('newspage').innerHTML += idThisAnunt.infoRed.map(text => {return `<div id=ninfored class="nsection height_fitcontent"><div class="lineleft linered display_flex"></div>${text}</div>`}).join('');
+            document.getElementById('newspage').innerHTML += `<div id=ntext class="n_tcesa height_fitcontent">S.C. T.C.E. S.A. Ploiesti</div>`;
+            
+            // let f_nv = (!idThisAnunt.nv) ? '' : document.getElementById('newspage').innerHTML += ;
+          } else {
+            document.getElementById('newspage').innerHTML = `<div class="btnlink WrongLink">Acest anunt nu exista. Verifica daca a scris corect link-ul</div>`
+          }
+            
+          //           forEach(anunt => {
+          //   anunt.TraseeAfectate.forEach(trafec => {
+          //     TrAfectFull += TrAfectPreset(trafec);
+          //   })
+          //   document.getElementById('newspag').innerHTML += AnuntPreset(anunt);
+          //   TrAfectFull = ``;
+          // });
+        });
+    
+  </script>
+</body>
+</html>

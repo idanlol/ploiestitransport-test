@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <script>eruda.init();</script>
+  <title>TransPloiesti - Acasa</title>
+  <meta name="keywords" content="transploiesti, tce, tceph, ratp, ratph, ploiesti, ">
+  <meta name="description" content="Platforma interactivă pentru transportul public din Ploiești. Vezi trasee, stații, orare în timp real și programul mijloacelor de transport în comun TCE.">
+  <meta name="theme-color" content="#111155">
+  <meta property="og:title" content="TransPloiesti">
+  <meta property="og:description" content="Site dedicat transportului public din Ploiesti. Informatii, stiri, noutati, galerie foto si video despre SC Transport Calatori Express (TCE) Ploiesti SA, fosta RATP Ploiesti.">
+  <meta property="og:url" content="https://transploiesti.com/">
+  <meta property="og:type" content="website">
+  <!-- <meta property="og:image" content="https://transploiesti.com/calea/spre/banner-principal.png"> 
+  -->
+  <link rel="icon" type="image/png" href="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/favicon/msung62e.ico">
+  <!-- <link rel="icon" type="image/png" href="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/favicon/msung62e.ico">
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <div id=menuopen></div>
+  <!div id=menu class="display_flex" style="width: 100%; position: fixed; bottom: 0%; left: 50%; transform: translate(-50%, -50%) scale(1.2);"></!div>
+
+  <div id=fixbtn></div>
+  <div id=deadTopSpace></div>
+  <div id=titlu></div>
+  <div style="margin-top: -3vmax; --bg-url: url('https://transploiesti.com/lib/ctje5h/5926---13072023-lqvi86ko.jpg');" class="homeimgDiv display_flex height_fitcontent">
+    <img class="homeimg homeimgOffs" style="position: relative; object-position: center 100%" src="https://transploiesti.com/lib/ctje5h/5926---13072023-lqvi86ko.jpg">
+    <div class="imgtext display_flex">Bun venit pe noul site TransPloiesti</div>
+    <div class="imgtext imgchevron display_flex" onclick="scrollDownFunc()"><div class="chevron">⌄</div></div>
+  </div>
+  
+  <div class="mb_7"></div>
+  
+  <div class="card display_flex width_fitcontent height_fitcontent justSelf_center flexDir_col gap_2">
+    <div class="gap_2 display_flex flexDir_row_r">
+      <div class="display_flex flexDir_col gap_2">
+        <input id="RPfrom" class="inp display_flex justify_center align_center">
+      </div>
+      <div class="display_flex flexDir_col gap_2">
+        <input id="RPto" class="inp display_flex justify_center align_center">
+      </div>
+    </div>
+    <a id="searchGo" onclick="routeGo()" class="abtnlink anuntHint display_flex width_fitcontent height_fitcontent alignSelf_center">Cauta</a>
+  </div>
+  
+  <div class="mb_7"></div>
+
+  <div class="display_flex gap_5 justSelf_center flexDir_row_r">
+    <div class="display_flex gap_5 flexDir_row">
+      <a href="./anunturi.html" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_3 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 13v-2z"/><path d="M11.6 16.8 a3 3 0 1 1-5.8-1.6"/></svg>
+        <div>Anunturi</div>
+      </a>
+      <a href="./tarife.html" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_3 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 9.5h18"/><path d="M7 14.5h4"/></svg> 
+        <div>Tarife</div>
+      </a>
+    </div>
+    <div class="display_flex gap_5 flexDir_row">
+      <a href="./ListaTrasee.html" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_3 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19C3 9 22 15 19 5"/><circle cx="5" cy="19" r="1.7"/><circle cx="12" cy="12" r="1.7" fill="currentColor"/><circle cx="19" cy="5" r="1.7"/></svg>
+        <div>Trasee</div>
+      </a>
+      <a href="./harta-trasee.html" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_3 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21 3 6"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+        <div>Harta</div>
+      </a>
+    </div>
+
+  </div>
+  
+  <div class="mb_7"></div>
+  
+  <div id=newscard class="card noscrollbar width_fitcontent height_fitcontent gap_07 gap_r_2 display_flex flexDir_col justSelf_center">
+    <a href="./anunturi.html" class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">
+      Anunturi
+    </a>
+  </div>
+  
+  <div class="mb_10"></div>
+  
+  <div class="gap_3 gap_r_5 display_flex flexDir_row_r justSelf_center">  
+    <div id="trbtn" style="max-height: 30vmax;" class="gap_07 gap_r_2 display_flex flexDir_col card noscrollbar width_fitcontent height_fitcontent">
+      <a href="./ListaTrasee.html" class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Autobuze</a>
+    </div>
+    <div class="gap_3 gap_r_5 display_flex flexDir_col">
+      <div id="trbtnTrv" class="gap_07 gap_r_2 display_flex flexDir_col card noscrollbar width_fitcontent height_fitcontent">
+        <a href="./ListaTrasee.html" class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Tramvaie</a>
+      </div>
+      <div id="trbtnTro" class="gap_07 gap_r_2 display_flex flexDir_col card  noscrollbar width_fitcontent height_fitcontent">
+        <a href="./ListaTrasee.html" class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Troleibuze</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb_10"></div>
+  
+  <div class="display_flex gap_r_3 flexDir_row justSelf_center">
+    <a href="https://facebook.com/TransPloiesti" class="abtnlink width_fitcontent height_fitcontent display_flex justify_center align_center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="socialMediaSVGs" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+      </svg>
+    </a>
+    <a href="https://youtube.com/transploiestioficial" class="abtnlink width_fitcontent height_fitcontent display_flex justify_center align_center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="socialMediaSVGs" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      </svg>
+    </a>
+    <a href="https://instagram.com/transploiesti" class="abtnlink width_fitcontent height_fitcontent display_flex justify_center align_center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="socialMediaSVGs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    </a>
+  </div>
+  
+  <div id=footer></div>
+  
+
+  <script src="./Scripts/UiElements.js"></script>
+  <script src="./Scripts/news.js"></script>
+  <script>
+      /*<a href="" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg display_flex"viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15v-4h3.5V9.5L12 7.5l6.5 2v1.5H22v7h-3.5v2.5H5.5V18H2z"/></svg>
+        <br>Statii
+      </a>*/
+
+    function scrollDownFunc() {
+      window.scrollTo({
+        top: 400,
+        behavior: 'smooth'
+      });
+    }
+    
+//decodeurlcomponent
+    
+    fetch('./JSON/anunturi.json')
+      .then(response => response.json())
+      .then(data => {
+        data.Anunturi.slice(-3).reverse().forEach(anunt=> {
+          anunt.TraseeAfectate.forEach(trafec => {
+            TrAfectFull += TrAfectPreset(trafec);
+          })
+          document.getElementById('newscard').innerHTML += AnuntPreset(anunt);
+          TrAfectFull = ``;
+        });
+        document.getElementById('newscard').innerHTML +=
+          `<a class="abtnlink anews display_flex anews2 alignSelf_center" href="/anunturi.html">
+            Vezi toate anunturile
+          </a>`
+      });
+
+    let RPfromID, RPtoID;
+    
+    let TrBtnPreset = (tr, data) => data[tr] ?
+      `<a class="abtnlink display_flex align_center" href=./traseu.html#${tr}.html>
+         <div class="abtnlink-nr display_flex justify_center align_center"> <span>${tr}</span> </div>
+         <span>${data[tr].Cap1} - ${data[tr].Cap2}</span>
+       </a>` : '';
+    
+    fetch('./JSON/trasee.json')
+      .then(response => response.json())
+      .then(data => {
+        dataa = data
+        data.HomeTrasee.forEach(tr => {
+          document.getElementById('trbtn').innerHTML += TrBtnPreset(tr, data);
+        });
+        data.HomeTraseeTramvai.forEach(tr => {
+          document.getElementById('trbtnTrv').innerHTML += TrBtnPreset(tr, data);
+        });
+        data.HomeTraseeTroleu.forEach(tr => {
+          document.getElementById('trbtnTro').innerHTML += TrBtnPreset(tr, data);
+        });
+        routePlannerSearch(document.getElementById('RPfrom'), RPfromID);
+        routePlannerSearch(document.getElementById('RPto'), RPtoID);
+      });
+
+    function routePlannerSearch(inputElement, tId) {
+      inputElement.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          if (document.getElementById('routeStopSearchResults')) {
+            document.getElementById('routeStopSearchResults').remove();
+          }
+          let routeStopSearchResultsDIV = document.createElement('div');
+          routeStopSearchResultsDIV.id = 'routeStopSearchResults';
+          routeStopSearchResultsDIV.className = 'display_flex gap_1 flexDir_col justSelf_center alignSelf_center';
+          // routeStopSearchResultsDIV.innerHTML = 'test';
+          inputElement.after(routeStopSearchResultsDIV)
+  
+          if (query.length === 0) {
+            routeStopSearchResultsDIV.remove();
+            return;
+          }
+  
+          const matches = dataa.IDs.filter(st => {
+            if (!st.nume || st.nume.trim() === '') return false;
+            return st.nume.toLowerCase().includes(query) || st.stopId.toLowerCase().includes(query);
+          });
+  
+          // if (matches.length === 0) {
+          //   OutputElement.style.display = 'none';
+          //   return;
+          // }
+          // OutputElement.style.display = 'block';
+  
+          matches.forEach(st => {
+            const item = document.createElement('div');
+            item.className = 'search-item';
+            item.innerHTML = `<a class="display_flex btnRouteStopSearchResult">${st.nume}</a>`;
+            item.addEventListener('click', () => {
+              inputElement.dataset.routesid = st.stopId;
+              inputElement.value = st.nume; // Pune numele stației în input
+              routeStopSearchResultsDIV.remove(); // Ascunde dropdown-ul
+            });
+            routeStopSearchResultsDIV.appendChild(item)
+          });
+        }, 200);
+        
+      })
+      // document.addEventListener('click', (e) => {
+      //   if (!inputElement.contains(e.target) && !OutputElement.contains(e.target)) {
+      //     OutputElement.style.display = 'none';
+      //   }
+      // });
+    };
+
+    function routeGo() {
+      fromID = document.getElementById('RPfrom').dataset.routesid;
+      toID = document.getElementById('RPto').dataset.routesid;
+      if (fromID && toID) {
+        window.location.href = `./route.html?from=${fromID}&to=${toID}`
+      } else {
+        alert('Selecteaza statia de plecare si de sosire')
+      }
+    }
+
+    
+  </script>
+</body>
+
+</html>

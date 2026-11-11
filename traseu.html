@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <script>eruda.init();</script>
+  <title>Traseu - TransPloiesti</title>
+  <meta name="description" content="Platforma interactivă pentru trasee, stații și orare în timp real în Ploiești.">
+  <meta name="theme-color" content="#111155">
+  <link rel="icon" type="image/png" href="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/favicon/msung62e.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width height=device-height">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div id=menuopen></div>
+  <div id=deadTopSpace></div>
+  <div id=titlu></div>
+  <div id=fixbtn></div>
+  <!div id=menu></!div>
+
+  <div class="contentwrap display_flex flexDir_row justSelf_center justify_center">
+    <div class="display_flex flexDir_col align_center" id=TrOptions>
+      <div class="trtitle display_flex justSelf_center">
+        <div class="nr display_flex justify_center alignSelf_center align_center">
+          <span id="nrtraseu"></span>
+        </div>
+        <div class="trtext display_flex flexDir_col justify_center">
+          <div id=origine></div>
+          <div id=destinatie></div>
+        </div>
+      </div>
+      <div class="mb_5"></div>
+      <div style="overflow-y: visible;" class="card display_flex width_fitcontent height_fitcontent flexDir_row justSelf_center gap_2">
+        <div class="gap_1 gap_r_2 display_flex flexDir_col align_center">
+          <div class="topbut width_fitcontent height_fitcontent adropd align_center gap_1 gap_r_2 display_flex flexDir_row justSelf_center">
+            <span id="nrtraseu"></span>
+            <span class="chevron">⌄</span>
+            <div class="floatmenu display_flex flexDir_col width_fitcontent hidden" id="ListaVariants"></div>
+          </div>
+          <!div class="topbut width_fitcontent height_fitcontent adropd align_center"
+            DateSel_WIP
+          </!div>
+        </div>
+        <div class="gap_1 gap_r_2 display_flex flexDir_col align_center">
+          <div class="gap_1 gap_r_2 display_flex flexDir_row justSelf_center">
+            <a id=Tbut class="btnlink display_flex align_center btn_DIR justify_center" onclick="directie(this, 'T')">
+              Tur
+            </a>
+            <a id=Rbut class="btnlink display_flex align_center btn_DIR justify_center" onclick="directie(this, 'R')">
+              Retur
+            </a>
+          </div>
+          <div class="gap_1 gap_r_2 display_flex flexDir_row justSelf_center">
+            <a class="btnlink display_flex align_center btn_ZI width_fitcontent justify_center" onclick="zi(this, 'LV')" id=LVbut>
+              Luni-Vineri
+            </a>
+            <a class="btnlink display_flex align_center btn_ZI width_fitcontent justify_center" onclick="zi(this, 'SD')" id=SDbut>
+              Sambata-Duminica
+            </a>
+            <a class="btnlink display_flex align_center btn_ZI width_fitcontent justify_center" onclick="zi(this, 'S')" id=Sbut>
+              Sambata
+            </a>
+            <a class="btnlink display_flex align_center btn_ZI width_fitcontent justify_center" onclick="zi(this, 'D')" id=Dbut>
+              Duminica
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mb_3"></div>
+      <div style="text-align: center;" class="display_flex traseeInfo mb_2 justSelf_center"><strong>Datele din programul de circulatie au caracter informativ si pot exista abateri. Respectarea programului depinde de conditiile de trafic de pe traseu</strong></div>
+    </div>
+    <div class="display_flex flexDir_col gap_2">
+      <div id="liveETAdiv" class="card display_flex flexDir_col">
+        <div class="anuntHint mb_2 display_flex alignSelf_center width_fitcontent">Urmatoarele plecari:</div>
+        <div class="display_flex flexDir_row" id=liveETA style="justify-content: space-around;"></div>
+      </div>
+      <div class="card display_flex width_fitcontent height_fitcontent gap_1 gap_r_2 flexDir_row justSelf_center">
+        <div class="noscrollbar display_flex flexDir_col justify_center" id=statii></div>
+        <div class="gap_1 gap_r_2 display_flex flexDir_col align_center" id=tabelintfull>
+          <div class="tabelrow display_flex height_fitcontent">
+            <div class="tabcell display_flex flexDir_row align_center cellOra">ORA</div>
+            <div class="tabcell display_flex flexDir_row align_center cellMin">MINUTUL</div>
+          </div>
+          <div id=tabelint></div>
+        </div>
+      </div>
+    </div>
+    <div id=tabelintErr></div>
+  </div>
+  
+  <div id=footer></div>
+
+
+  <script src="./Scripts/UiElements.js"></script>
+  <script>
+
+    let NrTraseuAct;
+    let NrTraseuMain;
+    let StatiiDirAct;
+    let ListVar;
+    let datajson, nrtr, nrtrm, ZiVacanta, Capat1, Capat2, Capat3, Capat4, VarianteTr, StatiiTur, StatiiRetur;
+    let ProgSelectat, ProgOffset;
+    
+    const origineDiv = document.getElementById('origine');
+    const destinatieDiv = document.getElementById('destinatie');
+    const StatiiDiv = document.getElementById('statii');
+
+    let getDataAzi = new Date();
+    let ziAct = getDataAzi.getDay();
+
+    // Sa zic ca URL-ul curent din browser este: https://site.ro/catalog?produs=laptop&id=42
+    
+    // const queryString = window.location.search; // ia tot ce este de la '?' incolo: "?produs=laptop&id=42"
+    // const urlParams = new URLSearchParams(queryString);
+    
+    // // 2. Poti verifica daca o variabila exista in link:
+    // if (urlParams.has('culoare')) {
+    //     console.log("Utilizatorul a filtrat dupa culoare.");
+    // } else {
+    //     console.log("Nu s-a aplicat filtru de culoare.");
+    // }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    let tipdir = (!urlParams.get('tDIR')) ? "T" : (urlParams.get('tDIR')) ;
+    let tipzi = (ziAct === 6) ? "S" : (ziAct === 0) ? "D" : "LV";
+    document.getElementById(`${tipdir}but`).classList.add('sel');
+
+    function traseeMainFunc() {
+      NrTraseuAct = `${window.location.hash.replace('#', '').replace('.html', '')}`;
+      // /*testing purposes, COMMENT WHEN FINISH*/ if (!window.location.hash) {NrTraseuAct = '32'};
+      NrTraseuMain = NrTraseuAct.replace(/[A-Z]/g, "");
+      console.log(NrTraseuMain);
+
+      document.title = `Traseul ${NrTraseuAct} - TransPloiesti`;
+  
+      // 2. Functie mica ajutatoare pentru a seta sau crea taguri og: dinamic
+      function setMetaTag(property, content) {
+        let tag = document.querySelector(`meta[property="${property}"]`);
+        if (!tag) {
+          tag = document.createElement('meta');
+          tag.setAttribute('property', property);
+          document.head.appendChild(tag);
+        }
+        tag.setAttribute('content', content);
+      }
+      
+      // 3. Setam dinamic datele pentru social media
+      setMetaTag('og:title', `Traseul ${NrTraseuAct} - TransPloiesti`);
+      setMetaTag('og:description', `Vezi programul de circulatie, statiile si orele in timp real pentru traseul ${NrTraseuAct}.`);
+      setMetaTag('og:url', window.location.href); // Ia exact link-ul curent cu tot cu # si ?
+      // setMetaTag('og:image', 'https://transploiesti.com/poza-ta-reprezentativa.png');
+
+      
+      document.querySelectorAll('#nrtraseu').forEach(nr => nr.innerHTML = NrTraseuAct);
+      
+      //EASTER EGG (might be broken tho) : Pentru trasee si orare discontinued , schimba textul din parantezele la fetch() cu './traseeOLD.json'
+      fetch('./JSON/trasee.json')
+        .then(response => response.json())
+        .then(data => {
+          datajson = data;
+
+          
+          ZiVacanta = data.ZileVac;
+          // DateNow();
+          nrtr = data[NrTraseuAct];
+          if (!nrtr) {
+            console.error(`Traseul ${NrTraseuAct} nu exista in JSON.`);
+            origineDiv.innerHTML = "";
+            destinatieDiv.innerHTML = "Traseu inexistent";
+            document.getElementById('ListaVariants').innerHTML = "";
+            StatiiDiv.innerHTML = "";
+            document.getElementById('tabelintErr').innerHTML = `<div class="btnlink display_flex align_center WrongLink">Traseul #${NrTraseuAct} nu a fost gasit in baza de date.\nVerifica link-ul daca este scris corect</div>`;
+            document.getElementById('TrOptions').classList.add('hidden');
+            document.querySelector('.tabelrow').classList.add('hidden');
+            document.getElementById('liveETAdiv').classList.add('hidden');
+            return; // Oprim executia aici pentru a evita crash-ul
+          }
+          nrtrm = data[NrTraseuMain];
+  
+          Capat1 = nrtr.Cap1;
+          Capat2 = nrtr.Cap2;
+          Capat3 = nrtr.Cap3;
+          Capat4 = nrtr.Cap4;
+          origineDiv.innerHTML = (tipdir === "T") ? Capat1 : Capat3;
+          destinatieDiv.innerHTML = (tipdir === "T") ? Capat2 : Capat4;
+  
+          VarianteTr = trVar(nrtrm.Variante);
+          document.getElementById('ListaVariants').innerHTML = VarianteTr;
+          
+          StatiiTur = genStatiiHTML(nrtr.StatiiTur, "T");
+          StatiiRetur = genStatiiHTML(nrtr.StatiiRetur, "R");
+          StatiiDirAct = (tipdir === "T") ? StatiiTur : StatiiRetur;
+          StatiiDiv.innerHTML = StatiiDirAct;
+
+          if (!nrtr.Prog_T_SD && !nrtr.Prog_R_SD) {
+            document.getElementById('SDbut').classList.add('hidden');
+          } else {  
+            document.getElementById('SDbut').classList.remove('hidden');
+          };
+          if (!nrtr.Prog_T_S && !nrtr.Prog_R_S) {
+            document.getElementById('Sbut').classList.add('hidden');
+          } else {
+            document.getElementById('Sbut').classList.remove('hidden');
+          };
+          if (!nrtr.Prog_T_D && !nrtr.Prog_R_D) {
+            document.getElementById('Dbut').classList.add('hidden');
+          } else {
+            document.getElementById('Dbut').classList.remove('hidden');
+          };
+          if (!nrtr.Prog_T_LV && !nrtr.Prog_R_LV) {
+            tipzi = (!nrtr.Prog_T_SD && !nrtr.Prog_R_SD) ? 'S' : 'SD'; 
+            document.getElementById('LVbut').classList.add('hidden');
+          } else {
+            document.getElementById('LVbut').classList.remove('hidden');
+          };
+
+          if ((tipzi === "S" || tipzi === "D") && !nrtr[`Prog_${tipdir}_${tipzi}`]) {
+            tipzi = "SD";
+          };
+          document.getElementById(`${tipzi}but`).classList.add('sel');
+
+           // element.dataset.sID
+          let selStop = urlParams.get('sID') ? document.querySelector(`[data-stopBtnID="${tipdir}Stop"][data-sID="${urlParams.get('sID')}"]`) : null;
+          if (selStop) {
+            selStop.click();
+          } else {
+            distantaMinute(0);
+          }
+          
+          });
+      
+    }
+    
+    // function DateNow() {
+    //   let now_time = new Date();
+    //   let year = now_time.getFullYear();
+    //   let month = String(now_time.getMonth() + 1).padStart(2, '0');
+    //   let day = String(now_time.getDate()).padStart(2, '0');
+    //   let datanow = `${day}-${month}-${year}`;
+      
+    //   // if (ZiVacanta.includes(datanow)) {
+    //   //   NrTraseuAct = `${NrTraseuAct}_Vac`;
+    //   // } else {
+    //   //   NrTraseuAct = NrTraseuAct.replace('_Vac', '');
+    //   // };
+    // }
+
+    function liveETAfunc(ProgSelectat) {
+      let liveETAbox = document.getElementById('liveETA');
+      if (!liveETAbox) return;
+      liveETAbox.innerHTML = '';
+    
+      if (!ProgSelectat || Object.keys(ProgSelectat).length === 0) {
+        liveETAbox.innerHTML = `--`;
+        return;
+      }
+      
+      let now_time = new Date();
+      let hour_now = now_time.getHours();
+      let minute_now = now_time.getMinutes();
+      // let secunde_now = now_time.getSeconds();
+      let totalMinNow = hour_now * 60 + minute_now;
+      let oraGasita = '';
+
+      let oreSortate = Object.keys(ProgSelectat).sort((a, b) => parseInt(a) - parseInt(b));
+      
+      let counterShow = 0;
+      for (let ora of oreSortate) {
+        let oraInt = parseInt(ora, 10);
+        for (let min of ProgSelectat[ora]) {
+          let totalMinCursa = oraInt * 60 + min;
+          if (totalMinCursa >= totalMinNow) {
+            oraGasita = `${String(oraInt).padStart(2, '0')}:${String(min).padStart(2, '0')}`;
+
+            if (totalMinCursa - totalMinNow === 0) {
+              liveETAbox.innerHTML += `<div class="display_flex justify_center flexDir_col"><div class="ETAtop display_flex justify_center"><strong>acum</strong></div><div class="ETAbottom display_flex justify_center">(${oraGasita})</div></div>`;
+            } else {
+              liveETAbox.innerHTML += `<div class="display_flex justify_center flexDir_col"><div class="ETAtop display_flex justify_center"><strong>${totalMinCursa - totalMinNow} min</strong></div><div class="ETAbottom display_flex justify_center">(${oraGasita})</div></div>`;
+            }
+            counterShow = counterShow + 1;
+            if (counterShow == 3) break;
+          }
+        }
+        if (counterShow == 3) break;
+      }
+      if (counterShow == 0) {
+        liveETAbox.innerHTML = `-`;
+      }
+    }
+
+    function trVar(variants) {
+      if (!variants) return "";
+      return variants
+        .map(v => {
+          const vnrtr = datajson[`${NrTraseuMain}${v.litera}`];
+          if (!vnrtr) {
+            console.warn(`Nu exista varianta ${NrTraseuMain}${v.litera}`);
+            return "";
+          };
+          return `<a class="btnlink display_flex align_center aindropd" href="./traseu.html#${NrTraseuMain}${v.litera}.html" onclick="traseeMainFunc()">${NrTraseuMain}${v.litera} : ${vnrtr.Cap1} - ${vnrtr.Cap2}</a>`;
+        })
+        .join("");
+    }
+
+    function genStatiiHTML(listaStatii, stopTipDir) {
+      if (!listaStatii) return "";
+      let lastOffset = 0;
+      return listaStatii
+        .map((st, index) => {
+          const selst = (!urlParams.get('sID') && index === 0) ? "sel" : "";
+          lastOffset = lastOffset + st.offset;
+          return `<a data-stopBtnID="${stopTipDir}Stop" class="btnlink display_flex align_center statieclass ${selst}" data-sID="${datajson.IDs.find(el => el.stopId === st.stopId).stopId}" onclick="distantaMinute(${lastOffset}, this)">${datajson.IDs.find(el => el.stopId === st.stopId).nume}</a>`
+        })
+        .join("");
+    }
+    
+    function directie(btn, td) {
+      tipdir = td;
+      document.querySelectorAll(".btn_DIR").forEach(el => el.classList.remove("sel"));
+      if (btn) {
+        btn.classList.add('sel');
+      };
+      if (tipdir === 'T') {
+        StatiiDirAct = StatiiTur;
+        origineDiv.innerHTML = Capat1;
+        destinatieDiv.innerHTML = Capat2;
+      } else {
+        StatiiDirAct = StatiiRetur;
+        origineDiv.innerHTML = Capat3;
+        destinatieDiv.innerHTML = Capat4;
+      };
+      StatiiDiv.innerHTML = StatiiDirAct;
+      distantaMinute(0);
+    };
+
+    function zi(btn, tz) {
+      tipzi = tz;
+      document.querySelectorAll(".btn_ZI").forEach(el => el.classList.remove('sel'));
+      if (btn) {
+        btn.classList.add('sel');
+      };
+      distantaMinute(0);
+    };
+      
+    function distantaMinute(SetOffset, btn) {
+      if (!nrtr) return;
+      const statieClass = document.querySelectorAll(".statieclass");
+      statieClass.forEach(el => el.classList.remove('sel'));
+      if (btn) {
+        btn.classList.add('sel');
+      } else if (statieClass.length > 0) {
+        statieClass[0].classList.add('sel')
+      }
+      
+      ProgSelectat = nrtr[`Prog_${tipdir}_${tipzi}`];
+      
+      const tabelinterv = document.getElementById('tabelint');
+      tabelinterv.innerHTML = "";
+      if (!ProgSelectat || Object.keys(ProgSelectat).length === 0) {
+        tabelinterv.innerHTML = `<div class="btnlink display_flex align_center WrongLink">Nu exista curse pe aceasta directie si in aceasta zi/interval de zile</div>`;
+        return;
+      }
+      
+      ProgOffset = {};
+      for (const ora in ProgSelectat) {
+        const oraint = parseInt(ora, 10);
+        ProgSelectat[ora].forEach((minut) => {
+          const totalmin = oraint * 60 + minut + SetOffset;
+          const oracalc = Math.floor(totalmin / 60) % 25;
+          const mincalc = totalmin % 60;
+          if (!ProgOffset[oracalc]) {
+            ProgOffset[oracalc] = [];
+          }
+          ProgOffset[oracalc].push(mincalc);
+        })
+      };
+
+      for (const ora in ProgOffset) {
+        const oratext = ora < 10 ? '0' + ora : ora;
+        const mintext = ProgOffset[ora]
+          .sort((a, b) => a - b)
+          .map(m => (m < 10 ? '0' + m : m))
+          .join(' ');
+        tabelinterv.innerHTML += `
+        <div class="tabelrow display_flex height_fitcontent">
+          <div class="tabcell display_flex flexDir_row align_center cellOra">${oratext}</div>
+          <div class="tabcell display_flex flexDir_row align_center cellMin">${mintext}</div>
+        </div>
+        `;
+      }
+      liveETAfunc(ProgOffset);
+    }
+
+    setInterval(() => {
+      if (typeof nrtr !== 'undefined' && nrtr) {
+        let ProgSelectat = nrtr[`Prog_${tipdir}_${tipzi}`];
+        liveETAfunc(ProgOffset);
+      }
+    }, 10000);
+    
+    window.addEventListener('hashchange', traseeMainFunc)
+    traseeMainFunc();
+
+  </script>
+</body>
+
+</html>

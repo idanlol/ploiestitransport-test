@@ -1,0 +1,96 @@
+<html>
+
+<head>
+  <title>Trasee - TransPloiesti</title>
+  <link rel="icon" type="image/png" href="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/favicon/msung62e.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-------Clusterele de statie gen InfoTb------->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <!---------------->
+  <style>
+
+
+  </style>
+</head>
+
+<body>
+  <div id=menuopen></div>
+  <div id=deadTopSpace></div>
+  <div id=titlu></div>
+
+  <div id=fixbtn></div>
+  <!div id=menu></!div>
+
+  <!div style="width: 90vw; height: 70vw; overflow: hidden;" class="card display_flex justSelf_center mb_5">
+    <!div id="map" style="z-index: 1; width: 100%; height: 100%; border-radius: 12px;"></!div>
+  </!div>
+  
+
+  <div class="gap_3 gap_r_5 display_flex flexDir_row_r justSelf_center">  
+    <div class="gap_3 gap_r_5 display_flex flexDir_col">
+      <div id="trbtnTrv" class="gap_07 gap_r_2 display_flex flexDir_col card noscrollbar width_fitcontent height_fitcontent">
+        <div class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Tramvaie</div>
+      </div>
+      <div id="trbtnTro" class="gap_07 gap_r_2 display_flex flexDir_col card  noscrollbar width_fitcontent height_fitcontent">
+        <div class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Troleibuze</div>
+      </div>
+    </div>
+    <div id="trbtn" style="max-height: 50vh;" class="gap_07 gap_r_2 display_flex flexDir_col card noscrollbar width_fitcontent height_fitcontent">
+      <div class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Autobuze</div>
+    </div>
+  </div>
+  
+  <div id=footer></div>
+
+
+<script src="./Scripts/UiElements.js"></script>
+<!script src="./Scripts/mapFunctionality.js"></!script>
+<script>
+
+  
+  // Exemplu de adăugare a unui pin pentru stația curentă
+  // function adaugaPinStatie(lat, lon, numeStatie) {
+  //   L.marker([lat, lon]).addTo(map)
+  //     .bindPopup(`<b>Stație:</b> ${numeStatie}`)
+  //     .openPopup();
+  // }
+
+  let TrBtnPreset = (tr, data) => data[tr] ?
+      `<a class="abtnlink display_flex align_center" href=./traseu.html#${tr}.html>
+         <div class="abtnlink-nr display_flex justify_center align_center"> <span>${tr}</span> </div>
+         <span>${data[tr].Cap1} - ${data[tr].Cap2}</span>
+       </a>` : '';
+
+  
+  fetch('./JSON/trasee.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+            console.log(response.status)
+          }
+          return response.json();
+        })
+        .then(data => {
+        // console.log(data);
+        dataa = data;
+        data.HomeTrasee.forEach(tr => {
+          document.getElementById('trbtn').innerHTML += TrBtnPreset(tr, data);
+        });
+        data.HomeTraseeTramvai.forEach(tr => {
+          document.getElementById('trbtnTrv').innerHTML += TrBtnPreset(tr, data);
+        });
+        data.HomeTraseeTroleu.forEach(tr => {
+          document.getElementById('trbtnTro').innerHTML += TrBtnPreset(tr, data);
+        });
+      })
+      .catch(err => console.error(err))
+  
+  </script>
+</body>
+</html>
