@@ -103,11 +103,11 @@
     if (!fromId || !toId) {
       document.getElementById('routeResults').innerHTML = `<div class=mb_3></div><div>Nu s-a gasit punct de plecare si de sosire.</div>`
     }
-    // /*testing*/ if (fromId === null || toId === null) {
-    //   fromId = "S50001";
-    //   toId = "S00115";
-    //   // toId = "S50010";
-    // }
+    /*testing*/ if (fromId === null || toId === null) {
+      fromId = "S00112";
+      toId = "S50026";
+      // toId = "S50010";
+    }
     console.log(fromId, toId);
 
     fetch ('./JSON/trasee.json')
@@ -134,7 +134,7 @@
         
         let fromObj = data.IDs.find(s => s.stopId === fromId);
         let toObj = data.IDs.find(s => s.stopId === toId);
-        
+
         document.getElementById('from').innerHTML = fromObj.nume;
         document.getElementById('to').innerHTML = toObj.nume;
 
@@ -207,18 +207,24 @@
         let statiiList = curent.statiiTraseuCurent;
 
         // Verificăm dacă linia curentă ajunge direct la destinație de la poziția curentă
-        let idxS = statiiList.findIndex((s, idx) => idx > curent.ultimaStatiePeLinie && s.stopId === toId);
+        let idxS = statiiList.findIndex((s, idx) => {
+          if (idx <= curent.ultimaStatiePeLinie || !s.stopId) return false;
+          if (s.stopId === toId) return true;
+          return calcDistMeters(coordMap, s, { stopId: toId }) <= 700;
+        });
         
         if (idxS !== -1) {
           if (curent.schimburi < minSchimburiGasit) {
-            //minSchimburiGasit = curent.schimburi + 1;
             minSchimburiGasit = curent.schimburi;
           }
           let cheieRuta = curent.istoricLinii.join('-');
           
-          // Calculăm un timp estimativ simplificat pentru început
+          let statieSosireRealerta = statiiList[idxS].stopId;
+          let distDest = (statieSosireRealerta === toId) ? 0 : calcDistMeters(coordMap, { stopId: statieSosireRealerta }, { stopId: toId });
+          let timpMersPietonalFinal = distDest > 0 ? Math.max(1, Math.round(distDest / 80)) : 0;
+
           let timpMers = estimeazaTimpTraseu(statiiList, curent.ultimaStatiePeLinie, idxS);
-          let timpTotal = curent.timpAcum + timpMers; // adăugăm penalizare de 5 min per schimb
+          let timpTotal = curent.timpAcum + timpMers + timpMersPietonalFinal;
 
           if (!ruteValide.some(r => r.cheie === cheieRuta)) {
             ruteValide.push({
@@ -227,11 +233,14 @@
               sensuri: curent.sensuri,
               schimburi: curent.schimburi,
               statiiSchimb: curent.istoricStatiiSchimb,
+              statieSosire: statieSosireRealerta,
+              timpMersFinal: timpMersPietonalFinal,
               timpTotal: timpTotal
             });
           }
           continue;
         }
+
 
         if (minSchimburiGasit === Infinity || curent.schimburi < minSchimburiGasit) {
           // Dacă nu am ajuns și nu am depășit numărul maxim de schimburi, căutăm transbordări
@@ -375,27 +384,26 @@
 
           let trUltim = data[ultimaLinie][ultimulSens];
           let idxUltimStart = trUltim.findIndex(s => s.stopId === ultimulStopId);
-          let idxDest = trUltim.findIndex(s => s.stopId === toId);
+          let idxDest = trUltim.findIndex((s, idx) => idx > idxUltimStart && s.stopId === r.statieSosire);
           if (idxUltimStart === -1) idxUltimStart = 0;
           if (idxDest === -1) idxDest = trUltim.length - 1;
 
           let durataUltimSegment = estimeazaTimpTraseu(trUltim, idxUltimStart, idxDest);
-          timpCurentAbsolut += durataUltimSegment;
+          timpCurentAbsolut += durataUltimSegment + r.timpMersFinal;
 
-          // let timpTotalReal = timpCurentAbsolut - getMinuteCurente();
-
-          // Clonăm ruta pentru această oră specifică de plecare
           ruteFinalDeProcesat.push({
             linii: r.linii,
             sensuri: r.sensuri,
             schimburi: r.schimburi,
             statiiSchimb: r.statiiSchimb,
+            statieSosire: r.statieSosire,
             timpTotal: timpCurentAbsolut - plecareInfo.oraAbsoluta,
             oraSosiriiMinute: timpCurentAbsolut,
             oraPlecareAbsoluta: plecareInfo.oraAbsoluta,
             plecareText: plecareInfo.text,
             minutePanaLaPlecare: plecareInfo.minute
           });
+
         });
       });
 
@@ -430,39 +438,36 @@
           
       ruteFiltrate.forEach(r => {
         let textSchimburi = r.schimburi === 0 ? "Nicio schimbare" : `${r.schimburi} schimb${r.schimburi > 1 ? 'uri' : ''}`;
+        let elementePasi = [];
         
-        let pasiHtml = '';
-        if (r.schimburi === 0) {
-          pasiHtml = `
-            <div>${walkManSvg}</div>
-            <span class="routeArrow">›</span>
-            <div class="nr display_flex justify_center align_center">${r.linii[0]}</div>
-          `;
-        } else {
-          let elementePasi = [];
-          
-          r.linii.forEach((linie, idx) => {
-            // Dacă nu suntem la primul element, adăugăm tranziția dintre autobuze
-            if (idx > 0) {
-              let schimb = r.statiiSchimb[idx - 1];
-              let linieAnterioara = r.linii[idx - 1];
-              let linieCurenta = linie;
-              
-              // Dacă e aceeași stație sau continuă pe aceeași linie, NU punem omuleț (rămâne doar săgeata simplă de legătură)
-              if (schimb.statieCoborare !== schimb.statieUrcare && linieAnterioara !== linieCurenta) {
-                elementePasi.push(`<div>${walkManSvg}</div>`);
-              }
-            }
-            
-            elementePasi.push(`<div class="nr display_flex justify_center align_center">${linie}</div>`);
-          });
-          
-          pasiHtml = elementePasi.join('<span class="routeArrow">›</span>');
+        // Verificăm dacă primul element din r.statiiSchimb este mersul de la început (pleacă din fromId)
+        let areMersStart = r.statiiSchimb.length > 0 && r.statiiSchimb[0].statieCoborare === fromId;
+        
+        if (areMersStart) {
+          elementePasi.push(`<div>${walkManSvg}</div>`);
         }
 
+        // Adăugăm liniile și omulețul de tranziție corect la schimburi
+        r.linii.forEach((linie, idx) => {
+          elementePasi.push(`<div class="nr display_flex justify_center align_center">${linie}</div>`);
+          
+          // Indexul real în statiiSchimb pentru transbordare (sărim peste cel de start dacă există)
+          let indexSchimbReal = areMersStart ? idx + 1 : idx;
+          
+          if (indexSchimbReal < r.statiiSchimb.length) {
+            let schimb = r.statiiSchimb[indexSchimbReal];
+            if (schimb && schimb.statieCoborare !== schimb.statieUrcare) {
+              elementePasi.push(`<div>${walkManSvg}</div>`);
+            }
+          }
+        });
 
+        // Omulețul de la final (dacă stația de sosire din BFS nu e fix toId)
+        if (r.statieSosire && r.statieSosire !== toId) {
+          elementePasi.push(`<div>${walkManSvg}</div>`);
+        }
 
-
+        let pasiHtml = elementePasi.join('<span class="routeArrow">›</span>');
         // console.log(r)
 
         container.innerHTML += `
