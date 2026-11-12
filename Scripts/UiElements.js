@@ -26,24 +26,60 @@ let menuHint = (window.location.pathname.endsWith('home.html') || window.locatio
 document.getElementById('titlu').insertAdjacentHTML('afterbegin',
   `<div class="titlu display_flex height_fitcontent align_center">
     <a href="./index.html">
-      <img class="ratphpng" src="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/ro/layout_2/mvary6uo/element_410/rwdMode_4/76x76/TransPloiesti-logo-2024-5.webp">
+      <svg class="ratphpng display_flex justSelf_center alignSelf_center" xmlns="http://www.w3.org/2000/svg" viewBox="23 0 310 191" width="100%" height="100%">
+        <style>
+          .myTP_svg {
+            fill: none;
+            stroke: var(--sitename);
+            stroke-width: 12;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .TP_svg {
+            stroke-width: 25;
+          }
+        </style>
+        <path class="myTP_svg" d="
+          M 29 107
+          C 34 125, 46 119, 49 104
+          C 56 76, 62 44, 66 44
+          C 67 44, 72 86, 76 114
+          C 78 126, 84 125, 86 110
+          C 92 84, 99 46, 103 46
+          C 103 46, 108 96, 112 114
+          C 115 126, 122 133, 130 112
+          C 133 102, 134 96, 139 96
+          C 139 96, 135 128, 152 127
+          C 159 126, 169 112, 175 96
+          C 169 135, 153 178, 134 184
+          C 119 188, 115 172, 120 164
+          C 139 136, 167 154, 200 120
+        " />
+        <line class="myTP_svg TP_svg" x1="200" y1="45" x2="250" y2="45" />
+        <line class="myTP_svg TP_svg" x1="225" y1="45" x2="225" y2="120" />
+        <line class="myTP_svg TP_svg" x1="280" y1="45" x2="280" y2="120" />
+        <path class="myTP_svg TP_svg" d="
+          M 280 45
+          C 280 45, 320 35, 320 65
+          C 320 65, 320 95, 280 85
+        " />
+      </svg>
     </a>
     <div style="color: var(--font-testver); font-size: 5vmin; font-weight: 700;">TEST VERSION</div>
     <div id=menu class="display_flex alignSelf_center"></div>
   </div>`);
 
+      //<img class="ratphpng" src="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/ro/layout_2/mvary6uo/element_410/rwdMode_4/76x76/TransPloiesti-logo-2024-5.webp">
 // https://ratph.ro/SiglaTCE.png
 
 if (document.getElementById('footer')) document.getElementById('footer').innerHTML =
   `<div class="endtitl display_flex flexDir_col justify_center align_center">
-    <span><strong>TransPloiesti DEMO version</strong></span>
-    <div style="white-space: wrap; text-align: center">Scop demonstrativ.</div>
-    <div style="white-space: wrap; text-align: center">Prezentul site NU va fi publicat fara permisiunea detinatorilor imaginilor si continuturilor prezentate</div>
+    <span><strong>MyTP DEMO version</strong></span>
     <div style="white-space: wrap; text-align: center">Informatiile, imaginile si drepturile de autor apartin detinatorilor acestora.</div>
     <span>-</span>
-    <span>&copy 2011-2026 TransPloiesti</span>
+    <span>&copy 2026-2027 MyTP</span>
     <span>Toate drepturile sunt rezervate</span>
-    <span>Ultimul update: octombrie 2026</span>
+    <span>Ultimul update: noiembrie 2026</span>
     <span>Ploiesti, Romania</span>
   </div>`;
 
