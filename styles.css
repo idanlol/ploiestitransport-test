@@ -2,6 +2,7 @@
   --bg-main: #eeeeff;
   --scrollbar-thumb: #777799;
   --scrollbar-track: #f1f1f1;
+  --sitename: #ccccfe;
   --titlu-bg: #0000ffaa;
   --titlu-bs: #0000ffbb;
   --footer: #ffff00aa;
@@ -53,6 +54,7 @@
   --bg-main: #0c0c15;
   --scrollbar-thumb: #777799;
   --scrollbar-track: #1f1f1f;
+  --sitename: #ccccfe;
   --titlu-bg: #0000ff77;
   --titlu-bs: #0000ffbb;
   --footer: #ffff00cc;
@@ -1154,7 +1156,7 @@ a {
   }
   .endtitl {
     height: fit-content;
-    padding: 15vmin 3vmin;
+    padding: 25vmin 3vmin;
     font-size: 3vmin;
   }
   .searchIconClass {
