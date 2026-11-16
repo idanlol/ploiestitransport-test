@@ -24,7 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
 let menuHint = (window.location.pathname.endsWith('home.html') || window.location.pathname === '/') ? `<span class="menutext">Meniu</span>` : '';
 
 document.getElementById('titlu').insertAdjacentHTML('afterbegin',
-  `<div class="titlu display_flex height_fitcontent align_center">
+  `<div class="colt-triunghi"><div class="colt-triunghi-text">BETA</div></div>
+  <div class="titlu display_flex height_fitcontent align_center">
     <a href="./index.html">
       <svg class="ratphpng display_flex justSelf_center alignSelf_center" xmlns="http://www.w3.org/2000/svg" viewBox="23 0 310 191" width="100%" height="100%">
         <style>
