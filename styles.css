@@ -202,6 +202,28 @@ a {
   display: none;
 }
 
+.colt-triunghi {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10vmax;
+  height: 10vmax;
+  background: #cc3300;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  pointer-events: none;
+  z-index: 999;
+}
+.colt-triunghi-text {
+  position: relative;
+  top: 0;
+  right: 0;
+  font-weight: 700;
+  font-size: 5vmin;
+  color: #ffffff;
+  transform: rotate(45deg) translate(50%, 0%);
+}
+
+
 
 
 /* Cutia principală a pop-up-ului */

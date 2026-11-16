@@ -3,6 +3,7 @@
 <head>
   <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
   <script>eruda.init();//eruda.show()</script>
+  <link rel="icon" type="image/png" href="/Content/icon/MyTP-48px.webp">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
   <style>
@@ -11,6 +12,11 @@
       height: 8vmin;
       stroke-linejoin: round;
       stroke-linecap: round;
+    }
+    .walkManETA {
+      font-size: 2.7vmin;
+      opacity: 0.8;
+      font-weight: 500
     }
     .routeArrow {
       opacity: 0.7;
@@ -38,6 +44,16 @@
   <div id=fixbtn></div>
   <div id=titlu></div>
   <div id=deadTopSpace></div>
+
+  <div style="padding: 4vmin; width: 80%" class="display_flex text_center justSelf_center flexDir_col gap_2 mb_5">
+    <div class="display_flex flexDir_row gap_1 alignSelf_center">
+      <strong style="font-size: 4.5vmin;">Route planner</strong>
+      <div style="background: #cc3300; border-radius: 50vw; padding: 1vmin 2vmin; font-weight: 700; font-size: 3vmin; color: #ffffff;">BETA</div>
+    </div>
+    <div class="routeSmallerFont">
+      Informatiile oferite pot fi inexacte/diferite de situatia reala
+    </div>
+  </div>
 
   <div style="padding: 4vmin; width: 80%" class="card display_flex height_fitcontent justSelf_center flexDir_col gap_1">
     <div class="routeCapete display_flex flexDir_row gap_1">
@@ -97,256 +113,400 @@
     
     // console.log('da');
     const urlParams = new URLSearchParams(window.location.search);
-    let fromId = urlParams.get('from');
-    let toId = urlParams.get('to');
+    let fromParam = urlParams.get('from');
+    let toParam = urlParams.get('to');
 
-    if (!fromId || !toId) {
-      document.getElementById('routeResults').innerHTML = `<div class=mb_3></div><div>Nu s-a gasit punct de plecare si de sosire.</div>`
-    }
-    /*testing*/ if (fromId === null || toId === null) {
-      fromId = "S00112";
-      toId = "S50026";
-      // toId = "S50010";
-    }
-    console.log(fromId, toId);
+    // /*testing*/ if (fromParam === null || toParam === null) {
+    //   fromParam = "S00112";
+    //   toParam = "S50026";
+    //   // toId = "S50010";
+    // }
+    console.log(fromParam, toParam);
 
-    fetch ('./JSON/trasee.json')
-      .then(response => response.json())
-      .then(data => {
-        // 1. Extragem doar liniile de transport (fără metadate)
-        const liniiValide = Object.keys(data).filter(k => 
-          !['IDs', 'HomeTrasee', 'HomeTraseeTramvai', 'HomeTraseeTroleu', 'ZileVac'].includes(k)
-        );
-
-        let stopToLinesMap = {};
-        liniiValide.forEach(linie => {
-          let tr = data[linie];
-          ['StatiiTur', 'StatiiRetur'].forEach(sens => {
-            if (!tr[sens]) return;
-            tr[sens].forEach((s, idx) => {
-              if (!s.stopId) return;
-              if (!stopToLinesMap[s.stopId]) stopToLinesMap[s.stopId] = [];
-              stopToLinesMap[s.stopId].push({ linie, sens, index: idx, statie: s });
+    if (!fromParam || !toParam) {
+      document.getElementById('routeResults').innerHTML = `<div class=mb_3></div><div>Nu s-a gasit punct de plecare si de sosire.</div>`;
+    } else if(fromParam === toParam) {
+      document.getElementById('routeResults').innerHTML = `<div class=mb_3></div><div>Punctele de plecare si sosire sunt identice.</div>`;
+    } else {
+      fetch ('./JSON/trasee.json')
+        .then(response => response.json())
+        .then(data => {
+          // 1. Extragem doar liniile de transport (fără metadate)
+          const data_onlyTrasee = Object.keys(data).filter(k => 
+            !['IDs', 'HomeTrasee', 'HomeTraseeTramvai', 'HomeTraseeTroleu', 'ZileVac'].includes(k)
+          );
+  
+          let stopsLinesMap = {};
+          data_onlyTrasee.forEach(linie => {
+            ['StatiiTur', 'StatiiRetur'].forEach(sens => {
+              if (!data[linie][sens]) return;
+              // if (!areOrarAzi(data[linie], sens)) return;
+              data[linie][sens].forEach((s, index) => {
+                if (!s.stopId) return;
+                if (!stopsLinesMap[s.stopId]) {
+                  let stopInfo = data.IDs.find(id => id.stopId === s.stopId)
+                  let coords = stopInfo ? stopInfo.coord : null;
+                  let [latitude, longitude] = coords ? coords.split(',').map(Number) : [null, null];
+                  stopsLinesMap[s.stopId] = [];
+                  stopsLinesMap[s.stopId].lat = latitude;
+                  stopsLinesMap[s.stopId].lon = longitude;
+                }
+                stopsLinesMap[s.stopId].push({
+                  linie,
+                  sens,
+                  index: index,
+                  statie: s});
+              });
             });
           });
+          console.log('stopsLinesMap', stopsLinesMap)
+  
+          console.time('vecini')
+          let veciniStops = {};      
+          // Prag aproximativ în grade pentru ~700m (1 grad lat ≈ 111 km)
+          // const MAX_DEG = (PRAG_DISTANTA_METRI / 111000) * 1.5;
+          
+          Object.keys(stopsLinesMap).forEach(idA => {
+            let cA = stopsLinesMap[idA];
+            veciniStops[idA] = [{ stopId: idA, dist: 0 }];
+            if (cA.lat == null || cA.lon == null) return;
+    
+            Object.keys(stopsLinesMap).forEach(idB => {
+              if (idA === idB) return;
+              let cB = stopsLinesMap[idB];
+              if (cB.lat == null || cB.lon == null) return;
+              // // Filtru rapid pe coordonate (fără sin/cos/sqrt)
+              // if (Math.abs(cA.lat - cB.lat) > MAX_DEG || Math.abs(cA.lon - cB.lon) > MAX_DEG) {
+              //   return;
+              // }
+              let dist = calcDistMeters(stopsLinesMap, { stopId: idA }, { stopId: idB });
+              //if (dist <= PRAG_DISTANTA_METRI) {
+                veciniStops[idA].push({ stopId: idB, dist });
+              //}
+            });
+            veciniStops[idA].sort((a,b) => a.dist - b.dist).splice(5)
+          });
+          console.timeEnd('vecini')
+          console.log(veciniStops)
+          
+          let fromObj = rezolvaPunct(fromParam, data);
+          let toObj = rezolvaPunct(toParam, data);
+  
+          document.getElementById('from').textContent = fromObj ? fromObj.nume : (fromParam || '');
+          document.getElementById('to').textContent = toObj ? toObj.nume : (toParam || '');
+  
+  
+          console.time('calcRoute');
+          calcRoute(data, stopsLinesMap, veciniStops, fromObj, toObj)
+          console.timeEnd('calcRoute');
+          // calcDistMeters(data.IDs.find(i => i.stopId === urlParams.get('from')), data.IDs.find(i => i.stopId === urlParams.get('to')))
         });
-        console.log(stopToLinesMap)
-        
-        let fromObj = data.IDs.find(s => s.stopId === fromId);
-        let toObj = data.IDs.find(s => s.stopId === toId);
+    }
 
-        document.getElementById('from').innerHTML = fromObj.nume;
-        document.getElementById('to').innerHTML = toObj.nume;
-
-        let coordMap = {};
-        data.IDs.forEach(s => {
-          if (s.coord) {
-            let [lat, lon] = s.coord.split(',').map(Number);
-            coordMap[s.stopId] = { lat, lon };
-          }
-        });
-
-        console.time('calcRoute');
-        calcRoute(data, coordMap, stopToLinesMap, fromObj, toObj)
-        console.timeEnd('calcRoute');
-        // calcDistMeters(data.IDs.find(i => i.stopId === urlParams.get('from')), data.IDs.find(i => i.stopId === urlParams.get('to')))
-      });
-
-    function calcRoute(data, coordMap, stopToLinesMap, fromObj, toObj) {
+    function calcRoute(data, stopsLinesMap, veciniStops, fromObj, toObj) {
       const container = document.getElementById('routeResults');
       container.innerHTML = "";
+
+      let timpLoop = 0;
+      let tlp2 = 0;
+      let cateLoops = 0;
+      let somethingCount = 0;
+
       
       let maxSchimburi = 4;
-      let maxRute = 32;
+      let maxRute = 1024; //512
       let coada = [];
-      let ruteValide = [];
-      let vizitate = new Set();
+      let ruteBune = [];
+      let ruteBuneSet = new Set();
+      let ruteBuneMap = new Map();
+      let vizitate = new Map();
+      let ruteFinalDeProcesat = [];
       
       let PRAG_DISTANTA_METRI = 700;
+      let PRAG_DIST_METRI_MIN = 5;
       let minSchimburiGasit = Infinity;
-
-      let statiiStartPosibile = Object.keys(stopToLinesMap).filter(idStatie => {
-        if (idStatie === fromId) return true;
-        let dist = calcDistMeters(coordMap, { stopId: fromId }, { stopId: idStatie });
-        return dist <= PRAG_DISTANTA_METRI;
+      
+      let statiiStartPosibile = [];
+      Object.keys(stopsLinesMap).forEach(idStatie => {
+        let dist = (idStatie === fromObj?.stopId) ? 0 : calcDistMeters(stopsLinesMap, fromObj, { stopId: idStatie });
+        statiiStartPosibile.push({IDstp: idStatie, distanta: dist});
       });
+      statiiStartPosibile.sort((a,b) => a.distanta - b.distanta).splice(9);
       console.log("statiiStartPosibile", statiiStartPosibile)
+      
+      let statiiEndPosibile = [];
+      Object.keys(stopsLinesMap).forEach(idStatie => {
+        let dist = (toObj?.stopId && idStatie === toObj.stopId) ? 0 : calcDistMeters(stopsLinesMap, toObj, { stopId: idStatie });
+        if (dist <= PRAG_DISTANTA_METRI) statiiEndPosibile.push({IDstp: idStatie, distanta: dist});
+      });
+      statiiEndPosibile.sort((a,b) => a.distanta - b.distanta).splice(9);
+      console.log("statiiEndPosibile", statiiEndPosibile)
+      let statiiEndMap = new Map();
+      for (let j = 0; j < statiiEndPosibile.length; j++) {
+        statiiEndMap.set(statiiEndPosibile[j].IDstp, statiiEndPosibile[j].distanta);
+      }
+      
+      let liniiCuFromId = new Set(
+        (stopsLinesMap[fromObj?.stopId] || []).map(x => `${x.linie}|${x.sens}`)
+      );
+      console.log(liniiCuFromId)
 
-      // Inițializăm coada pentru fiecare stație găsită în zonă
-      statiiStartPosibile.forEach(idStatie => {
-        let distStart = (idStatie === fromId) ? 0 : calcDistMeters(coordMap, { stopId: fromId }, { stopId: idStatie });
-        // let walkManSvgONSTART = (distStart !== 0) ? walkManSvg : "";
-        let timpMersPietonalStart = distStart > 0 ? Math.max(1, Math.round(distStart / 80)) : 0;
-        
-        let ruteDisponibile = stopToLinesMap[idStatie] || [];
-        ruteDisponibile.forEach(item => {
-          let trCurent = data[item.linie][item.sens];
+      // Inițializăm coada pentru fiecare stație găsită în zonă          
+      statiiStartPosibile.forEach(idStatieStart => {
+        let timpMersPietonalStart = idStatieStart.distanta > 0 ? Math.max(1, Math.round(idStatieStart.distanta / 75)) : 0;
+        // let walkManSvgONSTART = (idStatieStart.distanta > 0) ? walkManSvg : "";
+        let ruteDisponibile = stopsLinesMap[idStatieStart.IDstp] || [];
+        ruteDisponibile.forEach(itemRutaDisp => {
+          if (idStatieStart.distanta > 0 && liniiCuFromId.has(`${itemRutaDisp.linie}|${itemRutaDisp.sens}`)) return;
+          let currentDIR = data[itemRutaDisp.linie][itemRutaDisp.sens];
           coada.push({
-            istoricLinii: [item.linie],
-            sensuri: [item.sens],
-            istoricStatiiSchimb: distStart > 0 ? [{
-              statieCoborare: fromId,
-              statieUrcare: idStatie,
+            istoricLinii: [itemRutaDisp.linie],
+            sensuri: [itemRutaDisp.sens],
+            istoricStatiiSchimb: idStatieStart.distanta > 0 ? [{
+              statieCoborare: fromObj?.stopId || fromObj?.coord || '',
+              statieUrcare: idStatieStart.IDstp,
               timpMers: timpMersPietonalStart
             }] : [],
             schimburi: 0,
             timpAcum: timpMersPietonalStart, // Adăugăm timpul de mers pe jos de la stația reală la cea de plecare
-            ultimaStatiePeLinie: item.index,
-            statiiTraseuCurent: trCurent
+            statieUrcareIndex: itemRutaDisp.index,
+            statiiCurrentDir: currentDIR
           });
         });
       });
-      console.log('coada', [...coada])
-      
+
+      console.log('coada', coada)
+
+
+      console.time('while')
+      let head = 0;
       // Pasul 2: Căutare inteligentă pe Valuri (BFS) pentru directe și schimburi
-      while (coada.length > 0 && ruteValide.length < maxRute) {
-        let curent = coada.shift();
-        if (minSchimburiGasit !== Infinity && curent.schimburi > minSchimburiGasit) {
+      while (head < coada.length && ruteBuneMap.size < maxRute) {
+        let curent = coada[head++];
+        if (minSchimburiGasit !== Infinity && curent.schimburi > minSchimburiGasit + 1) {
           continue;
         }
-        let statiiList = curent.statiiTraseuCurent;
+        let statiiList = curent.statiiCurrentDir;
 
         // Verificăm dacă linia curentă ajunge direct la destinație de la poziția curentă
-        let idxS = statiiList.findIndex((s, idx) => {
-          if (idx <= curent.ultimaStatiePeLinie || !s.stopId) return false;
-          if (s.stopId === toId) return true;
-          return calcDistMeters(coordMap, s, { stopId: toId }) <= 700;
-        });
+        // let indexS = statiiList.findIndex((s, index) => {
+        //   if (index <= curent.statieUrcareIndex || !s.stopId) return false;
+        //   return statiiEndPosibile.some(item => item.IDstp === s.stopId)// calcDistMeters(stopsLinesMap, s, { stopId: toId }) <= PRAG_DISTANTA_METRI;
+        // });
         
-        if (idxS !== -1) {
+        let closestDestinatie = null;
+        let timpCurent = 0
+        let tsart2 = performance.now()
+        for (let i = curent.statieUrcareIndex + 1; i < statiiList.length; i++) {
+          let s = statiiList[i];
+          if (!s.stopId) continue;
+          timpCurent += (s.offset ?? 0)
+          let distEnd = statiiEndMap.get(s.stopId);
+          if (distEnd !== undefined) {
+            if (!closestDestinatie || distEnd < closestDestinatie.dist) {
+              closestDestinatie = {
+                index: i,
+                dist: distEnd,
+                timp: timpCurent
+              };
+            }
+          }
+        }
+        tlp2 += performance.now() - tsart2;
+        let indexS = closestDestinatie ? closestDestinatie.index : -1;
+        //console.warn(statiiList, indexS)
+        
+        if (indexS !== -1) {
+          // console.warn(curent)
           if (curent.schimburi < minSchimburiGasit) {
             minSchimburiGasit = curent.schimburi;
           }
-          let cheieRuta = curent.istoricLinii.join('-');
+          let cheieSchimburi = curent.istoricStatiiSchimb
+              .map(s => `${s.statieCoborare}>${s.statieUrcare}`)
+              .join(',');
+          let cheieRuta = `${curent.istoricLinii.map((l, idx) => `${l}:${curent.sensuri[idx]}`).join('-')}|${cheieSchimburi}`;
+          // console.warn('cr', cheieRuta)
           
-          let statieSosireRealerta = statiiList[idxS].stopId;
-          let distDest = (statieSosireRealerta === toId) ? 0 : calcDistMeters(coordMap, { stopId: statieSosireRealerta }, { stopId: toId });
-          let timpMersPietonalFinal = distDest > 0 ? Math.max(1, Math.round(distDest / 80)) : 0;
+          let statieSosireVar = statiiList[indexS].stopId;
+          //console.log('multe', statieSosireVar, statiiList[indexS].nume)
+          let distDest = closestDestinatie.dist;
+          let timpMersPietonalFinal = distDest > 0 ? Math.max(1, Math.round(distDest / 75)) : 0;
 
-          let timpMers = estimeazaTimpTraseu(statiiList, curent.ultimaStatiePeLinie, idxS);
-          let timpTotal = curent.timpAcum + timpMers + timpMersPietonalFinal;
+          let timpInside = Math.max(1, closestDestinatie.timp);
+          let timpTotal = curent.timpAcum + timpInside + timpMersPietonalFinal;
 
-          if (!ruteValide.some(r => r.cheie === cheieRuta)) {
-            ruteValide.push({
+          let existent = ruteBuneMap.get(cheieRuta);
+          let eMaiApropiata = !existent ||
+            distDest < existent.distDest ||
+            (distDest === existent.distDest && timpTotal < existent.timpTotal);
+        
+          if (eMaiApropiata) {
+          //if (!ruteBuneSet.has(cheieRuta)) {
+            //ruteBuneSet.add(cheieRuta);
+            //ruteBune.push({
+            ruteBuneMap.set(cheieRuta, {
               cheie: cheieRuta,
               linii: curent.istoricLinii,
               sensuri: curent.sensuri,
               schimburi: curent.schimburi,
               statiiSchimb: curent.istoricStatiiSchimb,
-              statieSosire: statieSosireRealerta,
+              statieSosire: statieSosireVar,
+              distDest: distDest,
+              timpMersStart: curent.timpAcum,
               timpMersFinal: timpMersPietonalFinal,
               timpTotal: timpTotal
             });
+            // console.warn('da', ruteBune)
           }
           continue;
         }
 
-
-        if (minSchimburiGasit === Infinity || curent.schimburi < minSchimburiGasit) {
+        let liniaAnterioara = curent.istoricLinii[curent.istoricLinii.length - 1];
+        let sensAnterior = curent.sensuri[curent.sensuri.length - 1];
+        let statiiLinieVeche = data[liniaAnterioara][sensAnterior];
+        
+        //console.time('da')
+        let tstart = performance.now()
+        if (minSchimburiGasit === Infinity || curent.schimburi < minSchimburiGasit + 1) {
           // Dacă nu am ajuns și nu am depășit numărul maxim de schimburi, căutăm transbordări
-          if (curent.schimburi < maxSchimburi && ruteValide.length <= maxRute) {
-            for (let i = curent.ultimaStatiePeLinie + 1; i < statiiList.length; i++) {
-              let statieIntermed1 = statiiList[i];
-              if (!statieIntermed1.stopId) continue;
-  
-              // Găsim toate opțiunile de transport din index care pleacă din această stație 
-              // sau din stații apropiate (rază 100m)
-              Object.keys(stopToLinesMap).forEach(targetStopId => {
-                // Verificăm distanța sau egalitatea între statieIntermed1 și targetStopId
-                let eAceeasiStatie = (statieIntermed1.stopId === targetStopId);
-                let dist = 0;
+          if (curent.schimburi < maxSchimburi && ruteBuneMap.size <= maxRute) {
+            let timpPanaAici = 0;
+            let ultimulTransferLinie = new Map();
+            for (let i = curent.statieUrcareIndex + 1; i < statiiList.length; i++) {
+              let statieIntermed = statiiList[i];
+              if (!statieIntermed.stopId) continue;
+              timpPanaAici += (statieIntermed.offset ?? 0);
+              let vecini = veciniStops[statieIntermed.stopId] || [{ stopId: statieIntermed.stopId, dist: 0 }];
+              vecini.forEach(({ stopId: objKey_stopId, dist }) => {
+                // Verificăm distanta sau egalitatea între statieIntermed și objKey_stopId
+                let eAceeasiStatie = (statieIntermed.stopId === objKey_stopId);
+
+                // Dacă vrei să păstrezi limita de 700m în while, lasă condiția de mai jos;
+                // dacă vrei să folosești direct cei 5 vecini din veciniStops, o poți comenta:
+                //! if (eAceeasiStatie || (dist > 0 && dist <= PRAG_DISTANTA_METRI)) {
                 
-                if (!eAceeasiStatie) {
-                  // Putem verifica rapid distanța folosind coordonatele din coordMap
-                  dist = calcDistMeters(coordMap, statieIntermed1, { stopId: targetStopId });
-                }
-  
-                if (eAceeasiStatie || (dist > 0 && dist <= PRAG_DISTANTA_METRI)) {
-                  // Luăm toate liniile care opresc în această stație din index
-                  stopToLinesMap[targetStopId].forEach(item => {
-                    let linieNoua = item.linie;
-                    let sensNou = item.sens;
-                    let idxNou = item.index;
-                    
-                    let dejaPeSensulAsta = curent.istoricLinii.some((l, idx) => l === linieNoua && curent.sensuri[idx] === sensNou);
-                    if (dejaPeSensulAsta) return;
-                    
-                    let trNou = data[linieNoua];
-                    if (trNou[sensNou].some(s => s.stopId === fromId)) return;
-  
-                    // === REGULĂ NOUĂ: Anti-paralelism / Schimb redundant ===
-                    let liniaAnterioara = curent.istoricLinii[curent.istoricLinii.length - 1];
-                    let sensAnterior = curent.sensuri[curent.sensuri.length - 1];
-                    let statiiLinieVeche = data[liniaAnterioara][sensAnterior];
-                    let statiiLinieNoua = trNou[sensNou];
-  
-                    let statiiComune = 0;
-                    let idxV = i;       // indexul curent în linia veche de unde facem schimbul
-                    let idxN = idxNou;  // indexul în linia nouă unde urcăm
-  
-                    while (idxV < statiiLinieVeche.length && idxN < statiiLinieNoua.length && 
-                           statiiLinieVeche[idxV].stopId && statiiLinieNoua[idxN].stopId &&
-                           statiiLinieVeche[idxV].stopId === statiiLinieNoua[idxN].stopId) {
-                      statiiComune++;
-                      idxV++;
-                      idxN++;
-                    }
-  
-                    if (statiiComune >= 2) return;
-  
-                    let timpPanaAici = estimeazaTimpTraseu(statiiList, curent.ultimaStatiePeLinie, i);
-                    let timpMersPeJos = eAceeasiStatie ? 0 : Math.max(1, Math.round(dist / 80));
-  
-                    let stateKey = `${curent.istoricLinii.join('-')}-${linieNoua}-${sensNou}-${idxNou}`;
-                    //let stateKey = `${linieNoua}-${sensNou}-${idxNou}`;
-                    if (!vizitate.has(stateKey)) {
-                      vizitate.add(stateKey);
-                      coada.push({
-                        istoricLinii: [...curent.istoricLinii, linieNoua],
-                        sensuri: [...curent.sensuri, sensNou],
-                        istoricStatiiSchimb: [...curent.istoricStatiiSchimb, {
-                          statieCoborare: statieIntermed1.stopId,
-                          statieUrcare: targetStopId,
-                          timpMers: timpMersPeJos
-                        }],
-                        schimburi: curent.schimburi + 1,
-                        timpAcum: curent.timpAcum + timpPanaAici + timpMersPeJos,
-                        ultimaStatiePeLinie: idxNou,
-                        statiiTraseuCurent: trNou[sensNou]
-                      });
-                    }
+                let timpMersPeJos = eAceeasiStatie ? 0 : Math.max(1, Math.round(dist / 75));
+                //console.log(objKey_stopId, stopsLinesMap[objKey_stopId])
+                stopsLinesMap[objKey_stopId].forEach(item => {
+                  somethingCount++;
+                  let linieNoua = item.linie;
+                  let sensNou = item.sens;
+                  let indexNou = item.index;
+                  let cheieTransfer = `${linieNoua}|${sensNou}`;
+                  let prevTransfer = ultimulTransferLinie.get(cheieTransfer);
+                  if (prevTransfer && (i - prevTransfer.i) <= 2) return;
+
+                  let dejaPeSensulAsta = curent.istoricLinii.some((l, index) => l === linieNoua && curent.sensuri[index] === sensNou);
+                  if (dejaPeSensulAsta) return;
+                  
+                  if (liniiCuFromId.has(`${linieNoua}|${sensNou}`)) return;
+                  
+                  let stateKey = `${linieNoua}|${sensNou}|${indexNou}`;
+                  let schimburiNoi = curent.schimburi + 1;
+                  let timpNouEstim = curent.timpAcum + timpPanaAici + timpMersPeJos;
+
+                  let prev = vizitate.get(stateKey);
+                  // Tăiem doar dacă am ajuns deja aici cu mai puține schimburi ȘI nu suntem semnificativ mai rapizi (cu 3+ min)
+                  if (prev) {
+                    if (schimburiNoi > prev.minSchimburi + 1) return;
+                    if (schimburiNoi === prev.minSchimburi && (prev.count >= 5 || timpNouEstim > prev.minTimp + 15)) return;
+                    if (schimburiNoi === prev.minSchimburi + 1 && (prev.count >= 12 || timpNouEstim > prev.minTimp + 30)) return;
+                  }
+
+
+                  //let stateKey = `${curent.istoricLinii.join('-')}-${linieNoua}-${sensNou}-${indexNou}`;
+                  //let stateKey = `${linieNoua}-${sensNou}-${indexNou}`;
+                  
+                  // === REGULĂ NOUĂ: Anti-paralelism / Schimb redundant ===
+                  let statiiLinieNoua = data[linieNoua][sensNou];
+                  let statiiComune = 0;
+                  let indexV = i;       // indexul curent în linia veche de unde facem schimbul
+                  let indexN = indexNou;  // indexul în linia nouă unde urcăm
+                  while (indexV < statiiLinieVeche.length && indexN < statiiLinieNoua.length && 
+                         statiiLinieVeche[indexV].stopId && statiiLinieNoua[indexN].stopId &&
+                         statiiLinieVeche[indexV].stopId === statiiLinieNoua[indexN].stopId) {
+                    statiiComune++;
+                    indexV++;
+                    indexN++;
+                  }
+                  if (statiiComune >= 2) return;
+                  ultimulTransferLinie.set(cheieTransfer, { i, indexNou });
+
+                  if (!prev || schimburiNoi < prev.minSchimburi) {
+                    vizitate.set(stateKey, {
+                      minSchimburi: schimburiNoi,
+                      minTimp: timpNouEstim,
+                      count: 1
+                    });
+                  } else {
+                    vizitate.set(stateKey, {
+                      minSchimburi: prev.minSchimburi,
+                      minTimp: Math.min(prev.minTimp, timpNouEstim),
+                      count: prev.count + 1
+                    });
+                  }
+
+                  coada.push({
+                    istoricLinii: [...curent.istoricLinii, linieNoua],
+                    sensuri: [...curent.sensuri, sensNou],
+                    istoricStatiiSchimb: [...curent.istoricStatiiSchimb, {
+                      statieCoborare: statieIntermed.stopId,
+                      statieUrcare: objKey_stopId,
+                      timpMers: timpMersPeJos
+                    }],
+                    schimburi: curent.schimburi + 1,
+                    timpAcum: curent.timpAcum + timpPanaAici + timpMersPeJos,
+                    statieUrcareIndex: indexNou,
+                    statiiCurrentDir: data[linieNoua][sensNou]
                   });
-                }
+                });
+                //!}
               });
             }
           }
         }
+        timpLoop += performance.now() - tstart;
+        cateLoops++
+        //console.timeEnd('da')
       }
-      console.log("Rute valide Găsite de BFS:", ruteValide);
-      console.table(ruteValide);
+      ruteBune = Array.from(ruteBuneMap.values());
+      console.timeEnd('while')
+      console.log("RV Găs. de BFS:", ruteBune);
+      console.warn(somethingCount)
+      //console.table(ruteBune);
 
 
       // Pasul 3: Prelucrare, Filtrare strictă după orar pentru TOATE segmentele și Randare
-      if (ruteValide.length === 0) {
+      if (ruteBune.length === 0) {
         container.innerHTML = `<div class="card" style="padding: 20px; text-align: center; color: #ff8888;">Nu s-a găsit nicio rută directă sau cu schimb între aceste stații.</div>`;
         return;
       }
+      console.time('step3')
 
-      let ruteFinalDeProcesat = [];
-
-      ruteValide.forEach(r => {
+      ruteBune.forEach(r => {
         // Obținem TOATE plecările primei linii din stația de start pentru azi (nu doar prima)
-        let plecariColectate = getToatePlecariDinStatie(data, r.linii[0], r.sensuri[0], fromId);
-        if (plecariColectate.length === 0) return;
+        let areMersStart = r.statiiSchimb.length > r.schimburi;
+        let startStopId = areMersStart ? r.statiiSchimb[0].statieUrcare : fromObj?.stopId;
+        let timpMersInitial = areMersStart ? r.statiiSchimb[0].timpMers : 0;
 
-        // Luăm primele 3 curse următoare de la plecare ca opțiuni de test
+        let plecariColectate = getToatePlecariDinStatie(
+          data,
+          r.linii[0],
+          r.sensuri[0],
+          startStopId,
+          getMinuteCurente() + timpMersInitial
+        );
+        if (plecariColectate.length === 0) return;
+        
         plecariColectate.forEach(plecareInfo => {
           let timpCurentAbsolut = plecareInfo.oraAbsoluta;
           let rutaValidaOrar = true;
-          let ultimulStopId = fromId;
+          let ultimulStopId = startStopId;
           let ultimaLinie = r.linii[0];
           let ultimulSens = r.sensuri[0];
-          let statiiSchimbInregistrate = [...r.statiiSchimb];
+          // Sărim peste primul element din statiiSchimb dacă a fost mersul de la început
+          let statiiSchimbInregistrate = areMersStart ? r.statiiSchimb.slice(1) : [...r.statiiSchimb];
+
 
           for (let i = 0; i < r.schimburi; i++) {
             let schimb = statiiSchimbInregistrate[i];
@@ -354,18 +514,16 @@
             let sensUrmator = r.sensuri[i + 1];
             
             let trCurent = data[ultimaLinie][ultimulSens];
-            let idxStart = trCurent.findIndex(s => s.stopId === ultimulStopId);
-            let idxSchimb = trCurent.findIndex((s, idx) => idx > idxStart && s.stopId === schimb.statieCoborare);
+            let indexStart = trCurent.findIndex(s => s.stopId === ultimulStopId);
+            let indexSchimb = trCurent.findIndex((s, index) => index > indexStart && s.stopId === schimb.statieCoborare);
 
-            // let idxSchimb = trCurent.findIndex(s => s.stopId === schimb.statieCoborare);
-            if (idxStart === -1) idxStart = 0;
-            if (idxSchimb === -1) idxSchimb = idxStart + 1;
+            if (indexStart === -1) indexStart = 0;
+            if (indexSchimb === -1) indexSchimb = indexStart + 1;
             
-            let durataSegment = estimeazaTimpTraseu(trCurent, idxStart, idxSchimb);
+            let durataSegment = estimeazaTimpTraseu(trCurent, indexStart, indexSchimb);
             timpCurentAbsolut += durataSegment + schimb.timpMers;
             
             let plecariUrmatoare = getToatePlecariDinStatie(data, linieUrmatoare, sensUrmator, schimb.statieUrcare, timpCurentAbsolut);
-            //console.log(`Căutare legătură pentru linia ${linieUrmatoare} din ${schimb.statieUrcare} după minutul ${timpCurentAbsolut}: Găsite ${plecariUrmatoare.length} plecări`);
             if (plecariUrmatoare.length === 0) {
               rutaValidaOrar = false;
               break;
@@ -383,27 +541,29 @@
           if (!rutaValidaOrar) return;
 
           let trUltim = data[ultimaLinie][ultimulSens];
-          let idxUltimStart = trUltim.findIndex(s => s.stopId === ultimulStopId);
-          let idxDest = trUltim.findIndex((s, idx) => idx > idxUltimStart && s.stopId === r.statieSosire);
-          if (idxUltimStart === -1) idxUltimStart = 0;
-          if (idxDest === -1) idxDest = trUltim.length - 1;
+          let indexUltimStart = trUltim.findIndex(s => s.stopId === ultimulStopId);
+          let indexDest = trUltim.findIndex((s, index) => index > indexUltimStart && s.stopId === r.statieSosire);
+          if (indexUltimStart === -1) indexUltimStart = 0;
+          if (indexDest === -1) indexDest = trUltim.length - 1;
 
-          let durataUltimSegment = estimeazaTimpTraseu(trUltim, idxUltimStart, idxDest);
+          let durataUltimSegment = estimeazaTimpTraseu(trUltim, indexUltimStart, indexDest);
           timpCurentAbsolut += durataUltimSegment + r.timpMersFinal;
-
+          let oraStartReal = plecareInfo.oraAbsoluta - timpMersInitial;
+          let diffPlecare = Math.round(plecareInfo.oraAbsoluta - getMinuteCurente());
+          
           ruteFinalDeProcesat.push({
             linii: r.linii,
             sensuri: r.sensuri,
             schimburi: r.schimburi,
             statiiSchimb: r.statiiSchimb,
             statieSosire: r.statieSosire,
-            timpTotal: timpCurentAbsolut - plecareInfo.oraAbsoluta,
+            timpMersFinal: r.timpMersFinal,
+            timpTotal: timpCurentAbsolut - oraStartReal,
             oraSosiriiMinute: timpCurentAbsolut,
-            oraPlecareAbsoluta: plecareInfo.oraAbsoluta,
-            plecareText: plecareInfo.text,
-            minutePanaLaPlecare: plecareInfo.minute
+            oraPlecareAbsoluta: oraStartReal,
+            plecareText: diffPlecare <= 0 ? "Pleacă acum" : `Pleacă în ${diffPlecare} min`,
+            minutePanaLaPlecare: diffPlecare
           });
-
         });
       });
 
@@ -418,7 +578,15 @@
         if (Math.abs(diffSosire) > 5) {
           return diffSosire;
         }
-        return a.timpTotal - b.timpTotal;
+        return (a.timpTotal - b.timpTotal) || (a.schimburi - b.schimburi);
+      });
+
+      let vazuteFinal = new Set();
+      ruteFinalDeProcesat = ruteFinalDeProcesat.filter(r => {
+        let sig = `${r.linii.join('-')}|${r.oraSosiriiMinute}`;
+        if (vazuteFinal.has(sig)) return false;
+        vazuteFinal.add(sig);
+        return true;
       });
 
       // 1. Găsim rutele după plecare (cum am făcut înainte)
@@ -435,36 +603,45 @@
         let pragSosireMaxima = ceaMaiRapidaSosire + 120;
         ruteFiltrate = ruteFiltrate.filter(r => r.oraSosiriiMinute <= pragSosireMaxima);
       }
-          
+
+      console.warn('rf', ruteFiltrate)
       ruteFiltrate.forEach(r => {
+        const renderWalk = (min) => `
+          <div class="display_flex flexDir_col align_center gap_1">
+            ${walkManSvg}
+            <span class="walkManETA">${min}min</span>
+          </div>
+        `;
         let textSchimburi = r.schimburi === 0 ? "Nicio schimbare" : `${r.schimburi} schimb${r.schimburi > 1 ? 'uri' : ''}`;
         let elementePasi = [];
         
         // Verificăm dacă primul element din r.statiiSchimb este mersul de la început (pleacă din fromId)
-        let areMersStart = r.statiiSchimb.length > 0 && r.statiiSchimb[0].statieCoborare === fromId;
+        let mersStart = r.statiiSchimb.length > r.schimburi;
+        //let mersStart = (r.statiiSchimb.length > 0) && (!fromObj?.stopId || r.statiiSchimb[0].statieCoborare === fromObj.stopId);
+        console.warn(mersStart)
         
-        if (areMersStart) {
-          elementePasi.push(`<div>${walkManSvg}</div>`);
+        if (mersStart) {
+          elementePasi.push(renderWalk(r.statiiSchimb[0].timpMers));
         }
 
         // Adăugăm liniile și omulețul de tranziție corect la schimburi
-        r.linii.forEach((linie, idx) => {
+        r.linii.forEach((linie, index) => {
           elementePasi.push(`<div class="nr display_flex justify_center align_center">${linie}</div>`);
           
           // Indexul real în statiiSchimb pentru transbordare (sărim peste cel de start dacă există)
-          let indexSchimbReal = areMersStart ? idx + 1 : idx;
+          let indexSchimbReal = mersStart ? index + 1 : index;
           
           if (indexSchimbReal < r.statiiSchimb.length) {
             let schimb = r.statiiSchimb[indexSchimbReal];
             if (schimb && schimb.statieCoborare !== schimb.statieUrcare) {
-              elementePasi.push(`<div>${walkManSvg}</div>`);
+              elementePasi.push(renderWalk(schimb.timpMers));
             }
           }
         });
 
         // Omulețul de la final (dacă stația de sosire din BFS nu e fix toId)
-        if (r.statieSosire && r.statieSosire !== toId) {
-          elementePasi.push(`<div>${walkManSvg}</div>`);
+        if (r.statieSosire && r.statieSosire !== toObj?.stopId && r.timpMersFinal > 0) {
+          elementePasi.push(renderWalk(r.timpMersFinal));
         }
 
         let pasiHtml = elementePasi.join('<span class="routeArrow">›</span>');
@@ -491,15 +668,63 @@
       //   container.innerHTML = "<p style='color:red;'>Stația de plecare și cea de sosire trebuie să fie diferite!</p>";
       //   return;
       // }
- 
+
+      console.timeEnd('step3')
+
+      console.warn('timploop', timpLoop.toFixed(10))
+      console.warn('tlp2', tlp2.toFixed(10))
     }
 
-    function calcDistMeters(coordMap, coord1, coord2) {
+    function rezolvaPunct(valoare, data) {
+      if (!valoare) return null;
+    
+      // Dacă ai pasat deja un obiect { lat, lon, nume }
+      if (typeof valoare === 'object' && valoare.lat != null && valoare.lon != null) {
+        return {
+          stopId: valoare.stopId || null,
+          lat: Number(valoare.lat),
+          lon: Number(valoare.lon),
+          coord: `${valoare.lat},${valoare.lon}`,
+          nume: valoare.nume || `${Number(valoare.lat).toFixed(5)}, ${Number(valoare.lon).toFixed(5)}`
+        };
+      }
+    
+      // Dacă e string de coordonate "lat,lon"
+      if (typeof valoare === 'string' && valoare.includes(',')) {
+        const [latStr, lonStr] = valoare.split(',');
+        const lat = Number(latStr.trim());
+        const lon = Number(lonStr.trim());
+        if (!Number.isNaN(lat) && !Number.isNaN(lon)) {
+          return {
+            stopId: null,
+            lat,
+            lon,
+            coord: `${lat},${lon}`,
+            nume: `Locație (${lat.toFixed(5)}, ${lon.toFixed(5)})`
+          };
+        }
+      }
+    
+      // Altfel e stopId clasic din data.IDs
+      const stopInfo = data.IDs.find(s => s.stopId === valoare);
+      if (!stopInfo) return null;
+      const [lat, lon] = stopInfo.coord ? stopInfo.coord.split(',').map(Number) : [null, null];
+    
+      return {
+        stopId: stopInfo.stopId,
+        lat,
+        lon,
+        coord: stopInfo.coord || null,
+        nume: stopInfo.nume
+      };
+    }
+
+    function calcDistMeters(stopsLinesMap, coord1, coord2) {
       if (!coord1 || !coord2) return 9999999;
       
-      let c1 = coordMap[coord1.stopId] || (coord1.coord ? { lat: Number(coord1.coord.split(',')[0]), lon: Number(coord1.coord.split(',')[1]) } : null);
-      let c2 = coordMap[coord2.stopId] || (coord2.coord ? { lat: Number(coord2.coord.split(',')[0]), lon: Number(coord2.coord.split(',')[1]) } : null);
-    
+      let c1 = extrageCoord(stopsLinesMap, coord1);
+      let c2 = extrageCoord(stopsLinesMap, coord2);
+      
       if (!c1 || !c2) return 9999999;
       
       const R = 6371e3;
@@ -514,6 +739,21 @@
       return R * c;
     }
     
+    function extrageCoord(stopsLinesMap, item) {
+      if (!item) return null;
+      if (item.stopId && stopsLinesMap[item.stopId]?.lat != null) {
+        return stopsLinesMap[item.stopId];
+      }
+      if (item.lat != null && item.lon != null) {
+        return { lat: item.lat, lon: item.lon };
+      }
+      if (item.coord) {
+        const [lat, lon] = item.coord.split(',').map(Number);
+        return { lat, lon };
+      }
+      return null;
+    }
+
     // Obții ora curentă în minute de la miezul nopții pentru calcule ușoare
     function getMinuteCurente() {
       //testing
@@ -522,11 +762,11 @@
     }
 
     // Funcție orientativă pentru calculul duratei (poți ajusta in functie de cum ai datele în JSON)
-    function estimeazaTimpTraseu(statiiList, idxStart, idxSosire) {
-      if (!statiiList || idxStart >= idxSosire) return 0;
+    function estimeazaTimpTraseu(statiiList, indexStart, indexSosire) {
+      if (!statiiList || indexStart >= indexSosire) return 0;
       let timp = 0;
-      for (let i = idxStart + 1; i <= idxSosire; i++) {
-        timp += (statiiList[i]?.offset || 2);
+      for (let i = indexStart + 1; i <= indexSosire; i++) {
+        timp += (statiiList[i]?.offset ?? 2);
       }
       return Math.max(1, timp);
     }
@@ -548,12 +788,12 @@
       let statiiList = tr[sens];
       if (!statiiList) return [];
       
-      let idxStatie = statiiList.findIndex(s => s.stopId === stopId);
-      if (idxStatie === -1) idxStatie = 0;
+      let indexStatie = statiiList.findIndex(s => s.stopId === stopId);
+      if (indexStatie === -1) indexStatie = 0;
     
       let offsetPanaAici = 0;
-      for (let i = 1; i <= idxStatie; i++) {
-        offsetPanaAici += (statiiList[i].offset || 2);
+      for (let i = 1; i <= indexStatie; i++) {
+        offsetPanaAici += (statiiList[i].offset ?? 2);
       }
     
       let minutStart = minutReferinta !== null ? minutReferinta : getMinuteCurente();
