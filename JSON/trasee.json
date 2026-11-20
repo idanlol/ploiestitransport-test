@@ -2000,7 +2000,7 @@
     "Cap4": "MAGAZIN DACIA",
     
     "StatiiTur": [
-      { "stopId": "S00011", "nume": "Mega Nord", "offset": 2},
+      { "stopId": "S00011", "nume": "Mega Nord", "offset": 0},
       { "stopId": "S00012", "nume": "Restaurant Nord", "offset": 2},
       { "stopId": "S00013", "nume": "XXL", "offset": 1},
       { "stopId": "S00014", "nume": "Complexul Mic", "offset": 1},

@@ -18,18 +18,37 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // const watermark = document.createElement('div');
-// watermark.innerHTML = `<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-55deg); font-size: 10vmax; font-weight: 900; color: #fff; opacity: 0.15; pointer-events: none; z-index: 99999; white-space: nowrap; user-select: none;">T.P. TEST VERSION </div>`;
+// watermark.innerHTML = `<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-55deg); font-size: 8vmax; font-weight: 900; color: #fff; opacity: 0.15; pointer-events: none; z-index: 99999; white-space: nowrap; user-select: none;">MyTP TEST VERSION </div>`;
 // document.body.appendChild(watermark.firstElementChild);
 
-let menuHint = (window.location.pathname.endsWith('home.html') || window.location.pathname === '/') ? `<span class="menutext">Meniu</span>` : '';
+const isHome = window.location.pathname.endsWith('/index.html') ||
+               window.location.pathname === '/index.html' ||
+               window.location.pathname === '/' ||
+               window.location.pathname === '';
+
+let menuHint = isHome ? `<span class="menutext">Meniu</span>` : '';
+
+let TestVerValue = false; 
+let betaVerValue = true;
+let erudaValue = false;
+
+let TestVerSHOW = !TestVerValue ? `` : `<div style="color: var(--font-testver); font-size: 5vmin; font-weight: 900;">TEST VERSION</div>`;
+let betaSHOW = !betaVerValue ? `` : `<div class="colt-triunghi"><div class="colt-triunghi-text">BETA</div></div>`;
+if (TestVerValue && erudaValue) {
+  const script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/npm/eruda';
+  script.onload = () => eruda.init();
+  document.body.appendChild(script);
+}
+
 
 document.getElementById('titlu').insertAdjacentHTML('afterbegin',
-  `<div class="colt-triunghi"><div class="colt-triunghi-text">BETA</div></div>
+  `${betaSHOW}
   <div class="titlu display_flex height_fitcontent align_center">
     <a href="./index.html">
       <svg class="ratphpng display_flex justSelf_center alignSelf_center" xmlns="http://www.w3.org/2000/svg" viewBox="23 0 310 191" width="100%" height="100%">
         <style>
-          .myTP_svg {
+          .myTP_svg_title {
             fill: none;
             stroke: var(--sitename);
             stroke-width: 12;
@@ -40,7 +59,7 @@ document.getElementById('titlu').insertAdjacentHTML('afterbegin',
             stroke-width: 25;
           }
         </style>
-        <path class="myTP_svg" d="
+        <path class="myTP_svg_title" d="
           M 29 107
           C 34 125, 46 119, 49 104
           C 56 76, 62 44, 66 44
@@ -56,17 +75,17 @@ document.getElementById('titlu').insertAdjacentHTML('afterbegin',
           C 119 188, 115 172, 120 164
           C 139 136, 167 154, 200 120
         " />
-        <line class="myTP_svg TP_svg" x1="200" y1="45" x2="250" y2="45" />
-        <line class="myTP_svg TP_svg" x1="225" y1="45" x2="225" y2="120" />
-        <line class="myTP_svg TP_svg" x1="280" y1="45" x2="280" y2="120" />
-        <path class="myTP_svg TP_svg" d="
+        <line class="myTP_svg_title TP_svg" x1="200" y1="45" x2="250" y2="45" />
+        <line class="myTP_svg_title TP_svg" x1="225" y1="45" x2="225" y2="120" />
+        <line class="myTP_svg_title TP_svg" x1="280" y1="45" x2="280" y2="120" />
+        <path class="myTP_svg_title TP_svg" d="
           M 280 45
           C 280 45, 320 35, 320 65
           C 320 65, 320 95, 280 85
         " />
       </svg>
     </a>
-    <div style="color: var(--font-testver); font-size: 5vmin; font-weight: 700;">TEST VERSION</div>
+    ${TestVerSHOW}
     <div id=menu class="display_flex alignSelf_center"></div>
   </div>`);
 
@@ -75,15 +94,17 @@ document.getElementById('titlu').insertAdjacentHTML('afterbegin',
 
 if (document.getElementById('footer')) document.getElementById('footer').innerHTML =
   `<div class="endtitl display_flex flexDir_col justify_center align_center">
-    <span><strong>MyTP DEMO version</strong></span>
+    <span><strong>MyTP BETA version</strong></span>
+    <br>
     <div style="white-space: wrap; text-align: center">Informatiile, imaginile si drepturile de autor apartin detinatorilor acestora.</div>
-    <span>-</span>
-    <span>&copy 2026-2027 MyTP</span>
+    <br><span>-</span><br>
+    <span>&copy 2026 MyTP</span>
     <span>Toate drepturile sunt rezervate</span>
-    <span>Ultimul update: noiembrie 2026</span>
     <span>Ploiesti, Romania</span>
   </div>`;
 
+    // <span>Ultimul update: noiembrie 2026</span>
+ 
   // `<div class="endtitl display_flex flexDir_col justify_center align_center">
   //   <span>S.C.TRANSPORT CALATORI EXPRESS S.A. PLOIESTI</span>
   //   <span>Toate drepturile sunt rezervate 2009 2026</span>
@@ -171,9 +192,6 @@ document.querySelectorAll('#menu').forEach(menu => menu.innerHTML =
 
 document.getElementById('fixbtn').innerHTML = 
   `<div class="fixedbtnDiv gap_3 display_flex flexDir_row">
-    <div style="transform: scale(0.8)" class="fixedbtn fixedbtnHideToggle display_flex justify_center align_center" onclick="scrollToTop()">
-      <div class="menuicon_fix chevron-up">⌄</div>
-    </div>
     <svg id=searchIconDown onclick="searchStart()" class="searchIconClass fixedbtn display_flex alignSelf_center justSelf_end" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="11" cy="11" r="7"></circle>
       <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
@@ -183,6 +201,9 @@ document.getElementById('fixbtn').innerHTML =
       <span class="menuicon">&#9776;</span>
     </div>
   </div>`
+    // <div style="transform: scale(0.8)" class="fixedbtn fixedbtnHideToggle display_flex justify_center align_center" onclick="scrollToTop()">
+    //   <div class="menuicon_fix chevron-up">⌄</div>
+    // </div>
 
 
 // <div class="card display_flex justSelf_center alignSelf_center">test</div

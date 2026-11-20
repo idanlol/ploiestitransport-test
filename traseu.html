@@ -2,9 +2,7 @@
 <html>
 
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-  <script>eruda.init();</script>
-  <title>Traseu - TransPloiesti</title>
+  <title>MyTP - Traseu</title>
   <meta name="description" content="Platforma interactivă pentru trasee, stații și orare în timp real în Ploiești.">
   <meta name="theme-color" content="#111155">
   <link rel="icon" type="image/png" href="/Content/icon/MyTP-48px.webp">
@@ -18,7 +16,9 @@
   <div id=deadTopSpace></div>
   <header id=titlu></header>
   <div id=fixbtn></div>
-  <!div id=menu></!div>
+  <!--
+  <div id=menu></div>
+  -->
 
   <div class="contentwrap display_flex flexDir_row justSelf_center justify_center">
     <div class="display_flex flexDir_col align_center" id=TrOptions>
@@ -39,9 +39,11 @@
             <span class="chevron">⌄</span>
             <div class="floatmenu display_flex flexDir_col width_fitcontent hidden" id="ListaVariants"></div>
           </div>
-          <!div class="topbut width_fitcontent height_fitcontent adropd align_center"
+          <!--
+          <div class="topbut width_fitcontent height_fitcontent adropd align_center">
             DateSel_WIP
-          </!div>
+          </div>
+          -->
         </div>
         <div class="gap_1 gap_r_2 display_flex flexDir_col align_center">
           <div class="gap_1 gap_r_2 display_flex flexDir_row justSelf_center">
@@ -73,7 +75,7 @@
     </div>
     <div class="display_flex flexDir_col gap_2">
       <div id="liveETAdiv" class="card display_flex flexDir_col">
-        <div class="anuntHint mb_2 display_flex alignSelf_center width_fitcontent">Urmatoarele plecari:</div>
+        <div class="anuntHint mb_1 display_flex alignSelf_center width_fitcontent">Urmatoarele plecari din statia selectata:</div>
         <div class="display_flex flexDir_row" id=liveETA style="justify-content: space-around;"></div>
       </div>
       <div class="card display_flex width_fitcontent height_fitcontent gap_1 gap_r_2 flexDir_row justSelf_center">
@@ -90,7 +92,7 @@
     <div id=tabelintErr></div>
   </div>
   
-  <div id=footer></div>
+  <header id=footer></header>
 
 
   <script src="./Scripts/UiElements.js"></script>
@@ -145,6 +147,7 @@
         }
         tag.setAttribute('content', content);
       }
+      
       
       // 3. Setam dinamic datele pentru social media
       setMetaTag('og:title', `Traseul ${NrTraseuAct} - TransPloiesti`);
@@ -309,7 +312,7 @@
       let lastOffset = 0;
       return listaStatii
         .map((st, index) => {
-          const selst = (!urlParams.get('sID') && index === 0) ? "sel" : "";
+          const selst = (!urlParams.get('sID') && index === 0) ? "selStatie" : "";
           lastOffset = lastOffset + st.offset;
           return `<a data-stopBtnID="${stopTipDir}Stop" class="btnlink display_flex align_center statieclass ${selst}" data-sID="${datajson.IDs.find(el => el.stopId === st.stopId).stopId}" onclick="distantaMinute(${lastOffset}, this)">${datajson.IDs.find(el => el.stopId === st.stopId).nume}</a>`
         })
@@ -347,11 +350,11 @@
     function distantaMinute(SetOffset, btn) {
       if (!nrtr) return;
       const statieClass = document.querySelectorAll(".statieclass");
-      statieClass.forEach(el => el.classList.remove('sel'));
+      statieClass.forEach(el => el.classList.remove('selStatie'));
       if (btn) {
-        btn.classList.add('sel');
+        btn.classList.add('selStatie');
       } else if (statieClass.length > 0) {
-        statieClass[0].classList.add('sel')
+        statieClass[0].classList.add('selStatie')
       }
       
       ProgSelectat = nrtr[`Prog_${tipdir}_${tipzi}`];

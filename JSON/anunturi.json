@@ -1,5 +1,5 @@
 {
-  "Anunturi": [
+  "Test" : [
     { "titluAnunt": "TEST_titlu",
       "dataAnunt": "07.09.2026",
       "idAnunt": "0000000_TEST",
@@ -10,6 +10,18 @@
       "infoYellow": ["TEST_yellow", "TEST_yellow2"],
       "infoRed": ["TEST_red"]
     },
+    { "titluAnunt": "TEMPLATE_titlu",
+      "dataAnunt": "TEMPLATE 07.09.2026",
+      "idAnunt": "0000000_Template",
+      "TraseeAfectate": ["1", "7"],
+      "segmenteAfectate": "TEMPLATE_segmente_afectate",
+      "perioada": "TEMPLATE 09.08.2026 ora 00:00 - 10.08.2026 ora 05:00",
+      "textAnunt": "TEMPLATE_text_anunt",
+      "infoYellow": ["yellow1", "yellow2"],
+      "infoRed": ["red1"]
+    }
+  ],
+  "Anunturi": [
     { "titluAnunt": "Anunt intrerupere circulatie",
       "dataAnunt": "07.09.2026",
       "idAnunt": "0000001",
