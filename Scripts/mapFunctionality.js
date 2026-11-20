@@ -81,7 +81,7 @@ fetch('./JSON/trasee.json')
         fillOpacity: 0.85,    // Opacitatea umplerii
         className: 'map_circle_small'
       })// .addTo(map)
-        .bindPopup(`<b>${i.nume}</b><br>Trasee: ${listaTraseeStr || 'Niciun traseu'}<br> <a href="./statie.html#${i.stopId}">Vezi plecari din statie</a>`);
+        .bindPopup(`<b>${i.nume}</b><br>Trasee: ${listaTraseeStr || 'Niciun traseu'}<br> <a href="./statie.html?sID=${i.stopId}">Vezi plecari din statie</a>`);
       markersCluster.addLayer(stopCircle);
     });
     map.addLayer(markersCluster);
