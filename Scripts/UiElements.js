@@ -320,7 +320,7 @@ function handleSearchInput(e) {
       const item = document.createElement('div');
       item.className = 'search-item';
       item.innerHTML = `
-        <a class="display_flex btnSearchResult flexDir_col" href="./statie.html#${st.stopId}">
+        <a class="display_flex btnSearchResult flexDir_col" href="./statie?sID=${st.stopId}">
           <span>${st.nume}</span>
           <div style="flex-wrap: wrap;" class="display_flex flexDir_row gap_05">${traseeInStatie}</div>
         </a>`;
