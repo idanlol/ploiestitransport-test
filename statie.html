@@ -48,7 +48,7 @@
 
     function ContainerTraseu(LTiS, index, cardMuted, RSID) {
       return `
-      <a href="./traseu.html?sID=${RSID}&tDIR=${LTiS.directie}#${LTiS.NrTraseu}.html" style="background: var(--card-stopETA)" class="card ${cardMuted} statieCard display_flex flexDir_col" id="cardContainer${index}">
+      <a href="./traseu.html?id=${LTiS.NrTraseu}&sID=${RSID}&tDIR=${LTiS.directie}" style="background: var(--card-stopETA)" class="card ${cardMuted} statieCard display_flex flexDir_col" id="cardContainer${index}">
         <div class="display_flex align_center">
           <div class="abtnlink-nr statie_nr display_flex justify_center align_center">${LTiS.NrTraseu}</div>
           <div><strong>&rarr; ${LTiS.capFront}</strong></div>
@@ -78,7 +78,9 @@
     function statiiGen() {
       document.getElementById('StatieLiveETA').innerHTML = '';
 
-      let ReqStopID = `${window.location.hash.replace('#', '').replace('.html', '')}`;
+      let urlparams = new URLSearchParams(window.location.search);
+      let ReqStopID = urlparams.get('sID');
+      // let ReqStopID = `${window.location.hash.replace('#', '').replace('.html', '')}`;
       // /*testing purposes, COMMENT WHEN FINISH*/ if (!window.location.hash) {ReqStopID = 'S00009'};
       // const stopId = ReqStopID.includes('=') ? ReqStopID.split('=')[1] : ReqStopID;
       console.warn(ReqStopID);

@@ -130,9 +130,12 @@
     document.getElementById(`${tipdir}but`).classList.add('sel');
 
     function traseeMainFunc() {
-      NrTraseuAct = `${window.location.hash.replace('#', '').replace('.html', '')}`;
+      //NrTraseuAct = `${window.location.hash.replace('#', '').replace('.html', '')}`;
+      let urlParamsID = new URLSearchParams(window.location.search)
+      NrTraseuAct = urlParamsID.get('id') || '';
       // /*testing purposes, COMMENT WHEN FINISH*/ if (!window.location.hash) {NrTraseuAct = '32'};
-      NrTraseuMain = NrTraseuAct.replace(/[A-Z]/g, "");
+      //NrTraseuMain = NrTraseuAct.replace(/[A-Z]/g, "");
+      NrTraseuMain = NrTraseuAct;
       console.log(NrTraseuMain);
 
       document.title = `Traseul ${NrTraseuAct} - TransPloiesti`;
@@ -302,7 +305,7 @@
             console.warn(`Nu exista varianta ${NrTraseuMain}${v.litera}`);
             return "";
           };
-          return `<a class="btnlink display_flex align_center aindropd" href="./traseu.html#${NrTraseuMain}${v.litera}.html" onclick="traseeMainFunc()">${NrTraseuMain}${v.litera} : ${vnrtr.Cap1} - ${vnrtr.Cap2}</a>`;
+          return `<a class="btnlink display_flex align_center aindropd" href="./traseu?id=${NrTraseuMain}${v.litera}" onclick="traseeMainFunc()">${NrTraseuMain}${v.litera} : ${vnrtr.Cap1} - ${vnrtr.Cap2}</a>`;
         })
         .join("");
     }
