@@ -68,7 +68,7 @@
   // }
 
   let TrBtnPreset = (tr, data) => data[tr] ?
-      `<a class="abtnlink display_flex align_center" href=./traseu.html#${tr}.html>
+      `<a class="abtnlink display_flex align_center" href=./traseu?id=${tr}>
          <div class="abtnlink-nr display_flex justify_center align_center"> <span>${tr}</span> </div>
          <span>${data[tr].Cap1} - ${data[tr].Cap2}</span>
        </a>` : '';

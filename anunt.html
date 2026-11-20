@@ -35,7 +35,9 @@
     fetch('./JSON/anunturi.json')
         .then(response => response.json())
         .then(data => {
-          let idThisAnunt = data.Anunturi.find(item => item.idAnunt === window.location.hash.replace('#', '').replace('.html', ''));
+          let urlparams = new URLSearchParams(window.location.search);
+          let idThisAnunt = data.Anunturi.find(item => item.idAnunt === urlparams.get('aID'));
+          // let idThisAnunt = data.Anunturi.find(item => item.idAnunt === window.location.hash.replace('#', '').replace('.html', ''));
   
           if (idThisAnunt) {
             let f_titlu = (!idThisAnunt.titluAnunt) ? '' : document.getElementById('newspage').innerHTML = `<div id=ntitle class="nsection height_fitcontent align_center justify_center flexDir_row"><div class="linetop linered display_flex"></div>${idThisAnunt.titluAnunt}</div>`;

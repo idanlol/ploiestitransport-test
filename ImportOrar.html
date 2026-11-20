@@ -572,5 +572,57 @@
     }
     
     weekend('SD', document.querySelector('.sdselect'))
+
+
+
+
+    // async function genereazaSitemap() {
+    //   const baseUrl = "https://mytp.pages.dev";
+    
+    //   const staticPages = [
+    //     "/",
+    //     "/anunturi",
+    //     "/DespreNoi",
+    //     "/harta-trasee",
+    //     "/ListaTrasee",
+    //     "/tarife"
+    //   ];
+    
+    //   // 1. Citește traseele din JSON
+    //   const resTrasee = await fetch("./JSON/trasee.json");
+    //   const dataTrasee = await resTrasee.json();
+    //   const ignoreKeys = ["HomeTrasee", "HomeTraseeTroleu", "HomeTraseeTramvai", "ZileVac", "IDs"];
+    //   const trasee = Object.keys(dataTrasee).filter(k => !ignoreKeys.includes(k));
+    
+    //   // 2. Citește anunțurile (ajustează calea/cheia după JSON-ul tău de anunțuri)
+    //   let anunturiUrls = [];
+    //   try {
+    //     const resAnunturi = await fetch("./JSON/anunturi.json");
+    //     const dataAnunturi = await resAnunturi.json();
+    //     // Presupunând că ai un array sau obiect cu id-uri de anunțuri:
+    //     const ids = Array.isArray(dataAnunturi) ? dataAnunturi.map(a => a.id) : Object.keys(dataAnunturi);
+    //     anunturiUrls = ids.map(id => `${baseUrl}/Anunt?id=${encodeURIComponent(id)}`);
+    //   } catch (e) {
+    //     console.warn("Nu s-a putut citi anunturi.json:", e);
+    //   }
+    
+    //   // 3. Construiește toate URL-urile
+    //   const urls = [
+    //     ...staticPages.map(p => `${baseUrl}${p}`),
+    //     ...trasee.map(t => `${baseUrl}/traseu?id=${encodeURIComponent(t)}`),
+    //     ...anunturiUrls
+    //   ];
+    
+    //   const xml = `<?xml version="1.0" encoding="UTF-8"?>
+    // <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    // ${urls.map(u => `  <url>\n    <loc>${u}</loc>\n  </url>`).join("\n")}
+    // </urlset>`;
+    
+    //   console.log(xml);
+    //   return xml;
+    // }
+    
+    // genereazaSitemap();
+
   </script>
 </html>
