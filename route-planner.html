@@ -1,0 +1,157 @@
+<html>
+
+<head>
+  <title>MyTP - </title>
+  <meta name="keywords" content="rute, route, route planner, planifica ruta, planifica o ruta, mytp, mytp ploiesti, tce, tceph, ratp, ratph, ploiesti">
+  <meta name="theme-color" content="#111155">
+  <meta property="og:title" content="MyTP">
+  <meta property="og:description" content="Site dedicat transportului public din Ploiesti. Informatii, stiri, noutati, despre SC Transport Calatori Express (TCE) Ploiesti SA, fosta RATP Ploiesti.">
+  <meta property="og:url" content="https://mytp.com/">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/Content/icon/MyTP-48px.webp">
+  <script src="/Scripts/UiElements.js" defer></script>
+  <script src="/Scripts/news.js" defer></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <div id=menuopen></div>
+  <div id=fixbtn></div>
+  <header id=titlu></header>
+  <div id=deadTopSpace></div>
+
+
+  <div class="card display_flex width_fitcontent height_fitcontent justSelf_center flexDir_col gap_2">
+    <div class="gap_2 display_flex flexDir_row_r">
+      <div class="display_flex alignSelf_center justSelf_center">Planifica o ruta</div>
+      <div class="display_flex flexDir_col gap_2">
+        <input id="RPfrom" data-routesid="" placeholder="Origine" class="inp display_flex justify_center align_center">
+      </div>
+      <!--
+      <div class="text_center">|</div>
+      <div class="text_center">v</div>
+      -->
+      <div class="display_flex flexDir_col gap_2">
+        <input id="RPto" data-routesid="" placeholder="Destinatie" class="inp display_flex justify_center align_center">
+      </div>
+      <div class="mb_3"></div>
+      <!--
+      <div style="width: 50%;" class="display_flex alignSelf_center text_center">
+        Fiecare din optiunile de mai jos sunt optionale si pot fi lasate necompletate daca se doreste
+      </div>
+      -->
+      <div class="display_flex flexDir_row align_center justify_spacebetween">
+        Data:
+        <input id=RPdate type="date" class="inp display_flex text_center width_fitcontent">
+      </div>
+      <div class="display_flex flexDir_row align_center justify_spacebetween">
+        Ora plecare:
+        <input id=RPHfrom type="time" class="inp display_flex text_center width_fitcontent">
+      </div>
+      <div class="display_flex flexDir_row align_center justify_spacebetween">
+        Ora sosire:
+        <input id=RPHto type="time" class="inp display_flex text_center width_fitcontent">
+      </div>
+    </div>
+    <div class="mb_3"></div>
+    <div class="display_flex flexDir_row justify_spaceevenly">
+      <a id="searchGo" onclick="routeGo()" class="inp abtnlink anutHint display_flex width_fitcontent height_fitcontent alignSelf_center">Cauta</a>
+    </div>
+  </div>
+
+  
+
+  <header id=footer></header>
+
+
+  <script src="/Scripts/UiElements.js"></script>
+  <script>
+    const dateInput = document.getElementById('RPdate');
+    if (dateInput && !dateInput.value) {
+      dateInput.valueAsDate = new Date(); // pune data de azi
+    }
+
+    let RPfromID, RPtoID;
+
+    fetch('./JSON/trasee.json')
+      .then(response => response.json())
+      .then(data => {
+        dataa = data;
+        routePlannerSearch(document.getElementById('RPfrom'), RPfromID);
+        routePlannerSearch(document.getElementById('RPto'), RPtoID);
+      });
+
+    function routePlannerSearch(inputElement, tId) {
+      inputElement.addEventListener('input', (e) => {
+        inputElement.dataset.routesid = '';
+        const query = e.target.value.toLowerCase().trim();
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          if (document.getElementById('routeStopSearchResults')) {
+            document.getElementById('routeStopSearchResults').remove();
+          }
+          let routeStopSearchResultsDIV = document.createElement('div');
+          routeStopSearchResultsDIV.id = 'routeStopSearchResults';
+          routeStopSearchResultsDIV.className = 'display_flex gap_1 flexDir_col justSelf_center alignSelf_center';
+          // routeStopSearchResultsDIV.innerHTML = 'test';
+          inputElement.after(routeStopSearchResultsDIV)
+  
+          if (query.length === 0) {
+            routeStopSearchResultsDIV.remove();
+            return;
+          }
+  
+          const matches = dataa.IDs.filter(st => {
+            if (!st.nume || st.nume.trim() === '') return false;
+            return st.nume.toLowerCase().includes(query) || st.stopId.toLowerCase().includes(query);
+          });
+  
+          // if (matches.length === 0) {
+          //   OutputElement.style.display = 'none';
+          //   return;
+          // }
+          // OutputElement.style.display = 'block';
+  
+          matches.forEach(st => {
+            const item = document.createElement('div');
+            item.className = 'search-item';
+            item.innerHTML = `<a class="display_flex btnRouteStopSearchResult">${st.nume}</a>`;
+            item.addEventListener('click', () => {
+              inputElement.dataset.routesid = st.stopId;
+              inputElement.value = st.nume; // Pune numele stației în input
+              routeStopSearchResultsDIV.remove(); // Ascunde dropdown-ul
+            });
+            routeStopSearchResultsDIV.appendChild(item)
+          });
+        }, 200);
+        
+      })
+      // document.addEventListener('click', (e) => {
+      //   if (!inputElement.contains(e.target) && !OutputElement.contains(e.target)) {
+      //     OutputElement.style.display = 'none';
+      //   }
+      // });
+    };
+
+    function routeGo() {
+      fromID = document.getElementById('RPfrom').dataset.routesid;
+      toID = document.getElementById('RPto').dataset.routesid;
+      if (fromID && toID) {
+        window.location.href = `./route.html?from=${fromID}&to=${toID}`
+      } else {
+        alert('Selecteaza statia de plecare si de sosire')
+      }
+    }
+    
+
+
+    
+  </script>
+</body>
+</html>

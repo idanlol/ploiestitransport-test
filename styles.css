@@ -3,7 +3,7 @@
   --scrollbar-thumb: #777799;
   --scrollbar-track: #f1f1f1;
   --sitename: #ccccfe;
-  --titlu-bg: #0000ffaa;
+  --titlu-bg: #0000ff99;
   --titlu-bs: #0000ffbb;
   --footer: #ffff00aa;
   --font: #111121;
@@ -15,8 +15,12 @@
   --sel-bs: #99bbff9f;
   --sel-search-bs: #aaccff7f;
   --textimgfont: #2222aadd;
-  --textimg: #ffff708f;
+  /*
+  --textimg: #ffff708f; old yelow one
   --textimg-bs: #ffff77df;
+  */
+  --textimg: #e0e0ff8f;
+  --textimg-bs: #eeeeffdf;
   --btnlink-bg: #ffffff70;
   --btnlink-boxshadow:#00000020;
   --btn-category-bs: #77779950;
@@ -30,13 +34,13 @@
   --card-stopETA-bs: #001ab07a;
   --menu-bg: #0000ff33;
   --menu-bs: #0000ffbb;
-  --flmenubg: #ddddfcc;
+  --flmenubg: #ddddfc;
   --flmenubs: #55555faa;
   --tabcell: #b2b2cf50;
   --t-titlecell: #1212c930;
   --fixbtn: #7777ff40;
   --fixbtn-bs: #33339970;
-  --tr-afect: #5577ff77;
+  --tr-afect: #5577ff55;
   --n-red: #ff999945;
   --n-blue: #9999ff45;
   --n-yellow: #ffff9945;
@@ -59,15 +63,19 @@
   --titlu-bs: #0000ffbb;
   --footer: #ffff00cc;
   --font: #eeeefe;
-  --font-muted: #c4d1e4;
+  --font-muted: #c4c4d4;
   --font-red: #ffbbbb;
   --sel: #5577ff7f;
   --sel-search: #444477f0;
   --sel-bs: #7799ff9f;
   --sel-search-bs: #5577bb7f;
+  --textimgfont: #eeeeffdd;
+  /*
   --textimgfont: #ffff77dd;
-  --textimg: #0000227f;
   --textimg-bs: #aaaa004f;
+  */
+  --textimg: #0000227f;
+  --textimg-bs: #5555aa4f;
   --btnlink-bg:#4f4f8750;
   --btnlink-boxshadow:#00000020;
   --btn-category-bs: #7f7fcf40;
@@ -102,11 +110,23 @@
   --brightness: 0.55;
 }
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('/Content/Fonts/Main_Nunito.ttf') format('truetype');
+  font-weight: 200 1000;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 body {
   background-color: var(--bg-main);
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   margin: 0px;
+}
+input {
+  font-family: 'Nunito';
 }
 a {
   text-decoration: none;
@@ -184,6 +204,10 @@ a {
   align-items: space-between;
   align-content: space-between;
 }
+.justify_spaceevenly {
+  justify-items: space-evenly;
+  justify-content: space-evenly;
+}
 .alignSelf_start { align-self: start; }
 .alignSelf_end { align-self: end; }
 .justSelf_end { justify-self: end; }
@@ -193,6 +217,12 @@ a {
   background: var(--sel) !important;
   box-shadow: 0px 0px 5px 0px var(--sel-bs) !important;
   transform: scale(1.07);
+}
+.selStatie {
+  background: var(--sel) !important;
+  box-shadow: 0px 0px 5px 0px var(--sel-bs) !important;
+  transform: scale(1.01) translateX(1%);
+  border-radius: 2.3vmin 1vmin 1vmin 2.3vmin !important;
 }
 
 .flexDir_row_r { flex-direction: row; }
@@ -211,16 +241,22 @@ a {
   background: #cc3300;
   clip-path: polygon(0 0, 100% 0, 100% 100%);
   pointer-events: none;
-  z-index: 999;
+  z-index: 99999;
 }
 .colt-triunghi-text {
   position: relative;
-  top: 0;
-  right: 0;
-  font-weight: 700;
-  font-size: 5vmin;
+  bottom: 0%;
+  left: 0%;
+  font-weight: 900;
+  font-size: 2.3vmax;
   color: #ffffff;
   transform: rotate(45deg) translate(50%, 0%);
+}
+.btn_border {
+  background: transparent !important;
+  outline: 0.7vmin solid var(--btnlink-bg) !important;
+  outline-offset: -0.7vmin;
+  box-shadow: none !important;
 }
 
 
@@ -359,7 +395,7 @@ a {
   padding: 0.5vw;
   box-shadow: 0px 0px 9px -2px var(--btnlink-boxshadow);
   border-radius: 30vw;
-  font-weight: 550;
+  font-weight: 700;
   font-size: 0.9vw;
   border: 0px solid #2f2f2f;
 }
@@ -370,14 +406,15 @@ a {
   background: var(--nr-bg);
   border-radius: 3vw;
   color: var(--font);
-  font-weight: bold;
+  font-weight: 750;
   font-size: 1.1vw;
   border: none;
 }
 .abtnlink:hover{
   background: var(--sel) !important;
   box-shadow: 0px 0px 5px 0px var(--sel-bs) !important;
-  transform: scale(1.02) translateY(-0.3vw);
+  transform: scale(0.97);
+  /*transform: scale(1.02) translateY(-0.3vw);*/
   cursor: pointer;
 }
 .statie_nr {
@@ -385,6 +422,7 @@ a {
 }
 .anuntHint {
   color: var(--font-muted);
+  font-weight: 700;
   position: sticky;
   padding: 0.5vw 1vw;
 }
@@ -394,7 +432,7 @@ a {
   min-width: 1vw;
   height: 0.7vmax;
   font-size: 0.9vw;
-  font-weight: 500;
+  font-weight: 700;
   padding: 0.4vw 0.7vw;
   text-align: center;
 }
@@ -404,7 +442,7 @@ a {
   gap: 0.5vw;
   padding: 0.5vw;
   border-radius: 1.7vw;
-  font-weight: 400;
+  font-weight: 450;
   font-size: 0.9vw;
 }
 .anews2 {
@@ -424,13 +462,14 @@ a {
   background: var(--nr-bg);
   border-radius: 2vw;
   color: var(--font);
-  font-weight: bold;
+  font-weight: 800;
   font-size: 1vw;
   border: none;
 }
 .card {
   background: var(--card);
-  color: var(--font);
+  color: var(--font-muted);
+  font-weight: 700;
   overflow-y: auto;
   box-shadow: 0px 12px 20px -15px var(--card-boxshadow);
   border-radius: 2.5vw;
@@ -458,7 +497,7 @@ a {
   /*width: 15vw;*/
   padding: 0.5vw;
   border-radius: 3vw;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
 }
 .btn_DIR {
@@ -500,7 +539,6 @@ a {
   gap:0.2vw;
 }
 .btnCategoryHome {
-  padding: 1.7vw;
   width: 9vmax;
   height: 9vmax;
   box-shadow: 0px 0px 15px 0px var(--btn-category-bs);
@@ -547,13 +585,16 @@ a {
   padding: 2.5vmax;
   top: 30%;
   left: 50%;
-  font-size: 5vmin;
-  font-weight: 800;
+  font-size: 5.5vmin;
+  font-weight: 700;
   text-align: center;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   color: var(--textimgfont);
   box-shadow: 0px 0px 30px 0px var(--textimg-bs);
+}
+.imgtextSecondary {
+  font-size: 4vmin;
 }
 .imgchevron {
   top: 80%;
@@ -565,8 +606,8 @@ a {
   box-shadow: 0px -20px 70px 25px var(--titlu-bs);
   position: fixed;
   top: 0%;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 15;
 }
 .homeimg {
@@ -593,7 +634,7 @@ a {
   background-image: var(--bg-url); /* Preia link-ul de la HTML */
   background-size: cover;
   background-position: center 100%;
-  filter: blur(70px) saturate(2.5);
+  filter: blur(20vmin) saturate(2.5);
   scale: 1;
 }
 .endtitl {
@@ -655,11 +696,11 @@ a {
 }
 .chevron {
   transform: translateY(-20%) scaleX(1.7) scale(0.8);
-  font-weight: 500;
+  font-weight: 550;
 }
 .chevron-up {
   transform: rotate(180deg) translateY(-20%) scaleX(1.5) scale(1);
-  font-weight: 500;
+  font-weight: 550;
 }
 .floatmenu {
   gap: 1vw;
@@ -705,7 +746,7 @@ a {
   
   border-radius: 2vw;
   font-size: 1vw;
-  font-weight: 500;
+  font-weight: 550;
 }
 .t-leftcell {
   border-radius: 1vw 0.5vw 0.5vw 1vw;
@@ -728,6 +769,7 @@ a {
 }
 .table-class {
   margin: -0.5vmin;
+  /*width: 75vw;*/
 }
 .WrongLink {
   max-width: 40vw;
@@ -786,7 +828,7 @@ a {
   text-align: center;
   padding: 1vw 1vw;
   font-size: 1.5vw;
-  font-weight: 500;
+  font-weight: 550;
   border-radius: 7vw;
   border: none;
   outline: none;
@@ -812,7 +854,7 @@ a {
 }
 .btnSearchResult {
   font-size: 2vmin;
-  font-weight: 500;
+  font-weight: 550;
   border-radius: 1.5vw;
   padding: 1vw 1vw;
   background: var(--btnlink-bg);
@@ -820,7 +862,7 @@ a {
 }
 .btnRouteStopSearchResult {
   font-size: 2vmin;
-  font-weight: 500;
+  font-weight: 550;
   border-radius: 1.5vw;
   padding: 1vw 1vw;
   background: var(--btnlink-bg);
@@ -828,7 +870,7 @@ a {
 }
 .btnRouteResult {
   font-size: 2vmin;
-  font-weight: 500;
+  font-weight: 550;
   border-radius: 1.5vw;
   padding: 1vw 1vw;
   background: var(--btnlink-bg);
@@ -837,12 +879,12 @@ a {
 .routeCapete {
   border-radius: 50vmin;
   padding: 0vmin 0.2vmin;
-  font-weight: 500;
+  font-weight: 550;
   font-size: 3.vmin;
 }
 .routeSmallerFont {
   font-size: 2.7vmin;
-  font-weight: 400;
+  font-weight: 450;
 }
 #statii {
   align-self: start;
@@ -852,12 +894,13 @@ a {
 .statieclass {
   width: 17vw;
   border-radius: 1.2vw;
-  font-size: 1vw;
-  padding: 0.5vw 0.5vw 0.5vw 0.7vw;
+  font-size: 1.1vw;
+  font-weight: 550;
+  padding: 0.7vw 0.7vw 0.7vw 0.9vw;
 }
 #statieName {
   font-size: 1.5vw;
-  font-weight: 500;
+  font-weight: 550;
   color: var(--font);
   background: var(--card-stopETA);
   box-shadow: 0px 3px 23px -5px var(--card-stopETA-bs);
@@ -946,6 +989,11 @@ a {
   .gap_r_9 {gap: 9vmin; }
   .gap_r_10 {gap: 10vmin; }
 
+  .selStatie {
+    transform: scale(1.03) translateX(5%);
+    border-radius: 2.3vmin 1vmin 1vmin 2.3vmin !important;
+  }
+
   .fixedbtnDiv {
     display: flex;
     width: auto;
@@ -971,7 +1019,7 @@ a {
     width: 75vmin;
     padding: 4vmin 5vmin;
     font-size: 5vmin;
-    font-weight: 500;
+    font-weight: 550;
     border-radius: 7vmin;
   }
   #searchResults {
@@ -981,26 +1029,26 @@ a {
     border-radius: 7vmin;
   }
   #routeStopSearchResults {
-    width: 50vmin;
+    width: 55vmin;
     max-height: 45vh;
     padding: 2vmin;
-    border-radius: 5.5vmin;
+    border-radius: 6.5vmin;
   }
   .btnSearchResult {
     font-size: 4vmin;
-    font-weight: 500;
+    font-weight: 550;
     border-radius: 5vmin;
     padding: 2.5vmin 3vmin;
   }
   .btnRouteStopSearchResult {
-    font-size: 4vmin;
-    font-weight: 500;
-    border-radius: 5vmin;
-    padding: 2.5vmin 3vmin;
+    font-size: 3.5vmin;
+    font-weight: 550;
+    border-radius: 4.5vmin;
+    padding: 2vmin 3vmin;
   }
   .btnRouteResult {
     font-size: 3.5vmin;
-    font-weight: 500;
+    font-weight: 550;
     border-radius: 5vmin;
     padding: 2vmin 2.5vmin;
   }
@@ -1019,30 +1067,23 @@ a {
   .menuicon_fix {
     margin: 3vmin 6vmin;
   }
+
   .menutext {
     display: inline-block;
     white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    max-width: 30vmin;
     margin: 0vmin -5vmin 0vmin 5vmin;
-    font-size: 5vmin;
+    font-size: 5.5vmin;
     opacity: 1;
     animation: collapseText 0.5s linear 3s forwards;
   }
   @keyframes collapseText {
-    0% {
-      margin: 0vmin -5vmin 0vmin 5vmin;
-      max-width: 20vmin;
-      opacity: 1;
-    }
-    45% {
-      margin: 0vmin -7.5vmin 0vmin 5vmin;
-      max-width: 10vmin;
-      opacity: 0.1;
-    }
-    100% {
-      margin: 0vmin -10vmin 0vmin 5vmin;
-      max-width: 0px;
+    to {
+      max-width: 0;
+      margin-left: 0;
       opacity: 0;
-      display: none;
     }
   }
   .themebtn {
@@ -1071,20 +1112,20 @@ a {
   }
   #statieName {
     font-size: 5.5vmin;
-    font-weight: 500;
+    font-weight: 550;
     border-radius: 50vmin;
     padding: 2.5vmin 5vmin;
     max-width: 90%;
   }
   .abtnlink {
-    width: 70vmin;
+    width: 75vmin;
     font-size: 2.7vmin;
     padding: 1.7vmin;
   }
   .abtnlink-nr{
-    min-width: 9vmin;
-    height: 5.9vmin;
-    font-size: 2.5vmin;
+    min-width: 11vmin;
+    height: 7vmin;
+    font-size: 3vmin;
     border-radius: 40vmin;
     margin-right: 1.3vmin;
   }
@@ -1101,7 +1142,8 @@ a {
     border-radius: 4vmin;
   }
   .anews {
-    width: 85vmin;
+    /*width: 85vmin;*/
+    width: 75vmin;
     height: fit-content;
     font-size: 2.3vmin;
     padding: 1.5vmin;
@@ -1118,7 +1160,7 @@ a {
   }
   .newsGap {gap: 1vmin;}
   .nnr{
-    min-width: 17vmin;
+    min-width: 15.5vmin;
     height: 5vmin;
     padding-left: 0.7vmin;
     padding-right: 0.7vmin;
@@ -1168,6 +1210,7 @@ a {
     height: auto;
   }
   .imgtext {
+    width: 50%;
     top: 50%;
   }
   .imgchevron {
@@ -1179,7 +1222,7 @@ a {
   .endtitl {
     height: fit-content;
     padding: 25vmin 3vmin;
-    font-size: 3vmin;
+    font-size: 3.5vmin;
   }
   .searchIconClass {
     width: 7.5vmin;
@@ -1213,14 +1256,14 @@ a {
     gap: 0.7vmin;
   }
   .btnCategoryHome {
-    width: 30vmin;
-    height: 30vmin;
+    width: 29vmin;
+    height: 29vmin;
     font-size: 4vmin!important;
-    border-radius: 7vmin;
+    border-radius: 10vmin;
   }
   .menuSvg {
-    width: 14vmin;
-    height: 14vmin;
+    width: 15vmin;
+    height: 15vmin;
     stroke: var(--font);
     stroke-width: 2;
   }
@@ -1252,7 +1295,7 @@ a {
     
     border-radius: 2vmin;
     font-size: 3.5vmin;
-    font-weight: 500;
+    font-weight: 550;
   }
   .t-leftcell {
     border-radius: 1.7vmin 1.5vmin 1.5vmin 1.7vmin;
@@ -1284,12 +1327,14 @@ a {
   }
   .statieclass {
     width: 25vmin;
+    font-size: 2.7vmin;
     border-radius: 2.3vmin;
-    padding: 1vmin 1.7vmin;
+    padding: 1vmin 2vmin;
   }
   .anuntHint {
-    font-size: 2.7vmin;
-    padding: 2vmin 5vmin;
+    font-size: 3.2vmin;
+    padding: 2vmin 3vmin;
+    max-width: 85%;
   }
   .readmore {
     padding: 1.5vmin 3vmin;
@@ -1306,11 +1351,12 @@ a {
     width: 90%;
   }
   .inp {
-    width: 55vw;
+    width: 60vmin;
     font-weight: bold;
-    font-size: 4vw;
-    border-radius: 30.5vw;
-    padding: 3vw 3vw;
+    font-size: 4vmin;
+    border-radius: 30.5vmin;
+    padding: 2vmin 3vmin;
+    scroll-margin-top: 10vmax;
   }
   #tabelintfull{
     gap: 0.4vmin;

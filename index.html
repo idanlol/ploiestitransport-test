@@ -7,7 +7,7 @@
   <script>eruda.init();</script>
   -->
   <title>MyTP - Acasa</title>
-  <meta name="keywords" content="mytp, transploiesti, tce, tceph, ratp, ratph, ploiesti">
+  <meta name="keywords" content="mytp, tce, tceph, ratp, ratph, ploiesti, transport">
   <meta name="description" content="Platforma interactivă pentru transportul public din Ploiești. Vezi trasee, stații, orare în timp real și programul mijloacelor de transport în comun TCE.">
   <meta name="theme-color" content="#111155">
   <meta property="og:title" content="MyTP">
@@ -19,6 +19,24 @@
   <link rel="icon" type="image/png" href="/Content/icon/MyTP-48px.webp">
   <!-- <link rel="icon" type="image/png" href="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/favicon/msung62e.ico">
   -->
+  <script src="./Scripts/UiElements.js" defer></script>
+  <script src="./Scripts/news.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "MyTP - My Transport Ploiești",
+    "description": "Platformă interactivă pentru transportul public din Ploiești (TCE): trasee, stații, hărți și orare.",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "All",
+    "areaServed": {
+      "@type": "City",
+      "name": "Ploiești",
+      "addressCountry": "RO"
+    }
+  }
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
@@ -29,78 +47,90 @@
 
 <body>
   <div id=menuopen></div>
-  <!div id=menu class="display_flex" style="width: 100%; position: fixed; bottom: 0%; left: 50%; transform: translate(-50%, -50%) scale(1.2);"></!div>
-
+  <!--
+  <div id=menu class="display_flex" style="width: 100%; position: fixed; bottom: 0%; left: 50%; transform: translate(-50%, -50%) scale(1.2);"></div>
+  -->
+  
   <div id=fixbtn></div>
   <div id=deadTopSpace></div>
   <header id=titlu></header>
+  <!--
   <div style="margin-top: -3.3vmax; --bg-url: url('https://transploiesti.com/lib/ctje5h/5926---13072023-lqvi86ko.jpg');" class="homeimgDiv display_flex height_fitcontent">
     <img class="homeimg homeimgOffs" style="position: relative; object-position: center 100%" src="https://transploiesti.com/lib/ctje5h/5926---13072023-lqvi86ko.jpg">
-    <div class="imgtext display_flex">Bun venit pe noul site MyTP</div>
-    <div class="imgtext imgchevron display_flex" onclick="scrollDownFunc()"><div class="chevron">⌄</div></div>
+    <div class="imgtext display_flex flexDir_col gap_3"><strong>Bun venit pe MyTP</strong><div class=imgtextSecondary>Aplicația de transport a Municipiului Ploiești</div></div>
+    <div class="imgtext imgchevron width_fitcontent display_flex" onclick="scrollDownFunc()"><div class="chevron">⌄</div></div>
   </div>
   
   <div class="mb_7"></div>
-  
-  <div class="card display_flex width_fitcontent height_fitcontent justSelf_center flexDir_col gap_2">
-    <div class="gap_2 display_flex flexDir_row_r">
-      <div class="display_flex flexDir_col gap_2">
-        <input id="RPfrom" class="inp display_flex justify_center align_center">
-      </div>
-      <div class="display_flex flexDir_col gap_2">
-        <input id="RPto" class="inp display_flex justify_center align_center">
-      </div>
-    </div>
-    <a id="searchGo" onclick="routeGo()" class="abtnlink anuntHint display_flex width_fitcontent height_fitcontent alignSelf_center">Cauta</a>
+  -->
+  <div style="margin-top: -3.3vmax; --bg-url: url('/Content/images/MyTP_logo.svg');" class="homeimgDiv display_flex height_fitcontent">
+    <div class="imgtext display_flex flexDir_col gap_3"><h1 style="margin: 0; font-size: inherit;"><strong>Bun venit pe MyTP</strong></h1><div class=imgtextSecondary>Platforma web pentru transportul din Ploiești</div></div>
+    <div class="imgtext imgchevron width_fitcontent display_flex" onclick="scrollDownFunc()"><div class="chevron">⌄</div></div>
   </div>
-  
-  <div class="mb_7"></div>
 
   <div class="display_flex gap_5 justSelf_center flexDir_row_r">
     <div class="display_flex gap_5 flexDir_row">
       <a href="./anunturi.html" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
-        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_3 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 13v-2z"/><path d="M11.6 16.8 a3 3 0 1 1-5.8-1.6"/></svg>
-        <div>Anunturi</div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg 1 mb_r_1 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 13v-2z"/><path d="M11.6 16.8 a3 3 0 1 1-5.8-1.6"/></svg>
+        <div >Anunturi</div>
       </a>
       <a href="./tarife.html" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
-        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_3 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 9.5h18"/><path d="M7 14.5h4"/></svg> 
+        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_1 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 9.5h18"/><path d="M7 14.5h4"/></svg> 
         <div>Tarife</div>
       </a>
     </div>
     <div class="display_flex gap_5 flexDir_row">
       <a href="./ListaTrasee.html" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
-        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_3 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19C3 9 22 15 19 5"/><circle cx="5" cy="19" r="1.7"/><circle cx="12" cy="12" r="1.7" fill="currentColor"/><circle cx="19" cy="5" r="1.7"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_1 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19C3 9 22 15 19 5"/><circle cx="5" cy="19" r="1.7"/><circle cx="12" cy="12" r="1.7" fill="currentColor"/><circle cx="19" cy="5" r="1.7"/></svg>
         <div>Trasee</div>
       </a>
       <a href="./harta-trasee.html" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
-        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_3 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21 3 6"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg mb_1 mb_r_1 display_flex" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21 3 6"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
         <div>Harta</div>
       </a>
     </div>
 
   </div>
   
-  <div class="mb_7"></div>
+  <div class="mb_10"></div>
+  
+  <div class="card display_flex width_fitcontent height_fitcontent justSelf_center flexDir_col gap_2">
+    <div class="gap_2 display_flex flexDir_row_r">
+      <div class="display_flex alignSelf_center justSelf_center">Planifică o rută</div>
+      <div class="display_flex flexDir_col gap_2">
+        <input id="RPfrom" data-routesid="" placeholder="Origine" class="inp display_flex justify_center align_center">
+      </div>
+      <div class="display_flex flexDir_col gap_2">
+        <input id="RPto" data-routesid="" placeholder="Destinatie" class="inp display_flex justify_center align_center">
+      </div>
+    </div>
+    <div class="display_flex flexDir_row justify_spaceevenly">
+      <a href="/route-planner.html" id="routeAdvanced" onclick="routeAdvanced()" class="btn_border abtnlink anuntHint display_flex width_fitcontent height_fitcontent alignSelf_center">Setari avansate</a>
+      <a id="searchGo" onclick="routeGo()" class="abtnlink anuntHint display_flex width_fitcontent height_fitcontent alignSelf_center">Cauta</a>
+    </div>
+  </div>
+  
+  <div class="mb_10"></div>
   
   <div id=newscard class="card noscrollbar width_fitcontent height_fitcontent gap_07 gap_r_2 display_flex flexDir_col justSelf_center">
-    <a href="./anunturi.html" class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">
-      Anunturi
-    </a>
+    <div href="./anunturi.html" class="display_flex justSelf_center alignSelf_center justify_center width_fitcontent">
+      Ultimele anunțuri
+    </div>
   </div>
   
   <div class="mb_10"></div>
   
   <div class="gap_3 gap_r_5 display_flex flexDir_row_r justSelf_center">  
-    <div id="trbtn" style="max-height: 30vmax;" class="gap_07 gap_r_2 display_flex flexDir_col card noscrollbar width_fitcontent height_fitcontent">
-      <a href="./ListaTrasee.html" class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Autobuze</a>
-    </div>
     <div class="gap_3 gap_r_5 display_flex flexDir_col">
       <div id="trbtnTrv" class="gap_07 gap_r_2 display_flex flexDir_col card noscrollbar width_fitcontent height_fitcontent">
-        <a href="./ListaTrasee.html" class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Tramvaie</a>
+        <div href="./ListaTrasee.html" class="display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Tramvaie</div>
       </div>
       <div id="trbtnTro" class="gap_07 gap_r_2 display_flex flexDir_col card  noscrollbar width_fitcontent height_fitcontent">
-        <a href="./ListaTrasee.html" class="abtnlink anuntHint mb_07 display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Troleibuze</a>
+        <div href="./ListaTrasee.html" class="display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Troleibuze</div>
       </div>
+    </div>
+    <div id="trbtn" style="max-height: 30vmax;" class="gap_07 gap_r_2 display_flex flexDir_col card noscrollbar width_fitcontent height_fitcontent">
+      <div href="./ListaTrasee.html" class="display_flex justSelf_center alignSelf_center justify_center width_fitcontent">Autobuze</div>
     </div>
   </div>
 
@@ -128,11 +158,9 @@
   </div>
   -->
   
-  <div id=footer></div>
+  <header id=footer></header>
   
 
-  <script src="./Scripts/UiElements.js"></script>
-  <script src="./Scripts/news.js"></script>
   <script>
       /*<a href="" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
         <svg xmlns="http://www.w3.org/2000/svg" class="menuSvg display_flex"viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15v-4h3.5V9.5L12 7.5l6.5 2v1.5H22v7h-3.5v2.5H5.5V18H2z"/></svg>
@@ -191,6 +219,7 @@
 
     function routePlannerSearch(inputElement, tId) {
       inputElement.addEventListener('input', (e) => {
+        inputElement.dataset.routesid = '';
         const query = e.target.value.toLowerCase().trim();
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(() => {
@@ -249,6 +278,21 @@
         alert('Selecteaza statia de plecare si de sosire')
       }
     }
+
+    ['RPfrom', 'RPto'].forEach(id => {
+      document.getElementById(id).addEventListener('focus', (e) => {
+        setTimeout(() => {
+          const headerHeight = document.querySelector('.titlu')?.offsetHeight || 70;
+          const y = e.target.getBoundingClientRect().top + window.scrollY - headerHeight - 40;
+    
+          window.scrollTo({
+            top: y,
+            behavior: 'smooth'
+          });
+        }, 1);
+      });
+    });
+
 
     
   </script>
