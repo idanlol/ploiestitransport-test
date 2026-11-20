@@ -132,10 +132,10 @@
     function traseeMainFunc() {
       //NrTraseuAct = `${window.location.hash.replace('#', '').replace('.html', '')}`;
       let urlParamsID = new URLSearchParams(window.location.search)
-      NrTraseuAct = urlParamsID.get('id') || '';
+      NrTraseuAct = urlParamsID.get('id') || urlParamsID.get('nr') || '';
       // /*testing purposes, COMMENT WHEN FINISH*/ if (!window.location.hash) {NrTraseuAct = '32'};
       //NrTraseuMain = NrTraseuAct.replace(/[A-Z]/g, "");
-      NrTraseuMain = NrTraseuAct;
+      NrTraseuMain = NrTraseuAct.replace(/[A-Z]/g, "");
       console.log(NrTraseuMain);
 
       document.title = `Traseul ${NrTraseuAct} - TransPloiesti`;
