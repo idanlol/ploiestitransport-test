@@ -1,5 +1,5 @@
 :root {
-  --bg-main: #eeeeff;
+  --bg-main: #f5f5ff;
   --scrollbar-thumb: #777799;
   --scrollbar-track: #f1f1f1;
   --sitename: #ccccfe;
@@ -148,6 +148,7 @@ a {
 .mb_5 { margin-bottom: 5vmin; }
 .mb_7 { margin-bottom: 7vmin; }
 .mb_10 { margin-bottom: 10vmin; }
+.mb_12 { margin-bottom: 12vmin; }
 .mb_15 { margin-bottom: 15vmin; }
 .mb_20 { margin-bottom: 20vmin; }
 
@@ -161,6 +162,10 @@ a {
 .gap_7 {gap: 7vmin; }
 .gap_9 {gap: 9vmin; }
 .gap_10 {gap: 10vmin; }
+
+.bgdebug {
+  background: #ff0000aa !important;
+}
 
 .display_flex { display: flex; }
 .hidden { display: none !important; }
@@ -222,7 +227,7 @@ a {
   background: var(--sel) !important;
   box-shadow: 0px 0px 5px 0px var(--sel-bs) !important;
   transform: scale(1.01) translateX(1%);
-  border-radius: 2.3vmin 1vmin 1vmin 2.3vmin !important;
+  border-radius: 1.7vw 1vw 1vw 1.7vw !important;
 }
 
 .flexDir_row_r { flex-direction: row; }
@@ -410,13 +415,6 @@ a {
   font-size: 1.1vw;
   border: none;
 }
-.abtnlink:hover{
-  background: var(--sel) !important;
-  box-shadow: 0px 0px 5px 0px var(--sel-bs) !important;
-  transform: scale(0.97);
-  /*transform: scale(1.02) translateY(-0.3vw);*/
-  cursor: pointer;
-}
 .statie_nr {
   min-width: 7vw;
 }
@@ -535,8 +533,25 @@ a {
   margin-right: 1vw;
   border: none;
 }
+.nrchevron {
+  transform: translateY(-10%) scaleX(1.7) scale(0.9) !important;
+}
+.nrchevrondiv {
+  margin: 0vmin !important;
+  width: fit-content !important;
+  padding: 0 3vmin !important;
+}
 .trtext{
   gap:0.2vw;
+}
+#origine {
+  font-size: 2vmin;
+  font-weight: 500;
+}
+#destinatie{
+  font-size: 2.5vmin;
+  transform: scaleY(1.1);
+  font-weight: 850;
 }
 .btnCategoryHome {
   width: 9vmax;
@@ -544,7 +559,7 @@ a {
   box-shadow: 0px 0px 15px 0px var(--btn-category-bs);
   font-size: 1.4vmax !important;
   font-weight: 700 !important;
-  border-radius: 4vw;
+  border-radius: 3vw;
 }
 .menuSvg {
   width: 5vmax;
@@ -564,7 +579,6 @@ a {
 }
 .contentwrap {
   width: 90%;
-  gap: 3vw;
   align-items: start; /* Aliniază conținutul sus */
 }
 .contentwrap_statie {
@@ -581,9 +595,12 @@ a {
   position: absolute;
   transform: translate(-50%, -50%);
   background: var(--textimg);
-  border-radius: 3vmax;
+  border-radius: 4vmax;
   padding: 2.5vmax;
+  top: 50%;
+  /*
   top: 30%;
+  */
   left: 50%;
   font-size: 5.5vmin;
   font-weight: 700;
@@ -626,7 +643,10 @@ a {
   position: relative;
   border-radius: 0vmax 0vmax 3vmax 3vmax;
 }
-.homeimgDiv::before {
+.homeimgDivH {
+  height: calc((100vh - 4.5vmax) / 2);
+}
+.homeimgDiv::before, .homeimgDivH::before {
   position: absolute;
   inset: 0;
   content: "";
@@ -634,8 +654,11 @@ a {
   background-image: var(--bg-url); /* Preia link-ul de la HTML */
   background-size: cover;
   background-position: center 100%;
-  filter: blur(20vmin) saturate(2.5);
+  filter: blur(25vmin) saturate(2.5);
   scale: 1;
+}
+.homeimgDivH::before {
+  background-position: center 50%;
 }
 .endtitl {
   max-width: 100%;
@@ -740,7 +763,7 @@ a {
 .t-tabcell {
   background: var(--tabcell);
   color: var(--font);
-  padding: 0.7vw 0.9vw;
+  padding: 0.5vw 0.7vw;
   
   /*border-radius: 1vw 3vw;*/
   
@@ -749,18 +772,18 @@ a {
   font-weight: 550;
 }
 .t-leftcell {
-  border-radius: 1vw 0.5vw 0.5vw 1vw;
+  border-radius: 0.8vw 0.4vw 0.4vw 0.8vw;
   max-width: 35vw;
   min-width: 15vw;
 }
 .t-rightcell {
-  border-radius: 0.5vw 1vw 1vw 0.5vw;
+  border-radius: 0.4vw 0.8vw 0.8vw 0.4vw;
   text-align: center;
   justify-content: center;
 }
 .t-titlecell {
   background: var(--t-titlecell);
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-weight: 700;
 }
 .t-tabel-card {
@@ -768,7 +791,7 @@ a {
   overflow: hidden;
 }
 .table-class {
-  margin: -0.5vmin;
+  margin: -0.2vmin;
   /*width: 75vw;*/
 }
 .WrongLink {
@@ -804,7 +827,7 @@ a {
   border: none;
   background: var(--btnlink-bg);
   color: var(--font);
-  padding: 1vw 2.5vw;
+  padding: 0.7vw 1.5vw;
 
   text-align: center;
   transition: 0.3s;
@@ -846,7 +869,7 @@ a {
 #routeStopSearchResults {
   overflow: hidden;
   overflow-y: scroll;
-  width: 50vw;
+  width: 19vw;
   max-height: 20vh;
   padding: 0.5vw;
   background: var(--btnlink-bg);
@@ -864,7 +887,7 @@ a {
   font-size: 2vmin;
   font-weight: 550;
   border-radius: 1.5vw;
-  padding: 1vw 1vw;
+  padding: 0.7vw 0.7vw;
   background: var(--btnlink-bg);
   color: var(--font)
 }
@@ -893,7 +916,7 @@ a {
 }
 .statieclass {
   width: 17vw;
-  border-radius: 1.2vw;
+  border-radius: 1.5vw;
   font-size: 1.1vw;
   font-weight: 550;
   padding: 0.7vw 0.7vw 0.7vw 0.9vw;
@@ -990,7 +1013,7 @@ a {
   .gap_r_10 {gap: 10vmin; }
 
   .selStatie {
-    transform: scale(1.03) translateX(5%);
+    transform: scale(1.03) translateX(3%);
     border-radius: 2.3vmin 1vmin 1vmin 2.3vmin !important;
   }
 
@@ -1112,10 +1135,10 @@ a {
   }
   #statieName {
     font-size: 5.5vmin;
-    font-weight: 550;
+    font-weight: 800;
     border-radius: 50vmin;
     padding: 2.5vmin 5vmin;
-    max-width: 90%;
+    max-width: 70%;
   }
   .abtnlink {
     width: 75vmin;
@@ -1216,7 +1239,7 @@ a {
   .imgchevron {
     display: none !important;
   }
-  .homeimgDiv {
+  .homeimgDiv, .homeimgDivH {
     height: 55vmin;
   }
   .endtitl {
@@ -1234,22 +1257,22 @@ a {
     border-radius: 7vmin;
   }
   .trtitle {
-    width: 80vmin;
-    padding: 2vmin;
-    border-radius: 7vmin;
+    width: 85vmin;
+    padding: 3vmin;
+    border-radius: 7.25vmin;
     margin-bottom: 2vmin;
   }
   #origine {
-    font-size: 2.3vmin;
+    font-size: 2.2vmin;
   }
   #destinatie{
-    font-size: 3.1vmin;
+    font-size: 3vmin;
   }
   .nr {
-    width: 14vmin;
+    width: 15vmin;
     height: 8.5vmin;
-    font-size: 4.2vmin;
-    border-radius: 6vmin;
+    font-size: 4.25vmin;
+    border-radius: 4.25vmin;
     margin-right: 2vmin;
   }
   .trtext{
@@ -1311,6 +1334,10 @@ a {
   .t-tabel-card {
     border-radius: 4.5vmin;
   }
+  .table-class {
+  margin: -0.5vmin;
+  /*width: 75vw;*/
+  }
   .WrongLink {
     max-width: 70vmin;
     padding: 3vmin 4.5vmin;
@@ -1320,7 +1347,6 @@ a {
   .contentwrap {
     flex-direction: column !important;
     align-items: center !important;
-    gap: 2vmin;
   }
   .contentwrap_statie {
     width: 90%;
@@ -1347,7 +1373,7 @@ a {
     color: var(--font-muted);
   }
   .traseeInfo {
-    font-size: 2.5vmin;
+    font-size: 2.2vmin;
     width: 90%;
   }
   .inp {
@@ -1386,10 +1412,10 @@ a {
 
 /*HOVER*/
 @media (hover: hover) {
-  .btnlink:hover, .aindropd:hover, .topbut:hover, .menubut:hover, .btnRouteStopSearchResult:hover {
+  .abtnlink:hover, .btnlink:hover, .aindropd:hover, .topbut:hover, .menubut:hover, .btnRouteStopSearchResult:hover {
     background: var(--sel) !important;
     box-shadow: 0px 0px 5px 0px var(--sel-bs) !important;
-    transform: scale(1.05);
+    transform: scale(1.02);
     cursor: pointer;
   }
   .topbut:not(:active), .btnlink:not(:active), .menubut:not(:active), .btnRouteStopSearchResult:not(:active) {

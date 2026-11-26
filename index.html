@@ -12,11 +12,12 @@
   <meta name="theme-color" content="#111155">
   <meta property="og:title" content="MyTP">
   <meta property="og:description" content="Site dedicat transportului public din Ploiesti. Informatii, stiri, noutati, despre SC Transport Calatori Express (TCE) Ploiesti SA, fosta RATP Ploiesti.">
-  <meta property="og:url" content="https://mytp.com/">
+  <meta property="og:url" content="https://mytp.pages.dev/">
+  <link rel="canonical" href="https://mytp.pages.dev/">
   <meta property="og:type" content="website">
   <!-- <meta property="og:image" content="https://transploiesti.com/calea/spre/banner-principal.png"> 
   -->
-  <link rel="icon" type="image/png" href="/Content/icon/MyTP-48px.webp">
+  <link rel="icon" type="image/webp" href="/Content/icon/MyTP-48px.webp">
   <!-- <link rel="icon" type="image/png" href="https://transploiesti.com/files/dynamicContent/sites/ctje5h/images/favicon/msung62e.ico">
   -->
   <script src="./Scripts/UiElements.js" defer></script>
@@ -36,6 +37,16 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MyTP",
+    "alternateName": "MyTP - My Transport Ploiești",
+    "url": "https://mytp.pages.dev/"
+  }
+  </script>
+
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,11 +74,13 @@
   
   <div class="mb_7"></div>
   -->
-  <div style="margin-top: -3.3vmax; --bg-url: url('/Content/images/MyTP_logo.svg');" class="homeimgDiv display_flex height_fitcontent">
+  <div style="margin-top: -3.3vmax; --bg-url: url('/Content/images/MyTP_logo.svg');" class="homeimgDiv homeimgDivH display_flex height_fitcontent">
     <div class="imgtext display_flex flexDir_col gap_3"><h1 style="margin: 0; font-size: inherit;"><strong>Bun venit pe MyTP</strong></h1><div class=imgtextSecondary>Platforma web pentru transportul din Ploiești</div></div>
-    <div class="imgtext imgchevron width_fitcontent display_flex" onclick="scrollDownFunc()"><div class="chevron">⌄</div></div>
+    <div class="imgtext imgchevron width_fitcontent display_flex hidden" onclick="scrollDownFunc()"><div class="chevron">⌄</div></div>
   </div>
 
+  <div class="mb_10 mb_r_3"></div>
+  
   <div class="display_flex gap_5 justSelf_center flexDir_row_r">
     <div class="display_flex gap_5 flexDir_row">
       <a href="./anunturi.html" class="btnlink btnCategoryHome display_flex justify_center align_center flexDir_col">
@@ -92,11 +105,11 @@
 
   </div>
   
-  <div class="mb_10"></div>
+  <div class="mb_15 mb_r_10"></div>
   
   <div class="card display_flex width_fitcontent height_fitcontent justSelf_center flexDir_col gap_2">
+    <div class="display_flex alignSelf_center justSelf_center">Planifică o rută</div>
     <div class="gap_2 display_flex flexDir_row_r">
-      <div class="display_flex alignSelf_center justSelf_center">Planifică o rută</div>
       <div class="display_flex flexDir_col gap_2">
         <input id="RPfrom" data-routesid="" placeholder="Origine" class="inp display_flex justify_center align_center">
       </div>
@@ -251,7 +264,7 @@
           matches.forEach(st => {
             const item = document.createElement('div');
             item.className = 'search-item';
-            item.innerHTML = `<a class="display_flex btnRouteStopSearchResult">${st.nume}</a>`;
+            item.innerHTML = `<a class="display_flex btnlink btnRouteStopSearchResult">${st.nume}</a>`;
             item.addEventListener('click', () => {
               inputElement.dataset.routesid = st.stopId;
               inputElement.value = st.nume; // Pune numele stației în input
@@ -283,7 +296,7 @@
       document.getElementById(id).addEventListener('focus', (e) => {
         setTimeout(() => {
           const headerHeight = document.querySelector('.titlu')?.offsetHeight || 70;
-          const y = e.target.getBoundingClientRect().top + window.scrollY - headerHeight - 40;
+          const y = e.target.getBoundingClientRect().top + window.scrollY - headerHeight - 50;
     
           window.scrollTo({
             top: y,

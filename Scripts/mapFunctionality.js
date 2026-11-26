@@ -39,6 +39,8 @@ function resetMapTheme () {
     // L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
 }
 
+// console.log('L keys:', window.L ? Object.keys(window.L).filter(k => k.toLowerCase().includes('cluster')) : 'no L');
+
 const markersCluster = L.markerClusterGroup({
   iconCreateFunction: function (cluster) {
     const count = cluster.getChildCount();

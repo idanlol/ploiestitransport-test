@@ -20,18 +20,25 @@
   <div id=menu></div>
   -->
 
-  <div class="contentwrap display_flex flexDir_row justSelf_center justify_center">
+  <div class="contentwrap display_flex flexDir_row justSelf_center justify_center gap_5 gap_r_5">
     <div class="display_flex flexDir_col align_center" id=TrOptions>
       <div class="trtitle display_flex justSelf_center">
         <div class="nr display_flex justify_center alignSelf_center align_center">
-          <span id="nrtraseu"></span>
+          <div id="nrtraseu"></div>
         </div>
         <div class="trtext display_flex flexDir_col justify_center">
           <div id=origine></div>
           <div id=destinatie></div>
         </div>
+        <!--
+        <div class="display_flex justify_center justSelf_end nr nrchevrondiv alignSelf_center align_center">
+          <div class="nrchevron chevron">⌄</div>
+        </div>
+        -->
       </div>
-      <div class="mb_5"></div>
+      <div class="mb_3"></div>
+      <div style="text-align: center;" class="display_flex traseeInfo mb_2 justSelf_center"><strong>Datele din programul de circulatie au caracter informativ si pot exista abateri. Respectarea programului depinde de conditiile de trafic de pe traseu</strong></div>
+      <div class="mb_3"></div>
       <div style="overflow-y: visible;" class="card display_flex width_fitcontent height_fitcontent flexDir_row justSelf_center gap_2">
         <div class="gap_1 gap_r_2 display_flex flexDir_col align_center">
           <div class="topbut width_fitcontent height_fitcontent adropd align_center gap_1 gap_r_2 display_flex flexDir_row justSelf_center">
@@ -45,8 +52,8 @@
           </div>
           -->
         </div>
-        <div class="gap_1 gap_r_2 display_flex flexDir_col align_center">
-          <div class="gap_1 gap_r_2 display_flex flexDir_row justSelf_center">
+        <div class="gap_2 gap_r_2 display_flex flexDir_col align_center">
+          <div class="gap_2 gap_r_2 display_flex flexDir_row justSelf_center">
             <a id=Tbut class="btnlink display_flex align_center btn_DIR justify_center" onclick="directie(this, 'T')">
               Tur
             </a>
@@ -54,7 +61,7 @@
               Retur
             </a>
           </div>
-          <div class="gap_1 gap_r_2 display_flex flexDir_row justSelf_center">
+          <div class="gap_2 gap_r_2 display_flex flexDir_row justSelf_center">
             <a class="btnlink display_flex align_center btn_ZI width_fitcontent justify_center" onclick="zi(this, 'LV')" id=LVbut>
               Luni-Vineri
             </a>
@@ -70,12 +77,10 @@
           </div>
         </div>
       </div>
-      <div class="mb_3"></div>
-      <div style="text-align: center;" class="display_flex traseeInfo mb_2 justSelf_center"><strong>Datele din programul de circulatie au caracter informativ si pot exista abateri. Respectarea programului depinde de conditiile de trafic de pe traseu</strong></div>
     </div>
-    <div class="display_flex flexDir_col gap_2">
-      <div id="liveETAdiv" class="card display_flex flexDir_col">
-        <div class="anuntHint mb_1 display_flex alignSelf_center width_fitcontent">Urmatoarele plecari din statia selectata:</div>
+    <div class="display_flex flexDir_col gap_5">
+      <div id="liveETAdiv" class="card display_flex flexDir_col gap_3">
+        <div style="padding: 0 !important" class="anuntHint display_flex alignSelf_center width_fitcontent">Urmatoarele plecari din statia selectata:</div>
         <div class="display_flex flexDir_row" id=liveETA style="justify-content: space-around;"></div>
       </div>
       <div class="card display_flex width_fitcontent height_fitcontent gap_1 gap_r_2 flexDir_row justSelf_center">
