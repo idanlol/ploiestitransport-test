@@ -28,7 +28,7 @@ const isHome = window.location.pathname.endsWith('/index.html') ||
 
 let menuHint = isHome ? `<span class="menutext">Meniu</span>` : '';
 
-let TestVerValue = true; 
+let TestVerValue = false; 
 let betaVerValue = true;
 let erudaValue = false;
 
