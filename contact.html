@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+  <title>MyTP - Contact</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111155">
+  <meta name="description" content="Trimite întrebări, sugestii sau sesizări privind orarele și funcțiile platformei MyTP Ploiești.">
+  <link rel="canonical" href="https://mytp.pages.dev/contact">
+  <meta property="og:title" content="MyTP - Contact">
+  <meta property="og:description" content="Contactează echipa MyTP pentru întrebări sau sugestii.">
+  <meta property="og:url" content="https://mytp.pages.dev/contact">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/webp" href="/Content/icon/MyTP-48px.webp">
+  <script src="/Scripts/UiElements.js" defer></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    window.addEventListener('error', function (e) {
+      console.log('ERR DETAILS:', e.message, '| file:', e.filename, '| line:', e.lineno, '| col:', e.colno);
+    });
+  </script>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <div id=menuopen></div>
+  <div id=fixbtn></div>
+  <header id=titlu></header>
+  <div id=deadTopSpace></div>
+
+  <h1 style="text-align: center; font-size: 1.4rem; margin-top: 0;" class="mb_4 justSelf_center">
+    Contact și sugestii MyTP Ploiești
+  </h1>
+
+
+  <form id="contactForm" class="card display_flex width_fitcontent height_fitcontent justSelf_center flexDir_col gap_3">
+    <!-- Câmp capcană anti-spam (ascuns pentru utilizatori) -->
+    <input type="text" name="website" id="website" style="display:none" tabindex="-1" autocomplete="off">
+  
+    <label for="nume">Nume *</label>
+    <input class="inp" type="text" id="nume" name="nume" required maxlength="100" placeholder="Numele tău">
+  
+    <label for="email">Email (opțional, pentru a primi un răspuns)</label>
+    <input class="inp" type="email" id="email" name="email" maxlength="150" placeholder="nume@exemplu.ro">
+  
+    <label for="subiect">Subiect</label>
+    <select id="subiect" class="inp" name="subiect">
+      <option value="Sugestie traseu / orar">Sugestie traseu / orar</option>
+      <option value="Propuneri">Propuneri</option>
+      <option value="Eroare pe site">Raportare eroare pe site</option>
+      <option value="Altele">Altele</option>
+    </select>
+  
+    <label for="mesaj">Mesaj *</label>
+    <textarea id="mesaj" class="inp" name="mesaj" rows="5" required maxlength="5000" placeholder="Scrie mesajul tău..."></textarea>
+  
+    <button type="submit" id="submitBtn" class="btnlink width_fitcontent alignSelf_center">Trimite mesajul</button>
+    <p id="formStatus" class=""></p>
+  </form>
+  
+
+  <header id=footer></header>
+
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const statusEl = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("submitBtn");
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      statusEl.textContent = "Se trimite...";
+  
+      const payload = {
+        nume: document.getElementById("nume").value,
+        email: document.getElementById("email").value,
+        subiect: document.getElementById("subiect").value,
+        mesaj: document.getElementById("mesaj").value,
+        website: document.getElementById("website").value
+      };
+  
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+  
+        const result = await res.json();
+  
+        if (res.ok && result.ok) {
+          statusEl.textContent = "Mesajul a fost trimis! Mulțumesc.";
+          form.reset();
+        } else {
+          statusEl.textContent = result.error || "A apărut o eroare.";
+        }
+      } catch (err) {
+        statusEl.textContent = "Nu s-a putut contacta serverul.";
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

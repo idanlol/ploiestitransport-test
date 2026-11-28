@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ro">
+  
 <head>
   <title>MyTP - Traseu</title>
   <meta name="description" content="Platforma interactivă pentru trasee, stații și orare în timp real în Ploiești.">
   <meta name="theme-color" content="#111155">
   <link rel="icon" type="image/png" href="/Content/icon/MyTP-48px.webp">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width height=device-height">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
 </head>
 
@@ -26,10 +26,10 @@
         <div class="nr display_flex justify_center alignSelf_center align_center">
           <div id="nrtraseu"></div>
         </div>
-        <div class="trtext display_flex flexDir_col justify_center">
+        <h1 style="margin: 0; font-size: inherit;" class="trtext display_flex flexDir_col justify_center">
           <div id=origine></div>
           <div id=destinatie></div>
-        </div>
+        </h1>
         <!--
         <div class="display_flex justify_center justSelf_end nr nrchevrondiv alignSelf_center align_center">
           <div class="nrchevron chevron">⌄</div>
@@ -143,7 +143,7 @@
       NrTraseuMain = NrTraseuAct.replace(/[A-Z]/g, "");
       console.log(NrTraseuMain);
 
-      document.title = `Traseul ${NrTraseuAct} - TransPloiesti`;
+      document.title = `MyTP - Traseul ${NrTraseuAct}`;
   
       // 2. Functie mica ajutatoare pentru a seta sau crea taguri og: dinamic
       function setMetaTag(property, content) {
@@ -186,8 +186,16 @@
             document.getElementById('TrOptions').classList.add('hidden');
             document.querySelector('.tabelrow').classList.add('hidden');
             document.getElementById('liveETAdiv').classList.add('hidden');
+            updateSEO('MyTP - Traseu', 'Traseul căutat nu există.', window.location.href, false);
             return; // Oprim executia aici pentru a evita crash-ul
           }
+          updateSEO(
+            `MyTP - Traseul ${NrTraseuAct}`,
+            `Orar complet, stații și plecări în timp real pentru traseul ${NrTraseuAct} (${nrtr.Cap1} - ${nrtr.Cap2}) TCE Ploiești.`,
+            `https://mytp.pages.dev/traseu?id=${encodeURIComponent(NrTraseuAct)}`,
+            true
+          );
+
           nrtrm = data[NrTraseuMain];
   
           Capat1 = nrtr.Cap1;

@@ -45,7 +45,7 @@ if (TestVerValue && erudaValue) {
 document.getElementById('titlu').insertAdjacentHTML('afterbegin',
   `${betaSHOW}
   <div class="titlu display_flex height_fitcontent align_center">
-    <a href="./index.html">
+    <a href="/">
       <svg class="ratphpng display_flex justSelf_center alignSelf_center" xmlns="http://www.w3.org/2000/svg" viewBox="23 0 310 191" width="100%" height="100%">
         <style>
           .myTP_svg_title {
@@ -114,22 +114,22 @@ if (document.getElementById('footer')) document.getElementById('footer').innerHT
 
 document.querySelectorAll('#menu').forEach(menu => menu.innerHTML =
   `<div class="menu display_flex width_fitcontent height_fitcontent justSelf_center">
-      <a href="./ListaTrasee.html"class="topbut width_fitcontent height_fitcontent">
+      <a href="./ListaTrasee"class="topbut width_fitcontent height_fitcontent">
         Trasee
       </a>
-      <a href="./tarife.html" class="topbut width_fitcontent height_fitcontent">
+      <a href="./tarife" class="topbut width_fitcontent height_fitcontent">
         Tarife
       </a>
-      <a href="./harta-trasee.html"class="topbut width_fitcontent height_fitcontent">
+      <a href="./harta-trasee"class="topbut width_fitcontent height_fitcontent">
         Harta Trasee
       </a>
-      <a href="./anunturi.html" class="topbut width_fitcontent height_fitcontent">
+      <a href="./anunturi" class="topbut width_fitcontent height_fitcontent">
         Anunturi
       </a>
-      <a href="./WIP.html" class="topbut width_fitcontent height_fitcontent">
+      <a href="./WIP" class="hidden topbut width_fitcontent height_fitcontent">
         Galerie Foto
       </a>
-      <a href="./DespreNoi.html" class="topbut width_fitcontent height_fitcontent">
+      <a href="./DespreNoi" class="topbut width_fitcontent height_fitcontent">
         Despre noi
       </a>
       <div style="margin-right: 1vw;"></div>
@@ -150,16 +150,16 @@ document.querySelectorAll('#menu').forEach(menu => menu.innerHTML =
 // TCE Menu
 /*
   `<div class="menu display_flex width_fitcontent height_fitcontent justSelf_center">
-      <!--<a class="topbut width_fitcontent height_fitcontent" href="/nj.html">
+      <!--<a class="topbut width_fitcontent height_fitcontent" href="/nj">
         Acasa
       </a>-->
       <div class="topbut width_fitcontent height_fitcontent">
         Trasee
       </div>
-      <a href="./ImportOrar.html" class="topbut width_fitcontent height_fitcontent">
+      <a href="./ImportOrar" class="topbut width_fitcontent height_fitcontent">
         Tarife
       </a>
-      <a href="/anunturi.html" class="topbut width_fitcontent height_fitcontent">
+      <a href="/anunturi" class="topbut width_fitcontent height_fitcontent">
         Anunturi
       </a>
       <div class="topbut width_fitcontent height_fitcontent">
@@ -210,25 +210,25 @@ document.getElementById('fixbtn').innerHTML =
 
 let menuopened = 
   `<div style="width: 80vw; position: absolute; transform: translate(0%, 0%); bottom: 32%; right: 30%" class="display_flex gap_3 height_fitcontent justSelf_center flexDir_col justify_center">
-    <a href="./index.html"class="menubut width_fitcontent height_fitcontent alignSelf_end">
+    <a href="/"class="menubut width_fitcontent height_fitcontent alignSelf_end">
       Acasa
     </a>
-    <a href="./ListaTrasee.html"class="menubut width_fitcontent height_fitcontent alignSelf_end">
+    <a href="./ListaTrasee"class="menubut width_fitcontent height_fitcontent alignSelf_end">
       Trasee
     </a>
-    <a href="./harta-trasee.html"class="menubut width_fitcontent height_fitcontent alignSelf_end">
+    <a href="./harta-trasee"class="menubut width_fitcontent height_fitcontent alignSelf_end">
       Harta Trasee
     </a>
-    <a href="./tarife.html" class="menubut width_fitcontent height_fitcontent alignSelf_end">
+    <a href="./tarife" class="menubut width_fitcontent height_fitcontent alignSelf_end">
       Tarife
     </a>
-    <a href="./anunturi.html" class="menubut width_fitcontent height_fitcontent alignSelf_end">
+    <a href="./anunturi" class="menubut width_fitcontent height_fitcontent alignSelf_end">
       Anunturi
     </a>
-    <a href="./WIP.html" class="hidden menubut width_fitcontent height_fitcontent alignSelf_end">
+    <a href="./WIP" class="hidden menubut width_fitcontent height_fitcontent alignSelf_end">
       Galerie Foto
     </a>
-    <a href="./DespreNoi.html" class="menubut width_fitcontent height_fitcontent alignSelf_end">
+    <a href="./DespreNoi" class="menubut width_fitcontent height_fitcontent alignSelf_end">
       Despre noi
     </a>
     <div class="mb_3"></div>
@@ -357,11 +357,11 @@ function changeTheme() {
   if (document.documentElement.getAttribute('data-theme') === 'dark') {
     document.documentElement.removeAttribute('data-theme');
     localStorage.setItem('theme', 'light');
-    if (map) { resetMapTheme() };
+    if (typeof map !== 'undefined' && map) { resetMapTheme(); }
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
-    if (map) { resetMapTheme() };
+    if (typeof map !== 'undefined' && map) { resetMapTheme(); }
   }
 }
 
@@ -373,9 +373,43 @@ function scrollToTop() {
   console.log('scroll')
 }
 
+function updateSEO(title, description, canonicalUrl, isIndexable = true) {
+  document.title = title;
+
+  let descTag = document.querySelector('meta[name="description"]');
+  if (!descTag) {
+    descTag = document.createElement('meta');
+    descTag.setAttribute('name', 'description');
+    document.head.appendChild(descTag);
+  }
+  descTag.setAttribute('content', description);
+
+  let canonicalTag = document.querySelector('link[rel="canonical"]');
+  if (!canonicalTag) {
+    canonicalTag = document.createElement('link');
+    canonicalTag.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonicalTag);
+  }
+  canonicalTag.setAttribute('href', canonicalUrl);
+
+  let robotsTag = document.querySelector('meta[name="robots"]');
+  if (!isIndexable) {
+    if (!robotsTag) {
+      robotsTag = document.createElement('meta');
+      robotsTag.setAttribute('name', 'robots');
+      document.head.appendChild(robotsTag);
+    }
+    robotsTag.setAttribute('content', 'noindex, nofollow');
+  } else if (robotsTag) {
+    robotsTag.remove();
+  }
+}
+
+
 
 document.querySelectorAll('.topbut').forEach(btn => {
   const fmenu = btn.querySelector('.floatmenu');
+  if (!fmenu) return;
   btn.addEventListener('click', (event) => {
     event.stopPropagation();
     document.querySelectorAll('.floatmenu').forEach (m => {
