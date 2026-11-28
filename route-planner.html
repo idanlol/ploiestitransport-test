@@ -1,19 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="ro">
 
 <head>
-  <title>MyTP - </title>
-  <meta name="keywords" content="rute, route, route planner, planifica ruta, planifica o ruta, mytp, mytp ploiesti, tce, tceph, ratp, ratph, ploiesti">
-  <meta name="theme-color" content="#111155">
-  <meta property="og:title" content="MyTP">
-  <meta property="og:description" content="Site dedicat transportului public din Ploiesti. Informatii, stiri, noutati, despre SC Transport Calatori Express (TCE) Ploiesti SA, fosta RATP Ploiesti.">
-  <meta property="og:url" content="https://mytp.com/">
-  <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="/Content/icon/MyTP-48px.webp">
-  <script src="/Scripts/UiElements.js" defer></script>
-  <script src="/Scripts/news.js" defer></script>
 
+  <title>MyTP - Planificare ruta</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculează cea mai bună rută cu autobuzul, tramvaiul sau troleibuzul între orice două stații din Ploiești.">
+  <meta name="keywords" content="rute, route planner, planifica ruta, mytp, mytp ploiesti, tce, ploiesti">
+  <link rel="canonical" href="https://mytp.pages.dev/route-planner">
+  <meta name="theme-color" content="#111155">
+  <meta property="og:title" content="MyTP - Planificator ruta">
+  <meta property="og:description" content="Găsește rapid traseul optim între două stații din rețeaua TCE Ploiești.">
+  <meta property="og:url" content="https://mytp.pages.dev/route-planner">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/webp" href="/Content/icon/MyTP-48px.webp">
+  <script src="/Scripts/UiElements.js" defer></script>
+  <script src="/Scripts/news.js" defer></script>
   <link rel="stylesheet" href="/styles.css">
   <style>
     
@@ -26,6 +29,10 @@
   <header id=titlu></header>
   <div id=deadTopSpace></div>
 
+
+  <h1 class="sr-only">
+    Planifică o rută în Ploiești
+  </h1>
 
   <div class="card display_flex width_fitcontent height_fitcontent justSelf_center flexDir_col gap_2">
     <div class="gap_2 display_flex flexDir_row_r">
@@ -70,7 +77,6 @@
   <header id=footer></header>
 
 
-  <script src="/Scripts/UiElements.js"></script>
   <script>
     const dateInput = document.getElementById('RPdate');
     if (dateInput && !dateInput.value) {
@@ -143,7 +149,7 @@
       fromID = document.getElementById('RPfrom').dataset.routesid;
       toID = document.getElementById('RPto').dataset.routesid;
       if (fromID && toID) {
-        window.location.href = `./route.html?from=${fromID}&to=${toID}`
+        window.location.href = `./route?from=${fromID}&to=${toID}`
       } else {
         alert('Selecteaza statia de plecare si de sosire')
       }

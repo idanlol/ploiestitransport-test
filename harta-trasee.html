@@ -1,10 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="ro">
 
 <head>
-  <title>Harta - TransPloiesti</title>
-  <link rel="icon" type="image/png" href="/Content/icon/MyTP-48px.webp">
+
+  <title>MyTP - Harta</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explorează harta interactivă a transportului public din Ploiești: vezi toate stațiile și rutele autobuzelor, tramvaielor și troleibuzelor TCE.">
+  <link rel="canonical" href="https://mytp.pages.dev/harta-trasee">
+  <meta name="theme-color" content="#111155">
+  <meta property="og:title" content="MyTP - Harta">
+  <meta property="og:description" content="Hartă interactivă cu toate stațiile și liniile de transport public din Ploiești.">
+  <meta property="og:url" content="https://mytp.pages.dev/harta-trasee">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/webp" href="/Content/icon/MyTP-48px.webp">
   <script src="./Scripts/UiElements.js" defer></script>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -36,7 +45,9 @@
   <div id=fixbtn></div>
   <header id=titlu></header>
   <div id=deadTopSpace></div>
-  <div id=fixbtn></div>
+
+  
+  <h1 class="sr-only">Harta interactivă a traseelor și stațiilor TCE Ploiești</h1>
   
   <div style="position: absolute; bottom: 0%; width: 100%; height: 100%; overflow: hidden;" class="display_flex justSelf_center">
     <div id="map" style="z-index: 1; width: 100%; height: 100%; border-radius: 0vw;"></div>

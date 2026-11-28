@@ -1,7 +1,8 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="ro">
+  
 <head>
-  <title>Statie - TransPloiesti</title>
+  <title>MyTP - Statie</title>
   <link rel="icon" type="image/png" href="/Content/icon/MyTP-48px.webp">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +49,7 @@
 
     function ContainerTraseu(LTiS, index, cardMuted, RSID) {
       return `
-      <a href="./traseu.html?id=${LTiS.NrTraseu}&sID=${RSID}&tDIR=${LTiS.directie}" style="background: var(--card-stopETA)" class="card ${cardMuted} statieCard display_flex flexDir_col" id="cardContainer${index}">
+      <a href="./traseu?id=${LTiS.NrTraseu}&sID=${RSID}&tDIR=${LTiS.directie}" style="background: var(--card-stopETA)" class="card ${cardMuted} statieCard display_flex flexDir_col" id="cardContainer${index}">
         <div class="display_flex align_center">
           <div class="abtnlink-nr statie_nr display_flex justify_center align_center">${LTiS.NrTraseu}</div>
           <div><strong>&rarr; ${LTiS.capFront}</strong></div>
@@ -85,8 +86,23 @@
       // const stopId = ReqStopID.includes('=') ? ReqStopID.split('=')[1] : ReqStopID;
       console.warn(ReqStopID);
       // if (!ReqStopID)
-      document.getElementById('statieName').innerHTML = data.IDs.find(st => st.stopId === ReqStopID).nume;
-  
+      // document.getElementById('statieName').innerHTML = data.IDs.find(st => st.stopId === ReqStopID).nume;
+
+      const statieObj = data.IDs.find(st => st.stopId === ReqStopID);
+      if (!statieObj) {
+        document.getElementById('statieName').innerHTML = 'Stație inexistentă';
+        updateSEO('Stație inexistentă - MyTP', 'Stația căutată nu există.', window.location.href, false);
+        return;
+      }
+      document.getElementById('statieName').innerHTML = statieObj.nume;
+      updateSEO(
+        `MyTP - Stația ${statieObj.nume} | Orar și plecări live`,
+        `Vezi toate traseele TCE Ploiești care opresc în stația ${statieObj.nume} și timpii de sosire în timp real.`,
+        `https://mytp.pages.dev/statie?sID=${encodeURIComponent(ReqStopID)}`,
+        true
+      );
+
+      
       ListaTraseeInStatie = searchForTrasee(ReqStopID, data);
       // console.warn(ListaTraseeInStatie)
       

@@ -1,7 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="ro">
 
 <head>
-  <title>Anunt - TransPloiesti</title>
+  <title>MyTP - Anunt</title>
   <link rel="icon" type="image/png" href="/Content/icon/MyTP-48px.webp">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,6 @@
     <div id=deadTopSpace></div>
     <header id=titlu></header>
     <div id=fixbtn></div>
-    <!div id=menu></!div>
   
     <div id=newspage class="gap_2 card ncard display_flex justSelf_center justify_center align_center flexDir_col">
       
@@ -49,12 +49,19 @@
             let f_infoYellow = (idThisAnunt.infoYellow == "") ? '' : document.getElementById('newspage').innerHTML += idThisAnunt.infoYellow.map(text => {return `<div id=ninfoyellow class="nsection height_fitcontent"><div class="lineleft lineyellow display_flex"></div>${text}</div>`}).join('');
             let f_infoRed = (idThisAnunt.infoRed == "") ? '' : document.getElementById('newspage').innerHTML += idThisAnunt.infoRed.map(text => {return `<div id=ninfored class="nsection height_fitcontent"><div class="lineleft linered display_flex"></div>${text}</div>`}).join('');
             document.getElementById('newspage').innerHTML += `<div id=ntext class="n_tcesa height_fitcontent">S.C. T.C.E. S.A. Ploiesti</div>`;
+            updateSEO(
+              `MyTP - ${idThisAnunt.titluAnunt}`,
+              (idThisAnunt.textAnunt || '').slice(0, 155),
+              `https://mytp.pages.dev/anunt?aID=${encodeURIComponent(idThisAnunt.idAnunt)}`,
+              true
+            );
             
             // let f_nv = (!idThisAnunt.nv) ? '' : document.getElementById('newspage').innerHTML += ;
           } else {
-            document.getElementById('newspage').innerHTML = `<div class="btnlink WrongLink">Acest anunt nu exista. Verifica daca a scris corect link-ul</div>`
+            document.getElementById('newspage').innerHTML = `<div class="WrongLink">Acest anunt nu exista. Verifica daca este scris corect link-ul</div>`
+            updateSEO('MyTP - Anunt', 'Anunțul căutat nu există.', window.location.href, false);
           }
-            
+
           //           forEach(anunt => {
           //   anunt.TraseeAfectate.forEach(trafec => {
           //     TrAfectFull += TrAfectPreset(trafec);
