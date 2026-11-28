@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mytp.pages.dev/</loc>
@@ -194,19 +193,18 @@
     <loc>https://mytp.pages.dev/traseu?id=444B</loc>
   </url>
   <url>
-    <loc>https://mytp.pages.dev/anunt?id=0000001</loc>
+    <loc>https://mytp.pages.dev/anunt?aID=0000001</loc>
   </url>
   <url>
-    <loc>https://mytp.pages.dev/anunt?id=0000002</loc>
+    <loc>https://mytp.pages.dev/anunt?aID=0000002</loc>
   </url>
   <url>
-    <loc>https://mytp.pages.dev/anunt?id=0000003</loc>
+    <loc>https://mytp.pages.dev/anunt?aID=0000003</loc>
   </url>
   <url>
-    <loc>https://mytp.pages.dev/anunt?id=0000004</loc>
+    <loc>https://mytp.pages.dev/anunt?aID=0000004</loc>
   </url>
   <url>
-    <loc>https://mytp.pages.dev/anunt?id=0000005</loc>
+    <loc>https://mytp.pages.dev/anunt?aID=0000005</loc>
   </url>
-
-</urlset> 
+</urlset>
