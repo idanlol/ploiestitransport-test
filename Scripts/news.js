@@ -7,7 +7,7 @@ let readMoreBTNShowValue = false;
 let readMoreBTNShow = !readMoreBTNShowValue ? '' : `<div class="abtnlink readmore width_fitcontent">Citeste mai mult</div>`
 
 let AnuntPreset = (anunt) => anunt ?
-  `<a href="./Anunt?aID=${anunt.idAnunt}" class="abtnlink anews display_flex align_center flexDir_col">
+  `<a href="./anunt?aID=${anunt.idAnunt}" class="abtnlink anews display_flex align_center flexDir_col">
     <div class="newsGap display_flex flexDir_row alignSelf_start">  
       <div class="nnr display_flex justify_center align_center">
         ${anunt.dataAnunt}
